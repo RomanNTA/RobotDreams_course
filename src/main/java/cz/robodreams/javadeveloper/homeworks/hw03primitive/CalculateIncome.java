@@ -12,6 +12,8 @@ public class CalculateIncome {
         // code your solution here
 
         // last statement will be assigment your temporary result to result variable
+
+        
         //======
         return result;
     }
