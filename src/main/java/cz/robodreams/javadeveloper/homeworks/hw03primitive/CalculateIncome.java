@@ -11,6 +11,8 @@ public class CalculateIncome {
         int result = 0;
         // code your solution here
 
+        result = hourlyRate * 8;
+
         // last statement will be assigment your temporary result to result variable
         //======
         return result;
@@ -23,6 +25,8 @@ public class CalculateIncome {
         int result = 0;
         // code your solution here
 
+        result = hourlyRate * 8 * 20;
+
         // last statement will be assigment your temporary result to result variable
         //======
         return result;
@@ -31,6 +35,8 @@ public class CalculateIncome {
     public double averageExpensiveOnTeamMemberInDay(int testerHourRate, int programmerHourRate, int analystHourRate) {
         double result = 0;
         // code your solution here
+
+        result = (testerHourRate + programmerHourRate + analystHourRate) / 3.0;
 
         // last statement will be assigment your temporary result to result variable
         //======
@@ -42,9 +48,12 @@ public class CalculateIncome {
      * BONUS task
      */
     public BigDecimal averageExpensiveOnTeamMemberInDayRoundedToDecimalPlaces(int testerHourRate, int programmerHourRate, int analystHourRate,
-            byte decimalPlace) {
+                                                                              byte decimalPlace) {
         BigDecimal result = BigDecimal.ZERO;
         // code your solution here
+
+        double dAverage = (testerHourRate + programmerHourRate + analystHourRate ) / 3.0;
+        result = BigDecimal.valueOf(dAverage).setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
 
         // last statement will be assigment your temporary result to result variable
         //======
@@ -59,6 +68,12 @@ public class CalculateIncome {
     public String createReportWithMonthExpensive(int testerHourRate, int programmerHourRate, int analystHourRate) {
         String result = "";
         // code your solution here
+
+        result = String.format("Analyst:%d; Developer:%d; Tester:%d",
+                analystHourRate * 20 * 8,
+                programmerHourRate * 20 * 8,
+                testerHourRate * 20 * 8
+        );
 
         // last statement will be assigment your temporary result to result variable
         //======
