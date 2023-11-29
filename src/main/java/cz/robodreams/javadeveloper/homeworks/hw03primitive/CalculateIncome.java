@@ -1,7 +1,7 @@
 package cz.robodreams.javadeveloper.homeworks.hw03primitive;
 
 import java.math.BigDecimal;
-@Disabled
+//@Disabled
 public class CalculateIncome {
 
     /**

@@ -11,6 +11,7 @@ public class CypherText {
         int result = 0;
         // code your solution here
 
+        result = plain ^ key;
 
         // last statement will be assigment your temporary result to result variable
         //======
@@ -21,6 +22,9 @@ public class CypherText {
     public int decryptByXor(int cypher, int key) {
         int result = 0;
         // code your solution here
+
+        result = cypher ^ key;
+
         // last statement will be assigment your temporary result to result variable
         //======
         return result;
