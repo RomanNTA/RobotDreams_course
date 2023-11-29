@@ -73,6 +73,8 @@ public class CalculateIncome {
                 analystHourRate * 20 * 8,
                 programmerHourRate * 20 * 8,
                 testerHourRate * 20 * 8
+
+
         );
 
         // last statement will be assigment your temporary result to result variable
