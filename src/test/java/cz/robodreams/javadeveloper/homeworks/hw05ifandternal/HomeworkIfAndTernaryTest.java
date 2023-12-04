@@ -50,7 +50,7 @@ class HomeworkIfAndTernaryTest {
     }
 
     @Test
-    @Disabled("kdo chce necht si toto smaze")
+    @Disabled("kdo chce necht si toto smaze, cely radek ")
     void allYearsTest() {
         for (int i = 0; i < 5100; i++) {
             assertThat(homeworkIfAndTernary.isYearALeapYear(i).equals("je"))
