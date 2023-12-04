@@ -10,7 +10,23 @@ public class HomeworkIfAndTernary {
      * "Neznama operace"
      */
     public String calculateAreaAndPerimeter(int dimensionX, int dimensionY, int operation) {
-        return "";
+
+        if (operation == 1 && dimensionX > 0 && dimensionY > 0) {
+
+            long lArea = dimensionX * dimensionY;
+            long lPerimeter = 2* (dimensionX + dimensionY);
+            return String.format("Area: %d; Perimeter %d", lArea, lPerimeter);
+
+        } else if (operation == 2  && dimensionX > 0) {
+
+            // long lArea = Math.round(Math.PI * dimensionX * dimensionX);
+            long lArea = (long) (Math.PI * dimensionX * dimensionX);
+            long lPerimeter = Math.round(2 * Math.PI * dimensionX);
+            return String.format("Area: %d; Perimeter %d", lArea, lPerimeter);
+
+        } else {
+            return "Neznama operace";
+        }
     }
 
     /**
@@ -22,7 +38,12 @@ public class HomeworkIfAndTernary {
      * @return "je" if year is a leap year, otherwise "neni; zbyva {years}",
      */
     public String isYearALeapYear(int year) {
-        return "";
+
+        String result = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))
+                ? "je"
+                : "neni; zbyva " + (4 - year % 4);
+
+        return result;
     }
 
 }
