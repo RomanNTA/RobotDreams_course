@@ -39,11 +39,10 @@ public class HomeworkIfAndTernary {
      */
     public String isYearALeapYear(int year) {
 
-        String result = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))
-                ? "je"
-                : "neni; zbyva " + (4 - year % 4);
+        return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))
+               ? "je"
+               : "neni; zbyva " + (4 - year % 4);
 
-        return result;
     }
 
 }
