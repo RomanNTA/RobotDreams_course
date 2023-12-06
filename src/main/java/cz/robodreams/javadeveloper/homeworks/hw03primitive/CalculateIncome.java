@@ -52,8 +52,13 @@ public class CalculateIncome {
         BigDecimal result = BigDecimal.ZERO;
         // code your solution here
 
-        double dAverage = (testerHourRate + programmerHourRate + analystHourRate ) / 3.0;
-        result = BigDecimal.valueOf(dAverage).setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+//        double dAverage = (testerHourRate + programmerHourRate + analystHourRate ) / 3.0;
+//        result = BigDecimal.valueOf(dAverage).setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+
+        result = new BigDecimal(testerHourRate);
+        result = result.add(new BigDecimal(analystHourRate));
+        result = result.add(new BigDecimal(programmerHourRate));
+        result = result.divide(new BigDecimal(3), decimalPlace, BigDecimal.ROUND_HALF_UP);
 
         // last statement will be assigment your temporary result to result variable
         //======
@@ -73,8 +78,6 @@ public class CalculateIncome {
                 analystHourRate * 20 * 8,
                 programmerHourRate * 20 * 8,
                 testerHourRate * 20 * 8
-
-
         );
 
         // last statement will be assigment your temporary result to result variable
