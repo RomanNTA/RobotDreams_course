@@ -2,6 +2,9 @@ package cz.robodreams.javadeveloper.homeworks.hw03primitive;
 
 import java.math.BigDecimal;
 
+// Jo jo ... je to nové :)
+
+
 public class CalculateIncome {
 
     /**
