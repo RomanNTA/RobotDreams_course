@@ -33,8 +33,14 @@ class CalculateIncomeTest {
             "-200,-32000"
     })
     void monthlyIncome(int hourlyRate, int expectedResult) {
+
         assertThat(calculateIncome.monthlyIncome(hourlyRate))
                 .isEqualTo(expectedResult);
+
+
+        assertThat(calculateIncome.monthlyIncome(hourlyRate))
+                .isEqualTo(expectedResult);
+
     }
 
     @ParameterizedTest
