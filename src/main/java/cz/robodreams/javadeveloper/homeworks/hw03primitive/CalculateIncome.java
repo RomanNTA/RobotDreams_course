@@ -2,6 +2,9 @@ package cz.robodreams.javadeveloper.homeworks.hw03primitive;
 
 import java.math.BigDecimal;
 
+// Jo jo ... je to nové :)
+
+
 public class CalculateIncome {
 
     /**
@@ -14,6 +17,8 @@ public class CalculateIncome {
         result = hourlyRate * 8;
 
         // last statement will be assigment your temporary result to result variable
+
+        
         //======
         return result;
     }

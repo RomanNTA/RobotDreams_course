@@ -54,4 +54,22 @@
 
   </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.2</version>
+<!--        <configuration>-->
+<!--          <includes>-->
+<!--            &lt;!&ndash; This includes all files ending with "Test.java" &ndash;&gt;-->
+<!--            <include>**/*Test.java</include>-->
+<!--          </includes>-->
+<!--          &lt;!&ndash; You can add more configurations as needed &ndash;&gt;-->
+<!--        </configuration>-->
+      </plugin>
+    </plugins>
+  </build>
+
+
 </project>
