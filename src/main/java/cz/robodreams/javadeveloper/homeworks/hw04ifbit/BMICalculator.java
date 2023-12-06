@@ -32,7 +32,8 @@ public class BMICalculator {
         double dHeight = height / 100.0;
 
         // Výpočet BMI podle vzorce
-        double dBmi = weight / (dHeight * dHeight);
+        //double dBmi = weight / (dHeight * dHeight);
+        double dBmi = weight / Math.pow (dHeight,2);
 
         // Kontrolní výpis
 //        System.out.println("Zadaní ...................");
@@ -41,7 +42,7 @@ public class BMICalculator {
 //        System.out.println("dHeight  = " + dHeight);
 //        System.out.println("BMI      = " + dBmi);
 
-        if (dBmi < 0) {
+        if (dBmi <= 0) {
             result = "Chyba zadání. Prosím, zkontroluj hmotnost a výšku.";
 
         } else if (dBmi > 0 && dBmi <= 15) {
