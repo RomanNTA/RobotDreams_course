@@ -2,6 +2,9 @@ package cz.robodreams.javadeveloper.homeworks.hw03primitive;
 
 import java.math.BigDecimal;
 
+// Jo jo ... je to nové :)
+
+
 public class CalculateIncome {
 
     /**
@@ -10,6 +13,8 @@ public class CalculateIncome {
     public int dailyIncome(int hourlyRate) {
         int result = 0;
         // code your solution here
+
+        result = hourlyRate * 8;
 
         // last statement will be assigment your temporary result to result variable
 
@@ -25,6 +30,8 @@ public class CalculateIncome {
         int result = 0;
         // code your solution here
 
+        result = hourlyRate * 8 * 20;
+
         // last statement will be assigment your temporary result to result variable
         //======
         return result;
@@ -33,6 +40,8 @@ public class CalculateIncome {
     public double averageExpensiveOnTeamMemberInDay(int testerHourRate, int programmerHourRate, int analystHourRate) {
         double result = 0;
         // code your solution here
+
+        result = (testerHourRate + programmerHourRate + analystHourRate) / 3.0;
 
         // last statement will be assigment your temporary result to result variable
         //======
@@ -44,9 +53,17 @@ public class CalculateIncome {
      * BONUS task
      */
     public BigDecimal averageExpensiveOnTeamMemberInDayRoundedToDecimalPlaces(int testerHourRate, int programmerHourRate, int analystHourRate,
-            byte decimalPlace) {
+                                                                              byte decimalPlace) {
         BigDecimal result = BigDecimal.ZERO;
         // code your solution here
+
+//        double dAverage = (testerHourRate + programmerHourRate + analystHourRate ) / 3.0;
+//        result = BigDecimal.valueOf(dAverage).setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+
+        result = new BigDecimal(testerHourRate);
+        result = result.add(new BigDecimal(analystHourRate));
+        result = result.add(new BigDecimal(programmerHourRate));
+        result = result.divide(new BigDecimal(3), decimalPlace, BigDecimal.ROUND_HALF_UP);
 
         // last statement will be assigment your temporary result to result variable
         //======
@@ -61,6 +78,12 @@ public class CalculateIncome {
     public String createReportWithMonthExpensive(int testerHourRate, int programmerHourRate, int analystHourRate) {
         String result = "";
         // code your solution here
+
+        result = String.format("Analyst:%d; Developer:%d; Tester:%d",
+                analystHourRate * 20 * 8,
+                programmerHourRate * 20 * 8,
+                testerHourRate * 20 * 8
+        );
 
         // last statement will be assigment your temporary result to result variable
         //======
