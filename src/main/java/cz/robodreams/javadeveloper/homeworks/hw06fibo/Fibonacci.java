@@ -29,7 +29,7 @@ public class Fibonacci {
         long result = procRecursion(n);
 
         System.out.println("Fibonacciho číslo " + n + " v pořadí je " + result);
-        System.out.println("Pro výpočet použito " + this.citac + " rekurzivních průchodů.\r\n");
+        System.out.println("Pro výpočet použito " + this.citac + " rekurzivních průchodů.\r\n ");
 
         return result;
     }
