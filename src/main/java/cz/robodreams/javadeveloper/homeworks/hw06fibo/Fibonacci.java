@@ -5,7 +5,7 @@ import java.text.*;
 
 public class Fibonacci {
 
-    static private long citac;
+    private long citac;
 
     private long procRecursion(int n) {
 
