@@ -14,13 +14,14 @@ public class ArraySearch {
      */
     public int linearSearch(int[] arr, int element) {
 
-        if (arr == null) return -1;
-        int i = 0;
+        if (arr == null) {
+            return -1;
+        }
 
-        while (i < arr.length) {
-            if (element == arr[i])
+        for (int i = 0; i < arr.length; i++) {
+            if (element == arr[i]) {
                 return i;
-            i++;
+            }
         }
 
         return -1;
@@ -39,8 +40,13 @@ public class ArraySearch {
      */
     public int binarySearch(int[] arr, int element) {
 
-        if (arr == null || arr.length == 0) return -1;
-        if (arr.length == 1) return 0;
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
+
+        if (arr.length == 1) {
+            return 0;
+        }
 
         int low = 0;
         int high = arr.length - 1;
@@ -54,6 +60,7 @@ public class ArraySearch {
                 low = middle + 1;
             } else return middle;
         }
+
         return -1;
     }
 
