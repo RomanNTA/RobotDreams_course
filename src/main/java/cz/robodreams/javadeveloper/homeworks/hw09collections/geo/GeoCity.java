@@ -136,21 +136,16 @@ public class GeoCity {
             return null;
         }
 
+        // inicializace bufferu
+        Stack<String> buffer = new Stack<>();
+
         // Vysledny seznam
         Set<String> result = new HashSet<>();
         result.add(city);
 
-        Set<String> cities = new HashSet<>();
-        cities = cityMap.get(city);
-        System.out.println("Počet " + cities.size());
-
-        // inicializace bufferu
-        Stack<String> buffer = new Stack<>();
-
         // Naplneni bufferu mesty, ktere primarne patri k "city"
         System.out.println("Vstupni naplneni bufferu");
-        Iterator<String> tmpIterator = cities.iterator();
-
+        Iterator<String> tmpIterator = cityMap.get(city).iterator();
         while (tmpIterator.hasNext()) {
             String t = tmpIterator.next();
             System.out.println("pridavam do bufferu - " + t);
