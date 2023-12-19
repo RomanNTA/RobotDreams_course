@@ -27,7 +27,6 @@ public class GeoCity {
     }
 
 
-
     /**
      * Register new city if is not present
      *
@@ -35,18 +34,18 @@ public class GeoCity {
      */
     public void registerCity(String city) {
 
-        Set<String> sSet = new HashSet<>();
-        cityMap.put(city, sSet);
+        cityMap.put(city, new HashSet<>());
         System.out.println("Registrace mesta .............. " + city);
 
     }
 
     private void insertConnect(String cityFrom, String cityTo) {
 
-        Set<String> sSet = cityMap.get(cityFrom);
-        sSet.add(cityTo);
-        cityMap.replace(cityFrom, sSet);
-
+        if (!cityMap.containsKey(cityFrom)) {
+            // Vyjimka
+            return;
+        }
+        cityMap.get(cityFrom).add(cityTo);
     }
 
 
@@ -83,8 +82,18 @@ public class GeoCity {
      */
     public void removeConnections(String cityFrom, String cityTo) {
 
-        cityMap.remove(cityFrom, cityTo);
-        cityMap.remove(cityTo, cityFrom);
+        if (!cityMap.containsKey(cityFrom)) {
+            // Vyjimka
+            return;
+        }
+        cityMap.get(cityFrom).remove(cityTo);
+
+        if (!cityMap.containsKey(cityTo)) {
+            // Vyjimka
+            return;
+        }
+        cityMap.get(cityTo).remove(cityFrom);
+
         System.out.println("Zruseni propojeni mesta ....... " + cityFrom + " <-> " + cityTo);
 
     }
@@ -134,21 +143,21 @@ public class GeoCity {
         cities = cityMap.get(city);
         System.out.println("Počet " + cities.size());
 
-         // inicializace bufferu
+        // inicializace bufferu
         Stack<String> buffer = new Stack<>();
 
         // Naplneni bufferu mesty, ktere primarne patri k "city"
         System.out.println("Vstupni naplneni bufferu");
         Iterator<String> tmpIterator = cities.iterator();
 
-        while(tmpIterator.hasNext()){
+        while (tmpIterator.hasNext()) {
             String t = tmpIterator.next();
             System.out.println("pridavam do bufferu - " + t);
             buffer.push(t);
         }
 
         // hlavni cyklus
-        while(buffer.size() > 0) {
+        while (buffer.size() > 0) {
 
             // Vyber z bufferu
             String s = buffer.pop();
@@ -156,9 +165,9 @@ public class GeoCity {
 
             // Pokud neco najdes, pak to pridej do bufferu
             tmpIterator = cityMap.get(s).iterator();
-            while(tmpIterator.hasNext()){
+            while (tmpIterator.hasNext()) {
                 String t = tmpIterator.next();
-                if (!buffer.contains(t) && !result.contains(t)){
+                if (!buffer.contains(t) && !result.contains(t)) {
                     System.out.println("pridavam do bufferu - " + t);
                     buffer.add(t);
                 }
@@ -171,7 +180,7 @@ public class GeoCity {
         }
 
         if (result.size() == 1) {
-            System.out.println("Z '" + city + "' nemůžeme vycestovat. Indiani vytrhali koleje ;-)" );
+            System.out.println("Z '" + city + "' nemůžeme vycestovat. Indiani vytrhali koleje ;-)");
             result.clear();
             return result;
 
