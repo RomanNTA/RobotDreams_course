@@ -41,11 +41,10 @@ public class GeoCity {
 
     private void insertConnect(String cityFrom, String cityTo) {
 
-        if (!cityMap.containsKey(cityFrom)) {
-            // Vyjimka
-            return;
+        if (cityMap.containsKey(cityFrom)) {
+            cityMap.get(cityFrom).add(cityTo);
         }
-        cityMap.get(cityFrom).add(cityTo);
+
     }
 
 
@@ -83,16 +82,12 @@ public class GeoCity {
     public void removeConnections(String cityFrom, String cityTo) {
 
         if (!cityMap.containsKey(cityFrom)) {
-            // Vyjimka
-            return;
+            cityMap.get(cityFrom).remove(cityTo);
         }
-        cityMap.get(cityFrom).remove(cityTo);
 
-        if (!cityMap.containsKey(cityTo)) {
-            // Vyjimka
-            return;
+        if (cityMap.containsKey(cityTo)) {
+            cityMap.get(cityTo).remove(cityFrom);
         }
-        cityMap.get(cityTo).remove(cityFrom);
 
         System.out.println("Zruseni propojeni mesta ....... " + cityFrom + " <-> " + cityTo);
 
