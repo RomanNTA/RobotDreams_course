@@ -84,14 +84,14 @@ public class GeoCity {
         if (cityMap.containsKey(cityFrom)) {
             cityMap.get(cityFrom).remove(cityTo);
         } else {
-            System.out.println("Chyba. Pokus o odstranění neexistujiciho spojeni. ( " + cityFrom + " - " + cityTo + ")" );
+            System.out.println("Chyba. Pokus o odstranění neexistujiciho spojeni. ( " + cityFrom + " - " + cityTo + ")");
             return;
         }
 
         if (cityMap.containsKey(cityTo)) {
             cityMap.get(cityTo).remove(cityFrom);
         } else {
-            System.out.println("Chyba. Pokus o odstranění neexistujiciho spojeni. ( " + cityFrom + " - " + cityTo + ")" );
+            System.out.println("Chyba. Pokus o odstranění neexistujiciho spojeni. ( " + cityFrom + " - " + cityTo + ")");
             return;
         }
 
@@ -144,24 +144,37 @@ public class GeoCity {
         result.add(city);
 
         // Naplneni bufferu mesty, ktere primarne patri k "city"
-        buffer.addAll(0,cityMap.get(city));
+        buffer.addAll(0, cityMap.get(city));
 
         // hlavni cyklus
         while (buffer.size() > 0) {
 
             // Vyber z bufferu
-            String s = buffer.pop();
-            result.add(s);
+            String sCity = buffer.pop();
+            result.add(sCity);
 
+/*
             // Pokud neco najdes, pak to pridej do bufferu
-            Iterator<String> tmpIterator = cityMap.get(s).iterator();
+            // 1 verze
+            Iterator<String> tmpIterator = cityMap.get(sCity).iterator();
             while (tmpIterator.hasNext()) {
-                String t = tmpIterator.next();
-                if (!buffer.contains(t) && !result.contains(t)) {
-                    System.out.println("pridavam do bufferu - " + t);
-                    buffer.add(t);
+                String tempStr = tmpIterator.next();
+                if (!buffer.contains(tempStr) && !result.contains(tempStr)) {
+                    System.out.println("pridavam do bufferu - " + tempStr);
+                    buffer.add(tempStr);
                 }
             }
+*/
+
+            // Pokud neco najdes, pak to pridej do bufferu
+            // 2 verze
+            for (String tempStr : cityMap.get(sCity)) {
+                if (!buffer.contains(tempStr) && !result.contains(tempStr)) {
+                    System.out.println("pridavam do bufferu - " + tempStr);
+                    buffer.add(tempStr);
+                }
+            }
+
         }
 
         if (result.size() == 1) {
