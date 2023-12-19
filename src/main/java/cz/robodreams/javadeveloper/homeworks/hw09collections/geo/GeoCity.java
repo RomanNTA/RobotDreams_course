@@ -169,17 +169,18 @@ public class GeoCity {
             }
         }
 
-        String t = "";
-        for (String s : result) {
-            t += s + ",";
-        }
-
         if (result.size() == 1) {
             System.out.println("Z '" + city + "' nemůžeme vycestovat. Indiani vytrhali koleje ;-)");
             result.clear();
             return result;
 
         } else {
+
+            String t = "";
+            for (String s : result) {
+                t += s + ",";
+            }
+
             System.out.println("Z '" + city + "' můžeme cestovat do " + t);
             return result;
 
