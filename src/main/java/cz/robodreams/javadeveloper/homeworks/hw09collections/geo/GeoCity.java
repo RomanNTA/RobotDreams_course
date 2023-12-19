@@ -81,12 +81,18 @@ public class GeoCity {
      */
     public void removeConnections(String cityFrom, String cityTo) {
 
-        if (!cityMap.containsKey(cityFrom)) {
+        if (cityMap.containsKey(cityFrom)) {
             cityMap.get(cityFrom).remove(cityTo);
+        } else {
+            System.out.println("Chyba. Pokus o odstranění neexistujiciho spojeni. ( " + cityFrom + " - " + cityTo + ")" );
+            return;
         }
 
         if (cityMap.containsKey(cityTo)) {
             cityMap.get(cityTo).remove(cityFrom);
+        } else {
+            System.out.println("Chyba. Pokus o odstranění neexistujiciho spojeni. ( " + cityFrom + " - " + cityTo + ")" );
+            return;
         }
 
         System.out.println("Zruseni propojeni mesta ....... " + cityFrom + " <-> " + cityTo);
