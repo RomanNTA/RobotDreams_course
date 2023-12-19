@@ -144,13 +144,7 @@ public class GeoCity {
         result.add(city);
 
         // Naplneni bufferu mesty, ktere primarne patri k "city"
-        System.out.println("Vstupni naplneni bufferu");
-        Iterator<String> tmpIterator = cityMap.get(city).iterator();
-        while (tmpIterator.hasNext()) {
-            String t = tmpIterator.next();
-            System.out.println("pridavam do bufferu - " + t);
-            buffer.push(t);
-        }
+        buffer.addAll(0,cityMap.get(city));
 
         // hlavni cyklus
         while (buffer.size() > 0) {
@@ -160,7 +154,7 @@ public class GeoCity {
             result.add(s);
 
             // Pokud neco najdes, pak to pridej do bufferu
-            tmpIterator = cityMap.get(s).iterator();
+            Iterator<String> tmpIterator = cityMap.get(s).iterator();
             while (tmpIterator.hasNext()) {
                 String t = tmpIterator.next();
                 if (!buffer.contains(t) && !result.contains(t)) {
