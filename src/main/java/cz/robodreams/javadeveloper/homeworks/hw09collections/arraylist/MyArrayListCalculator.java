@@ -40,7 +40,7 @@ public class MyArrayListCalculator implements InnerAccessToArrayList {
     private void realocateMinus(int newSize) {
 
         int sizeMin = (int) Math.ceil((double) capacity * dcdf);
-        if (sizeMin < newSize) {  // je to mimo povolenou oblast - vyfukujeme 50% volné oblasti
+        if (sizeMin >= newSize) {  // je to mimo povolenou oblast - vyfukujeme 50% volné oblasti
 
             int alocDcf = newSize + (int) Math.ceil((double) (capacity - newSize) * dcf);
             if (alocDcf < INIT_CAPACITY) {

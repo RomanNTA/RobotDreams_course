@@ -13,7 +13,32 @@ public class App {
         }
     }
 
-    private static void naplnitPoleArrayList(List pole, int pocet){
+    private static void naplnitPole(MyArrayPetr pole, int pocet) {
+        for (int i = 0; i < pocet; i++) {
+            pole.add(i);
+        }
+    }
+
+    private static void naplnitPole(List pole, int pocet) {
+        for (int i = 0; i < pocet; i++) {
+            pole.add(i);
+        }
+    }
+
+    private static void naplnitPoleArrayList(List pole, int pocet) {
+        for (int i = 0; i < pocet; i++) {
+            Integer j = i;
+            pole.add(j);
+        }
+    }
+    private static void naplnitPoleArrayList(MyArrayPetr pole, int pocet) {
+        for (int i = 0; i < pocet; i++) {
+            Integer j = i;
+            pole.add(j);
+        }
+    }
+
+    private static void naplnitPoleArrayList(MyArrayList pole, int pocet) {
         for (int i = 0; i < pocet; i++) {
             Integer j = i;
             pole.add(j);
@@ -22,27 +47,31 @@ public class App {
 
     public static void main(String[] args) {
 
-        testAdd();
-        testRemoveAccordingObject();
-        testConstructorWithArray();
-
-        testAddAll();
-        testContainsAll();
-        testIndexOf();
-        testRemoveAccordingValue();
-        testSubList();
+//        testAdd();
+//        testRemoveAccordingObject();
+//        testConstructorWithArray();
+//
+//        testAddAll();
+//        testContainsAll();
+//        testIndexOf();
+       testRemoveAccordingValue();
+//        testSubList();
     }
 
 
     private static void testRemoveAccordingObject() {
 
-        System.out.println( "testRemoveAccordingObject----------------------------------------------------------------");
+        System.out.println("testRemoveAccordingObject----------------------------------------------------------------");
 
         MyList pole1 = new MyArrayList();
         naplnitPole(pole1, 15);
 
         List pole2 = new ArrayList<>();
-        naplnitPoleArrayList(pole2,15);
+        naplnitPoleArrayList(pole2, 15);
+
+        MyArrayPetr pole3 = new MyArrayPetr();
+        naplnitPoleArrayList(pole3, 15);
+
 
         // Zkouška remove podle objektu
         int i = pole1.size();
@@ -50,8 +79,11 @@ public class App {
             i--;
             pole1.remove((Object) i);
             pole2.remove((Object) i);
+            pole3.remove((Object) i);
+
             System.out.println(pole1.toString() + " - " + i + " - " + pole1.isEmpty());
             System.out.println(pole2.toString() + " - " + i + " - " + pole2.isEmpty());
+            System.out.println(pole3.toString() + " - " + i + " - " + pole3.isEmpty());
         }
 
         i = -1;
@@ -59,136 +91,252 @@ public class App {
             i++;
             pole1.remove((Object) i);
             pole2.remove((Object) i);
+            pole3.remove((Object) i);
+
             System.out.println(pole1.toString() + " - " + i + " - " + pole1.isEmpty());
             System.out.println(pole2.toString() + " - " + i + " - " + pole2.isEmpty());
+            System.out.println(pole3.toString() + " - " + i + " - " + pole3.isEmpty());
         }
 
     }
 
     private static void testRemoveAccordingValue() {
-        System.out.println( "testRemoveAccordingValue ----------------------------------------------------------------");
+        System.out.println("testRemoveAccordingValue ----------------------------------------------------------------");
 
-        MyList pole = new MyArrayList();
-        naplnitPole(pole, 10);
+        MyList pole1 = new MyArrayListEx();
+        naplnitPole(pole1, 10);
 
-        List ara = new ArrayList<>();
-        naplnitPoleArrayList(ara,10);
+        List pole2 = new ArrayList<>();
+        naplnitPoleArrayList(pole2, 10);
+
+        MyArrayPetr pole3 = new MyArrayPetr();
+        naplnitPoleArrayList(pole3, 10);
 
         // Zkouška remove podle hodnoty
-        int i = pole.size();
-        while (pole.size() > 0) {
-            i--;
-            ara.remove((int) i);
-            pole.remove((int) i);
-            System.out.println(ara.toString() + " - " + i);
-            System.out.println(pole.toString() + " - " + i);
+//        int i = pole1.size();
+//        while (pole1.size() > 0) {
+//            i--;
+//            pole1.remove((int) i);
+//            System.out.println(pole1.toString() + " - " + i);
+//        }
+//
+//        i = pole2.size();
+//        while (pole2.size() > 0) {
+//            i--;
+//            pole2.remove((int) i);
+//            System.out.println(pole2.toString() + " - " + i);
+//        }
+//
+//        i = pole3.size();
+//        while (pole3.size() > 0) {
+//            i--;
+//            pole3.remove((int) i);
+//            System.out.println(pole3.toString() + " - " + i);
+//        }
+
+
+        // Zkouška remove podle hodnoty
+        int i = pole1.size();
+        while (pole1.size() > 0) {
+
+            int j = getRandomId(0,pole1.size());
+
+            System.out.println( " Roman ------------------------ " + j + " - " + pole1.get(j));
+
+            System.out.println(pole1.toString() + " - " + j);
+            pole1.remove((int) j);
+            System.out.println(pole1.toString() + " - " + j);
         }
-    }
+
+        while (pole2.size() > 0) {
+            int j = getRandomId(0,pole2.size());
+
+            System.out.println( " JAVA ------------------------ " + j + " - " + pole2.get(j));
+
+            System.out.println(pole2.toString() + " - " + j);
+            pole2.remove((int) j);
+            System.out.println(pole2.toString() + " - " + j);
+        }
 
 
-    private static void testContainsAll(){
-        System.out.println( "testContainsAll -------------------------------------------------------------------------");
+        while (pole3.size() > 0) {
+            int j = getRandomId(0,pole3.size());
 
-        MyList pole = new MyArrayList();
-        naplnitPole(pole, 10);
+            System.out.println( " Petr ------------------------ " + j + " - " + pole3.get(j));
 
-        // Zkouška containsAll
-//        System.out.println(pole.toString());
-        List<Integer> p3 = Arrays.asList(2,5,7);
-        System.out.println(p3);
-        System.out.println(pole.toString() + pole.containsAll(p3));
-
-        List<Integer> p4 = Arrays.asList(2,5,7,40);
-        System.out.println(p4);
-        System.out.println(pole.toString() + pole.containsAll(p4));
+            System.out.println(pole3.toString() + " - " + j);
+            pole3.remove((int) j);
+            System.out.println(pole3.toString() + " - " + j);
+        }
 
 
-    }
-
-
-
-    private static void testIndexOf(){
-        System.out.println( "testIndexOf -----------------------------------------------------------------------------");
-
-        MyList pole = new MyArrayList();
-        naplnitPole(pole, 10);
-
-        List ara = new ArrayList<>();
-        naplnitPoleArrayList(ara,10);
-
-        // Zkouška indexOf
-        Integer int1 = 7;
-        System.out.println(pole.toString() + pole.indexOf(int1));
-        System.out.println(ara.toString() + ara.indexOf(int1));
 
     }
 
+    public static Integer getRandomId(int min, int max ) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
 
 
-    private static void testSubList(){
-        System.out.println( "testSubList -----------------------------------------------------------------------------");
+    private static void testContainsAll() {
+        System.out.println("testContainsAll -------------------------------------------------------------------------");
 
         MyList pole1 = new MyArrayList();
         naplnitPole(pole1, 10);
 
         List pole2 = new ArrayList<>();
-        naplnitPoleArrayList(pole2,10);
+        naplnitPole(pole2, 10);
+
+        MyArrayPetr pole3 = new MyArrayPetr();
+        naplnitPole(pole3, 10);
+
+        // Zkouška containsAll
+//        System.out.println(pole.toString());
+
+        List<Integer> p3 = Arrays.asList(2, 5, 7);
+        List<Integer> p4 = Arrays.asList(2, 5, 7, 40);
+
+        System.out.println(p3);
+        System.out.println(p4);
+
+        System.out.println(pole1.toString() + pole1.containsAll(p3));
+        System.out.println(pole2.toString() + pole2.containsAll(p3));
+        System.out.println(pole3.toString() + pole3.containsAll(p3));
+
+        System.out.println(pole1.toString() + pole1.containsAll(p4));
+        System.out.println(pole2.toString() + pole2.containsAll(p4));
+        System.out.println(pole3.toString() + pole3.containsAll(p4));
+
+
+    }
+
+
+    private static void testIndexOf() {
+        System.out.println("testIndexOf -----------------------------------------------------------------------------");
+
+        MyList pole1 = new MyArrayList();
+        naplnitPole(pole1, 10);
+
+        List pole2 = new ArrayList<>();
+        naplnitPoleArrayList(pole2, 10);
+
+        MyArrayPetr pole3 = new MyArrayPetr();
+        naplnitPole(pole3, 10);
+
+        // Zkouška indexOf
+        Integer int1 = 7;
+        System.out.println(pole1.toString() + pole1.indexOf(int1));
+        System.out.println(pole2.toString() + pole2.indexOf(int1));
+        System.out.println(pole3.toString() + pole3.indexOf(int1));
+
+    }
+
+    private static void testSubList() {
+        System.out.println("testSubList -----------------------------------------------------------------------------");
+
+        MyArrayList pole1 = new MyArrayList();
+        naplnitPoleArrayList(pole1, 10);
+
+        List pole2 = new ArrayList<>();
+        naplnitPoleArrayList(pole2, 10);
+
+        MyArrayPetr pole3 = new MyArrayPetr();
+        naplnitPoleArrayList(pole3, 10);
 
         // Zkouška objektu subList
-        MyList pole3 = pole1.subList(2,6);
-        List pole4 = pole2.subList(2,6);
+        MyList pole11 = pole1.subList(2, 6);
+        List pole22 = pole2.subList(2, 6);
+        MyList pole33 = pole3.subList(2, 6);
 
         System.out.println(pole1.toString());
+        System.out.println(pole2.toString());
         System.out.println(pole3.toString());
 
-        System.out.println(pole2.toString());
-        System.out.println(pole4.toString());
+        System.out.println(pole11.toString());
+        System.out.println(pole22.toString());
+        System.out.println(pole33.toString());
 
     }
 
 
-    private static void testConstructorWithArray(){
+    private static void testConstructorWithArray() {
         // Zkouška konstruktoru s polem
-        System.out.println( "testConstructorWithArray ----------------------------------------------------------------");
+        System.out.println("testConstructorWithArray ----------------------------------------------------------------");
 
-        Integer[] pi1 = {10,20,30,40,50,60,70,80,90};
-        MyList pole = new MyArrayList(pi1);
+        Integer[] pi1 = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+        MyList pole1 = new MyArrayList(pi1);
+        //List pole2 = new ArrayList(pi1);
+        MyList pole3 = new MyArrayPetr(pi1);
 
         System.out.println(Arrays.toString(pi1));
-        System.out.println(pole.toString());
+        System.out.println(pole1.toString());
+        //System.out.println(pole2.toString());
+        System.out.println(pole3.toString());
     }
 
-    private static void testAddAll(){
+    private static void testAddAll() {
         // Zkouška konstruktoru s polem
 
-        System.out.println( "testAddAll ------------------------------------------------------------------------------");
+        System.out.println("testAddAll ------------------------------------------------------------------------------");
 
         List<Integer> p1 = Arrays.asList(10, 20, 30, 40, 50);
         List<Integer> p2 = Arrays.asList(60, 70, 80, 90, 100, 110, 120);
+        List<Integer> p3 = Arrays.asList(130, 140, 150, 160);
+//-------
 
-        MyList pole = new MyArrayList();
-        pole.addAll(p1);
-        System.out.println(pole.toString());
-        pole.addAll(p2);
-        System.out.println(pole.toString());
-        pole.addAll(p2);
+        MyList pole1 = new MyArrayList();
+        pole1.addAll(p1);
+        System.out.println(pole1.toString());
+        pole1.addAll(p2);
+        System.out.println(pole1.toString());
+        pole1.addAll(p3);
+        System.out.println(pole1.toString() + " - " + pole1.size());
 
-        System.out.println(pole.toString() + " - " + pole.size())  ;
-
-        int i = pole.size();
-        while (pole.size() > 0) {
+        int i = pole1.size();
+        while (pole1.size() > 0) {
             i--;
-            pole.remove(i);
-            System.out.println(pole.toString() + " - " + pole.size())  ;
+            pole1.remove(i);
+            System.out.println(pole1.toString() + " - " + pole1.size());
+        }
+//-------
+
+        List pole2 = new ArrayList();
+        pole2.addAll(p1);
+        System.out.println(pole2.toString());
+        pole2.addAll(p2);
+        System.out.println(pole2.toString());
+        pole2.addAll(p3);
+        System.out.println(pole2.toString() + " - " + pole2.size());
+
+        i = pole2.size();
+        while (pole2.size() > 0) {
+            i--;
+            pole2.remove(i);
+            System.out.println(pole2.toString() + " - " + pole2.size());
+        }
+//-------
+        MyArrayPetr pole3 = new MyArrayPetr();
+        pole3.addAll(p1);
+        System.out.println(pole3.toString());
+        pole3.addAll(p2);
+        System.out.println(pole3.toString());
+        pole3.addAll(p3);
+        System.out.println(pole3.toString() + " - " + pole3.size());
+
+        i = pole3.size();
+        while (pole3.size() > 0) {
+            i--;
+            pole3.remove(i);
+            System.out.println(pole3.toString() + " - " + pole3.size());
         }
 
     }
 
-    private static void testAdd(){
+    private static void testAdd() {
 
-        System.out.println( "testAdd ---------------------------------------------------------------------------------");
+        System.out.println("testAdd ---------------------------------------------------------------------------------");
 
-        MyList pole1 = new MyArrayListEx();
+        MyArrayPetr pole1 = new MyArrayPetr();
         for (int i = 0; i < 10; i++) {
             pole1.add(i);
         }
@@ -208,14 +356,11 @@ public class App {
         pole2.add(1);
 
 
-
-        System.out.println(pole1.toString());
         System.out.println(pole3.toString());
         System.out.println(pole2.toString());
+        System.out.println(pole1.toString());
 
     }
-
-
 
 
 }
