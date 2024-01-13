@@ -1,0 +1,587 @@
+
+	Počet= 20;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+	Počet= 20;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+Letadlo společnosti Wizz Air, let WIZ-3793 na pravidelné lince 'Barcelona - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu WIZ-3793 pokračujte v kurzu 133 na okruh.
+Nákladní letadlo Airbus A350-900 Wizz Air společnosti WIZ-3793, let s obsahem
+'ocelové konstrukce' na palubě je navedeno na okruh
+
+	Počet= 19;Vstup= 1, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+Letadlo společnosti British Airways, let BA-9878 na pravidelné lince 'Barcelona - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu BA-9878 pokračujte v kurzu 187 na okruh.
+Dopravní letadlo Airbus A380 společnosti British Airways, let BA-9878
+s 481 cestujícími na palubě je navedeno na okruh.
+
+Letadlo společnosti Ryan Air, let RYR-7889 na pravidelné lince 'Praha - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu RYR-7889 pokračujte v kurzu 097 na okruh.
+Dopravní letadlo Boeing 777-300ER společnosti Ryan Air, let RYR-7889
+s 478 cestujícími na palubě je navedeno na okruh.
+
+	Počet= 17;Vstup= 3, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+	WIZ-3793 pokračujte po okruhu.
+
+	BA-9878 pokračujte po okruhu.
+
+	Počet= 17;Vstup= 1, na okruhu= 2, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+	Mošnov Airport k letu WIZ-3793. Proveďte přistání na ranveji 03A.
+	Vítr severní, 6 m/s
+		* WIZ-3793. přistál za normálních podmínek.
+		* Airbus A350-900 výrobce Airbus Commercial Aircraft SN:Airbus A350-900[00000607920634]
+		* Dolet: 15000 km. Palivo: 'Jet A-1'. Cestovní rychlost: 903 km/h
+	WIZ-3793. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	RYR-7889 pokračujte po okruhu.
+
+Letadlo společnosti Wizz Air, let WIZ-3317 na pravidelné lince 'Kyjev - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu WIZ-3317 pokračujte v kurzu 251 na okruh.
+Nákladní letadlo Boeing 777ER Wizz Air společnosti WIZ-3317, let s obsahem
+'potraviny' na palubě je navedeno na okruh
+
+Letadlo společnosti Wizz Air, let WIZ-4357 na pravidelné lince 'Paříž - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu WIZ-4357 pokračujte v kurzu 312 na okruh.
+Nákladní letadlo Airbus A300 Wizz Air společnosti WIZ-4357, let s obsahem
+'ocelové konstrukce' na palubě je navedeno na okruh
+
+Letadlo společnosti Ryan Air, let RYR-9165 na pravidelné lince 'Barcelona - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu RYR-9165 pokračujte v kurzu 307 na okruh.
+Dopravní letadlo Airbus A380 společnosti Ryan Air, let RYR-9165
+s 493 cestujícími na palubě je navedeno na okruh.
+
+	Počet= 14;Vstup= 3, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+Probíhá vykládka zboží letu WIZ-3793.(Wizz Air)
+
+	Mošnov Airport k letu BA-9878. Proveďte přistání na ranveji 03A.
+	Vítr jižní, 4 m/s
+		* BA-9878. přistál za normálních podmínek.
+		* Airbus A380 výrobce Airbus Commercial Aircraft SN:Airbus A380[00000305480184]
+		* Dolet: 15200 km. Palivo: 'Jet A-1'. Cestovní rychlost: 945 km/h
+	BA-9878. Vítejte v Ostravě. Pojíždějte na stojánek 05.
+
+	WIZ-3317 pokračujte po okruhu.
+
+	Počet= 14;Vstup= 2, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+	WIZ-3793 byla přidělená identifikace 'WIZ-1405'. Váš nový cíl je 'Vídeň'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu BA-9878.
+
+	Mošnov Airport k letu RYR-7889. Proveďte přistání na ranveji 03A.
+	Vítr jižní, 6 m/s
+		* RYR-7889. přistál za normálních podmínek.
+		* Boeing 777-300ER výrobce The Boeing Company SN:Boeing 777-300ER[00000821071680]
+		* Dolet: 13600 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	RYR-7889. Vítejte v Ostravě. Pojíždějte na stojánek 05.
+
+	Počet= 14;Vstup= 2, na okruhu= 1, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 0
+---------------------------------------------------------------------------------------------
+	Let WIZ-1405. 'Ostrava - Vídeň'. Povolení k odletu z ranveje 03.
+
+	BA-9878 byla přidělená identifikace 'BA-0158'. Váš nový cíl je 'Londýn'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu RYR-7889.
+
+	Mošnov Airport k letu WIZ-3317. Proveďte přistání na ranveji 03A.
+	Vítr jižní, 3 m/s
+		* WIZ-3317. přistál za normálních podmínek.
+		* Boeing 777ER výrobce The Boeing Company SN:Boeing 777ER[00000417947374]
+		* Dolet: 13600 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	WIZ-3317. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	WIZ-4357 pokračujte po okruhu.
+
+	RYR-9165 pokračujte po okruhu.
+
+Letadlo společnosti KLM, let KLM-5383 na pravidelné lince 'Paříž - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu KLM-5383 pokračujte v kurzu 298 na okruh.
+Nákladní letadlo Airbus A350-900 KLM společnosti KLM-5383, let s obsahem
+'textil' na palubě je navedeno na okruh
+
+	Počet= 13;Vstup= 1, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	WIZ-1405. Pokračujte v kurzu 321.
+	Přepněte na kanál 31. Pokračujte na kurzu 142.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let BA-0158. 'Ostrava - Londýn'. Povolení k odletu z ranveje 03.
+
+	RYR-7889 byla přidělená identifikace 'RYR-5230'. Váš nový cíl je 'Vídeň'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu WIZ-3317.(Wizz Air)
+
+	Mošnov Airport k letu WIZ-4357. Proveďte přistání na ranveji 03A.
+	Vítr západní, 2 m/s
+		* WIZ-4357. přistál za normálních podmínek.
+		* Airbus A300 výrobce Airbus Commercial Aircraft SN:Airbus A300[00000221428158]
+		* Dolet: 11000 km. Palivo: 'Jet A-1'. Cestovní rychlost: 960 km/h
+	WIZ-4357. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	KLM-5383 pokračujte po okruhu.
+
+Letadlo společnosti British Airways, let BA-0956 na pravidelné lince 'Vídeň - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu BA-0956 pokračujte v kurzu 001 na okruh.
+Dopravní letadlo Airbus A380 společnosti British Airways, let BA-0956
+s 475 cestujícími na palubě je navedeno na okruh.
+
+	Počet= 12;Vstup= 1, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	BA-0158. Pokračujte v kurzu 156.
+	Přepněte na kanál 23. Pokračujte na kurzu 260.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let RYR-5230. 'Ostrava - Vídeň'. Povolení k odletu z ranveje 03.
+
+	WIZ-3317 byla přidělená identifikace 'WIZ-3628'. Váš nový cíl je 'Hurghada'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu WIZ-4357.(Wizz Air)
+
+	Mošnov Airport k letu RYR-9165. Proveďte přistání na ranveji 03A.
+	Vítr severní, 3 m/s
+		* RYR-9165. přistál za normálních podmínek.
+		* Airbus A380 výrobce Airbus Commercial Aircraft SN:Airbus A380[00000465323067]
+		* Dolet: 15200 km. Palivo: 'Jet A-1'. Cestovní rychlost: 945 km/h
+	RYR-9165. Vítejte v Ostravě. Pojíždějte na stojánek 04.
+
+	BA-0956 pokračujte po okruhu.
+
+Letadlo společnosti KLM, let KLM-2113 na pravidelné lince 'Budapešť - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu KLM-2113 pokračujte v kurzu 176 na okruh.
+Nákladní letadlo Airbus A350-900 KLM společnosti KLM-2113, let s obsahem
+'textil' na palubě je navedeno na okruh
+
+Letadlo společnosti Lufthansa, let LUF-6113 na pravidelné lince 'Vídeň - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu LUF-6113 pokračujte v kurzu 264 na okruh.
+Dopravní letadlo Boeing 777-200 společnosti Lufthansa, let LUF-6113
+s 302 cestujícími na palubě je navedeno na okruh.
+
+Letadlo společnosti Vueling, let VUL-5942 na pravidelné lince 'Budapešť - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-5942 pokračujte v kurzu 107 na okruh.
+Dopravní letadlo Airbus A300 společnosti Vueling, let VUL-5942
+s 214 cestujícími na palubě je navedeno na okruh.
+
+	Počet= 9;Vstup= 3, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	RYR-5230. Pokračujte v kurzu 153.
+	Přepněte na kanál 80. Pokračujte na kurzu 129.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let WIZ-3628. 'Ostrava - Hurghada'. Povolení k odletu z ranveje 03.
+
+	WIZ-4357 byla přidělená identifikace 'WIZ-3584'. Váš nový cíl je 'Dubaj'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu RYR-9165.
+
+	Mošnov Airport k letu KLM-5383. Proveďte přistání na ranveji 03A.
+	Vítr jižní, 2 m/s
+		* KLM-5383. přistál za normálních podmínek.
+		* Airbus A350-900 výrobce Airbus Commercial Aircraft SN:Airbus A350-900[00000261155049]
+		* Dolet: 15000 km. Palivo: 'Jet A-1'. Cestovní rychlost: 903 km/h
+	KLM-5383. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	KLM-2113 pokračujte po okruhu.
+
+	LUF-6113 pokračujte po okruhu.
+
+Letadlo společnosti Vueling, let VUL-7618 na pravidelné lince 'Milan - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-7618 pokračujte v kurzu 282 na okruh.
+Nákladní letadlo Boeing 747-400 Large Cargo Freighter (LCF) Vueling společnosti VUL-7618, let s obsahem
+'ocelové konstrukce' na palubě je navedeno na okruh
+
+	Počet= 8;Vstup= 2, na okruhu= 3, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	WIZ-3628. Pokračujte v kurzu 281.
+	Přepněte na kanál 41. Pokračujte na kurzu 359.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let WIZ-3584. 'Ostrava - Dubaj'. Povolení k odletu z ranveje 03.
+
+	RYR-9165 byla přidělená identifikace 'RYR-8132'. Váš nový cíl je 'Hurghada'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu KLM-5383.(KLM)
+
+	Mošnov Airport k letu BA-0956. Proveďte přistání na ranveji 03A.
+	Vítr západní, 6 m/s
+		* BA-0956. přistál za normálních podmínek.
+		* Airbus A380 výrobce Airbus Commercial Aircraft SN:Airbus A380[00000453997511]
+		* Dolet: 15200 km. Palivo: 'Jet A-1'. Cestovní rychlost: 945 km/h
+	BA-0956. Vítejte v Ostravě. Pojíždějte na stojánek 04.
+
+	Počet= 8;Vstup= 2, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	WIZ-3584. Pokračujte v kurzu 233.
+	Přepněte na kanál 89. Pokračujte na kurzu 186.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let RYR-8132. 'Ostrava - Hurghada'. Povolení k odletu z ranveje 03.
+
+	KLM-5383 byla přidělená identifikace 'KLM-9554'. Váš nový cíl je 'Praha'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu BA-0956.
+
+	Mošnov Airport k letu KLM-2113. Proveďte přistání na ranveji 03A.
+	Vítr severní, 4 m/s
+		* KLM-2113. přistál za normálních podmínek.
+		* Airbus A350-900 výrobce Airbus Commercial Aircraft SN:Airbus A350-900[00000802399261]
+		* Dolet: 15000 km. Palivo: 'Jet A-1'. Cestovní rychlost: 903 km/h
+	KLM-2113. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	Počet= 8;Vstup= 2, na okruhu= 1, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	RYR-8132. Pokračujte v kurzu 221.
+	Přepněte na kanál 91. Pokračujte na kurzu 003.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let KLM-9554. 'Ostrava - Praha'. Povolení k odletu z ranveje 03.
+
+	BA-0956 byla přidělená identifikace 'BA-2617'. Váš nový cíl je 'Londýn'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu KLM-2113.(KLM)
+
+	Mošnov Airport k letu LUF-6113. Proveďte přistání na ranveji 03A.
+	Vítr severní, 6 m/s
+		* LUF-6113. přistál za normálních podmínek.
+		* Boeing 777-200 výrobce The Boeing Company SN:Boeing 777-200[00000885122322]
+		* Dolet: 9700 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	LUF-6113. Vítejte v Ostravě. Pojíždějte na stojánek 05.
+
+	Počet= 8;Vstup= 2, na okruhu= 0, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	KLM-9554. Pokračujte v kurzu 344.
+	Přepněte na kanál 63. Pokračujte na kurzu 327.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let BA-2617. 'Ostrava - Londýn'. Povolení k odletu z ranveje 03.
+
+	KLM-2113 byla přidělená identifikace 'KLM-6786'. Váš nový cíl je 'Paříž'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu LUF-6113.
+
+	Počet= 8;Vstup= 2, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	BA-2617. Pokračujte v kurzu 145.
+	Přepněte na kanál 81. Pokračujte na kurzu 355.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let KLM-6786. 'Ostrava - Paříž'. Povolení k odletu z ranveje 03.
+
+	LUF-6113 byla přidělená identifikace 'LUF-7548'. Váš nový cíl je 'Praha'. Vyčkejte povolení rolovat.
+
+	Počet= 8;Vstup= 2, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	KLM-6786. Pokračujte v kurzu 013.
+	Přepněte na kanál 23. Pokračujte na kurzu 117.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let LUF-7548. 'Ostrava - Praha'. Povolení k odletu z ranveje 03.
+
+	Počet= 8;Vstup= 2, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 1
+---------------------------------------------------------------------------------------------
+	LUF-7548. Pokračujte v kurzu 004.
+	Přepněte na kanál 14. Pokračujte na kurzu 218.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	VUL-5942 pokračujte po okruhu.
+
+Letadlo společnosti Vueling, let VUL-1586 na pravidelné lince 'Kyjev - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-1586 pokračujte v kurzu 185 na okruh.
+Nákladní letadlo Airbus A300 Vueling společnosti VUL-1586, let s obsahem
+'textil' na palubě je navedeno na okruh
+
+	Počet= 7;Vstup= 2, na okruhu= 1, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+	Mošnov Airport k letu VUL-5942. Proveďte přistání na ranveji 03A.
+	Vítr východní, 6 m/s
+		* VUL-5942. přistál za normálních podmínek.
+		* Airbus A300 výrobce Airbus Commercial Aircraft SN:Airbus A300[00000277502537]
+		* Dolet: 9800 km. Palivo: 'Jet A-1'. Cestovní rychlost: 960 km/h
+	VUL-5942. Vítejte v Ostravě. Pojíždějte na stojánek 06.
+
+	VUL-7618 pokračujte po okruhu.
+
+	VUL-1586 pokračujte po okruhu.
+
+Letadlo společnosti Vueling, let VUL-5464 na pravidelné lince 'Dubaj - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-5464 pokračujte v kurzu 081 na okruh.
+Nákladní letadlo Boeing 777 Vueling společnosti VUL-5464, let s obsahem
+'potraviny' na palubě je navedeno na okruh
+
+Letadlo společnosti Vueling, let VUL-6702 na pravidelné lince 'Budapešť - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-6702 pokračujte v kurzu 309 na okruh.
+Nákladní letadlo Airbus A300-600ST Beluga XL Vueling společnosti VUL-6702, let s obsahem
+'ocelové konstrukce' na palubě je navedeno na okruh
+
+	Počet= 5;Vstup= 2, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+Probíhá odbavení cestujících letu VUL-5942.
+
+	Mošnov Airport k letu VUL-7618. Proveďte přistání na ranveji 03A.
+	Vítr východní, 6 m/s
+		* VUL-7618. přistál za normálních podmínek.
+		* Boeing 747-400 Large Cargo Freighter (LCF) výrobce The Boeing Company SN:Boeing 747-400 Large Cargo Freighter (LCF)[00000271874836]
+		* Dolet: 13600 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	VUL-7618. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	VUL-5464 pokračujte po okruhu.
+
+Letadlo společnosti Vueling, let VUL-4089 na pravidelné lince 'Kyjev - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-4089 pokračujte v kurzu 143 na okruh.
+Dopravní letadlo Boeing 777-200 společnosti Vueling, let VUL-4089
+s 310 cestujícími na palubě je navedeno na okruh.
+
+	Počet= 4;Vstup= 2, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
+	VUL-5942 byla přidělená identifikace 'VUL-8307'. Váš nový cíl je 'Hurghada'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu VUL-7618.(Vueling)
+
+	Mošnov Airport k letu VUL-1586. Proveďte přistání na ranveji 03A.
+	Vítr východní, 2 m/s
+		* VUL-1586. přistál za normálních podmínek.
+		* Airbus A300 výrobce Airbus Commercial Aircraft SN:Airbus A300[00000197876026]
+		* Dolet: 11000 km. Palivo: 'Jet A-1'. Cestovní rychlost: 960 km/h
+	VUL-1586. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	VUL-6702 pokračujte po okruhu.
+
+	VUL-4089 pokračujte po okruhu.
+
+Letadlo společnosti British Airways, let BA-2772 na pravidelné lince 'Brno - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu BA-2772 pokračujte v kurzu 353 na okruh.
+Dopravní letadlo Airbus A300 společnosti British Airways, let BA-2772
+s 202 cestujícími na palubě je navedeno na okruh.
+
+Letadlo společnosti Ryan Air, let RYR-3295 na pravidelné lince 'Budapešť - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu RYR-3295 pokračujte v kurzu 046 na okruh.
+Nákladní letadlo Boeing 777 Ryan Air společnosti RYR-3295, let s obsahem
+'potraviny' na palubě je navedeno na okruh
+
+Letadlo společnosti Vueling, let VUL-8059 na pravidelné lince 'Madrid - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu VUL-8059 pokračujte v kurzu 019 na okruh.
+Nákladní letadlo Boeing 777 Vueling společnosti VUL-8059, let s obsahem
+'textil' na palubě je navedeno na okruh
+
+	Počet= 1;Vstup= 3, na okruhu= 3, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 0
+---------------------------------------------------------------------------------------------
+	Let VUL-8307. 'Ostrava - Hurghada'. Povolení k odletu z ranveje 03.
+
+	VUL-7618 byla přidělená identifikace 'VUL-7488'. Váš nový cíl je 'Vídeň'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu VUL-1586.(Vueling)
+
+	Mošnov Airport k letu VUL-5464. Proveďte přistání na ranveji 03A.
+	Vítr severní, 2 m/s
+		* VUL-5464. přistál za normálních podmínek.
+		* Boeing 777 výrobce The Boeing Company SN:Boeing 777[00000409505258]
+		* Dolet: 9700 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	VUL-5464. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	BA-2772 pokračujte po okruhu.
+
+	Počet= 1;Vstup= 2, na okruhu= 3, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-8307. Pokračujte v kurzu 116.
+	Přepněte na kanál 49. Pokračujte na kurzu 138.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let VUL-7488. 'Ostrava - Vídeň'. Povolení k odletu z ranveje 03.
+
+	VUL-1586 byla přidělená identifikace 'VUL-3738'. Váš nový cíl je 'Vídeň'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu VUL-5464.(Vueling)
+
+	Mošnov Airport k letu VUL-6702. Proveďte přistání na ranveji 03A.
+	Vítr jižní, 4 m/s
+		* VUL-6702. přistál za normálních podmínek.
+		* Airbus A300-600ST Beluga XL výrobce Airbus Commercial Aircraft SN:Airbus A300-600ST Beluga XL[00000317068401]
+		* Dolet: 4260 km. Palivo: 'Jet A-1'. Cestovní rychlost: 737 km/h
+	VUL-6702. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	RYR-3295 pokračujte po okruhu.
+
+Letadlo společnosti Wizz Air, let WIZ-9655 na pravidelné lince 'Paříž - Ostrava',
+vstoupilo do vzdušného prostoru letiště Ostrava Mošnov.
+	Řízení letového provozu Ostrava Mošnov
+	Letu WIZ-9655 pokračujte v kurzu 351 na okruh.
+Dopravní letadlo Boeing 777-200 společnosti Wizz Air, let WIZ-9655
+s 250 cestujícími na palubě je navedeno na okruh.
+
+	Počet= 0;Vstup= 2, na okruhu= 3, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-7488. Pokračujte v kurzu 208.
+	Přepněte na kanál 20. Pokračujte na kurzu 308.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let VUL-3738. 'Ostrava - Vídeň'. Povolení k odletu z ranveje 03.
+
+	VUL-5464 byla přidělená identifikace 'VUL-5992'. Váš nový cíl je 'Milan'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu VUL-6702.(Vueling)
+
+	Mošnov Airport k letu VUL-4089. Proveďte přistání na ranveji 03A.
+	Vítr východní, 2 m/s
+		* VUL-4089. přistál za normálních podmínek.
+		* Boeing 777-200 výrobce The Boeing Company SN:Boeing 777-200[00000224135920]
+		* Dolet: 9700 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	VUL-4089. Vítejte v Ostravě. Pojíždějte na stojánek 03.
+
+	VUL-8059 pokračujte po okruhu.
+
+	WIZ-9655 pokračujte po okruhu.
+
+	Počet= 0;Vstup= 0, na okruhu= 4, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-3738. Pokračujte v kurzu 345.
+	Přepněte na kanál 33. Pokračujte na kurzu 046.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let VUL-5992. 'Ostrava - Milan'. Povolení k odletu z ranveje 03.
+
+	VUL-6702 byla přidělená identifikace 'VUL-9784'. Váš nový cíl je 'Dubaj'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu VUL-4089.
+
+	Mošnov Airport k letu BA-2772. Proveďte přistání na ranveji 03A.
+	Vítr jižní, 2 m/s
+		* BA-2772. přistál za normálních podmínek.
+		* Airbus A300 výrobce Airbus Commercial Aircraft SN:Airbus A300[00000844022299]
+		* Dolet: 9800 km. Palivo: 'Jet A-1'. Cestovní rychlost: 960 km/h
+	BA-2772. Vítejte v Ostravě. Pojíždějte na stojánek 04.
+
+	Počet= 0;Vstup= 0, na okruhu= 3, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-5992. Pokračujte v kurzu 105.
+	Přepněte na kanál 84. Pokračujte na kurzu 106.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let VUL-9784. 'Ostrava - Dubaj'. Povolení k odletu z ranveje 03.
+
+	VUL-4089 byla přidělená identifikace 'VUL-2994'. Váš nový cíl je 'Dubaj'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu BA-2772.
+
+	Mošnov Airport k letu RYR-3295. Proveďte přistání na ranveji 03A.
+	Vítr západní, 4 m/s
+		* RYR-3295. přistál za normálních podmínek.
+		* Boeing 777 výrobce The Boeing Company SN:Boeing 777[00000785567808]
+		* Dolet: 9700 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	RYR-3295. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	Počet= 0;Vstup= 0, na okruhu= 2, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-9784. Pokračujte v kurzu 312.
+	Přepněte na kanál 84. Pokračujte na kurzu 103.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let VUL-2994. 'Ostrava - Dubaj'. Povolení k odletu z ranveje 03.
+
+	BA-2772 byla přidělená identifikace 'BA-4122'. Váš nový cíl je 'Hurghada'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu RYR-3295.(Ryan Air)
+
+	Mošnov Airport k letu VUL-8059. Proveďte přistání na ranveji 03A.
+	Vítr západní, 5 m/s
+		* VUL-8059. přistál za normálních podmínek.
+		* Boeing 777 výrobce The Boeing Company SN:Boeing 777[00000833242031]
+		* Dolet: 9700 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	VUL-8059. Vítejte v Ostravě. Pojíždějte na rampu A-sever.
+
+	Počet= 0;Vstup= 0, na okruhu= 1, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-2994. Pokračujte v kurzu 146.
+	Přepněte na kanál 73. Pokračujte na kurzu 195.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let BA-4122. 'Ostrava - Hurghada'. Povolení k odletu z ranveje 03.
+
+	RYR-3295 byla přidělená identifikace 'RYR-2913'. Váš nový cíl je 'Madrid'. Vyčkejte povolení rolovat.
+
+Probíhá vykládka zboží letu VUL-8059.(Vueling)
+
+	Mošnov Airport k letu WIZ-9655. Proveďte přistání na ranveji 03A.
+	Vítr severní, 3 m/s
+		* WIZ-9655. přistál za normálních podmínek.
+		* Boeing 777-200 výrobce The Boeing Company SN:Boeing 777-200[00000749743303]
+		* Dolet: 9700 km. Palivo: 'Jet A-1'. Cestovní rychlost: 892 km/h
+	WIZ-9655. Vítejte v Ostravě. Pojíždějte na stojánek 02.
+
+	Počet= 0;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 1, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	BA-4122. Pokračujte v kurzu 196.
+	Přepněte na kanál 85. Pokračujte na kurzu 299.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let RYR-2913. 'Ostrava - Madrid'. Povolení k odletu z ranveje 03.
+
+	VUL-8059 byla přidělená identifikace 'VUL-1661'. Váš nový cíl je 'Barcelona'. Vyčkejte povolení rolovat.
+
+Probíhá odbavení cestujících letu WIZ-9655.
+
+	Počet= 0;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 1, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	RYR-2913. Pokračujte v kurzu 172.
+	Přepněte na kanál 70. Pokračujte na kurzu 207.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let VUL-1661. 'Ostrava - Barcelona'. Povolení k odletu z ranveje 03.
+
+	WIZ-9655 byla přidělená identifikace 'WIZ-2494'. Váš nový cíl je 'Kyjev'. Vyčkejte povolení rolovat.
+
+	Počet= 0;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 1, výstup= 1
+---------------------------------------------------------------------------------------------
+	VUL-1661. Pokračujte v kurzu 248.
+	Přepněte na kanál 19. Pokračujte na kurzu 270.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Let WIZ-2494. 'Ostrava - Kyjev'. Povolení k odletu z ranveje 03.
+
+	Počet= 0;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 1
+---------------------------------------------------------------------------------------------
+	WIZ-2494. Pokračujte v kurzu 145.
+	Přepněte na kanál 49. Pokračujte na kurzu 212.
+	Řízení letového provozu Ostrava se loučí. Mějte dobrý let.
+
+	Počet= 0;Vstup= 0, na okruhu= 0, přistání= 0, odbavení= 0, cekani= 0, odlet= 0, výstup= 0
+---------------------------------------------------------------------------------------------
