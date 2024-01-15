@@ -97,6 +97,18 @@
 <!--        </configuration>-->
       </plugin>
     </plugins>
+
+
+    <!--    Přidal Roman Slíva !!!-->
+    <resources>
+      <resource>
+        <directory>src/main/resources/</directory>
+      </resource>
+    </resources>
+    <!--    Přidal Roman Slíva !!!-->
+
+
+
   </build>
 
 

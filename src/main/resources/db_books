@@ -1,0 +1,874 @@
+Titul|Autor|Počet stran|Cena CZK|ISBN|EAN|Vazba|Hlavní obor|Nakladatel|Zisk
+STRING|STRING|INTEGER|INTEGER|STRING|STRING|STRING|STRING|STRING|INTEGER
+-|-|-|PRICE|-|-|-|-|-|PROFIT
+Něžná náruč rodičů|Kiedroňová Eva|304|499|80-247-1210-5|8024712105|Pevná šitá vazba|Rady pro rodiče|Grada|50
+Krásná a zdravá pleť|Hammelmann Iris|98|159|80-247-1510-4|8024715104|Brožovaná vazba|Zdraví a životní styl|Grada|50
+Koně a poníci|Kolektiv autorů|32|179|859-404-924-057-9|8594049240579|Vazba se skobkami|Čtení s poučením|Bambook|50
+Pejsci a štěňátka|Kolektiv autorů|32|179|859-404-924-058-6|8594049240586|Vazba se skobkami|Čtení s poučením|Bambook|50
+Superstroje|Kolektiv autorů|32|179|859-404-924-059-3|8594049240593|Vazba se skobkami|Čtení s poučením|Bambook|50
+Kočičky a koťátka|Kolektiv autorů|32|179|859-404-924-060-9|8594049240609|Vazba se skobkami|Čtení s poučením|Bambook|50
+Opráski 2023|jaz|24|259|859-404-924-124-8|8594049241248|Vazba se skobkami|Humor, satira|Grada|50
+WOMAN 2024|Zika Adolf|13|399|859-404-924-127-9|8594049241279|Spirálová vazba|Umění a kultura|Grada|50
+Se Stim Smiř!|jaz|1|649|859-404-924-174-3|8594049241743|Pevná šitá vazba|Humor, satira|Grada|50
+Vojenská letadla||128|349|859-404-924-195-8|8594049241958|Šitá vazba|Militaria|Grada|50
+Opráski 2024 - kalendář|jaz|24|299|859-404-924-202-3|8594049242023|Vazba se skobkami|Komiksy|Grada|50
+Fifty Shades of Light|Zika Adolf|140|599|978-80-11-02345-4|9788011023454|Pevná šitá vazba|Umění a kultura|Grada|50
+Tesařské spoje|Gerner Manfred|220|345|978-80-247-0076-2|9788024700762|Šitá vazba|Stavebnictví|Grada|50
+Angličtina pro lékaře|Parkinson Joy|416|539|978-80-247-0289-6|9788024702896|Šitá vazba|Jazyky, komunikace, etika|Grada|50
+Komunikace a prezentace|Plamínek Jiří|208|359|978-80-247-0432-6|9788024704326|Brožovaná vazba|Komunikace|Grada|50
+Kompenzační cvičení|Bursová Marta|196|199|978-80-247-0948-2|9788024709482|Brožovaná vazba|Fitness a kondice|Grada|50
+Srdce a Hlava|Singhal Nishi|32|339|978-80-247-0950-5|9788024709505|Pevná šitá vazba|Dětská literatura|Alferia|50
+Logopedie|Klenková Jiřina|228|329|978-80-247-1110-2|9788024711102|Brožovaná vazba|Logopedie|Grada|50
+Putování vesmírem|Schauerová Aneta|120|329|978-80-247-1161-4|9788024711614|Pevná šitá vazba|Osobní rozvoj a poznání|Alferia|50
+Naučte se investovat|Gladiš Daniel|176|219|978-80-247-1205-5|9788024712055|Brožovaná vazba|Finanční trhy a instituce|Grada|50
+Udírny a uzení|Binder Egon|112|179|978-80-247-1261-1|9788024712611|Brožovaná vazba|Kuchařky|Grada|50
+Pascal|Putz Karel|264|249|978-80-247-1266-6|9788024712666|Brožovaná vazba|Programování|Grada|50
+Člověk a čas|Pacovský Petr|264|399|978-80-247-1701-2|9788024717012|Pevná šitá vazba|Úspěch a motivace|Grada|50
+Zakázaná rétorika|Beck Gloria|272|399|978-80-247-1743-2|9788024717432|Pevná šitá vazba|Slovní sebeobrana, manipulace|Grada|50
+Udírny|Vlk Václav|112|219|978-80-247-1828-6|9788024718286|Šitá vazba|Hobby|Grada|50
+Excel 2019|Navarrů Miroslav|264|349|978-80-247-2026-5|9788024720265|Brožovaná vazba|Kancelářské programy|Grada|50
+Krok za krokem 1. třídou|Kreislová Zdenka|168|259|978-80-247-2038-8|9788024720388|Brožovaná vazba|Pedagogika|Grada|50
+Anesteziologie|Larsen Reinhard|1240|3499|978-80-247-2217-7|9788024722177|Pevná šitá vazba|Anesteziologie, resuscitace, emergency|Grada|50
+Cviky na vaši bolest|Ramík Kamil|96|199|978-80-247-2391-4|9788024723914|Brožovaná vazba|Zdraví a životní styl|Grada|50
+Kincugi|Santini Céline|248|399|978-80-247-2503-1|9788024725031|Šitá vazba|Harmonie těla a duše|Alferia|50
+Tělové svíce|Ježek Michal|136|269|978-80-247-2579-6|9788024725796|Brožovaná vazba|Alternativní léčení|Alferia|50
+Auta východního bloku|Tuček Jan|292|599|978-80-247-2585-7|9788024725857|Pevná šitá vazba|Automobily|Grada|50
+Beze svědků|Jewellová Lisa|288|339|978-80-247-2730-1|9788024727301|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Úspěšná prezentace|Ledden Emma|176|269|978-80-247-2912-1|9788024729121|Brožovaná vazba|Prezentace|Grada|50
+Ekopanenky do domečků|Jarošová Tereza|80|199|978-80-247-2927-5|9788024729275|Šitá vazba|Výtvarné techniky|Grada|50
+Jak jsem potkala Brusel|Farná Kateřina|360|369|978-80-247-2935-0|9788024729350|Flexi vazba|Literatura faktu|Grada|50
+Architektura|Šefců Ondřej|256|479|978-80-247-3120-9|9788024731209|Pevná šitá vazba|Architektura|Grada|50
+Psychologie osobnosti|Říčan Pavel|208|379|978-80-247-3133-9|9788024731339|Brožovaná vazba|Psychologie odborná|Grada|50
+Velká kniha drátenictví|Jurovatý Ladislav|184|399|978-80-247-3188-9|9788024731889|Pevná šitá vazba|Řemesla|Grada|50
+Paličkování|Domanjová Ivana|112|299|978-80-247-3229-9|9788024732299|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Funkční anatomie|Dylevský Ivan|544|849|978-80-247-3240-4|9788024732404|Pevná šitá vazba|Teoretické obory|Grada|50
+Moderní dřevostavba|Růžička Martin|160|329|978-80-247-3298-5|9788024732985|Brožovaná vazba|Stavebnictví|Grada|50
+Prázdné domy|Kočí Radomír|240|499|978-80-247-3328-9|9788024733289|Pevná šitá vazba|Architektura|Grada|50
+Robinson Crusoe|Defoe Daniel|72|159|978-80-247-3385-2|9788024733852|Lepená vazba|Komiksy|Bambook|50
+20 000 mil pod mořem|Verne Jules|72|199|978-80-247-3388-3|9788024733883|Lepená vazba|Komiksy|Bambook|50
+Cesta do středu Země|Verne Jules|72|159|978-80-247-3389-0|9788024733890|Lepená vazba|Komiksy|Bambook|50
+Moderní didaktika|Čapek Robert|624|799|978-80-247-3450-7|9788024734507|Šitá vazba|Didaktika|Grada|50
+Pěstujeme révu vinnou|Kraus Vilém|128|189|978-80-247-3465-1|9788024734651|Brožovaná vazba|Zahradní rostliny|Grada|50
+Velikonoční tvoření|Šporková Sylva|64|199|978-80-247-3477-4|9788024734774|Šitá vazba|Výtvarné techniky|Grada|50
+Výroba vína u malovinařů|Pavloušek Pavel|128|189|978-80-247-3487-3|9788024734873|Brožovaná vazba|Pohostinství|Grada|50
+O nožích|Pajl Josef|248|379|978-80-247-3502-3|9788024735023|Pevná šitá vazba|Myslivost|Grada|50
+Pro nejlepší kamarádku||96|199|978-80-247-3518-4|9788024735184|Pevná šitá vazba|Vztahy, láska, rodina|Grada|50
+Politická komunikace|Křeček Jan|176|379|978-80-247-3536-8|9788024735368|Brožovaná vazba|Politologie|Grada|50
+Mám tě ráda, tati||96|199|978-80-247-3544-3|9788024735443|Pevná šitá vazba|Vztahy, láska, rodina|Grada|50
+Škoda Felicia 1994-2001|Schwarz Jiří|416|499|978-80-247-3657-0|9788024736570|Šitá vazba|Automobily|Grada|50
+Finanční trhy|Rejnuš Oldřich|768|890|978-80-247-3671-6|9788024736716|Pevná šitá vazba|Ekonomie|Grada|50
+Budu správně mluvit|Kutálková Dana|224|249|978-80-247-3687-7|9788024736877|Brožovaná vazba|Rady pro rodiče|Grada|50
+Volání divočiny|London Jack|72|159|978-80-247-3695-2|9788024736952|Šitá vazba|Komiksy|Bambook|50
+Jako Fénix z popela|Lerchová Pavlína|160|249|978-80-247-3706-5|9788024737065|Brožovaná vazba|Memoáry, osobnosti a osudy|Grada|50
+Zdravotní nauka 1. díl|Nováková Iva|192|239|978-80-247-3708-9|9788024737089|Brožovaná vazba|Ostatní lékařské obory|Grada|50
+Škoda Popular a Rapid|Tuček Jan|216|399|978-80-247-3714-0|9788024737140|Pevná šitá vazba|Retro|Grada|50
+Legendární Škoda 100/110|Tuček Jan|152|499|978-80-247-3721-8|9788024737218|Pevná šitá vazba|Automobily|Grada|50
+Vyměň chemii za jídlo|Batorová Julita|256|329|978-80-247-3735-5|9788024737355|Brožovaná vazba|Harmonie těla a duše|Alferia|50
+Rozvíjej se, děťátko…|Kiedroňová Eva|384|499|978-80-247-3744-7|9788024737447|Pevná šitá vazba|Rady pro rodiče|Grada|50
+Sklepy v zahradě|Faltýnek Jiří|112|179|978-80-247-3798-0|9788024737980|Brožovaná vazba|Hobby|Grada|50
+Anatomie 1|Čihák Radomír|552|1949|978-80-247-3817-8|9788024738178|Pevná šitá vazba|Teoretické obory|Grada|50
+Psychologie 1. díl|Kopecká Ilona|200|269|978-80-247-3875-8|9788024738758|Brožovaná vazba|Sociálně zdravotnický pracovník|Grada|50
+Psychologie 2. díl|Kopecká Ilona|164|229|978-80-247-3876-5|9788024738765|Brožovaná vazba|Sociálně zdravotnický pracovník|Grada|50
+Psychologie 3. díl|Kopecká Ilona|268|319|978-80-247-3877-2|9788024738772|Brožovaná vazba|Sociálně zdravotnický pracovník|Grada|50
+CSS a XHTML|Procházka David|176|259|978-80-247-3897-0|9788024738970|Brožovaná vazba|Internet, komunikace, sítě|Grada|50
+Fyziologie|Mourek Jindřich|224|299|978-80-247-3918-2|9788024739182|Brožovaná vazba|Teoretické obory|Grada|50
+Dyslexie|Krejčová Lenka|248|369|978-80-247-3950-2|9788024739502|Brožovaná vazba|Psychologie odborná|Grada|50
+Miluj svůj život|Hayová L. Louise|192|299|978-80-247-3956-4|9788024739564|Brožovaná vazba|Alternativní léčení|Alferia|50
+Himmler|Longerich Peter|720|899|978-80-247-3959-5|9788024739595|Pevná šitá vazba|Dějiny|Grada|50
+Cévní sonografie|Cholt Milan|328|779|978-80-247-3974-8|9788024739748|Brožovaná vazba|Zobrazovací metody|Grada|50
+Umíme to s konfliktem!|Medlíková Olga|136|199|978-80-247-4016-4|9788024740164|Brožovaná vazba|Psychologie pro každého|Grada|50
+Vše o uzení|Dyk Vladimír|132|199|978-80-247-4068-3|9788024740683|Pevná šitá vazba|Kuchařky|Grada|50
+Koučování|Daňková Michaela|112|199|978-80-247-4121-5|9788024741215|Brožovaná vazba|Podnikání a management|Grada|50
+Chytře vedená prodejna|Hammond Richard|200|298|978-80-247-4162-8|9788024741628|Brožovaná vazba|Obchod a prodej|Grada|50
+Legendární Škoda 1000 MB|Tuček Jan|156|469|978-80-247-4167-3|9788024741673|Pevná šitá vazba|Retro|Grada|50
+Strážce nádrže|Svěrák Zdeněk|96|249|978-80-247-4184-0|9788024741840|Pevná šitá vazba|Humor, satira|Cosmopolis|50
+Manažerská psychologie|Mikuláštík Milan|344|429|978-80-247-4221-2|9788024742212|Brožovaná vazba|Psychologie odborná|Grada|50
+Konstrukce nábytku|Nutsch Wolfgang|408|459|978-80-247-4244-1|9788024742441|Šitá vazba|Stavebnictví|Grada|50
+Sebedůvěra v práci|Taylor Ros|192|269|978-80-247-4276-2|9788024742762|Brožovaná vazba|Kariéra a zaměstnání|Grada|50
+Bio odrůdy révy vinné|Pavloušek Pavel|320|499|978-80-247-4330-1|9788024743301|Šitá vazba|Zahrada|Grada|50
+Tatra 813|Frýba Jiří|160|449|978-80-247-4347-9|9788024743479|Pevná šitá vazba|Retro|Grada|50
+Doplňky stravy|Mach Ivan|176|199|978-80-247-4353-0|9788024743530|Brožovaná vazba|Fitness a kondice|Grada|50
+Klinická propedeutika|Nejedlá Marie|240|299|978-80-247-4402-5|9788024744025|Lepená vazba|Ošetřovatelství - klinické obory|Grada|50
+Management|Blažek Ladislav|224|319|978-80-247-4429-2|9788024744292|Pevná šitá vazba|Podnikání a management|Grada|50
+Dítě a mateřská škola|Koťátková Soňa|256|349|978-80-247-4435-3|9788024744353|Brožovaná vazba|Předškolní pedagogika|Grada|50
+iPhone|Vávrů Jiří|192|289|978-80-247-4457-5|9788024744575|Brožovaná vazba|Programování|Grada|50
+O otcovské roli|Novák Tomáš|128|199|978-80-247-4498-8|9788024744988|Brožovaná vazba|Psychologie pro každého|Grada|50
+Masáže na vaši bolest|Ramík Kamil|88|189|978-80-247-4537-4|9788024745374|Brožovaná vazba|Zdraví a životní styl|Grada|50
+První pomoc|Kurucová Andrea|160|199|978-80-247-4582-4|9788024745824|Brožovaná vazba|Ošetřovatelství - postupy, první pomoc|Grada|50
+Pozitivně na manželství|Novák Tomáš|144|229|978-80-247-4645-6|9788024746456|Brožovaná vazba|Psychologie pro každého|Grada|50
+Adolf Hitler|Maser Werner|400|449|978-80-247-4654-8|9788024746548|Pevná šitá vazba|Dějiny|Grada|50
+Jak se rodí vodníčci|Kiedroňová Eva|384|499|978-80-247-4667-8|9788024746678|Pevná šitá vazba|Rady pro rodiče|Grada|50
+Úvod do psychologie|Helus Zdeněk|312|399|978-80-247-4675-3|9788024746753|Brožovaná vazba|Psychologie odborná|Grada|50
+Trika od Aptáka|Slavíková Irena|64|199|978-80-247-4680-7|9788024746807|Šitá vazba|Výtvarné techniky|Grada|50
+Anglická konverzace||324|249|978-80-247-4701-9|9788024747019|Brožovaná vazba|Angličtina|Grada|50
+Stavební truhlářství|Dirlam Martin|112|239|978-80-247-4721-7|9788024747217|Brožovaná vazba|Stavebnictví|Grada|50
+Word 2013|Král Mojmír|176|129|978-80-247-4727-9|9788024747279|Brožovaná vazba|Kancelářské programy|Grada|50
+Office 2013|Šimek Tomáš|256|329|978-80-247-4731-6|9788024747316|Brožovaná vazba|Kancelářské programy|Grada|50
+Psychiatrické minimum|Kučerová Helena|168|349|978-80-247-4733-0|9788024747330|Brožovaná vazba|Psychiatrie, psychoterapie|Grada|50
+Síla introvertů|Löhken Sylvia|224|299|978-80-247-4735-4|9788024747354|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Němčina Business Deutsch|Michňová Iva|160|229|978-80-247-4749-1|9788024747491|Brožovaná vazba|Němčina|Grada|50
+Powerjóga|Krejčík Václav|208|289|978-80-247-4757-6|9788024747576|Šitá vazba|Sporty|Grada|50
+Mikrobiologie|Schindler Jiří|248|299|978-80-247-4771-2|9788024747712|Brožovaná vazba|Ošetřovatelství - klinické obory|Grada|50
+Paličkování III|Domanjová Ivana|112|299|978-80-247-4779-8|9788024747798|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Velká kniha léčitelství|Saveljev Igor|304|369|978-80-247-4785-9|9788024747859|Brožovaná vazba|Alternativní léčení|Alferia|50
+Anatomie 2|Čihák Radomír|512|1739|978-80-247-4788-0|9788024747880|Pevná šitá vazba|Teoretické obory|Grada|50
+Umění slovní sebeobrany|Pöhm Matthias|200|299|978-80-247-4795-8|9788024747958|Brožovaná vazba|Slovní sebeobrana, manipulace|Grada|50
+Andragogika|Beneš Milan|176|259|978-80-247-4824-5|9788024748245|Brožovaná vazba|Andragogika|Grada|50
+Pozitivní myšlení|Hadfield Sue|176|249|978-80-247-4848-1|9788024748481|Brožovaná vazba|Štěstí a pozitivní myšlení|Grada|50
+Začínáme včelařit|Šefčík Jozef|112|219|978-80-247-4857-3|9788024748573|Brožovaná vazba|Chovatelství|Grada|50
+Excel 2013|Laurenčík Marek|176|249|978-80-247-5003-3|9788024750033|Brožovaná vazba|Kancelářské programy|Grada|50
+Dárky z přírody|Rogge Anne|144|349|978-80-247-5011-8|9788024750118|Pevná šitá vazba|Zahrada|Grada|50
+Public relations|Hejlová Denisa|256|349|978-80-247-5022-4|9788024750224|Pevná šitá vazba|Marketing a reklama|Grada|50
+Myšlenkové mapy|Müller Horst|112|169|978-80-247-5057-6|9788024750576|Brožovaná vazba|Trénink paměti a učení|Grada|50
+HTML|Písek Slavoj|192|269|978-80-247-5059-0|9788024750590|Brožovaná vazba|Programování|Grada|50
+Posilování|Contreras Bret|232|449|978-80-247-5075-0|9788024750750|Šitá vazba|Sporty|Grada|50
+Profesní poradenství|Svobodová Dagmar|160|259|978-80-247-5092-7|9788024750927|Brožovaná vazba|Psychologie odborná|Grada|50
+Předškolní pedagogika|Opravilová Eva|224|329|978-80-247-5107-8|9788024751078|Brožovaná vazba|Předškolní pedagogika|Grada|50
+Všecky krásy dřeva|Patřičný Martin|168|449|978-80-247-5115-3|9788024751153|Pevná šitá vazba|Umění a kultura|Grada|50
+Sociální péče 2. díl|Arnoldová Anna|320|349|978-80-247-5148-1|9788024751481|Brožovaná vazba|Psychologie odborná|Grada|50
+Osobní IQ trenér|Reichel Wolfgang|176|199|978-80-247-5176-4|9788024751764|Brožovaná vazba|Trénink paměti a učení|Grada|50
+Tatra 805|Frýba Jiří|192|399|978-80-247-5201-3|9788024752013|Pevná šitá vazba|Retro|Grada|50
+Andragogický výzkum|Průcha Jan|152|249|978-80-247-5232-7|9788024752327|Brožovaná vazba|Andragogika|Grada|50
+Kapitán|Řepka Tomáš|184|399|978-80-247-5246-4|9788024752464|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Bylinková zahrádka|Bohne Burkhard|160|399|978-80-247-5253-2|9788024752532|Šitá vazba|Úprava zahrady|Grada|50
+Řezbářské řemeslo|Minář Marek|372|599|978-80-247-5254-9|9788024752549|Pevná šitá vazba|Řemesla|Grada|50
+Jawa kývačka|Wohlmuth Jiří|188|349|978-80-247-5266-2|9788024752662|Pevná šitá vazba|Retro|Grada|50
+CNC|Štulpa Miloslav|244|299|978-80-247-5269-3|9788024752693|Brožovaná vazba|Ostatní|Grada|50
+Fitness výživa|Kleiner Susan|352|379|978-80-247-5289-1|9788024752891|Šitá vazba|Fitness a kondice|Grada|50
+Od jeskyně ke katedrále|Šefců Ondřej|64|199|978-80-247-5300-3|9788024753003|Brožovaná vazba|Encyklopedie a naučná|Grada|50
+Tvoříme ve vintage stylu|Šporková Sylva|64|199|978-80-247-5301-0|9788024753010|Šitá vazba|Výtvarné techniky|Grada|50
+Lékařská etika|Šimek Jiří|224|349|978-80-247-5306-5|9788024753065|Brožovaná vazba|Jazyky, komunikace, etika|Grada|50
+Zkroťte trému|Daníček Jiří|96|179|978-80-247-5328-7|9788024753287|Brožovaná vazba|Psychologie pro každého|Grada|50
+Pleteme z pedigu|Hátleová Karla|64|199|978-80-247-5353-9|9788024753539|Šitá vazba|Výtvarné techniky|Grada|50
+Mezinárodní marketing|Machková Hana|200|299|978-80-247-5366-9|9788024753669|Pevná šitá vazba|Marketing a reklama|Grada|50
+Opožděná ejakulace|Daneš Luděk|104|169|978-80-247-5368-3|9788024753683|Brožovaná vazba|Psychologie odborná|Grada|50
+Stará Praha|Fritz Miloš|224|499|978-80-247-5398-0|9788024753980|Pevná šitá vazba|Architektura|Grada|50
+Revoluce v podnikání|Priestley Daniel|200|249|978-80-247-5421-5|9788024754215|Brožovaná vazba|Podnikání a management|Grada|50
+Bezpečný internet|Král Mojmír|184|199|978-80-247-5453-6|9788024754536|Brožovaná vazba|Kancelářské programy|Grada|50
+Jawa Californian|Bartuš Jiří|240|449|978-80-247-5454-3|9788024754543|Pevná šitá vazba|Retro|Grada|50
+Lymfatické masáže|Tesař Vlastimil|96|219|978-80-247-5456-7|9788024754567|Brožovaná vazba|Fitness a kondice|Grada|50
+Psychologie lži|Mynaříková Lenka|200|299|978-80-247-5472-7|9788024754727|Brožovaná vazba|Psychologie odborná|Grada|50
+Šijeme sedací vaky|Theiberová Zita|80|199|978-80-247-5492-5|9788024754925|Šitá vazba|Výtvarné techniky|Grada|50
+Jawa 50 Pionýr|Wohlmuth Jiří|168|349|978-80-247-5493-2|9788024754932|Pevná šitá vazba|Retro|Grada|50
+Hitlerovi inženýři|Taylor Blaine|272|499|978-80-247-5513-7|9788024755137|Pevná šitá vazba|Militaria|Grada|50
+Tajemství motivace|Plamínek Jiří|160|199|978-80-247-5515-1|9788024755151|Brožovaná vazba|Podnikání a management|Grada|50
+Klasické masáže|Tesař Vlastimil|104|239|978-80-247-5528-1|9788024755281|Brožovaná vazba|Fitness a kondice|Grada|50
+Networking|Schánová Lenka|160|239|978-80-247-5533-5|9788024755335|Brožovaná vazba|Psychologie odborná|Grada|50
+Trénink techniky řeči|Špačková Alena|256|299|978-80-247-5578-6|9788024755786|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Krvavé dozvuky války|Vlk Václav|272|349|978-80-247-5593-9|9788024755939|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Vánoční příběh|Skopová Kamila|24|219|978-80-247-5617-2|9788024756172|Pevná šitá vazba|Pohádky|Bambook|50
+Trika od Aptáka 2|Slavíková Irena|64|199|978-80-247-5625-7|9788024756257|Lepená vazba|Výtvarné techniky|Grada|50
+Emoční inteligence|Hassonová Gill|176|249|978-80-247-5630-1|9788024756301|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Anatomie 3|Čihák Radomír|832|1949|978-80-247-5636-3|9788024756363|Pevná šitá vazba|Teoretické obory|Grada|50
+Velká kniha posilování|Stoppani Jim|640|599|978-80-247-5643-1|9788024756431|Šitá vazba|Sporty|Grada|50
+Praha neznámá|Ryska Petr|232|399|978-80-247-5651-6|9788024756516|Flexi vazba|Architektura|Grada|50
+Ukliďte si v hlavě|Puddicombe Andy|208|269|978-80-247-5652-3|9788024756523|Brožovaná vazba|Mindfulness|Grada|50
+Je načase být šťastný!|Kantová Kateřina|136|229|978-80-247-5696-7|9788024756967|Brožovaná vazba|Psychologie pro každého|Grada|50
+Zátěž pečovatele|Kurucová Radka|112|199|978-80-247-5707-0|9788024757070|Brožovaná vazba|Psychologie a komunikace|Grada|50
+Legendární Praga V3S|Frýba Jiří|320|499|978-80-247-5724-7|9788024757247|Pevná šitá vazba|Retro|Grada|50
+Dopis|Hughesová Kathryn|320|349|978-80-247-5747-6|9788024757476|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Dítě školkou povinné|M. M. Cabicar|184|199|978-80-247-5783-4|9788024757834|Šitá vazba|Humor, satira|Cosmopolis|50
+Raw food jako zážitek|Peršinová Eva|184|299|978-80-247-5799-5|9788024757995|Brožovaná vazba|Zdraví a životní styl|Grada|50
+Jóga, očista a rituály|Krejčík Václav|192|299|978-80-247-5813-8|9788024758138|Brožovaná vazba|Sporty|Grada|50
+Rorschachova metoda|Lečbych Martin|240|339|978-80-247-5834-3|9788024758343|Brožovaná vazba|Psychologie odborná|Grada|50
+Hravé mozaikování|Konířová Kateřina|64|199|978-80-247-5849-7|9788024758497|Šitá vazba|Výtvarné techniky|Grada|50
+Německá gramatika|Michňová Iva|312|399|978-80-247-5867-1|9788024758671|Šitá vazba|Němčina|Grada|50
+Finanční trhy|Rejnuš Oldřich|384|299|978-80-247-5871-8|9788024758718|Brožovaná vazba|Finanční trhy a instituce|Grada|50
+Album předškoláčka|Zmatlíková Helena|48|199|978-80-271-0019-4|9788027100194|Pevná šitá vazba|Pracovní sešity, zábava, hry|Bambook|50
+Dědek na kole|Feldstein Petr|288|299|978-80-271-0021-7|9788027100217|Pevná šitá vazba|Humor, satira|Cosmopolis|50
+Daňové zákony 2023|Marková Hana|312|169|978-80-271-0023-1|9788027100231|Lepená vazba|Daně|Grada|50
+Box|Gabriel Martin|128|189|978-80-271-0030-9|9788027100309|Brožovaná vazba|Sporty|Grada|50
+Citlivost jako výhoda|Sohst Kathrin|256|349|978-80-271-0049-1|9788027100491|Brožovaná vazba|Štěstí a pozitivní myšlení|Grada|50
+Didaktika dospělých|Zormanová Lucie|224|329|978-80-271-0051-4|9788027100514|Brožovaná vazba|Didaktika|Grada|50
+Autobus Karosa 900|Harák Martin|160|339|978-80-271-0057-6|9788027100576|Pevná šitá vazba|Retro|Grada|50
+Prokoukněte svého šéfa|Daňková Michaela|184|229|978-80-271-0069-9|9788027100699|Brožovaná vazba|Kariéra a zaměstnání|Grada|50
+Projektový management|Svozilová Alena|424|495|978-80-271-0075-0|9788027100750|Pevná šitá vazba|Podnikání a management|Grada|50
+Jednoduše ze dřeva|Rittermann Antje|200|329|978-80-271-0090-3|9788027100903|Lepená vazba|Řemesla|Grada|50
+Moderní lektor|Langer Tomáš|224|289|978-80-271-0093-4|9788027100934|Brožovaná vazba|Personalistika|Grada|50
+Speciální pedagogika|Slowík Josef|168|289|978-80-271-0095-8|9788027100958|Brožovaná vazba|Speciální pedagogika|Grada|50
+WC Pocket Revue|Hybner Boris|88|99|978-80-271-0103-0|9788027101030|Brožovaná vazba|Medicína pro veřejnost|Grada|50
+Akupresura v praxi|Mildt Christina|312|690|978-80-271-0105-4|9788027101054|Brožovaná vazba|Fyzioterapeut, rehabilitační pracovník|Grada|50
+Praktická homeopatie|Váňová Hana|208|359|978-80-271-0109-2|9788027101092|Pevná šitá vazba|Alternativní léčení|Grada|50
+Spojovačky Dot to dot|Moore Gareth|64|279|978-80-271-0110-8|9788027101108|Lepená vazba|Antistresové omalovánky|Grada|50
+Moderní ekonomie|Lipovská Hana|256|319|978-80-271-0120-7|9788027101207|Brožovaná vazba|Ekonomie|Grada|50
+Vincent van Gogh|Van Gogh Museum|64|289|978-80-271-0123-8|9788027101238|Brožovaná vazba|Antistresové omalovánky|Grada|50
+Pečovatelství 1. díl|Mlýnková Jana|260|349|978-80-271-0131-3|9788027101313|Brožovaná vazba|Sociálně zdravotnický pracovník|Grada|50
+Pečovatelství 2. díl|Mlýnková Jana|300|349|978-80-271-0132-0|9788027101320|Brožovaná vazba|Sociálně zdravotnický pracovník|Grada|50
+Psychofarmakoterapie|Dreher Jan|216|490|978-80-271-0133-7|9788027101337|Brožovaná vazba|Farmacie, farmakologie|Grada|50
+Říše snů|Rosanes Kerby|96|299|978-80-271-0139-9|9788027101399|Šitá vazba|Antistresové omalovánky|Grada|50
+Squash|Griffin Tony|112|199|978-80-271-0143-6|9788027101436|Brožovaná vazba|Sporty|Grada|50
+Jedeme k moři|Vávra David|144|398|978-80-271-0144-3|9788027101443|Pevná šitá vazba|Architektura|Grada|50
+Zdravotnická psychologie|Zacharová Eva|264|289|978-80-271-0155-9|9788027101559|Brožovaná vazba|Psychologie a komunikace|Grada|50
+Skvělý šéf|Groth Alexander|192|299|978-80-271-0162-7|9788027101627|Brožovaná vazba|Podnikání a management|Grada|50
+Kouzelný ostrov|Bowenová Brenda|280|299|978-80-271-0170-2|9788027101702|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Lymfotaping|Kobrová Jitka|136|349|978-80-271-0182-5|9788027101825|Brožovaná vazba|Fyzioterapeut, rehabilitační pracovník|Grada|50
+Paleo vaření|Kintrup Martin|144|299|978-80-271-0190-0|9788027101900|Lepená vazba|Kuchařky|Grada|50
+Střihněte si na šaty|Velebová Lenka|64|329|978-80-271-0226-6|9788027102266|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Kavárna v Kodani|Caplinová Julie|352|399|978-80-271-0233-4|9788027102334|Brožovaná vazba|Milostné romány|Cosmopolis|50
+Pomeranče v podprsence|Březinová Ivona|144|199|978-80-271-0262-4|9788027102624|Pevná šitá vazba|Příběhy, deníky|Bambook|50
+Nápady pro korek|Moras Ingrid|64|199|978-80-271-0271-6|9788027102716|Lepená vazba|Výtvarné techniky|Grada|50
+Photoshop Elements 15|Gradias Michael|328|449|978-80-271-0272-3|9788027102723|Brožovaná vazba|Grafika, CAD|Grada|50
+Příběhy stromů|Wohlleben Peter|192|349|978-80-271-0277-8|9788027102778|Pevná šitá vazba|Zahrada|Grada|50
+Lež ti kouká z očí|Mynaříková Lenka|160|239|978-80-271-0279-2|9788027102792|Brožovaná vazba|Psychologie pro každého|Grada|50
+Čarodějka|Čáp Martin|224|249|978-80-271-0295-2|9788027102952|Brožovaná vazba|Romantika, romány pro ženy|Cosmopolis|50
+Mauthausen|Vlk Václav|432|399|978-80-271-0299-0|9788027102990|Pevná šitá vazba|Literatura faktu|Cosmopolis|50
+Sturmartillerie|Anderson Thomas|288|499|978-80-271-0302-7|9788027103027|Pevná šitá vazba|Militaria|Grada|50
+Pracujeme se dřevem|Patřičný Martin|112|149|978-80-271-0307-2|9788027103072|Brožovaná vazba|Hobby|Grada|50
+Inovace je rozhodnutí|Novák Adam|208|299|978-80-271-0333-1|9788027103331|Brožovaná vazba|Podnikání a management|Grada|50
+Hrady Čech a Moravy|Kvirenc Jan|320|499|978-80-271-0335-5|9788027103355|Pevná šitá vazba|Dějiny|Grada|50
+Album našeho děťátka|Zmatlíková Helena|48|199|978-80-271-0337-9|9788027103379|Pevná šitá vazba|Rodičovství|Bambook|50
+Naše vtipná historie|Kantorek Pavel|88|129|978-80-271-0349-2|9788027103492|Šitá vazba|Křížovky a zábava|Cosmopolis|50
+Zoner Photo Studio X|Pecinovský Josef|192|339|978-80-271-0356-0|9788027103560|Brožovaná vazba|Digitální fotografie a video|Grada|50
+Dívka v ledu|Bryndza Robert|448|449|978-80-271-0370-6|9788027103706|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Druhá šance pro košile|Harmachová Jana|128|299|978-80-271-0372-0|9788027103720|Šitá vazba|Výtvarné techniky|Grada|50
+Jak číst architekturu|Hopkins Owen|176|399|978-80-271-0373-7|9788027103737|Šitá vazba|Architektura|Grada|50
+Hmyz kolem nás|Helb Matthias|112|249|978-80-271-0383-6|9788027103836|Brožovaná vazba|Příroda kolem nás|Grada|50
+Střihněte dětem na šaty|Velebová Lenka|88|379|978-80-271-0389-8|9788027103898|Pevná šitá vazba|Výtvarné techniky|Grada|50
+PzKpfw IV vs Sherman|Zaloga J. Steven|80|289|978-80-271-0402-4|9788027104024|Lepená vazba|Militaria|Grada|50
+Temné hlubiny|Bryndza Robert|416|449|978-80-271-0403-1|9788027104031|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Noční lov|Bryndza Robert|432|449|978-80-271-0404-8|9788027104048|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Matky, synové a milenky|Gurian Michael|288|369|978-80-271-0415-4|9788027104154|Brožovaná vazba|Osobní rozvoj a poznání|Alferia|50
+Praha neznámá II|Ryska Petr|232|399|978-80-271-0417-8|9788027104178|Flexi vazba|Architektura|Grada|50
+Tiché šlapací království|Svěrák Zdeněk|64|179|978-80-271-0445-1|9788027104451|Pevná šitá vazba|Humor, satira|Cosmopolis|50
+Zastávky|Vrabec Jan|192|399|978-80-271-0449-9|9788027104499|Šitá vazba|Architektura|Grada|50
+Uzdravte své sebevědomí|Adamíková Hana|192|349|978-80-271-0460-4|9788027104604|Brožovaná vazba s klopami|Osobní rozvoj a poznání|Grada|50
+Autobusy SOR|Harák Martin|128|319|978-80-271-0465-9|9788027104659|Pevná šitá vazba|Retro|Grada|50
+Auta první republiky|Tuček Jan|356|699|978-80-271-0466-6|9788027104666|Pevná šitá vazba|Automobily|Grada|50
+Běžet s domy|Vávra David|160|329|978-80-271-0467-3|9788027104673|Šitá vazba|Architektura|Grada|50
+Anglická gramatika|Walther Lutz|176|249|978-80-271-0486-4|9788027104864|Šitá vazba|Jazyky|Grada|50
+Německá gramatika|Fleer Sarah|176|249|978-80-271-0488-8|9788027104888|Šitá vazba|Jazyky|Grada|50
+Zakázaná slova|Doležal Antonín|320|299|978-80-271-0497-0|9788027104970|Brožovaná vazba|Medicína pro veřejnost|Grada|50
+Biozahrada|Tabach Arnošt|128|249|978-80-271-0498-7|9788027104987|Brožovaná vazba|Zahrada|Grada|50
+Programování v C++|Virius Miroslav|416|399|978-80-271-0502-1|9788027105021|Brožovaná vazba|Programování|Grada|50
+Vyšetřovatel|Dzuro Vladimír|272|399|978-80-271-0507-6|9788027105076|Pevná šitá vazba|Literatura faktu|Grada|50
+Praha neznámá III|Ryska Petr|232|489|978-80-271-0519-9|9788027105199|Flexi vazba|Architektura|Grada|50
+Do posledního dechu|Bryndza Robert|416|449|978-80-271-0521-2|9788027105212|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Chladnokrevně|Bryndza Robert|416|399|978-80-271-0522-9|9788027105229|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Šijeme z úpletů|Coufalová Jana|160|399|978-80-271-0526-7|9788027105267|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Krasopis|Klanicová Nikola|120|249|978-80-271-0538-0|9788027105380|Flexi vazba|Výtvarné techniky|Grada|50
+Vikingské copy a copánky|Collin Annette|160|299|978-80-271-0547-2|9788027105472|Šitá vazba|Výtvarné techniky|Grada|50
+Motocyklové vozíky PAv|Bartuš Jiří|96|349|978-80-271-0566-3|9788027105663|Pevná šitá vazba|Retro|Grada|50
+Jak ušít ekopanenky|Jarošová Tereza|64|199|978-80-271-0576-2|9788027105762|Šitá vazba|Výtvarné techniky|Grada|50
+Smrtící tajnosti|Bryndza Robert|384|449|978-80-271-0592-2|9788027105922|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Imunologie|Jílek Petr|104|299|978-80-271-0595-3|9788027105953|Brožovaná vazba|Metabolizmus, imunita|Grada|50
+English Is Not Easy|Gutierrez Luci|344|299|978-80-271-0600-4|9788027106004|Šitá vazba|Angličtina|Grada|50
+Tolerantní výchova|Pöslová Blanka|152|239|978-80-271-0622-6|9788027106226|Brožovaná vazba|Rady pro rodiče|Grada|50
+Týdenní náladovník|Davidová Monika|112|149|978-80-271-0623-3|9788027106233|Šitá vazba|Dětské omalovánky|Grada|50
+Malované pranostiky|Votavová Dušana|80|189|978-80-271-0625-7|9788027106257|Brožovaná vazba|Pracovní sešity, zábava, hry|Bambook|50
+Ještě můžu vzlétnout|Hodáčová Monika|200|269|978-80-271-0632-5|9788027106325|Brožovaná vazba|Štěstí a pozitivní myšlení|Grada|50
+Antibiotika|Beneš Jiří|600|949|978-80-271-0636-3|9788027106363||Farmacie, farmakologie|Grada|50
+Malé sladké lži|Frearová Caz|432|399|978-80-271-0637-0|9788027106370|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Co na tobě miluji||96|239|978-80-271-0649-3|9788027106493|Pevná šitá vazba|Vztahy, láska, rodina|Grada|50
+Mám tě ráda, mami||96|199|978-80-271-0650-9|9788027106509|Pevná šitá vazba|Vztahy, láska, rodina|Grada|50
+Uzení|Schmid Jeremy|160|349|978-80-271-0652-3|9788027106523|Šitá vazba|Kuchařky,  gastronomie|Grada|50
+Svažte si sami knížku|Kühne Franziska|64|229|978-80-271-0664-6|9788027106646|Pevná šitá vazba|Řemesla|Grada|50
+Kdo chce naše peníze?|Lipovská Hana|208|269|978-80-271-0679-0|9788027106790|Brožovaná vazba|Osobní a rodinné finance|Grada|50
+Stručný příběh umění|Hodgeová Susie|224|399|978-80-271-0685-1|9788027106851|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Mrtvé dřevo plné života|Werner David|176|299|978-80-271-0698-1|9788027106981|Lepená vazba|Příroda kolem nás|Grada|50
+Pinnacle Studio 21|Pecinovský Josef|136|199|978-80-271-0732-2|9788027107322|Brožovaná vazba|Digitální fotografie a video|Grada|50
+Jak správně krmit psa|Bucksch Martin|128|299|978-80-271-0746-9|9788027107469|Lepená vazba|Chovatelství|Grada|50
+Barefoot: žij naboso!|Pytlová Lucie|144|229|978-80-271-0749-0|9788027107490|Brožovaná vazba s klopami|Harmonie těla a duše|Alferia|50
+Jak si zařídit domov|Pěkná Jana|192|369|978-80-271-0753-7|9788027107537|Flexi vazba|Architektura|Grada|50
+Provensálský styl|Hornová Karolína|152|299|978-80-271-0756-8|9788027107568|Pevná šitá vazba|Architektura|Grada|50
+Kdo bojuje, vyhrává|Ryšánková Jana|192|269|978-80-271-0769-8|9788027107698|Pevná šitá vazba|Memoáry, osobnosti a osudy|Grada|50
+Světové mosty|Vítek Jan|400|599|978-80-271-0770-4|9788027107704|Pevná šitá vazba|Architektura|Grada|50
+Airbus A380|Wicks Robert|192|469|978-80-271-0772-8|9788027107728|Pevná šitá vazba|Ostatní|Grada|50
+SQL|Laurenčík Marek|216|329|978-80-271-0774-2|9788027107742|Brožovaná vazba|Ostatní|Grada|50
+Uber a Airbnb mění svět|Stone Brad|320|399|978-80-271-0779-7|9788027107797|Brožovaná vazba|Ekonomie|Grada|50
+Sturmgeschütz|Anderson Thomas|272|499|978-80-271-0780-3|9788027107803|Pevná šitá vazba|Militaria|Grada|50
+Háčkování|Bednářová Lenka|112|349|978-80-271-0785-8|9788027107858|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Prostě Hawking!|Vaas Rüdiger|128|349|978-80-271-0786-5|9788027107865|Lepená vazba|Literatura faktu|Grada|50
+Jóga podle čaker|Anodea Judith|384|549|978-80-271-0793-3|9788027107933|Šitá vazba|Harmonie těla a duše|Alferia|50
+Pražské vinice|Vítková Radana|200|399|978-80-271-0796-4|9788027107964|Flexi vazba|Architektura|Grada|50
+Stromy|Haag Holger|112|249|978-80-271-0824-4|9788027108244|Šitá vazba|Encyklopedie a naučná|Grada|50
+Ptáci|Haag Holger|112|249|978-80-271-0825-1|9788027108251|Šitá vazba|Encyklopedie a naučná|Grada|50
+Vnitřní svět vítězů|Jelínek Marian|208|399|978-80-271-0826-8|9788027108268|Flexi vazba|Úspěch a motivace|Grada|50
+Krátký proces|Sklář Richard|432|399|978-80-271-0830-5|9788027108305|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Manuál běžce|Červinka Pavel|264|389|978-80-271-0839-8|9788027108398|Šitá vazba|Trénink|Grada|50
+Sportovní talent|Vičar Michal|272|349|978-80-271-0841-1|9788027108411|Pevná šitá vazba|Sport, zdraví a životní styl|Grada|50
+Motolkomix|Kalina Adam|112|245|978-80-271-0845-9|9788027108459|Brožovaná vazba|Medicína pro veřejnost|Grada|50
+Orientace v přírodě|Gooley Tristan|278|359|978-80-271-0854-1|9788027108541|Pevná šitá vazba|Harmonie těla a duše|Alferia|50
+Nekonečný střih|Velebová Lenka|112|449|978-80-271-0861-9|9788027108619|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Obchodník s hudbou|Joyceová Rachel|288|339|978-80-271-0878-7|9788027108787|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Štěstí|Hanh Nhat Thich|208|279|978-80-271-0893-0|9788027108930|Brožovaná vazba s klopami|Mindfulness|Alferia|50
+Vědění pro nejisté časy|Watts Alan|160|299|978-80-271-1000-1|9788027110001|Brožovaná vazba s klopami|Harmonie těla a duše|Alferia|50
+Přej si opatrně|Ephronová Hallie|296|329|978-80-271-1010-0|9788027110100|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Pražské dvorky|Sojka Petr|248|399|978-80-271-1012-4|9788027110124|Pevná šitá vazba|Průvodce|Grada|50
+Háčkované příšerky|Bednářová Lenka|112|299|978-80-271-1018-6|9788027110186|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Microsoft Teams|Šindler Jaroslav|208|269|978-80-271-1023-0|9788027110230|Brožovaná vazba|Internet, komunikace, sítě|Grada|50
+Češi a cizinci|Hebnar Jan|160|249|978-80-271-1027-8|9788027110278|Brožovaná vazba|Úspěch a motivace|Grada|50
+Sportovní výživa|Clark Nancy|448|399|978-80-271-1030-8|9788027110308|Lepená vazba|Výživa|Grada|50
+Přívětivá zahrada|Fedders Mareike|128|349|978-80-271-1055-1|9788027110551|Brožovaná vazba s klopami|Zahrada, zvířata, příroda|Grada|50
+Odložená spravedlnost|Čepek Petr|368|379|978-80-271-1059-9|9788027110599|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+První chyba|Jonesová Sandie|344|379|978-80-271-1060-5|9788027110605|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Interiéry do detailu|Bastlová Iva|208|499|978-80-271-1168-8|9788027111688|Pevná šitá vazba|Architektura|Grada|50
+Krásné věci|Brownová Janelle|488|479|978-80-271-1202-9|9788027112029|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Tajné jezero|Inglisová Karen|132|199|978-80-271-1204-3|9788027112043|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Plnou parou do pohádky|Hoňková Iva|120|259|978-80-271-1211-1|9788027112111|Pevná šitá vazba|Pohádky|Bambook|50
+Na výletě v raketě|Medzvecová Dagmar|72|219|978-80-271-1212-8|9788027112128|Pevná šitá vazba|Pohádky|Bambook|50
+Praha neznámá V|Ryska Petr|232|399|978-80-271-1215-9|9788027112159|Flexi vazba|Průvodce|Grada|50
+Programování v C#|Virius Miroslav|424|449|978-80-271-1216-6|9788027112166|Brožovaná vazba|Programování|Grada|50
+Nástroje proti úzkosti|Boyes Alice|240|299|978-80-271-1219-7|9788027112197|Brožovaná vazba|Sebedůvěra a emoce|Grada|50
+Fair trade|Doležalová Hana|176|249|978-80-271-1220-3|9788027112203|Brožovaná vazba|Obchod a prodej|Grada|50
+Rande na balkoně|Kingsley Felicia|184|229|978-80-271-1224-1|9788027112241|Brožovaná vazba s klopami|Humor|Cosmopolis|50
+Angličtina|Wright Markéta|344|449|978-80-271-1229-6|9788027112296|Šitá vazba|Jazyky, komunikace, etika|Grada|50
+Čajovna v Tokiu|Caplinová Julie|328|399|978-80-271-1232-6|9788027112326|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Volání hvězd|Donoghue Emma|296|349|978-80-271-1236-4|9788027112364|Pevná šitá vazba|Historické romány|Cosmopolis|50
+Stručný příběh románu|Russell Henry|224|399|978-80-271-1256-2|9788027112562|Pevná šitá vazba|Umění a kultura|Grada|50
+Stručný příběh filmu|Smith Haydn Ian|224|399|978-80-271-1258-6|9788027112586|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Strom splněných přání|Gladwell Jenny|272|299|978-80-271-1262-3|9788027112623|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Pegas - Boj o Olymp|O'Hearnová Kate|256|349|978-80-271-1264-7|9788027112647|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Pegas - Plamen Olympu|O'Hearnová Kate|256|349|978-80-271-1265-4|9788027112654|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Veganská kuchařka|Ševčíková Monika|124|189|978-80-271-1267-8|9788027112678|Šitá vazba|Výživa|Grada|50
+Co je pro mě dobré|Wickham Sara|152|299|978-80-271-1274-6|9788027112746|Brožovaná vazba s klopami|Osobní rozvoj a poznání|Alferia|50
+Chata ve Švýcarsku|Caplinová Julie|344|399|978-80-271-1276-0|9788027112760|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Vizionáři architektury|Weston Richard|312|849|978-80-271-1283-8|9788027112838|Šitá vazba|Architektura|Grada|50
+Vraždy s cejchem|Backmanová Elina|496|459|978-80-271-1290-6|9788027112906|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Háčkování 3|Bednářová Lenka|112|349|978-80-271-1291-3|9788027112913|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Vstřikování plastů 2|Zeman Lubomír|448|499|978-80-271-1294-4|9788027112944|Šitá vazba|Ostatní|Grada|50
+Konec marketingu|Gil Carlos|200|349|978-80-271-1296-8|9788027112968|Lepená vazba|Marketing a reklama|Grada|50
+Opium a absint|Kang Lydia|384|379|978-80-271-1301-9|9788027113019|Pevná šitá vazba|Historické romány|Cosmopolis|50
+Život v utajení|Fox Amaryllis|240|329|978-80-271-1313-2|9788027113132|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Homeopatie a děti|Karhan Tomáš|184|239|978-80-271-1316-3|9788027113163|Brožovaná vazba|Rady pro rodiče|Grada|50
+Klíč|Hughesová Kathryn|344|399|978-80-271-1319-4|9788027113194|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Tajemství|Hughesová Kathryn|336|399|978-80-271-1320-0|9788027113200|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Poslední slib|Hughesová Kathryn|344|429|978-80-271-1321-7|9788027113217|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Fotbalová bludiště||160|179|978-80-271-1323-1|9788027113231|Brožovaná vazba|Pracovní sešity, zábava, hry|Bambook|50
+Koncentrace|Bailey Chris|248|329|978-80-271-1324-8|9788027113248|Brožovaná vazba|Trénink paměti a učení|Grada|50
+Zelené střechy|Dostalová Jitka|168|299|978-80-271-1326-2|9788027113262|Brožovaná vazba|Stavebnictví|Grada|50
+První lež|Park A.J.|376|399|978-80-271-1327-9|9788027113279|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Vzpomínky naší babičky|Kolektiv autorů|96|349|978-80-271-1328-6|9788027113286|Pevná šitá vazba|Vztahy, láska, rodina|Cosmopolis|50
+Lalečka|Keidarová Amira|288|329|978-80-271-1332-3|9788027113323|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Aplikace lásky|Skilton Tash|376|379|978-80-271-1334-7|9788027113347|Brožovaná vazba s klopami|Humor|Cosmopolis|50
+Vzpomínky mojí maminky|Kolektiv autorů|96|349|978-80-271-1336-1|9788027113361|Pevná šitá vazba|Vztahy, láska, rodina|Cosmopolis|50
+Základy mantrailingu|Satora Lubomír|136|299|978-80-271-1341-5|9788027113415|Lepená vazba|Zahrada, zvířata, příroda|Grada|50
+Krutá hra|Seeck Max|456|449|978-80-271-1345-3|9788027113453|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+WC kniha hostů|Kolektiv autorů|88|249|978-80-271-1346-0|9788027113460|Pevná šitá vazba|Dárkové knížky|Cosmopolis|50
+Rodina z podkroví|Jewellová Lisa|352|399|978-80-271-1347-7|9788027113477|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Příběh malířství||360|799|978-80-271-1348-4|9788027113484|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Holky, to musíte vědět!|Einwohlt Ilona|96|299|978-80-271-1368-2|9788027113682|Šitá vazba|Populárně naučná pro děti|Grada|50
+Byl jsem číslo 30529|Weinberg Felix|200|249|978-80-271-1370-5|9788027113705|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Rodné domy slavných|Laudin Radek|208|329|978-80-271-1371-2|9788027113712|Pevná šitá vazba|Memoáry, osobnosti a osudy|Grada|50
+Hele, je to kůň|Kolektiv autorů|56|179|978-80-271-1373-6|9788027113736|Pevná šitá vazba|Pracovní sešity, zábava, hry|Bambook|50
+Z Etiopie a odjinud|Jazairiová Pavla|224|349|978-80-271-1378-1|9788027113781|Brožovaná vazba|Literatura faktu|Grada|50
+Cesta k cizím jazykům|Sieglová Dagmar|272|349|978-80-271-1382-8|9788027113828|Brožovaná vazba s klopami|Jazyky|Grada|50
+Produktivní podnikatel|Klein Štěpán|352|399|978-80-271-1386-6|9788027113866|Lepená vazba|Podnikání a management|Grada|50
+Kubík a autíčko|Mauleová Eliška|88|199|978-80-271-1387-3|9788027113873|Pevná šitá vazba|První čtení|Bambook|50
+Excel 2019|Laurenčík Marek|184|229|978-80-271-1391-0|9788027113910|Brožovaná vazba|Kancelářské programy|Grada|50
+Michael Thonet|Uhlíř Jiří|384|799|978-80-271-1393-4|9788027113934|Pevná šitá vazba|Architektura|Grada|50
+Sebepéče pro pečující|Leblanc Lise|208|299|978-80-271-1395-8|9788027113958|Brožovaná vazba s klopami|Harmonie těla a duše|Alferia|50
+Pleteme pomlázky|Osoba Jiří|80|219|978-80-271-1397-2|9788027113972|Šitá vazba|Výtvarné techniky, umění|Grada|50
+Mukl|Čeřovská Petra|408|399|978-80-271-1399-6|9788027113996|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Nevinný záskok|Dentová Lizzy|368|379|978-80-271-1684-3|9788027116843|Brožovaná vazba s klopami|Humor|Cosmopolis|50
+Kdo je bez hříchu|Svernström Bo|448|449|978-80-271-1685-0|9788027116850|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Nemocné rozhovory|Kabelka Ladislav|240|379|978-80-271-1688-1|9788027116881|Brožovaná vazba|Ostatní lékařské obory|Grada|50
+Džungle v nás|Plamínek Jiří|144|249|978-80-271-1691-1|9788027116911|Lepená vazba|Psychologie pro každého|Grada|50
+Němčina|Hanáková Anežka|232|299|978-80-271-1717-8|9788027117178|Brožovaná vazba|Management, jazyky|Grada|50
+Fotografujeme ptáky|Zygmunt Milan|144|369|978-80-271-1720-8|9788027117208||Příroda kolem nás|Grada|50
+Můj malý les|Wiehle Katrin|16|329|978-80-271-1736-9|9788027117369||Osobní rozvoj a poznání|Alferia|50
+Zrozeni k chůzi|Earls James|242|449|978-80-271-1749-9|9788027117499|Lepená vazba|Sport|Grada|50
+Experimentování s dětmi|Gallagher Shaun|240|299|978-80-271-1751-2|9788027117512|Brožovaná vazba|Rady pro rodiče|Grada|50
+Dva v srdci|Silverová Josie|376|389|978-80-271-1752-9|9788027117529|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Závislosti|Křížová Ivana|280|399|978-80-271-1754-3|9788027117543|Brožovaná vazba|Psychologie odborná|Grada|50
+Hlavně na to nemysli|Moussa Hadj Iva|272|299|978-80-271-1765-9|9788027117659|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Nevlastní sestra|Jonesová Sandie|348|379|978-80-271-1766-6|9788027117666|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Moje motýlí zahrada|Schwarzer Elke|128|299|978-80-271-1770-3|9788027117703||Zahrada, zvířata, příroda|Grada|50
+Novodobí dobrodruzi|Bowman Jeffrey|256|699|978-80-271-1772-7|9788027117727|Pevná šitá vazba|Průvodce|Grada|50
+Trénuj jako výsadkář|McGrath Sam|176|399|978-80-271-1773-4|9788027117734|Brožovaná vazba|Sport, zdraví a životní styl|Grada|50
+V temnotě|Omer Mike|400|399|978-80-271-1779-6|9788027117796|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Přestávkovník|Kolektiv autorů|112|179|978-80-271-1780-2|9788027117802|Brožovaná vazba|Pracovní sešity, zábava, hry|Bambook|50
+V síti dezinformací|Táborský Jiří|224|269|978-80-271-2014-7|9788027120147|Lepená vazba|Žurnalistika a komunikace|Grada|50
+Mám tě ráda, babičko||96|199|978-80-271-2018-5|9788027120185|Pevná šitá vazba|Dárkové knížky|Grada|50
+Komu hlava sejde|Järvelä Jari|264|329|978-80-271-2033-8|9788027120338|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Sérioví vrazi|Vronsky Peter|520|599|978-80-271-2041-3|9788027120413|Brožovaná vazba|Literatura faktu|Grada|50
+Kostely|Dvořáček Petr|304|599|978-80-271-2050-5|9788027120505|Pevná šitá vazba|Architektura|Grada|50
+Polohování|Wagner Uwe|136|279|978-80-271-2053-6|9788027120536|Brožovaná vazba|Fyzioterapeut, rehabilitační pracovník|Grada|50
+SOS ve vesmíru|Woydt Hermann|144|289|978-80-271-2062-8|9788027120628|Brožovaná vazba|Ostatní|Grada|50
+Let stříbrných šípů|Růžička Petr|264|499|978-80-271-2063-5|9788027120635|Pevná šitá vazba|Retro|Grada|50
+Pohybové hry pro školáky|Pokorný Ivan|152|219|978-80-271-2064-2|9788027120642|Brožovaná vazba|Děti a sport|Grada|50
+Pekárna v Brooklynu|Caplinová Julie|368|399|978-80-271-2068-0|9788027120680|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Operační polohy|Kolektiv autorů|72|169|978-80-271-2077-2|9788027120772|Šitá vazba|Chirurgie, ortopedie, traumatologie|Grada|50
+Řeč zvířat|Meijerová Eva|144|269|978-80-271-2080-2|9788027120802|Šitá vazba|Příroda kolem nás|Grada|50
+Radost z chůze|Kagge Erling|176|299|978-80-271-2081-9|9788027120819|Brožovaná vazba|Uvědomělý život|Alferia|50
+Výroba vlastní kosmetiky|Menšíková Lenka|176|299|978-80-271-2082-6|9788027120826|Pevná šitá vazba|Sport, zdraví a životní styl|Grada|50
+Háčkujeme pro miminka|Krampolinka|144|349|978-80-271-2083-3|9788027120833|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Praha neznámá IV|Ryska Petr|232|399|978-80-271-2087-1|9788027120871|Flexi vazba|Průvodce|Grada|50
+Lovci tanků|Anderson Thomas|304|499|978-80-271-2089-5|9788027120895|Pevná šitá vazba|Militaria|Grada|50
+V zajetí vlčích máků|Digtyar Dominika|344|349|978-80-271-2094-9|9788027120949|Pevná šitá vazba|Young Adult, New Adult|Cosmopolis|50
+Investice|Kohout Pavel|216|329|978-80-271-2101-4|9788027121014|Brožovaná vazba|Finanční trhy a instituce|Grada|50
+Květinové kirigami|Yamamoto Emiko|80|229|978-80-271-2103-8|9788027121038|Šitá vazba|Výtvarné techniky|Grada|50
+Slow fashion|Glogaza Joanna|168|379|978-80-271-2108-3|9788027121083|Šitá vazba|Osobní rozvoj a poznání|Alferia|50
+Zraková postižení|Beneš Pavel|136|249|978-80-271-2110-6|9788027121106|Brožovaná vazba|Oftalmologie, ORL|Grada|50
+Somatologie|Dylevský Ivan|312|349|978-80-271-2111-3|9788027121113|Brožovaná vazba|Ostatní nelékařské profese|Grada|50
+Ovčí vlna|Šilarová Jana|112|299|978-80-271-2112-0|9788027121120|Šitá vazba|Výtvarné techniky, umění|Grada|50
+O lásce|Hanh Nhat Thich|216|279|978-80-271-2184-7|9788027121847|Brožovaná vazba s klopami|Mindfulness|Alferia|50
+O věrnosti|Hanh Nhat Thich|144|249|978-80-271-2185-4|9788027121854|Brožovaná vazba s klopami|Harmonie těla a duše|Alferia|50
+Cesta osvobození|Hanh Nhat Thich|304|399|978-80-271-2186-1|9788027121861|Brožovaná vazba|Mindfulness|Alferia|50
+Matčina hra|Jonesová Sandie|352|399|978-80-271-2188-5|9788027121885|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Barvy, trendy, interiéry|Bastlová Iva|216|499|978-80-271-2190-8|9788027121908|Pevná šitá vazba|Architektura|Grada|50
+Načítání|Petrov Vadim|296|299|978-80-271-2198-4|9788027121984|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Ruční knižní vazby|Beranová Lucie|80|259|978-80-271-2199-1|9788027121991|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Emoce pod kontrolou|Loja Radka|208|299|978-80-271-2217-2|9788027122172|Brožovaná vazba|Sebedůvěra a emoce|Grada|50
+Teorie sociální práce I|Mátel Andrej|208|329|978-80-271-2220-2|9788027122202|Brožovaná vazba|Sociálně zdravotnický pracovník|Grada|50
+Neplýtvejte svým časem|Bray Gemma|176|249|978-80-271-2223-3|9788027122233|Brožovaná vazba|Životní styl|Grada|50
+Prahou za vínem|Vítková Radana|376|499|978-80-271-2234-9|9788027122349|Flexi vazba|Průvodce|Grada|50
+Jóga světla|Wills Pauline|160|349|978-80-271-2239-4|9788027122394|Šitá vazba|Sporty|Metafora|50
+Konec školní nudy|Sieglová Dagmar|336|499|978-80-271-2254-7|9788027122547|Brožovaná vazba|Didaktika|Grada|50
+Skrytá tajemství Prahy|Černý David|128|349|978-80-271-2267-7|9788027122677|Pevná šitá vazba|Průvodce|Grada|50
+Příběhy budov|Dilllon Patrick|104|349|978-80-271-2268-4|9788027122684|Pevná šitá vazba|Architektura|Bambook|50
+Noční návštěva|Goodmanová Carol|248|299|978-80-271-2282-0|9788027122820|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Magická knihovna|Zeno Alexander|152|229|978-80-271-2284-4|9788027122844|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Jak k nám tělo promlouvá|Vávrová Šárka|312|349|978-80-271-2295-0|9788027122950|Pevná šitá vazba|Alternativní léčení|Alferia|50
+Sebevýchova|Zvírotský Michal|224|299|978-80-271-2425-1|9788027124251|Brožovaná vazba|Psychologie odborná|Grada|50
+Papírové dekorace|Váňová Dita|80|199|978-80-271-2430-5|9788027124305|Šitá vazba|Výtvarné techniky|Grada|50
+Matčin hrob|Reganová Lisa|384|449|978-80-271-2443-5|9788027124435|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Mizející dívky|Reganová Lisa|384|449|978-80-271-2444-2|9788027124442|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Dívka beze jména|Reganová Lisa|384|449|978-80-271-2445-9|9788027124459|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Neodvracej pohled|Santorelli Saki|304|349|978-80-271-2448-0|9788027124480|Brožovaná vazba s klopami|Mindfulness|Alferia|50
+Jin jóga|Clark Bernie|368|469|978-80-271-2449-7|9788027124497|Šitá vazba|Harmonie těla a duše|Alferia|50
+Ulice|Aleš Dominik|240|649|978-80-271-2450-3|9788027124503||Architektura|Grada|50
+Nová tajemství Prahy|Černý David|120|349|978-80-271-2451-0|9788027124510|Pevná šitá vazba|Průvodce|Grada|50
+Moderní time management|Kruse Kevin|176|289|978-80-271-2452-7|9788027124527|Brožovaná vazba|Kariéra a zaměstnání|Grada|50
+Zvládneš to...|Allan Kate|200|299|978-80-271-2460-2|9788027124602|Pevná šitá vazba|Štěstí a pozitivní myšlení|Grada|50
+Sonografie|Niehaus Jens|432|790|978-80-271-2468-8|9788027124688|Šitá vazba|Zobrazovací metody|Grada|50
+Pletení z papíru|Králiková Monika|128|299|978-80-271-2476-3|9788027124763|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Tajemství řeči těla|Navarro Joe|192|299|978-80-271-2477-0|9788027124770|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Velký IQ a EQ trenér|Reichel Wolfgang|248|319|978-80-271-2478-7|9788027124787|Brožovaná vazba|Trénink paměti a učení|Grada|50
+Cukrárna v Paříži|Caplinová Julie|368|399|978-80-271-2483-1|9788027124831|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Co dělá tenhle knoflík?|Dickinson Bruce|336|449|978-80-271-2485-5|9788027124855|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Ebru|Tess|112|299|978-80-271-2488-6|9788027124886|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Umění vyjednat cokoliv|Pařík Radim|224|349|978-80-271-2489-3|9788027124893|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Ovládněte tržní cykly|Marks Howard|232|349|978-80-271-2500-5|9788027125005|Šitá vazba|Finanční trhy a instituce|Grada|50
+Marie Rozsypalová|Škardová Lucie|80|229|978-80-271-2502-9|9788027125029|Brožovaná vazba|Ošetřovatelství - postupy, první pomoc|Grada|50
+Vražedné úmysly|Cameron Marc|328|349|978-80-271-2505-0|9788027125050|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Sofie, Smrťák a já|Uhlmann Thees|240|299|978-80-271-2506-7|9788027125067|Pevná šitá vazba|Humor, satira|Cosmopolis|50
+Kouzlo psané rukou|Klanicová Nikola|136|299|978-80-271-2507-4|9788027125074|Pevná šitá vazba|Populárně naučná pro děti|Grada|50
+Cupcakes|Šmalcová Anna|144|299|978-80-271-2509-8|9788027125098|Šitá vazba|Kuchařky,  gastronomie|Grada|50
+Když není úniku|Čhödrön Pema|168|249|978-80-271-2512-8|9788027125128|Brožovaná vazba s klopami|Mindfulness|Alferia|50
+Naše letadla|Minář Václav|64|299|978-80-271-2513-5|9788027125135|Pevná šitá vazba|Dětská literatura|Bambook|50
+Inline bruslení|Thor Ondřej|104|199|978-80-271-2517-3|9788027125173|Brožovaná vazba|Děti a sport|Grada|50
+Dějiny psychologie|Plháková Alena|416|499|978-80-271-2528-9|9788027125289|Brožovaná vazba|Psychologie odborná|Grada|50
+Prima čas|Králík Jan|96|299|978-80-271-2535-7|9788027125357|Pevná šitá vazba|Ostatní|Grada|50
+Ájurvéda||320|399|978-80-271-2536-4|9788027125364|Šitá vazba|Alternativní léčení|Alferia|50
+Psí hrdinové|Greaves Laura|288|349|978-80-271-2538-8|9788027125388|Pevná šitá vazba|Beletrie|Cosmopolis|50
+O Popelce|Skopová Kamila|12|119|978-80-271-2553-1|9788027125531|Leporela|Leporela|Bambook|50
+O třech prasátkách|Skopová Kamila|12|119|978-80-271-2555-5|9788027125555|Leporela|Leporela|Bambook|50
+Méně mít, více žít|Haunerová Klára|208|299|978-80-271-2562-3|9788027125623|Pevná šitá vazba|Životní styl|Grada|50
+Pro Čechy je nebe nízko|Hampl Mojmír|192|269|978-80-271-2566-1|9788027125661|Brožovaná vazba|Osobní rozvoj a kariéra|Grada|50
+Tohle je marketing!|Godin Seth|208|349|978-80-271-2567-8|9788027125678|Brožovaná vazba|Marketing a reklama|Grada|50
+Jak vnímat stres|Dutková Andrea|144|299|978-80-271-2568-5|9788027125685|Brožovaná vazba|Psychologie pro každého|Grada|50
+Eutanázie|Vácha Marek|112|259|978-80-271-2575-3|9788027125753|Brožovaná vazba|Teoretické obory|Grada|50
+Věrný čtenář|Seeck Max|392|399|978-80-271-2578-4|9788027125784|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Cabin Porn - Za dveřmi|Klein Zach|328|599|978-80-271-2582-1|9788027125821|Pevná šitá vazba|Architektura|Grada|50
+Ženy plují na sever|Pipherová Mary|224|369|978-80-271-2603-3|9788027126033|Pevná šitá vazba|Harmonie těla a duše|Alferia|50
+Vaše jedinečná zahrada|Frost Adam|256|699|978-80-271-2834-1|9788027128341|Pevná šitá vazba|Úprava zahrady|Grada|50
+Trolejbusy|Harák Martin|216|449|978-80-271-2839-6|9788027128396|Pevná šitá vazba|Auto & moto|Grada|50
+Psychologie učení|Průcha Jan|272|349|978-80-271-2853-2|9788027128532|Brožovaná vazba|Psychologie odborná|Grada|50
+Moje super (ne)realita|Frost Claire|328|349|978-80-271-2864-8|9788027128648|Brožovaná vazba|Romantika, romány pro ženy|Cosmopolis|50
+Já a ty|Kolektiv autorů|88|249|978-80-271-2865-5|9788027128655|Pevná šitá vazba|Dárkové knížky|Cosmopolis|50
+Mějte se ráda|Noakes Mel|144|239|978-80-271-2867-9|9788027128679|Brožovaná vazba|Sebedůvěra a emoce|Grada|50
+Nekonečný střih 2|Velebová Lenka|136|499|978-80-271-2873-0|9788027128730|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Les a louka na talíři|Tscharner Gisula|160|299|978-80-271-2875-4|9788027128754|Šitá vazba|Kuchařky|Grada|50
+Drak do kapsy|Clarke Ed|232|299|978-80-271-2879-2|9788027128792|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Chemie na talíři|Dvořák Ondřej|208|399|978-80-271-2881-5|9788027128815||Přírodní vědy|Grada|50
+Technologie obrábění|Štulpa Miloslav|160|299|978-80-271-2883-9|9788027128839|Brožovaná vazba|Ostatní|Grada|50
+Hotýlek na Islandu|Caplinová Julie|360|399|978-80-271-2889-1|9788027128891|Brožovaná vazba|Milostné romány|Cosmopolis|50
+Vlhkost v domě|Balík Michael|96|199|978-80-271-2892-1|9788027128921|Lepená vazba|Hobby|Grada|50
+Úspěšná řeč těla|Matschnig Monika|216|289|978-80-271-2894-5|9788027128945|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Kanibal z Nine Elms|Bryndza Robert|464|449|978-80-271-2897-6|9788027128976|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Mlha nad Shadow Sands|Bryndza Robert|384|399|978-80-271-2898-3|9788027128983|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Propast smrti|Bryndza Robert|368|399|978-80-271-2899-0|9788027128990|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Vyřezávání dřeva nožem|Benson Peter|144|369|978-80-271-2904-1|9788027129041|Šitá vazba|Řemesla|Grada|50
+Pod dohledem|Jewellová Lisa|376|399|978-80-271-2911-9|9788027129119|Pevná šitá vazba|Světová současná beletrie|Cosmopolis|50
+Veselé celoroční tvoření|Diblíček Jan|128|299|978-80-271-2913-3|9788027129133|Pevná šitá vazba|Výtvarné techniky|Grada|50
+Léčivá síla stromů|Apostolaki Pavla|128|299|978-80-271-2914-0|9788027129140|Pevná šitá vazba|Zahrada, zvířata, příroda|Grada|50
+Fauna||336|899|978-80-271-2915-7|9788027129157||Zahrada, zvířata, příroda|Grada|50
+Flóra||360|899|978-80-271-2916-4|9788027129164||Příroda kolem nás|Grada|50
+Pláž v Chorvatsku|Caplinová Julie|360|399|978-80-271-2935-5|9788027129355|Brožovaná vazba|Romantika, romány pro ženy|Cosmopolis|50
+Panther|Anderson Thomas|216|449|978-80-271-3001-6|9788027130016|Pevná šitá vazba|Militaria|Grada|50
+Umění motivace|Medlíková Olga|136|199|978-80-271-3005-4|9788027130054|Brožovaná vazba|Úspěch a motivace|Grada|50
+V kolektivu oblíbená|Taussig Pavel|264|279|978-80-271-3013-9|9788027130139|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Oblíbenec smrti|Černý Ivan|248|299|978-80-271-3014-6|9788027130146|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Povídky a jedna báseň|Svěrák Zdeněk|104|249|978-80-271-3015-3|9788027130153|Pevná šitá vazba|Humor, satira|Cosmopolis|50
+Láskyplné hubnutí|Douchová Zuzana|224|349|978-80-271-3018-4|9788027130184|Pevná šitá vazba|Hubnutí|Grada|50
+Sluneční hodiny|Nosek Miloš|184|389|978-80-271-3023-8|9788027130238||Ostatní|Grada|50
+Big data|Hendl Jan|224|399|978-80-271-3031-3|9788027130313|Brožovaná vazba|Programování|Grada|50
+Toulky Alpami|Roddie Alex|336|849|978-80-271-3039-9|9788027130399|Pevná šitá vazba|Průvodce|Grada|50
+Nosní polypóza|Schalek Petr|136|249|978-80-271-3045-0|9788027130450|Brožovaná vazba|Lékařské obory|Grada|50
+Dětská oftalmologie|Kolektiv autorů|704|1699|978-80-271-3052-8|9788027130528|Pevná šitá vazba|Lékařské obory|Grada|50
+Hodná holka, zlá krev|Jacksonová Holly|352|449|978-80-271-3053-5|9788027130535|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+Vyvýšené záhony|Kampas Doris|120|349|978-80-271-3055-9|9788027130559|Lepená vazba|Zahrada|Grada|50
+Sociologie|Urban Lukáš|280|499|978-80-271-3056-6|9788027130566|Brožovaná vazba|Sociologie|Grada|50
+Frida|Grünfeldová Nina|336|499|978-80-271-3059-7|9788027130597|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Příběhy paní Vilemíny|Mauleová Eliška|152|259|978-80-271-3063-4|9788027130634|Pevná šitá vazba|Pohádky|Bambook|50
+Praha v proměnách času|Sojka Petr|224|499|978-80-271-3065-8|9788027130658|Pevná šitá vazba|Průvodce|Grada|50
+Nejsi na to sama|Bellis|256|379|978-80-271-3070-2|9788027130702|Pevná šitá vazba|Zdravotnická a lékařská literatura|Grada|50
+Všichni jsme lobbisté|Nekvapil Václav|160|229|978-80-271-3072-6|9788027130726|Brožovaná vazba|Ekonomie|Grada|50
+Kraniosakrální jóga|Uhlířová Lucie|304|429|978-80-271-3073-3|9788027130733|Šitá vazba|Harmonie těla a duše|Alferia|50
+Etika versus emoce|Rapčan Milan|136|199|978-80-271-3075-7|9788027130757|Brožovaná vazba|Jazyky, komunikace, etika|Grada|50
+Krása jednoduchosti|Kumár Satiš|224|299|978-80-271-3085-6|9788027130856|Brožovaná vazba s klopami|Harmonie těla a duše|Alferia|50
+Staré sídlo|Taylor Ellen Mary|384|399|978-80-271-3087-0|9788027130870|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Einstein|Bayarri Jordi|48|249|978-80-271-3092-4|9788027130924|Pevná šitá vazba|Komiksy|Bambook|50
+Fit recepty pro každého|Kalašová Tereza|168|299|978-80-271-3098-6|9788027130986|Pevná šitá vazba|Výživa|Grada|50
+Velmi citlivá maminka|Schorr Brigitte|144|289|978-80-271-3100-6|9788027131006|Brožovaná vazba|Psychologie pro každého|Grada|50
+Newton|Bayarri Jordi|48|249|978-80-271-3102-0|9788027131020|Pevná šitá vazba|Komiksy|Bambook|50
+Osobnostní management|Barták Jan|296|399|978-80-271-3114-3|9788027131143|Brožovaná vazba|Andragogika|Grada|50
+Akciové investice|Gladiš Daniel|216|299|978-80-271-3122-8|9788027131228|Brožovaná vazba|Finance a investování|Grada|50
+Péče o rány|Brabcová Soňa|184|349|978-80-271-3133-4|9788027131334|Brožovaná vazba|Ošetřovatelství - postupy, první pomoc|Grada|50
+Šikmé tkaní|Mašková Dana|112|329|978-80-271-3134-1|9788027131341|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+Globalizovaná Indie|Jazairiová Pavla|288|469|978-80-271-3149-5|9788027131495|Brožovaná vazba|Literatura faktu|Grada|50
+Fermentace|Davisová Holly|272|490|978-80-271-3152-5|9788027131525|Šitá vazba|Kuchařky,  gastronomie|Grada|50
+Rudý vlk|Vincentová Rachel|320|379|978-80-271-3154-9|9788027131549|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+Holka od koní|Seimová Carrie|240|299|978-80-271-3156-3|9788027131563|Pevná šitá vazba|Beletrie pro děti|Bambook|50
+Lexikon kamarádství|Kolektiv autorů|112|199|978-80-271-3159-4|9788027131594|Pevná šitá vazba|Populárně naučná pro děti|Bambook|50
+Desetkrát šťastnější|O´Kane Owen|272|339|978-80-271-3161-7|9788027131617|Brožovaná vazba|Štěstí a pozitivní myšlení|Grada|50
+Štědrý bylinářův rok|Švédová Zuzana|392|599|978-80-271-3164-8|9788027131648|Pevná šitá vazba|Zdraví a životní styl|Grada|50
+Kreslíme zvířata|Miller D. L.|128|249|978-80-271-3168-6|9788027131686|Šitá vazba|Dětská literatura|Bambook|50
+Dům v zátoce|Taylor Ellen Mary|368|449|978-80-271-3170-9|9788027131709|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Opráski f krichli|jaz|488|499|978-80-271-3173-0|9788027131730|Pevná šitá vazba|Humor, satira|Grada|50
+Lovci tanků|Anderson Thomas|288|549|978-80-271-3174-7|9788027131747|Pevná šitá vazba|Militaria|Grada|50
+Kůže - nové projekty|Bothe Carsten|112|299|978-80-271-3179-2|9788027131792|Šitá vazba|Řemesla|Grada|50
+Marie Curie|Bayarri Jordi|48|249|978-80-271-3182-2|9788027131822|Pevná šitá vazba|Komiksy|Bambook|50
+Pasteur|Bayarri Jordi|48|249|978-80-271-3183-9|9788027131839|Pevná šitá vazba|Komiksy|Grada|50
+Neučebnice ekonomie|Farkačová Lenka|176|239|978-80-271-3193-8|9788027131938|Brožovaná vazba|Ekonomie|Grada|50
+Tichá řeč těla|Havener Thorsten|176|319|978-80-271-3199-0|9788027131990|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Trénuj jako bojovník|Landow Loren|256|369|978-80-271-3205-8|9788027132058|Brožovaná vazba|Sport|Grada|50
+Ofélie podruhé|Pipherová Mary|320|499|978-80-271-3211-9|9788027132119|Pevná šitá vazba|Osobní rozvoj a poznání|Alferia|50
+Toulky Evropou|Roddie Alex|328|889|978-80-271-3215-7|9788027132157|Pevná šitá vazba|Průvodce|Grada|50
+Fenomén Jan Kotěra|Zelinský Miroslav|144|399|978-80-271-3216-4|9788027132164|Brožovaná vazba s klopami|Architektura|Grada|50
+Karcinom rekta|Ihnát Peter|272|595|978-80-271-3219-5|9788027132195|Pevná šitá vazba|Chirurgie, ortopedie, traumatologie|Grada|50
+Noční pes|Elsonová Jane|272|349|978-80-271-3233-1|9788027132331|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Udíme a grilujeme|Kaufer Markus|160|349|978-80-271-3236-2|9788027132362|Šitá vazba|Kuchařky,  gastronomie|Grada|50
+Bylinky pro každého|Gutjahr Axel|128|299|978-80-271-3237-9|9788027132379|Šitá vazba|Zahrada, zvířata, příroda|Grada|50
+Jiná, ale pořád já|Dajbychová Jolana|320|299|978-80-271-3248-5|9788027132485|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Nečekané přiznání|Reganová Lisa|368|449|978-80-271-3250-8|9788027132508|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Pohřbené kosti|Reganová Lisa|368|449|978-80-271-3251-5|9788027132515|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Tichý pláč|Reganová Lisa|408|449|978-80-271-3252-2|9788027132522|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Soustružení dřeva|Gross Barry|144|429|978-80-271-3255-3|9788027132553|Šitá vazba|Řemesla|Grada|50
+Život na 4 kolech|Roman & Káťa|232|469|978-80-271-3258-4|9788027132584|Flexi vazba|Memoáry, osobnosti a osudy|Grada|50
+Zločiny ve jménu vědy|Kean Sam|352|499|978-80-271-3259-1|9788027132591|Pevná šitá vazba|Literatura faktu|Grada|50
+Všechno je krásné|Ray Eleanor|328|349|978-80-271-3264-5|9788027132645|Brožovaná vazba s klopami|Společenské romány|Cosmopolis|50
+Tři týdny do svatby|Quinnová Ella|336|399|978-80-271-3265-2|9788027132652|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Přivítejte nevítané|Čhödrön Pema|208|349|978-80-271-3288-1|9788027132881|Brožovaná vazba s klopami|Osobní rozvoj a poznání|Alferia|50
+Nečekaná lekce lásky|Dillonová Lucy|376|449|978-80-271-3290-4|9788027132904|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Dračí dcera|Flanaganová Liz|320|399|978-80-271-3298-0|9788027132980|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+Radost z nedokonalosti|Zahariades Damon|144|199|978-80-271-3300-0|9788027133000|Brožovaná vazba|Komunikační dovednosti|Grada|50
+Umění: objasněno|Hodgeová Susie|216|449|978-80-271-3316-1|9788027133161|Pevná šitá vazba|Výtvarné techniky, umění|Grada|50
+S dětmi v přírodě|Irvine Richard|160|399|978-80-271-3322-2|9788027133222|Šitá vazba|Výtvarné techniky, umění|Grada|50
+Mladá čarodějka|Birchallová Katy|248|299|978-80-271-3326-0|9788027133260|Brožovaná vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Jak vyzrát na akvarel|Davidová Monika|128|299|978-80-271-3328-4|9788027133284|Šitá vazba|Výtvarné techniky, umění|Grada|50
+Jiná válka|Diner Dan|272|449|978-80-271-3333-8|9788027133338|Pevná šitá vazba|Dějiny|Grada|50
+Microsoft Office 365|Klatovský Karel|176|289|978-80-271-3334-5|9788027133345|Brožovaná vazba|Kancelářské programy|Grada|50
+Zámecká strašidla|Hoňková Iva|72|199|978-80-271-3347-5|9788027133475|Pevná šitá vazba|První čtení|Bambook|50
+Skvělé časy|Hauptmannová Gaby|400|399|978-80-271-3348-2|9788027133482|Brožovaná vazba s klopami|Společenské romány|Cosmopolis|50
+Aristokrat|Mazáč Antonín|352|379|978-80-271-3353-6|9788027133536|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Domek v Irsku|Caplinová Julie|352|399|978-80-271-3364-2|9788027133642|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Francouzská revoluce|Válková Veronika|176|249|978-80-271-3396-3|9788027133963|Šitá vazba|Beletrie pro děti|Bambook|50
+Keltové|Válková Veronika|176|249|978-80-271-3397-0|9788027133970|Šitá vazba|Beletrie pro děti|Bambook|50
+Topíme dřevem|Zima Radek|112|269|978-80-271-3399-4|9788027133994|Brožovaná vazba|Hobby|Grada|50
+Myšlení pod kontrolou|Loja Radka|224|339|978-80-271-3402-1|9788027134021|Brožovaná vazba|Sebepoznání|Grada|50
+Bambusová říše – Potopa|Hunterová Erin|216|329|978-80-271-3407-6|9788027134076|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Sashiko|Clay Jill|136|399|978-80-271-3409-0|9788027134090|Šitá vazba|Výtvarné techniky, umění|Grada|50
+Ptáci na zahradě|Haag Holger|112|249|978-80-271-3417-5|9788027134175||Populárně naučná pro děti|Bambook|50
+Revolvers|Janeba Oldřich|208|229|978-80-271-3419-9|9788027134199|Brožovaná vazba|Česká současná beletrie|Cosmopolis|50
+Holky, to dáme!|Harrisonová Lisi|224|299|978-80-271-3437-3|9788027134373|Pevná šitá vazba|Příběhy, deníky|Bambook|50
+Šepot v bouři|Novotný Aleš|184|249|978-80-271-3438-0|9788027134380|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Tajemství odolnosti|Strunz  Ulrich|224|359|978-80-271-3444-1|9788027134441|Brožovaná vazba|Harmonie těla a duše|Grada|50
+Deníček psychiatričky|Moricová Anna|240|329|978-80-271-3446-5|9788027134465|Brožovaná vazba|Životní styl|Cosmopolis|50
+Dračí dech|Vernonová Ursula|160|279|978-80-271-3448-9|9788027134489|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Nové Vršovice|Valouch Klement|128|599|978-80-271-3466-3|9788027134663|Pevná šitá vazba|Architektura|Grada|50
+Hotel v naší hlavě|Baseler Marja|48|299|978-80-271-3467-0|9788027134670|Pevná šitá vazba|Dětská literatura|Bambook|50
+Továrna na hovínka|Baseler Marja|48|299|978-80-271-3468-7|9788027134687|Pevná šitá vazba|Dětská literatura|Bambook|50
+Pancéřoví granátníci|Anderson Thomas|304|649|978-80-271-3469-4|9788027134694|Pevná šitá vazba|Militaria|Grada|50
+Bike instruktor|Tóthová Katarína|96|229|978-80-271-3470-0|9788027134700|Šitá vazba|Sporty|Grada|50
+Pivrncovy vejšplechty|Urban Petr|112|199|978-80-271-3471-7|9788027134717|Lepená vazba|Humor, satira|Cosmopolis|50
+Pas a pes|Kynčl Jakub|248|449|978-80-271-3472-4|9788027134724|Flexi vazba|Memoáry, osobnosti a osudy|Grada|50
+Jsi tam?|Aldertonová Dolly|336|399|978-80-271-3473-1|9788027134731|Brožovaná vazba s klopami|Humor|Cosmopolis|50
+Holky se čtečkou|Jareš Vítězslav|272|349|978-80-271-3475-5|9788027134755|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Divoké kvašené nápoje|Baudar Pascal|304|569|978-80-271-3479-3|9788027134793|Šitá vazba|Osobní rozvoj a poznání|Alferia|50
+Zima na východní frontě|Baxter Ian|160|349|978-80-271-3487-8|9788027134878|Lepená vazba|Militaria|Grada|50
+Legendární Tatra 613|Tuček Jan|240|699|978-80-271-3488-5|9788027134885|Pevná šitá vazba|Automobily|Grada|50
+Bible dřepu|Horsching Aaron|144|349|978-80-271-3489-2|9788027134892|Brožovaná vazba|Trénink|Grada|50
+Svět nenásilí|Kashtan Miki|288|449|978-80-271-3500-4|9788027135004|Brožovaná vazba s klopami|Osobní rozvoj a poznání|Alferia|50
+Chce to dva|Coxová Natalie|352|429|978-80-271-3503-5|9788027135035|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Kempiči|Říha Vojtěch|200|449|978-80-271-3521-9|9788027135219|Flexi vazba|Beletrie|Grada|50
+Cukrový svět|Slánská Zuzana|96|279|978-80-271-3527-1|9788027135271|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Jen moje štěstí|Parksová Adele|384|429|978-80-271-3532-5|9788027135325|Brožovaná vazba s klopami|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Lean dílenské řízení|Patermann Jiří|160|329|978-80-271-3534-9|9788027135349|Brožovaná vazba|Podnikání a management|Grada|50
+Šumavská kuchařka|Pálka Radek|136|399|978-80-271-3540-0|9788027135400|Pevná šitá vazba|Kuchařky|Grada|50
+Nauč se žít|Snider Grant|144|329|978-80-271-3541-7|9788027135417|Šitá vazba|Životní styl|Grada|50
+Staň se tou pravou|Aiyana Sheleana|232|449|978-80-271-3542-4|9788027135424|Brožovaná vazba|Osobní rozvoj a poznání|Alferia|50
+Holka přes palubu|Bailey Tessa|360|399|978-80-271-3546-2|9788027135462|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Šli dva, šel sám|Růžička Petr|248|349|978-80-271-3548-6|9788027135486|Brožovaná vazba|Historické romány|Cosmopolis|50
+Daňové zákony 2022|Marková Hana|296|129|978-80-271-3551-6|9788027135516|Lepená vazba|Daně|Grada|50
+Autoškola 2022|Minář Václav|304|199|978-80-271-3552-3|9788027135523|Brožovaná vazba|Autoškola|Grada|50
+Kámen, nůžky, papír|Feeney Alice|320|449|978-80-271-3554-7|9788027135547|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Se žirafami na západ|Rutledgeová Lynda|384|449|978-80-271-3555-4|9788027135554|Pevná šitá vazba|Historické romány|Cosmopolis|50
+Smrt mezi řádky|Slaterová Alice|376|449|978-80-271-3557-8|9788027135578|Brožovaná vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Od nápadu k úspěchu|Webster Tamsen|208|359|978-80-271-3558-5|9788027135585|Brožovaná vazba|Marketing a reklama|Grada|50
+Low Carb pečení|Ruchser Diana|144|369|978-80-271-3561-5|9788027135615|Brožovaná vazba s klopami|Kuchařky|Grada|50
+Jeho a její|Feeney Alice|352|479|978-80-271-3565-3|9788027135653|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Dítě noci|McQuestion Karen|352|449|978-80-271-3566-0|9788027135660|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Vyjednávání s respektem|Davies Melissa|240|399|978-80-271-3568-4|9788027135684|Brožovaná vazba|Osobní rozvoj a poznání|Grada|50
+Myšák Kryštof a ponorka|Hoňková Iva|112|299|978-80-271-3569-1|9788027135691|Pevná šitá vazba|Pohádky|Bambook|50
+Houby - Do kapsy|Flück Markus|128|289|978-80-271-3572-1|9788027135721||Zahrada, zvířata, příroda|Grada|50
+Stromy -  Do kapsy|Heckerová Katrin|128|289|978-80-271-3574-5|9788027135745||Zahrada, zvířata, příroda|Grada|50
+Kde na světě?||32|279|978-80-271-3576-9|9788027135769|Pevná šitá vazba|Pracovní sešity, zábava, hry|Bambook|50
+Tvoření z dřívek|Šporková Sylva|80|249|978-80-271-3578-3|9788027135783|Šitá vazba|Výtvarné techniky|Grada|50
+Cvičení pro dva|Popowych Krista|224|429|978-80-271-3581-3|9788027135813|Brožovaná vazba|Fitness a kondice|Grada|50
+O liškách a lidech|Kimmig Sophia|248|399|978-80-271-3583-7|9788027135837|Brožovaná vazba|Zahrada, zvířata, příroda|Grada|50
+Stánek s polibky|Reeklesová Beth|360|449|978-80-271-3587-5|9788027135875|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+V příboji pochyb|Marcott Lindsay|400|449|978-80-271-3588-2|9788027135882|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Biomedicínská ergonomie|Dylevský Ivan|168|899|978-80-271-3600-1|9788027136001|Pevná šitá vazba|Ostatní lékařské obory|Grada|50
+Rok s velkým dubem|Mullerová Gerda|40|299|978-80-271-3605-6|9788027136056|Pevná šitá vazba|Dětská literatura|Bambook|50
+Zámky Čech a Moravy|Kvirenc Jan|320|499|978-80-271-3607-0|9788027136070|Pevná šitá vazba|Dějiny|Grada|50
+Krabička vzpomínek|Hughesová Kathryn|384|449|978-80-271-3610-0|9788027136100|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Lepší krev|Bennett Michael|320|449|978-80-271-3613-1|9788027136131|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Windows 11|Klatovský Karel|192|349|978-80-271-3617-9|9788027136179|Brožovaná vazba|Windows a další OS|Grada|50
+Odpojte se|Kersting Thomas|208|349|978-80-271-3620-9|9788027136209|Brožovaná vazba|Rady pro rodiče|Grada|50
+Autobusy Ikarus|Harák Martin|160|389|978-80-271-3625-4|9788027136254|Pevná šitá vazba|Retro|Grada|50
+Když se řekne fotbal|Williams Tom|240|449|978-80-271-3628-5|9788027136285||Sport|Grada|50
+Půda, duše, společnost|Kumár Satiš|200|399|978-80-271-3629-2|9788027136292|Brožovaná vazba s klopami|Uvědomělý život|Alferia|50
+Štvaná zvěř|Bennettová M.A.|304|399|978-80-271-3632-2|9788027136322|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+Odvoz pro Sáru|S. C. Lalli|304|399|978-80-271-3634-6|9788027136346|Brožovaná vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Fenomén Jože Plečnik|Zelinský Miroslav|128|399|978-80-271-3639-1|9788027136391|Brožovaná vazba s klopami|Architektura|Grada|50
+Víkend plný viny|Jonesová Sandie|320|449|978-80-271-3641-4|9788027136414|Brožovaná vazba s klopami|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Matčina hra (brož.)|Jonesová Sandie|352|399|978-80-271-3642-1|9788027136421|Brožovaná vazba s klopami|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Domek u lesa|Taylor Ellen Mary|368|449|978-80-271-3643-8|9788027136438|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Štědrý bylinářův rok II|Švédová Zuzana|424|799|978-80-271-3645-2|9788027136452|Pevná šitá vazba|Zdraví a životní styl|Grada|50
+Z tajů pražských dvorků|Sojka Petr|216|449|978-80-271-3646-9|9788027136469|Pevná šitá vazba|Architektura|Grada|50
+Markýz hledá ženu|Quinnová Ella|328|449|978-80-271-3650-6|9788027136506|Pevná šitá vazba|Milostné romány|Cosmopolis|50
+Dirigentka|Petersová Maria|272|399|978-80-271-3651-3|9788027136513|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Haka za lilii|Hardy M. K.|360|449|978-80-271-3656-8|9788027136568|Pevná šitá vazba|Erotické romány|Cosmopolis|50
+HAŠKOVINY|Syrovátka Tomáš|120|249|978-80-271-3659-9|9788027136599|Brožovaná vazba|Česká současná beletrie|Cosmopolis|50
+Atlas rostlin|Kremer P. Bruno|192|399|978-80-271-3663-6|9788027136636|Šitá vazba|Zahrada, zvířata, příroda|Grada|50
+Léto s draky|Clarke Ed|208|279|978-80-271-3671-1|9788027136711|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Šance pro Stelu|Hoyleová McCall|184|299|978-80-271-3672-8|9788027136728|Brožovaná vazba s klopami|Příběhy, deníky|Bambook|50
+Parní osobní automobily|Květoň Michael|160|369|978-80-271-3678-0|9788027136780|Lepená vazba|Retro|Grada|50
+Železniční modelářství|Losos Ludvík|192|399|978-80-271-3682-7|9788027136827|Šitá vazba|Auto & moto|Grada|50
+Ďáblova cesta|Bryndza Robert|368|459|978-80-271-3686-5|9788027136865|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Tíživé ticho|Bryndza Robert|368|459|978-80-271-3687-2|9788027136872|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Osudné svědectví|Bryndza Robert|384|459|978-80-271-3689-6|9788027136896|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Hrátky s pastelkami|Ráž Václav|64|199|978-80-271-3690-2|9788027136902|Brožovaná vazba|Pracovní sešity, zábava, hry|Bambook|50
+Kluci, to musíte vědět!|Einwohlt Ilona|96|299|978-80-271-3718-3|9788027137183|Šitá vazba|Populárně naučná pro děti|Grada|50
+NE/PROMLČENO|Nepromlčíme|200|449|978-80-271-3721-3|9788027137213|Brožovaná vazba s klopami|Literatura faktu|Cosmopolis|50
+Psychopedie|Bazalová Barbora|200|359|978-80-271-3725-1|9788027137251|Brožovaná vazba|Speciální pedagogika|Grada|50
+Vražedná temnota|Reganová Lisa|384|449|978-80-271-3743-5|9788027137435|Pevná šitá vazba|Krimi, detektivky|Cosmopolis|50
+Bojovníci s Nicotou|Murrayová Kate|288|399|978-80-271-3753-4|9788027137534|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+Nový domov|Connor Leslie|328|399|978-80-271-3754-1|9788027137541|Brožovaná vazba s klopami|Příběhy, deníky|Bambook|50
+O trzích a lidech|Hudík Marek|208|389|978-80-271-3758-9|9788027137589|Brožovaná vazba|Ekonomie|Grada|50
+Já, droga|Dvořák Ondřej|200|449|978-80-271-3759-6|9788027137596||Přírodní vědy|Grada|50
+Řecké štěstí|Panou Kateřina|264|399|978-80-271-3775-6|9788027137756|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Jak ovládnout své emoce|Meurisse Thibaut|216|349|978-80-271-3779-4|9788027137794|Šitá vazba|Sebepoznání|Grada|50
+Pravdu mám přece já!|Skálová Hana|208|299|978-80-271-3784-8|9788027137848|Brožovaná vazba s klopami|Česká současná beletrie|Cosmopolis|50
+Konzultant|Mazáč Antonín|344|449|978-80-271-3785-5|9788027137855|Brožovaná vazba s klopami|Česká současná beletrie|Cosmopolis|50
+Hravé počítání|Kneblová Radka|80|249|978-80-271-3790-9|9788027137909|Brožovaná vazba|Pracovní sešity, zábava, hry|Bambook|50
+Hravá abeceda|Kneblová Radka|80|249|978-80-271-3791-6|9788027137916|Brožovaná vazba|Pracovní sešity, zábava, hry|Bambook|50
+25 let kliniky Esthé|Měšťák Jan|96|1459|978-80-271-3798-5|9788027137985|Pevná šitá vazba|Historie|Grada|50
+Hrad ve Skotsku|Caplinová Julie|320|399|978-80-271-3804-3|9788027138043|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Rozmarýnová zátoka|Haleová Jenny|312|449|978-80-271-3805-0|9788027138050|Pevná šitá vazba|Společenské romány|Cosmopolis|50
+Kamenictví|Jundrovský R.|224|349|978-80-271-3808-1|9788027138081|Šitá vazba|Stavebnictví|Grada|50
+Hravá jóga pro děti|Dvořáková Anna|112|199|978-80-271-3810-4|9788027138104|Šitá vazba|Děti a sport|Grada|50
+Tajné jezero – Návrat|Inglisová Karen|272|329|978-80-271-3814-2|9788027138142|Pevná šitá vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Zbabělci a vrazi|Zachrdla Jakub|328|449|978-80-271-3816-6|9788027138166|Brožovaná vazba s klopami|Česká současná beletrie|Cosmopolis|50
+Údolí snů|Jacobsová Anna|368|449|978-80-271-3819-7|9788027138197|Brožovaná vazba|Romantika, romány pro ženy|Cosmopolis|50
+Štěstí voní jako chleba|Maiová Pauline|392|479|978-80-271-3820-3|9788027138203|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Pes v umění||160|349|978-80-271-3826-5|9788027138265|Šitá vazba|Výtvarné techniky, umění|Grada|50
+Píseň moře|Sattin Samuel|272|479|978-80-271-3841-8|9788027138418|Brožovaná vazba|Komiksy|Bambook|50
+Rolo hledá domov|Morgan Blake|144|249|978-80-271-3843-2|9788027138432|Pevná šitá vazba|Příběhy, deníky|Bambook|50
+Útěk na venkov|Caplinová Julie|368|449|978-80-271-3846-3|9788027138463|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Má to háček|Bailey Tessa|320|449|978-80-271-3847-0|9788027138470|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Sen o šicím stroji|Pitzorno Bianca|256|399|978-80-271-3848-7|9788027138487|Pevná šitá vazba|Historické romány|Cosmopolis|50
+Thonet 1939 - 1945|Uhlíř Jiří|120|399|978-80-271-3859-3|9788027138593|Pevná šitá vazba|Architektura|Grada|50
+Vlkochodci|Sattin Samuel|272|479|978-80-271-3864-7|9788027138647|Brožovaná vazba|Komiksy|Bambook|50
+Jeden koktejl nestačí|Mikšovic Alex|344|499|978-80-271-3869-2|9788027138692|Šitá vazba|Kuchařky|Grada|50
+Taxikář|Čepek Petr|264|399|978-80-271-3873-9|9788027138739|Brožovaná vazba s klopami|Česká současná beletrie|Cosmopolis|50
+Zahrádkářův rok|Kolektiv autorů|144|349|978-80-271-3875-3|9788027138753|Brožovaná vazba s klopami|Zahrada|Grada|50
+Cvičení s kojenci|Arlet Marie|88|199|978-80-271-3877-7|9788027138777|Brožovaná vazba s klopami|Medicína pro veřejnost|Grada|50
+Bílá vlčice|Walderová Vanessa|200|299|978-80-271-3878-4|9788027138784|Brožovaná vazba|Příběhy, deníky|Bambook|50
+Hrdinové suchých zahrad|Kern Simone|128|399|978-80-271-3886-9|9788027138869||Zahradní rostliny|Grada|50
+Kluk v kopačkách|Bolfová Markéta|120|279|978-80-271-3888-3|9788027138883|Pevná šitá vazba|Beletrie pro děti|Bambook|50
+Ekonomické jednohubky|Skořepa Michal|320|359|978-80-271-3901-9|9788027139019|Brožovaná vazba s klopami|Finance a investování|Grada|50
+Tváře|Meister Karel|224|899|978-80-271-3907-1|9788027139071|Pevná šitá vazba|Memoáry, osobnosti a osudy|Grada|50
+Modrá čarodějka|Adamsová Alane|200|299|978-80-271-3911-8|9788027139118|Brožovaná vazba|Dobrodružství, napětí, fantasy|Bambook|50
+Autoškola 2023|Minář Václav|320|249|978-80-271-3916-3|9788027139163|Brožovaná vazba|Autoškola|Grada|50
+Vzpomínky má každý|Ottová Alžběta|264|379|978-80-271-3930-9|9788027139309|Brožovaná vazba s klopami|Humor, satira|Cosmopolis|50
+Cukrářské zdobení|Puchałka Klaudia|192|399|978-80-271-3938-5|9788027139385|Brožovaná vazba|Kuchařky|Grada|50
+Jihomoravská kuchařka|Pálka Radek|160|399|978-80-271-3948-4|9788027139484|Pevná šitá vazba|Kuchařky,  gastronomie|Grada|50
+Dientzenhofer|Dvořáček Petr|136|649|978-80-271-3950-7|9788027139507|Pevná šitá vazba|Architektura|Grada|50
+Král medvědů|Walderová Vanessa|208|299|978-80-271-3954-5|9788027139545|Brožovaná vazba|Příběhy, deníky|Bambook|50
+Začalo to polibkem|Quinnová Ella|336|449|978-80-271-3957-6|9788027139576|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Dějiny válek v mapách|Parker Philip|224|749|978-80-271-3963-7|9788027139637|Pevná šitá vazba|Militaria|Grada|50
+Jedinečná svatá|Taussig Pavel|180|299|978-80-271-3964-4|9788027139644|Brožovaná vazba s klopami|Světová současná beletrie|Cosmopolis|50
+Vinice ve Francii|Caplinová Julie|368|449|978-80-271-3968-2|9788027139682|Brožovaná vazba s klopami|Milostné romány|Cosmopolis|50
+Mělčina|Craigová Holly|344|449|978-80-271-3973-6|9788027139736|Brožovaná vazba|Dobrodružství, napětí, thrillery|Cosmopolis|50
+Daně z příjmů|Dušek Jiří|208|349|978-80-271-3985-9|9788027139859|Brožovaná vazba|Daně|Grada|50
+S láskou Pamela|Anderson Pamela|256|399|978-80-271-3990-3|9788027139903|Pevná šitá vazba|Memoáry, osobnosti a osudy|Cosmopolis|50
+Tanec za odpuštění|Hardy M. K.|480|499|978-80-271-3992-7|9788027139927|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Smlouva na lásku|Connor Cassie|288|399|978-80-271-3993-4|9788027139934|Brožovaná vazba s klopami|Romantika, romány pro ženy|Cosmopolis|50
+Třicátý kilometr|Dubská Kateřina|224|399|978-80-271-3998-9|9788027139989|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Mentální odolnost|McNab Chris|192|345|978-80-271-3999-6|9788027139996|Šitá vazba|Sebeobrana|Grada|50
+Ta z katovny|Štelová Diana|240|349|978-80-271-5008-3|9788027150083|Pevná šitá vazba|Česká současná beletrie|Cosmopolis|50
+Malá traumata|Arroll Meg|304|449|978-80-271-5011-3|9788027150113|Brožovaná vazba|Harmonie těla a duše|Grada|50
+Freeskiing 2.0|Volák Jiří|128|329|978-80-271-5015-1|9788027150151|Brožovaná vazba|Sporty|Grada|50
+Drzý jako opice|Šmalcová Markéta|96|299|978-80-271-5019-9|9788027150199|Pevná šitá vazba|Dětská literatura|Bambook|50
+Dílna plná nápadů|Zeman Pavel|224|399|978-80-271-5053-3|9788027150533|Brožovaná vazba s klopami|Hobby|Grada|50
+Hravá keramika|Krédlová Kateřina|80|249|978-80-271-5054-0|9788027150540|Šitá vazba|Výtvarné techniky, umění|Grada|50
+Dopisy hvězdným duším|Campbell Rebecca|256|399|978-80-271-5081-6|9788027150816|Brožovaná vazba|Sebepoznání|Alferia|50
+Lovci lidí|Dyk Vladimír|108|249|978-80-271-5085-4|9788027150854|Brožovaná vazba|Beletrie|Cosmopolis|50
+Tetování za trest|Hardy M. K.|376|449|978-80-271-5101-1|9788027151011|Pevná šitá vazba|Romantika, romány pro ženy|Cosmopolis|50
+Společně se včelami|Urban Miroslav|160|349|978-80-271-5125-7|9788027151257|Brožovaná vazba s klopami|Chovatelství|Grada|50
+Glamping|Shattauer Julia|192|549|978-80-271-5126-4|9788027151264||Průvodce|Grada|50
+Cesty za oceán|Záhrobská Eva|224|449|978-80-271-5145-5|9788027151455||Memoáry, osobnosti a osudy|Grada|50
+Tajemství Karlova mostu|Černý David|128|349|978-80-271-5158-5|9788027151585|Pevná šitá vazba|Průvodce|Grada|50
+Rty s příchutí vína|Novotný Aleš|192|299|978-80-271-5178-3|9788027151783|Brožovaná vazba s klopami|Young Adult, New Adult|Cosmopolis|50
+Informační gramotnost|Černý Michal|320|449|978-80-271-5195-0|9788027151950|Brožovaná vazba|Společenské vědy, historie|Grada|50
+Toulky Skandinávií|Honan Cam|300|899|978-80-271-5196-7|9788027151967|Pevná šitá vazba|Průvodce|Grada|50
+Rusko-ukrajinské vztahy|Syruček Milan|272|399|978-80-271-5221-6|9788027152216|Brožovaná vazba s klopami|Literatura faktu|Grada|50
+Daňové zákony 2024|Marková Hana|336|189|978-80-271-5243-8|9788027152438|Lepená vazba|Daně|Grada|50
+Zásady ekonomie|Mankiw Gregory N.|768|1059|978-80-7169-891-3|9788071698913|Šitá vazba|Ekonomie|Grada|50
+Koně - práce ze země|Bayley Lesley|192|449|978-80-7359-051-2|9788073590512|Pevná šitá vazba|Chovatelství|Metafora|50
+Kameny od A do Z|Hallová Judy|399|399|978-80-7359-061-1|9788073590611|Brožovaná vazba|Osobní rozvoj a poznání|Metafora|50
+Matrix: božský zdroj|Braden Gregg|288|329|978-80-7359-153-3|9788073591533|Brožovaná vazba|Harmonie těla a duše|Metafora|50
+Výcvik jezdeckého koně|Wood Perry|153|469|978-80-7359-191-5|9788073591915|Pevná šitá vazba|Chovatelství|Metafora|50
+Výcvik mladého koně|Maxwell Richard|154|469|978-80-7359-199-1|9788073591991|Pevná šitá vazba|Zahrada, zvířata, příroda|Metafora|50
+Kameny od A do Z 2|Hallová Judy|400|449|978-80-7359-218-9|9788073592189|Pevná šitá vazba|Osobní rozvoj a poznání|Metafora|50
+Emoční inteligence|Goleman Daniel|336|349|978-80-7359-334-6|9788073593346|Pevná šitá vazba|Komunikační dovednosti|Metafora|50
+Templářská relikvie|Palov Chloe|432|349|978-80-7359-354-4|9788073593544|Brožovaná vazba|Krimi, detektivky|Metafora|50
+Poselství Mistrů|Weiss Brian L.|260|199|978-80-7359-367-4|9788073593674|Flexi vazba|Harmonie těla a duše|Metafora|50
+Háčkujeme na panenky|Armani Cendrine|64|149|978-80-7359-371-1|9788073593711|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Háčkování: Jak na to|Eatonová Jan|160|379|978-80-7359-380-3|9788073593803|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Madame Picasso|Girardová Anne|352|379|978-80-7359-446-6|9788073594466|Pevná šitá vazba|Biografické romány|Metafora|50
+Šití: Jak na to|Knightová Lorna|160|349|978-80-7359-466-4|9788073594664|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Tilda a dům hraček|Finnangerová Tone|144|329|978-80-7359-501-2|9788073595012|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Bohové a králové|Thomasová Dana|429|299|978-80-7359-509-8|9788073595098|Pevná šitá vazba|Memoáry, osobnosti a osudy|Metafora|50
+Práce se dřevem|Griffiths Mark|192|499|978-80-7359-512-8|9788073595128|Pevná šitá vazba|Výtvarné techniky|Metafora|50
+Ví o tobě|Pinborough Sarah|304|299|978-80-7359-528-9|9788073595289|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Tilda a její nápady|Finnangerová Tone|144|349|978-80-7359-535-7|9788073595357|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Labutě z páté Avenue|Benjamin Melanie|288|349|978-80-7359-541-8|9788073595418|Pevná šitá vazba|Biografické romány|Metafora|50
+Šťastně až do smrti|Ekbergová Anna|368|399|978-80-7359-542-5|9788073595425|Pevná šitá vazba|Krimi, detektivky|Metafora|50
+Vařila jsem pro Picassa|Aubray Camille|416|399|978-80-7359-543-2|9788073595432|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Včelí vosk|Ahnertová Petra|136|349|978-80-7359-545-6|9788073595456|Flexi vazba|Výtvarné techniky|Metafora|50
+Levandule|Koníčková Mirka|128|279|978-80-7359-546-3|9788073595463|Brožovaná vazba|Zahrada|Metafora|50
+Práce s kůží|Ingrams Otis|144|399|978-80-7359-549-4|9788073595494|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Zázračná voda|Emoto Masaru|108|199|978-80-7359-574-6|9788073595746|Pevná šitá vazba|Harmonie těla a duše|Metafora|50
+Právem moje|Butler J. L.|400|399|978-80-7359-577-7|9788073595777|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Prchavý čas světla|Scharer Whitney|360|399|978-80-7359-578-4|9788073595784|Pevná šitá vazba|Biografické romány|Metafora|50
+Srdce Šamana|Villoldo Alberto|160|259|978-80-7359-580-7|9788073595807|Flexi vazba|Harmonie těla a duše|Metafora|50
+Ocejchovaná|Ekbergová Anna|456|399|978-80-7359-582-1|9788073595821|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Zachraňte si kůži!|Midal Fabrice|160|249|978-80-7359-583-8|9788073595838|Pevná šitá vazba|Harmonie těla a duše|Metafora|50
+Mystický léčitel: Játra|William Anthony|416|599|978-80-7359-930-0|9788073599300|Pevná šitá vazba|Alternativní léčení|Metafora|50
+Zlatá klec|Läckberg Camilla|432|399|978-80-7625-032-1|9788076250321|Pevná šitá vazba|Krimi, detektivky|Metafora|50
+Tichá srdce|Florio Gwen|392|399|978-80-7625-033-8|9788076250338|Pevná šitá vazba|Světová současná beletrie|Metafora|50
+Smrt jako umění|Anholt Laurence|320|329|978-80-7625-034-5|9788076250345|Pevná šitá vazba|Krimi, detektivky|Metafora|50
+Devět tváří tebe|Pariatová Janice|176|199|978-80-7625-070-3|9788076250703|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Znám tě ze svých snů|Avitová Clélie|208|269|978-80-7625-071-0|9788076250710|Brožovaná vazba s klopami|Milostné romány|Metafora|50
+Pletení stylových košů|N´Diaye Tabara|143|349|978-80-7625-075-8|9788076250758|Brožovaná vazba s klopami|Řemesla|Metafora|50
+Den, kdy jsme se potkali|Cooperová Roxie|400|379|978-80-7625-077-2|9788076250772|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Báječný čas života|Williamsová Abby|360|349|978-80-7625-085-7|9788076250857|Brožovaná vazba s klopami|Humor|Metafora|50
+Dívka na útěku|Reesová Joanna|480|449|978-80-7625-086-4|9788076250864|Pevná šitá vazba|Milostné romány|Metafora|50
+Kameny v praxi|Hallová Judy|264|299|978-80-7625-090-1|9788076250901|Flexi vazba|Alternativní léčení|Metafora|50
+Ať zemře|Pinborough Sarah|392|399|978-80-7625-095-6|9788076250956|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Zdroj|Swartová Tara|272|329|978-80-7625-096-3|9788076250963|Pevná šitá vazba|Sebepoznání|Metafora|50
+Pečujte o svou energii|Svirinskaja Alla|264|299|978-80-7625-103-8|9788076251038|Flexi vazba|Harmonie těla a duše|Metafora|50
+Metabolický motor|Pontzer Herman|296|499|978-80-7625-104-5|9788076251045||Harmonie těla a duše|Metafora|50
+Šaty dělají člověka|Karenová Dawnn|256|329|978-80-7625-105-2|9788076251052|Pevná šitá vazba|Prezentace|Metafora|50
+Nobelovka|Gely Cyril|196|249|978-80-7625-106-9|9788076251069|Pevná šitá vazba|Biografické romány|Metafora|50
+7 klíčů|Schwarz Asa|328|349|978-80-7625-108-3|9788076251083|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Román z pokoje 128|Bonidanová Cathy|248|299|978-80-7625-110-6|9788076251106|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Pohlednice z Itálie|Brownová Alex|336|369|978-80-7625-115-1|9788076251151|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Mrchožrouti|Jonsson Magnus|416|399|978-80-7625-122-9|9788076251229|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Žena, která lovila sama|Jonsson Magnus|448|449|978-80-7625-123-6|9788076251236|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Pletené ponožky|Ozolina Ieva|128|349|978-80-7625-125-0|9788076251250|Brožovaná vazba|Výtvarné techniky|Metafora|50
+Cizinka v Paříži|Reesová Joanna|490|449|978-80-7625-127-4|9788076251274|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Útočiště|Loubry Jerome|344|369|978-80-7625-128-1|9788076251281|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Paříž tě nikdy neopustí|Feldmanová Ellen|280|349|978-80-7625-129-8|9788076251298|Pevná šitá vazba|Světová současná beletrie|Metafora|50
+Haló...jsi tam?|Lucasová Fiona|376|399|978-80-7625-130-4|9788076251304|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Skříň plná Diora|Lesterová Natasha|472|449|978-80-7625-132-8|9788076251328|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Holky z Detroitu|Whitaker Tori|360|449|978-80-7625-135-9|9788076251359|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Spolčení ničemů|Chattam Maxime|448|449|978-80-7625-141-0|9788076251410|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Za dveřmi tma|Bailey Anna|344|379|978-80-7625-143-4|9788076251434|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+A v srdci láska|Parrettová Favel|216|249|978-80-7625-145-8|9788076251458|Pevná šitá vazba|Světová současná beletrie|Metafora|50
+Lež vedle mě|Olsen Gregg|384|399|978-80-7625-149-6|9788076251496|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Květy smrti|Johnsonová Jill|320|329|978-80-7625-150-2|9788076251502|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Letní sázka|Henryová Emily|384|399|978-80-7625-152-6|9788076251526|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Rozbal to naplno!|Beck Tobias|160|229|978-80-7625-153-3|9788076251533|Pevná šitá vazba|Úspěch a motivace|Metafora|50
+Smrtelný hřích|Grundová Maria|344|379|978-80-7625-157-1|9788076251571|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Ticho mezi námi|Greavesová Abbey|288|329|978-80-7625-158-8|9788076251588|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Na život a na smrt|Griffinová Laura|368|379|978-80-7625-160-1|9788076251601|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Jackie a Maria|Paulová Gill|472|449|978-80-7625-163-2|9788076251632|Pevná šitá vazba|Biografické romány|Metafora|50
+Hotel u Jezera stínů|Tullyová Daniela|296|299|978-80-7625-165-6|9788076251656|Pevná šitá vazba|Světová současná beletrie|Metafora|50
+Háčkované čtverce|Callard Sarah|176|449|978-80-7625-167-0|9788076251670|Brožovaná vazba|Beletrie|Metafora|50
+Jednou za život|Swan T.L.|472|499|978-80-7625-168-7|9788076251687|Pevná šitá vazba|Erotické romány|Metafora|50
+Hodiny v Paříži|George Alex|288|299|978-80-7625-169-4|9788076251694|Pevná šitá vazba|Historické romány|Metafora|50
+Na druhý pokus|Swan T.L.|440|449|978-80-7625-171-7|9788076251717|Pevná šitá vazba|Erotické romány|Metafora|50
+Čtyři múzy|Haydocková Sophie|448|479|978-80-7625-172-4|9788076251724|Pevná šitá vazba|Biografické romány|Metafora|50
+V jabloňovém sadu|Wiggsová Susan|416|399|978-80-7625-173-1|9788076251731|Pevná šitá vazba|Milostné romány|Metafora|50
+Dívka č. 37|Gálvez Christian|384|399|978-80-7625-175-5|9788076251755|Pevná šitá vazba|Historické romány|Metafora|50
+Babičky na tahu|Leigh Judy|304|349|978-80-7625-176-2|9788076251762|Pevná šitá vazba|Humor, satira|Metafora|50
+Tři ženy pana Wrighta|Keir Linda|432|399|978-80-7625-177-9|9788076251779|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Eliza je sama doma|Rosenová Jane L.|328|349|978-80-7625-183-0|9788076251830|Pevná šitá vazba|Společenské romány|Metafora|50
+Obyčejné lhářky|Guyová Louise|352|369|978-80-7625-186-1|9788076251861|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Obr z mlhy|Loubry Jerome|256|329|978-80-7625-188-5|9788076251885|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Rendez-vous s múzou|Ernstová Dee|304|299|978-80-7625-190-8|9788076251908|Brožovaná vazba s klopami|Milostné romány|Metafora|50
+5 vůní našeho příběhu|Margerand Laure|272|329|978-80-7625-194-6|9788076251946|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Kmotry|Aubray Camille|440|449|978-80-7625-200-4|9788076252004|Pevná šitá vazba|Historické romány|Metafora|50
+Diktátorova múza|Farndale Nigel|360|399|978-80-7625-203-5|9788076252035|Pevná šitá vazba|Biografické romány|Metafora|50
+Kouzlo všité do šatů|Davisová Barbara|416|469|978-80-7625-205-9|9788076252059|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Sestry z vinice|Ross  JoAnn|376|449|978-80-7625-208-0|9788076252080|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Alex, léto a já|Henryová Emily|384|449|978-80-7625-210-3|9788076252103|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+30 nocí vášně|D´Abová Christine|272|299|978-80-7625-211-0|9788076252110|Pevná šitá vazba|Erotické romány|Metafora|50
+Trofej|Kane Darby|416|449|978-80-7625-213-4|9788076252134|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Toxická láska|Noort Saskia|272|299|978-80-7625-214-1|9788076252141|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Ďábel si počká|Chattam Maxime|496|499|978-80-7625-216-5|9788076252165|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Magická síla kamenů|Hallová Judy|176|349|978-80-7625-217-2|9788076252172|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Jak být šik v Paříži|Levy Marianne|232|269|978-80-7625-220-2|9788076252202|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Lvi na výsluní|Auci Stefania|272|369|978-80-7625-221-9|9788076252219|Pevná šitá vazba|Světová současná beletrie|Metafora|50
+Byt nad Seinou|Bowenová  Kelly|368|449|978-80-7625-222-6|9788076252226|Pevná šitá vazba|Historické romány|Metafora|50
+Poslední měsíční dívka|Davisová Barbara|400|449|978-80-7625-223-3|9788076252233|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Pád sicilských lvů|Auci Stefania|456|469|978-80-7625-224-0|9788076252240|Pevná šitá vazba|Historické romány|Metafora|50
+Pohlednice z Paříže|Brownová Alex|352|399|978-80-7625-226-4|9788076252264|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Na hraně|Manzor René|320|399|978-80-7625-227-1|9788076252271|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Bublinky štěstí|Frippová Helen|368|449|978-80-7625-228-8|9788076252288|Pevná šitá vazba|Biografické romány|Metafora|50
+Američanka v Paříži|Maher Kerri|376|449|978-80-7625-229-5|9788076252295|Pevná šitá vazba|Biografické romány|Metafora|50
+Francouzská lekce|Boyd Natasha|472|449|978-80-7625-230-1|9788076252301|Brožovaná vazba s klopami|Erotické romány|Metafora|50
+Bez zábran|Swan T.L.|464|449|978-80-7625-235-6|9788076252356|Pevná šitá vazba|Erotické romány|Metafora|50
+Prokletí hrobky|Paulová Gill|320|449|978-80-7625-236-3|9788076252363|Pevná šitá vazba|Biografické romány|Metafora|50
+Láska naslepo|Layne Lauren|272|329|978-80-7625-237-0|9788076252370|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+O lásce vážně|Krien  Daniela|224|349|978-80-7625-238-7|9788076252387|Pevná šitá vazba|Společenské romány|Metafora|50
+Láska z Manhattanu|Layne Lauren|264|349|978-80-7625-239-4|9788076252394|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Vůně medu|Wiggsová Susan|368|449|978-80-7625-240-0|9788076252400|Pevná šitá vazba|Romantika, romány pro ženy|Metafora|50
+Scénář na lásku|Monaghan Annabel|224|349|978-80-7625-241-7|9788076252417|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Krvavé stíny|Loubry Jerome|352|429|978-80-7625-244-8|9788076252448|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Knihomolové|Henryová Emily|384|449|978-80-7625-245-5|9788076252455|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Dům vůní|Sahler Martina|352|429|978-80-7625-248-6|9788076252486|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Dům knih|Rygiert Beate|352|449|978-80-7625-249-3|9788076252493|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Vinice v Provence|Kelly Ruth|344|399|978-80-7625-252-3|9788076252523|Brožovaná vazba s klopami|Romantika, romány pro ženy|Metafora|50
+Žena v ohni|Barr Lisa|392|459|978-80-7625-254-7|9788076252547|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Drž mě|Kennedy Stacey|216|249|978-80-7625-255-4|9788076252554|Brožovaná vazba|Erotické romány|Metafora|50
+Sváděj mě|Kennedy Stacey|208|289|978-80-7625-256-1|9788076252561|Brožovaná vazba|Erotické romány|Metafora|50
+Uteč, dokud můžeš|Zanetti Rebecca|368|449|978-80-7625-258-5|9788076252585|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Ztracená kapitola|Bishop Caroline|328|449|978-80-7625-259-2|9788076252592|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Tři životy|Lesterová Natasha|440|469|978-80-7625-261-5|9788076252615|Pevná šitá vazba|Beletrie|Metafora|50
+Zákon karmy|Michie David|432|499|978-80-7625-271-4|9788076252714||Osobní rozvoj a poznání|Metafora|50
+Sleduj mě|Kennedy Stacey|208|249|978-80-7625-279-0|9788076252790|Brožovaná vazba|Beletrie|Metafora|50
+Zachraň mě|Kennedy Stacey|208|249|978-80-7625-280-6|9788076252806|Brožovaná vazba|Beletrie|Metafora|50
+Zmiz, dokud můžeš|Zanetti Rebecca|368|449|978-80-7625-281-3|9788076252813|Pevná šitá vazba|Beletrie|Metafora|50
+Nedokončený příběh|Yarros Rebecca|440|479|978-80-7625-282-0|9788076252820|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Jen mezi námi|Swan T.L.|496|499|978-80-7625-283-7|9788076252837|Pevná šitá vazba|Beletrie|Metafora|50
+Bláznivá jízda|Myers Christina|240|349|978-80-7625-286-8|9788076252868|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Annin útěk|Corrente Mattia|264|349|978-80-7625-287-5|9788076252875|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Dámy na zabití|Raybourn Deanna|320|449|978-80-7625-288-2|9788076252882|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Kapitální podfuk|Haven Josh|272|399|978-80-7625-289-9|9788076252899|Pevná šitá vazba|Beletrie|Metafora|50
+Dívka v mlze|Bernátová Barbora|320|449|978-80-7625-298-1|9788076252981|Brožovaná vazba s klopami|Beletrie|Metafora|50
+Stříbrná křídla|Läckberg Camilla|376|399|978-80-7625-366-7|9788076253667|Pevná šitá vazba|Dobrodružství, napětí, thrillery|Metafora|50
+Bohatství národů|Smith Adam|904|889|978-80-86389-60-8|9788086389608|Pevná šitá vazba|Ekonomie|Grada|50
+Liberalismus|Mises von Ludwig|240|289|978-80-86389-62-2|9788086389622|Brožovaná vazba|Ekonomie|Grada|50
+Socialismus|Mises von Ludwig|584|769|978-80-86389-65-3|9788086389653|Brožovaná vazba|Ekonomie|Grada|50
+Nepřátelé státu|Tětek Josef|190|259|978-80-86389-68-4|9788086389684|Brožovaná vazba|Ekonomie|Grada|50
+Ekonomie v jednom viru|Bourne Ryan|336|399|978-80-86389-70-7|9788086389707|Lepená vazba|Ekonomie|Grada|50
+Osudná domýšlivost|Hayek F. A.|272|399|978-80-86389-71-4|9788086389714|Lepená vazba|Ekonomie|Grada|50
+Teorie mravních citů|Smith Adam|432|679|978-80-86389-73-8|9788086389738||Ekonomie|Grada|50
+Kapitalismus a svoboda|Friedman Milton|368|389|978-80-86389-74-5|9788086389745|Brožovaná vazba|Ekonomie|Grada|50
+Petice za zákaz slunce|Bastiat Frederic|254|349|978-80-87733-18-9|9788087733189|Pevná šitá vazba|Finanční trhy a instituce|Grada|50
+Nemovité věci v daních|Hnátek Miloslav|212|389|978-80-907398-9-5|9788090739895|Brožovaná vazba|Daně|Grada|50
