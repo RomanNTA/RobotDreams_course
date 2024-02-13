@@ -1,7 +1,5 @@
 package cz.robodreams.javadeveloper.project.common;
 
-import cz.robodreams.javadeveloper.project.books.IItem;
-
 public interface ISubject<T> {
 
     Integer size();

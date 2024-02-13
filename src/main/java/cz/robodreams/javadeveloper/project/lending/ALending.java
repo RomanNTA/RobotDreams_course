@@ -1,9 +1,8 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.books.Article;
-import cz.robodreams.javadeveloper.project.books.IArticle;
-import cz.robodreams.javadeveloper.project.books.IItem;
-import cz.robodreams.javadeveloper.project.books.IItemBook;
+import cz.robodreams.javadeveloper.project.books.Book;
+import cz.robodreams.javadeveloper.project.books.IBook;
+import cz.robodreams.javadeveloper.project.books.IBooks;
 import cz.robodreams.javadeveloper.project.common.ASubject;
 import cz.robodreams.javadeveloper.project.common.ISubjectAdd;
 import cz.robodreams.javadeveloper.project.users.AUser;
@@ -15,10 +14,9 @@ import java.util.List;
 public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubjectAdd<ILoan> {
 
     private IUsers<IUser> users;
+    private IBooks<IBook> books;
 
-    private IArticle<IItemBook> books;
-
-    public ALending(IUsers<IUser> users, IArticle<IItemBook> books) {
+    public ALending(IUsers<IUser> users, IBooks<IBook> books) {
         this.books = books;
         this.users = users;
     }
@@ -64,8 +62,8 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
             repository.values().stream()
                     .filter(y -> x.equals( y.getUser().getId() ))
                     .forEach(y -> System.out.println(
-                    "|\t" + ((IItem) y.getBook()).getShortInfo() + " " +
-                    ((ALoan) y).getShortInfo())
+                                    "|\t" + ((Book) y.getBook()).getShortInfo() + " " +
+                                    ((ALoan) y).getShortInfo())
                     );
             this.line();
         });

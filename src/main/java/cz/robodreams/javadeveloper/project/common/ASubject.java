@@ -1,7 +1,5 @@
 package cz.robodreams.javadeveloper.project.common;
 
-import cz.robodreams.javadeveloper.project.books.IItem;
-
 import java.util.HashMap;
 
 public abstract class ASubject<T> implements ISubject<T> {
@@ -9,15 +7,14 @@ public abstract class ASubject<T> implements ISubject<T> {
     protected HashMap<Integer, T > repository = new HashMap<>();
 
     @Override
-    public void generator(int count) {};
+    public abstract void generator(int count);
 
     @Override
     public Boolean add(int key, T value) {
         if (value != null) {
             repository.put(key, value);
-            return true;
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -39,7 +36,7 @@ public abstract class ASubject<T> implements ISubject<T> {
     }
 
     @Override
-    public void show(int id, Boolean shortLongFormat){};
+    public abstract void show(int id, Boolean shortLongFormat);
 
     @Override
     public T getRandomSubject(){

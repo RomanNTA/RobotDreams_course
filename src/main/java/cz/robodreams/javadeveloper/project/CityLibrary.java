@@ -1,20 +1,24 @@
 package cz.robodreams.javadeveloper.project;
 
-import cz.robodreams.javadeveloper.project.books.Article;
-import cz.robodreams.javadeveloper.project.books.IArticle;
-
-import cz.robodreams.javadeveloper.project.books.IItemBook;
+import cz.robodreams.javadeveloper.project.books.Books;
+import cz.robodreams.javadeveloper.project.books.IBook;
+import cz.robodreams.javadeveloper.project.books.IBooks;
 import cz.robodreams.javadeveloper.project.event.EventManager;
 import cz.robodreams.javadeveloper.project.lending.ALending;
 import cz.robodreams.javadeveloper.project.lending.ILending;
 import cz.robodreams.javadeveloper.project.lending.ILendingConst;
+import cz.robodreams.javadeveloper.project.users.IUser;
 import cz.robodreams.javadeveloper.project.users.IUsers;
 import cz.robodreams.javadeveloper.project.users.Users;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 public class CityLibrary implements ICityLibrary, ILendingConst {
 
 
-    private IArticle<IItemBook> books;
+    private IBooks books;
     private IUsers usr;
     private ILending lending;
 
@@ -24,27 +28,23 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
         /**
          * Načtení 100 knih z databaze.
          */
-        this.books = new Article();
-        //books.generator(100);
+        this.books = new Books();
+        books.generator(100);
 
 
         /**
          * Vygenerování 20 uživatelů knihovny
          */
         this.usr = new Users();
-        //usr.generator(20);
+        usr.generator(20);
 
 
         /**
          * Vygenerování 20 zapůjčení knih
          */
         this.lending = new ALending(usr, books);
-        //lending.generator(20);
+        lending.generator(20);
 //        lending.show(1,false);;
-
-
-
-
 
     }
 

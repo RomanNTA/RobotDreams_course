@@ -1,7 +1,6 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.books.IItem;
-import cz.robodreams.javadeveloper.project.books.IItemBook;
+import cz.robodreams.javadeveloper.project.books.IBook;
 import cz.robodreams.javadeveloper.project.common.TerminalColorConst;
 import cz.robodreams.javadeveloper.project.users.IUser;
 
@@ -12,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
 
     private IUser user;
-    private IItem book;
+    private IBook book;
 
 
     private LocalDateTime sinceWhen;
@@ -20,7 +19,7 @@ public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
     private STATUS_BORROW status;
 
 
-    public ALoan(IUser user, IItem book,
+    public ALoan(IUser user, IBook book,
                  LocalDateTime sinceWhen, LocalDateTime untilWhen,
                  STATUS_BORROW status) {
         this.user = user;
@@ -66,7 +65,7 @@ public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
         return user;
     }
 
-    public IItem getBook() {
+    public IBook getBook() {
         return book;
     }
 
@@ -101,7 +100,7 @@ public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
     public String toString() {
         return "ALoan{" +
                 "user=" + user.getName() +
-                " books=" + ((IItemBook) book).getTitle() +
+                " books=" + book.getTitle() +
                 ", sinceWhen=" + sinceWhen +
                 ", untilWhen=" + untilWhen +
                 ", status=" + status +

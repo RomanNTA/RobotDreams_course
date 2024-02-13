@@ -2,13 +2,20 @@ package cz.robodreams.javadeveloper.project.books;
 
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 
-import static cz.robodreams.javadeveloper.project.books.TypeArticle.BOOK;
+public interface IBook {
 
-public interface IItemBook {
 
-    TypeArticle typeArticle = BOOK;
+    void show(Boolean shortLongFormat);
+
+    String getShortInfo();
 
     String getShortInfoBuying();
+
+    Boolean getBorrowed();
+
+    void setBorrowed(Boolean borrowed, ALoan borrowedReference);
+
+    ALoan getBorrowedReference();
 
 
     Integer getIdBook();

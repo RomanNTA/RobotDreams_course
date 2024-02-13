@@ -6,22 +6,51 @@ import cz.robodreams.javadeveloper.project.common.UsefulProc;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 
-public class Article extends ASubject<T extends IItem > implements IArticle<T extends IItem> {
+public class Books extends ASubject<IBook> implements IBooks<IBook> {
 
+//    private Boolean isBuying;
     private Integer money;
+
+
 
     @Override
     public void generator(int count) {
+//        isBuying = false;
         new BooksGenerator(this, count);
     }
 //
-//    @Override
-//    public Boolean add(int key, IBook value) {
-//        return super.add(key, value);
+//    public Integer buyBooks(int money){
+//        isBuying = true;
+//        this.money = money;
+//        new BooksGenerator(this, -1);
+//        // kolik stály knihy
+//        return money - this.money;
 //    }
+
+    @Override
+    public Boolean add(int key, IBook value) {
+
+//        // generování podle počtu knih
+//        if (!isBuying){
+            return super.add(key, value);
+//        }
+//
+//        // generování/ nákup podle ceny knihy
+//        if (value.getPrice() <= money ){
+//            //line();
+//            super.add(key, value);
+//            money -= value.getPrice();
+//            System.out.println(value.getShortInfoBuying());
+//            System.out.println("\t... nákup knihy v ceně " + value.getPrice() + " Kč. Zbývá " + money + " Kč");
+//            return true;
+//        }
+//        // nejsou money ... konec
+//        return false;
+    }
 
     @Override
     public void show(int id, Boolean shortLongFormat) {
@@ -29,10 +58,14 @@ public class Article extends ASubject<T extends IItem > implements IArticle<T ex
         get(id).show(true);
     }
 
+
     @Override
-    public IItem getRandomSubject() {
+    public IBook getRandomSubject() {
         try {
-            return (repository.values().stream().skip(UsefulProc.getRandomId(0, repository.size() - 1)).findAny()).get();
+            return (repository.values().stream()
+                    .skip(UsefulProc.getRandomId(0,repository.size()-1))
+                    .findAny()
+            ).get();
         } catch (NullPointerException e) {
             return null;
         }
@@ -41,7 +74,6 @@ public class Article extends ASubject<T extends IItem > implements IArticle<T ex
     public String showBookGenre(Boolean returnRandomGenre, Boolean showAllGenre) {
 
         Map<String, Long> booksGenre = repository.values().stream()
-                .map(x -> (IItemBook) x)
                 .filter(x -> x.getGenre().length() > 0)
                 .filter(x -> !x.getBorrowed())
                 .map(x -> x.getGenre())
@@ -56,7 +88,10 @@ public class Article extends ASubject<T extends IItem > implements IArticle<T ex
         String result = "";
         try {
             if (returnRandomGenre) {
-                result = (booksGenre.keySet().stream().skip(UsefulProc.getRandomId(0, booksGenre.size() - 1)).findAny()).get();
+                result = (booksGenre.keySet().stream()
+                        .skip(UsefulProc.getRandomId(0,booksGenre.size()-1))
+                        .findAny()
+                ).get();
             }
         } catch (NullPointerException e) {
             return "";
@@ -67,10 +102,10 @@ public class Article extends ASubject<T extends IItem > implements IArticle<T ex
     public void showBooksAccordingToGenre(String genre) {
 
         List<Integer> listOfBooks = repository.values().stream()
-                .map(x -> (IItemBook) x)
                 .filter(x -> !x.getBorrowed())
                 .filter(p -> p.getGenre() == genre)
-                .map(x -> x.getIdBook()).toList();
+                .map(x -> x.getIdBook())
+                .toList();
 
         System.out.printf("Seznam voných knih v knihovně pro žánr '%s'.\n", genre);
         for (int i = 0; i < listOfBooks.size(); i++) {

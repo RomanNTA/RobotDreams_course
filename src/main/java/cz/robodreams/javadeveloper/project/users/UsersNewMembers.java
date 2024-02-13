@@ -7,8 +7,8 @@ public class UsersNewMembers extends Users implements IUsersNewMembers {
 
     public void newMembersAreComing(int countOfNewMembers){
         this.countOfNewMembers = countOfNewMembers;
-        System.out.println("\t... noví členové knihovny (" + countOfNewMembers + ").");
-        new UserGenerator(this, countOfNewMembers );
+        System.out.println("\t... noví členové knihovny");
+        new UserGenerator(this, -1);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class UsersNewMembers extends Users implements IUsersNewMembers {
         countOfNewMembers--;
         value.show(true);
 
-        return countOfNewMembers > 0;
+        return countOfNewMembers == 0;
     }
 
 

@@ -1,6 +1,6 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.books.IItem;
+import cz.robodreams.javadeveloper.project.books.IBook;
 import cz.robodreams.javadeveloper.project.users.IUser;
 
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ public interface ILoan {
 
     IUser getUser();
 
-    IItem getBook();
+    IBook getBook();
 
 
     LocalDateTime getSinceWhen();

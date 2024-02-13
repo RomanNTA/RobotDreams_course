@@ -1,7 +1,15 @@
 package cz.robodreams.javadeveloper.project.books;
 
+import cz.robodreams.javadeveloper.project.common.ASubject;
+import cz.robodreams.javadeveloper.project.common.UsefulProc;
 
-public class BooksShopping extends Article implements IBooksShopping {
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+
+public class BooksShopping extends Books implements IBooksShopping{
 
     private Integer money;
 
@@ -13,7 +21,7 @@ public class BooksShopping extends Article implements IBooksShopping {
     }
 
     @Override
-    public Boolean add(int key, IItem value) {
+    public Boolean add(int key, IBook value) {
 
         if (value.getPrice() <= money ){
             //line();

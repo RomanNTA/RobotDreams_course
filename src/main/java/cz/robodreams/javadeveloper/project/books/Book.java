@@ -1,12 +1,12 @@
 package cz.robodreams.javadeveloper.project.books;
 
+import cz.robodreams.javadeveloper.project.common.TerminalColorConst;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 
-import static cz.robodreams.javadeveloper.project.books.TypeArticle.BOOK;
-
-public class AItemBook extends AItem implements IItem, IItemBook {
+public class Book extends TerminalColorConst implements IBook {
 
     private Integer idBook;
+
     private String title;
     private String author;
     private Integer numberOfPages;
@@ -24,9 +24,9 @@ public class AItemBook extends AItem implements IItem, IItemBook {
     private ALoan borrowedReference;
 
 
-    public AItemBook(Integer idBook, String title, String author, Integer numberOfPages,
-                     Integer price, String isbn, String ean, String custody, String genre,
-                     String publisher, Integer profit) {
+    public Book(Integer idBook, String title, String author, Integer numberOfPages,
+                Integer price, String isbn, String ean, String custody, String genre,
+                String publisher, Integer profit) {
         this.idBook = idBook;
         this.title = title;
         this.author = author;
@@ -73,18 +73,31 @@ public class AItemBook extends AItem implements IItem, IItemBook {
 
     }
 
-    public String getShortInfo() {
+    public String getShortInfo(){
         return String.format(String.format(colCyan("%-40s"), title));
     }
-
-    public String getShortInfoBuying() {
-        return String.format(String.format(colCyan("%-40s") + colRed("%d Kč."), title, price));
+    public String getShortInfoBuying(){
+        return String.format(String.format(colCyan("%-40s")+colRed("%d Kč."), title,price));
     }
+
 
 
     /**
      * Getter + setter
      */
+    public ALoan getBorrowedReference() {
+        return borrowedReference;
+    }
+
+    public Boolean getBorrowed() {
+        return borrowed;
+    }
+
+
+    public void setBorrowed(Boolean borrowed, ALoan borrowedReference) {
+        this.borrowed = borrowed;
+        this.borrowedReference = borrowed ? borrowedReference : null;
+    }
 
     /**
      * Jen gettery
