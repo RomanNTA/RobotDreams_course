@@ -1,19 +1,6 @@
 package cz.robodreams.javadeveloper.project.users;
+import cz.robodreams.javadeveloper.project.common.ISubject;
 
-public interface IUsers {
-
-
-    void addNewUsers(int countOfNewPerson);
-
-    void insertNewUser(int key, Identity value);
-
-    Identity getPerson(int id);
-
-    Integer getCountPerson();
-
-    void show(int id, Boolean shortLongFormat);
-
-    void line();
-
+public interface IUsers<T> extends ISubject<T> {
 
 }

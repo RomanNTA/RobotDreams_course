@@ -3,10 +3,9 @@ package cz.robodreams.javadeveloper.project.db;
 import cz.robodreams.javadeveloper.project.balist.BufferedArrayList;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.Objects;
 
-public class AColumn extends BufferedArrayList implements IColumn, IConstant {
+public class AColumn<T, E> extends BufferedArrayList<E> implements IColumn<T>, IConstant {
 
     /**
      * id identifikátor a zpětný odkaz na pozici v rootu
@@ -22,7 +21,7 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
     /**
      * typ sloupce podle konstant
      */
-    private Integer type;
+    private TypeColumn type;
 
     /**
      * přídavek navíc pro uložení dalšího zpracování
@@ -38,12 +37,13 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
      */
 
     //, int id, int type
-    public AColumn(String name, int id, int type, Object additional) {
+    public AColumn(Class type1, Class type2, String name, int id, TypeColumn strType, Object additional) {
+
+        super(type2);
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.type = strType;
         this.additional = additional;
-
     }
 
     @Override
@@ -52,7 +52,7 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
     }
 
     @Override
-    public int getType() {
+    public TypeColumn getType() {
         return type;
     }
 
@@ -66,7 +66,7 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
     @Override
     public void setName(String setName) {
         this.name = setName;
-        if (setName.trim().length() <= 0) {
+        if (setName.trim().length() == 0) {
             this.name = "<unknown>";
         }
     }
@@ -76,7 +76,6 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
     public Object getAdditional() {
         return additional;
     }
-
     @Override
     public void setAdditional(Object object) {
         this.additional = object;
@@ -84,35 +83,14 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
 
 
     @Override
-    public Integer getValueInteger(int index) {
-        return ((Integer) this.get(index));
+    public void setValue(int index, T value) {
+        insert((E) value, index);
     }
-
     @Override
-    public LocalDateTime getValueLocalDateTime(int index) {
-        return (LocalDateTime) this.get(index);
+    public T getValue(int index) {
+        return ((T) this.get(index));
     }
 
-    @Override
-    public String getValueString(int index) {
-        return (String) this.get(index);
-    }
-
-
-    @Override
-    public void setValueString(int index, String value) {
-        insert((Object) value, index);
-    }
-
-    @Override
-    public void setValueInteger(int index, Integer value) {
-        insert((Object) value, index);
-    }
-
-    @Override
-    public void setValueDateTime(int index, LocalDateTime value) {
-        insert((Object) value, index);
-    }
 
 
     @Override
@@ -125,78 +103,9 @@ public class AColumn extends BufferedArrayList implements IColumn, IConstant {
         return Objects.hash(id);
     }
 
-    @Override
-    public String toString() {
-        String s = "AColumn{";
-        s += "\r\n\tColumn " + id + " : Name= " + name + " : Type= " + typeToString() + ", Rows= " + size();
-        s += "\r\n\tArray=[" + getStreamToString() + "];";
-        s += "}\r\n";
-        return s;
-
-//        return "\r\nADbChain{" +
-//                ",\r\nid= '" + id + '\'' +
-//                ",\r\nname= '" + name + '\'' +
-//                ",\r\ntype= '" + type + '\'' +
-//                ",\r\nnadditional= '" + (String) additional + '\'' +
-//                "\r\nchain={" + s +
-//                "'}\r\n";
-
-
-
-//        for (int i = 0; i < size(); i++) {
-//            s += String.format("(%d->%s),", i, (String) get(i));
-//        }
-
-
-//        switch (type) {
-//
-//            case IColumn.TypeSTRING: {
-//                for (int i = 0; i < size(); i++) {
-//                    s += String.format("(%d->%s),", i, (String) get(i));
-//                }
-//                break;
-//            }
-
-
-//            case IColumn.TypeSTRING: {
-//                for (int i = 0; i < chain.size(); i++) {
-//                    s += String.format("(%d->%s),", i, (String) chain.get(i));
-//
-//                    //"'" + (String) chain.get(i) + "',";
-//                }
-//                break;
-//            }
-
-
-//            case IColumn.TypeINTEGER: {
-//                for (Object val : chain) {
-//                    s += "'" + (Integer) val + "'\r\n";
-//                }
-//                break;
-//            }
-//            case IColumn.TypeDATETIME: {
-//                for (Object val : chain) {
-//                    s += "'" + (LocalDateTime) val + "'\r\n";
-//                }
-//                break;
-//            }
-//    }
-
-
-//        return "\r\nADbChain{" +
-//                ",\r\nid= '" + id + '\'' +
-//                ",\r\nname= '" + name + '\'' +
-//                ",\r\ntype= '" + type + '\'' +
-//                ",\r\nnadditional= '" + (String) additional + '\'' +
-//                "\r\nchain={" + s +
-//                "'}\r\n";
-    }
-
     public String typeToString() {
-        return TYPE_TO_TEXT[type];
+        return TYPE_TO_TEXT[type.ordinal()];
     }
-
-
 
 
 }

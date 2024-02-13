@@ -1,5 +1,7 @@
 package cz.robodreams.javadeveloper.project.db;
 
+import cz.robodreams.javadeveloper.project.balist.IBufferedArrayList;
+
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.time.LocalDateTime;
@@ -10,7 +12,6 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
 
     private Map<Integer, AColumn> columns = new HashMap<>();
     private String sourceFile;
-
     private ILoader loader;
 
     public ATable(String sourceFile) {
@@ -30,82 +31,62 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
     }
 
     private void put(int col, int row, Object value) {
-        AColumn c = getColumn(col);
-
         //System.out.println("col = " + col + ", row = " + row + ", value -> " + value);
-        switch (c.getType()) {
-            case TYPE_STRING -> {
-                c.insert((String) value, row);
-            }
-            case TYPE_INTEGER -> {
-                try {
+
+        AColumn column = getColumn(col);
+        try {
+            switch (column.getType()) {
+                case TYPE_STRING -> column.setValue(row, (String) value);
+                case TYPE_DATETIME -> column.setValue(row, (LocalDateTime) value);
+                case TYPE_INTEGER -> {
                     NumberFormat format = NumberFormat.getInstance();
-                    int i = format.parse((String) value).intValue();
-                    c.insert(i, row);
-                } catch (ParseException e) {
-                    e.printStackTrace();
+                    column.setValue(row, (Integer) format.parse((String) value).intValue());
                 }
+
             }
-            case TYPE_DATETIME -> {
-                c.insert((LocalDateTime) value, row);
-            }
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
-    }
-
-
-    @Override
-    public String getColumnName(int index) {
-        return getColumn(index).getName();
-    }
-
-    @Override
-    public String getTypeToString(int index) {
-        return getColumn(index).typeToString();
-    }
-
-    @Override
-    public int getColumnCount() {
-        return columns.size();
-    }
-
-    @Override
-    public Integer getRowsCount(int id) {
-        return getColumn(id).size();
-    }
-
-    @Override
-    public Integer getColumnType(int id) {
-        return getColumn(id).getType();
-    }
-
-
-    @Override
-    public String getString(int row, int col) {
-        return getColumn(col).getValueString(row);
-    }
-
-    @Override
-    public Integer getInteger(int row, int col) {
-        //System.out.println(col + " - " + row);
-        return getColumn(col).getValueInteger(row);
-    }
-
-    @Override
-    public LocalDateTime getLocalDateTime(int row, int col) {
-        return getColumn(col).getValueLocalDateTime(row);
     }
 
     @Override
     public AColumn addColumn(String name, int type, String additional) {
-        AColumn ac = new AColumn(name, columns.size(), type, additional);
-        columns.put(columns.size(), ac);
-        return ac;
+
+        AColumn column = null;
+        switch (type) {
+            case IConstant.TYPE_INTEGER -> {
+                column = new AColumn<Integer, Integer[]>(Integer.class, Integer[].class,
+                        name, columns.size(), TypeColumn.TYPE_INTEGER, additional);
+                columns.put(columns.size(), column);
+                return column;
+            }
+            case IConstant.TYPE_STRING -> {
+                column = new AColumn<String, String[]>(String.class, String[].class,
+                        name, columns.size(), TypeColumn.TYPE_STRING, additional);
+                columns.put(columns.size(), column);
+                return column;
+
+            }
+            case IConstant.TYPE_DATETIME -> {
+                column = new AColumn<LocalDateTime, LocalDateTime[]>(LocalDateTime.class, LocalDateTime[].class,
+                        name, columns.size(), TypeColumn.TYPE_DATETIME, additional);
+                columns.put(columns.size(), column);
+                return column;
+
+            }
+        }
+        return column;
     }
+
     @Override
     public void invalidateAndReload() {
         columns.clear();
         ILoader loader = new Loader(this, sourceFile);
         loader.loadData();
+
+//        IBufferedArrayList col = (AColumn) getColumn(2);
+//        System.out.println( col.find(32) );
+
     }
 
 
@@ -144,6 +125,52 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
         }
     }
 
+
+
+    @Override
+    public String getColumnName(int index) {
+        return getColumn(index).getName();
+    }
+
+    @Override
+    public String getTypeToString(int index) {
+        return getColumn(index).typeToString();
+    }
+
+    @Override
+    public int getColumnCount() {
+        return columns.size();
+    }
+
+    @Override
+    public Integer getRowsCount(int id) {
+        return getColumn(id).size();
+    }
+
+    @Override
+    public TypeColumn getColumnType(int id) {
+        return getColumn(id).getType();
+    }
+
+
+
+    @Override
+    public String getString(int row, int col) {
+        return (String) getColumn(col).getValue(row);
+    }
+
+    @Override
+    public Integer getInteger(int row, int col) {
+        return (Integer) getColumn(col).getValue(row);
+    }
+
+    @Override
+    public LocalDateTime getLocalDateTime(int row, int col) {
+        return (LocalDateTime) getColumn(col).getValue(row);
+    }
+
+
+
     @Override
     public String toString() {
         String s = "ATable{";
@@ -156,85 +183,6 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
 }
 
 
-//        switch (c.getType()) {
-//            case TYPE_STRING -> {
-//                c.insert((String) value, row);
-//            }
-//            case TYPE_INTEGER -> {
-//                c.insert((Integer) value, row);
-//            }
-//            case TYPE_DATETIME -> {
-//                c.insert((LocalDateTime) value, row);
-//            }
-//        }
-
-
-
-//    @Override
-//    public String getTypeOfSubjectField(int index) {
-//        return listTypeOfSubject.get(index);
-//    }
-//
-//    @Override
-//    public String getInAdditionOfSubjectField(int index) {
-//        return listInAdditinalOfSubjectField.get(index);
-//    }
-//
-//    @Override
-//    public int getCountOfSubjectField() {
-//        return listNameOfSubject.size();
-//    }
-//
-//    @Override
-//    public Boolean isBorrowed(int index) {
-//        return listBorrowed.get(index);
-//    }
-
-
-//    @Override
-//    public void insertNames(String[] strings) {
-//
-//
-//        for (int i = 0; i < strings.length-1; i++) {
-//
-//        }
-
-
-//        System.arraycopy(strings, 0, listNameOfSubject, 0, strings.length - 1);
-//        size = listNameOfSubject.size();
-//        System.out.println(listNameOfSubject);
-//    }
-//
-//    @Override
-//    public void insertTypes(String[] strings) {
-//        if (size == strings.length) {
-//            throw new RuntimeException("Import dat: Chybný počet typů.");
-//        }
-//    }
-//
-//    @Override
-//    public void insertAdditional(String[] strings) {
-//        if (size == strings.length) {
-//            throw new RuntimeException("Import dat: Chybný počet přídavků.");
-//        }
-//    }
-//
-//    @Override
-//    public Boolean getCountOfSubject() {
-//        return null;
-//    }
-//
-//    @Override
-//    public String getFields(int row, int column) {
-//
-////        try {
-////            String[] result = linesMap.get(row);
-////            return result[column];
-////        } catch (NullPointerException e) {
-//            return null;
-////        }
-//    }
-//
 //    //    @Override
 //    public ArrayList<String> toArrayList(Boolean writeTerminal, String delimiter) {
 //

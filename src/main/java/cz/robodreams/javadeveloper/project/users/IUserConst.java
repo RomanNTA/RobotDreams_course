@@ -1,10 +1,10 @@
 package cz.robodreams.javadeveloper.project.users;
 
-public interface IUserIdentity {
+public interface IUserConst {
 
     enum GENDER {
         MAN,
-        WOMAN;
+        WOMAN
     }
 
 
@@ -51,6 +51,12 @@ public interface IUserIdentity {
             "Za invalidovnou", "Za Karlínským přístavem", "Za Poříčskou bránou", "Zábranská"
     };
     int COUNT_STREETS = STREETS.length;
+
+
+
+
+
+
 
 
 

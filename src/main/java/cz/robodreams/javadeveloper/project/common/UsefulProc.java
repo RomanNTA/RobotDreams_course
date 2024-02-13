@@ -1,4 +1,4 @@
-package cz.robodreams.javadeveloper.project.users;
+package cz.robodreams.javadeveloper.project.common;
 
 import org.apache.commons.lang3.StringUtils;
 

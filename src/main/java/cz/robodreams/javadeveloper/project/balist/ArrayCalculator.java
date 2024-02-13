@@ -1,28 +1,14 @@
 package cz.robodreams.javadeveloper.project.balist;
 
 
-public class BufferedArrayListCalculator implements InnerAccessToArrayList {
+public class ArrayCalculator implements IArrayCalculator {
 
-    /* 1,2  => 120% */
-    private static final double ICLF = (double) (INCREASE_CAPACITY_LOAD_FACTOR + 100) / 100;
-    /* 0,25 => 25%  */
-    private static final double DCDF = (double) DECREASE_CAPACITY_DECISION_FACTOR / 100;
-    /* 0,5  => 50%  */
-    private static final double DCF = (double) DECREASE_CAPACITY_FACTOR / 100;
+    protected Boolean needTmpArray;
+    protected int capacity;
+    protected int size;
 
-    private BufferedArrayList ale;
-
-    public Boolean needTmpArray;
-
-    public int capacity;
-
-
-    /**
-     * @param MyArrayListEx - zpětný ukazatel
-     */
-    public BufferedArrayListCalculator(BufferedArrayList le) {
-        this.ale = le;
-        this.capacity = InnerAccessToArrayList.INIT_CAPACITY;
+    public ArrayCalculator() {
+        this.capacity = IArrayCalculator.INIT_CAPACITY;
         this.needTmpArray = false;
     }
 
@@ -53,6 +39,7 @@ public class BufferedArrayListCalculator implements InnerAccessToArrayList {
         }
 
         if (newSize <= INIT_CAPACITY) {
+            capacity = INIT_CAPACITY;
             return;
         }
 
@@ -61,51 +48,47 @@ public class BufferedArrayListCalculator implements InnerAccessToArrayList {
 
             int alocDcf = newSize + (int) Math.ceil((double) (capacity - newSize) * DCF);
             alocDcf = ((alocDcf / ALIGN)) * ALIGN;
-            capacity = alocDcf < INIT_CAPACITY ? INIT_CAPACITY : alocDcf;
+            capacity = Math.max(INIT_CAPACITY, alocDcf);
+            //alocDcf < INIT_CAPACITY ? INIT_CAPACITY : alocDcf;
             needTmpArray = true;
-        } else {  // je to v povolené oblasti
-            newSize = newSize < INIT_CAPACITY ? INIT_CAPACITY : newSize;
         }
+//        else {  // je to v povolené oblasti
+//            newSize = newSize < INIT_CAPACITY ? INIT_CAPACITY : newSize;
+//        }
     }
 
-    public Boolean realocate(int newSize) {
+    public void resizeCapacity(int newSize) {
 
-        ale.setPosition(ale.size());
         needTmpArray = false;
-        capacity = ale.getAllocatedCapacity();
 
-        if (newSize > ale.size()) {
-            realocatePlus(newSize);
-        } else if (newSize < ale.size()) {
-            realocateMinus(newSize);
+        if (newSize == size) {
+            return;
         }
-        ale.setSize(newSize);
-        return needTmpArray;
-    }
-
-
-    public Boolean resize(int newSize) {
-
-        //ale.setPosition(ale.size());
-        needTmpArray = false;
-        capacity = ale.getAllocatedCapacity();
 
         if (newSize > capacity) {
             realocatePlus(newSize);
-        } else if (newSize < capacity) {
+        } else {
             realocateMinus(newSize);
         }
 
         if (needTmpArray) {
-            ale.reCopyWithNewSize(capacity);
+            reCopyWithNewSize(capacity);
         }
-//        ale.setSize(newSize);
-        return needTmpArray;
     }
+
+    protected void reCopyWithNewSize(int newSize) {}
 
     @Override
     public int getAllocatedCapacity() {
         return 0;
     }
+
+    @Override
+    public void clear() {
+        size = 0;
+        capacity = INIT_CAPACITY;
+        needTmpArray = false;
+    }
+
 
 }

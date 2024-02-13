@@ -23,7 +23,7 @@ public interface ITable {
     /**
      * Typ sloupce
      */
-    Integer getColumnType(int index);
+    IConstant.TypeColumn getColumnType(int index);
 
     /**
      * Vrati obsah bunky
@@ -34,38 +34,10 @@ public interface ITable {
 
     LocalDateTime getLocalDateTime(int row, int col);
 
+
     AColumn addColumn(String name, int type, String additional);
 
-
     String getTypeToString(int index);
-
-
-//    /**
-//     * Import ... předměty !!!
-//     * */
-//    void insertSubjects(int counter, String[] output);
-//
-//
-//
-//    /**
-//     * Import ... Names ... MUSÍ BÝT PRVNÍ !!!
-//     * */
-//    void insertNames(String[] strings);
-//
-//    /**
-//     * Import ... Types
-//     * */
-//    void insertTypes(String[] strings);
-//
-//    /**
-//     * Import ... Additional
-//     * */
-//    void insertAdditional(String[] strings);
-//
-//
-//
-//    String getFields(int row, int column);
-
 
     void invalidateAndReload();
 

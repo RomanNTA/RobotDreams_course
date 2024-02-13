@@ -1,4 +1,4 @@
-package cz.robodreams.javadeveloper.project.util;
+package cz.robodreams.javadeveloper.project.common;
 
 public interface ITerminal {
 

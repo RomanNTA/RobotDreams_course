@@ -1,46 +1,42 @@
 package cz.robodreams.javadeveloper.project.balist;
 
 
-public interface IBufferedArrayList {
+public interface IBufferedArrayList<E> {
 
     int size();
 
-    boolean isEmpty();
+    E get(int i);
 
-    boolean contains(Object o);
+    //    void set(int i, Object value);
+    void set(int i, E value);
 
-    boolean add(Object value);
+    Boolean isEmpty();
 
-    boolean remove(Object o);
+    void insert(E value, int index);
+
+    Boolean contains(E object);
+
+    Boolean containsAll(E[] collection);
+
+
+    void add(E value);
+
+    Boolean remove(E value);
 
     Boolean remove(int index);
 
-    //boolean containsAll(Collection<?> collection);
-    boolean containsAll(Object... objArr);
+    Boolean removeFromTo(int indexFrom, int indexTo);
 
-    //boolean addAll(Collection<? extends Object> collection);
-    boolean addAll(Object... objArr);
+    Boolean addAll(E... collection);
 
     void clear();
 
-    Object get(int i);
+    int indexOf(E o);
 
-    Object set(int i, Object value);
-
-    int indexOf(Object o);
+    void insertFromTo(int indexOfInsert, int length, E... objArr);
 
     IBufferedArrayList subList(int i, int i1);
 
-    void insertFromTo(int indexOfInsert, int length, Object... objArr);
-
-    void insert(Object o, int index);
-
-    void setCalc(BufferedArrayListCalculator calc);
-
-    Boolean removeFromTo(int indexFrom, int indexTo);
-
-    BufferedArrayListCalculator getCalc();
-
-    String getStreamToString();
+    Boolean find(E value);
 
 }

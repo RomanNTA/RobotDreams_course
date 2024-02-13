@@ -1,10 +1,11 @@
 package cz.robodreams.javadeveloper.project.books;
 
-public interface IBookDatabase {
+public interface IBooksGenerator {
 
     String DATABASE_FILE = "db_books";
+    int DATABASE_FILE_SIZE = 870;
 
-    IBook getBook(int id);
+    IItem getBook(int id);
     Integer getCountOfBooks();
 
 }

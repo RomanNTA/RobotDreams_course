@@ -1,61 +1,52 @@
 package cz.robodreams.javadeveloper.project.balist;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import java.lang.reflect.Array;
 
+public class BufferedArrayList<E> extends ArrayCalculator implements IBufferedArrayList<E> {
 
-public class BufferedArrayList implements IBufferedArrayList, InnerAccessToArrayList {
+    private final Class<E[]> myType;
 
     /**
      * This will represent stored data
      */
-    private Object[] arr;
-    private Object[] arrTmp;
+    private E arr[];
+    private E arrTmp[];
 
-    private BufferedArrayListCalculator calc;
+    private int allocCapacity;
 
-    private int size;
-    private int position;
+//    private int position;
 
-    public BufferedArrayList() {
-        calc = new BufferedArrayListCalculator(this);
-        arr = new Object[calc.capacity];
+    /***
+     *  Suspend validation while appending to the end of an array.
+     */
+    private Boolean suspendVerify = false;
+
+
+    public BufferedArrayList(Class<E[]> type) {
+        super();
+        this.myType = type;
+        arr = createArray(capacity);
         arrTmp = null;
         size = 0;
-        // allocCapacity = InnerAccessToArrayList.INIT_CAPACITY;
+
+
+
     }
 
-    //    public BufferedArrayList(Collection<? extends Object> collection) {
-    public BufferedArrayList(Object... extArr) {
-        this();
-        calc.realocate(extArr.length);
-        arr = new Object[calc.capacity];
-        System.arraycopy(extArr, 0, arr, 0, extArr.length);
+    public BufferedArrayList(Class<E[]> type, E... objArr) {
+        this(type);
+        if (objArr == null) {
+            return;
+        }
+        resizeCapacity(objArr.length);
+        System.arraycopy(objArr, 0, arr, 0, objArr.length);
+        size = objArr.length;
     }
 
-
-    /**
-     * public pro kalkulátor, v interface není zahrnuta
-     *
-     * @param newSize
-     */
-    public void setSize(int newSize) {
-        size = newSize;
+    private void changeTempAndArr() {
+        arr = arrTmp;
+        arrTmp = null;
     }
-
-    @Override
-    public int size() {
-        return size;
-    }
-
-    public BufferedArrayListCalculator getCalc() {
-        return calc;
-    }
-
-    public void setCalc(BufferedArrayListCalculator calc) {
-        this.calc = calc;
-    }
-
 
     @Override
     public int getAllocatedCapacity() {
@@ -63,12 +54,120 @@ public class BufferedArrayList implements IBufferedArrayList, InnerAccessToArray
     }
 
     @Override
-    public boolean isEmpty() {
-        return size == 0;
+    public int size() {
+        return size;
     }
 
     @Override
-    public int indexOf(Object o) {
+    public Boolean isEmpty() {
+        return size == 0;
+    }
+
+
+    @Override
+    public Boolean contains(E object) {
+
+        for (int i = 0; i < size; i++) {
+            if (((E) object) == ((E) arr[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void reCopyWithNewSize(int newSize) {
+        arrTmp = createArray(newSize);
+        System.arraycopy(arr, 0, arrTmp, 0, Math.min(arr.length, arrTmp.length));
+        arr = arrTmp;
+        arrTmp = null;
+    }
+
+    @Override
+    public Boolean remove(E value) {
+        int i = this.indexOf(value);
+        if (i == -1) {
+            return false;
+        }
+        return null; // removeFromTo(i, i);
+    }
+
+    /**
+     * nerespektuje velikost a pokud je to mimo, nafoukne pole
+     */
+    @Override
+    public void insert(E value, int index) {
+        try {
+            if (index < capacity) {
+                arr[index] = value;
+                size = size > index + 1 ? size : ++index;
+            } else {
+                insertFromTo(index, 1, value);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error 'insert' ... index= " + index + " size= " + size + " capacity= " + capacity);
+        }
+    }
+
+    @Override
+    public Boolean find(E value){
+        for (int i = 0; i < size; i++) {
+            if ( value.equals((E) arr[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    @Override
+    public Boolean containsAll(E[] collection) {
+        for (E o : collection) {
+            if (!contains(o)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public Boolean addAll(E... collection) {
+
+        resizeCapacity(size + collection.length);
+        System.arraycopy(collection, 0, arr, size, collection.length);
+        size = size + collection.length;
+        return true;
+    }
+
+    @Override
+    public void add(E value) {
+        resizeCapacity(size + 1);
+        arr[size++] = value;
+    }
+
+    @Override
+    public void clear() {
+        super.clear();
+        arr = createArray(capacity);
+        arrTmp = null;
+    }
+
+    @Override
+    public E get(int i) {
+        verifyIndex(i);
+        return (E) arr[i];
+    }
+
+    @Override
+    public void set(int i, E value) {
+        verifyIndex(i);
+        arr[i] = (E) value;
+    }
+
+
+    @Override
+    public int indexOf(E o) {
+
         for (int i = 0; i < size; i++) {
             if (arr[i].equals(o)) {
                 return i;
@@ -77,26 +176,15 @@ public class BufferedArrayList implements IBufferedArrayList, InnerAccessToArray
         return -1;
     }
 
-    public void setPosition(int i) {
-        position = i;
-    }
+//    @Override
+//    public String toString() {
+//        String out = Arrays.stream(arr)
+//                .filter(x -> x!= null)
+//                .map(x -> (String) x.toString())
+//                .collect(Collectors.joining(", "));
+//        return "BufferedArrayList<" + myType.getTypeName() + ">size = "+size + "; capacity = " + capacity + "\r\n{" + out + "}";
+//    }
 
-    @Override
-    public boolean add(Object value) {
-        calc.resize(size + 1);
-        position = size++;
-        arr[position] = value;
-        return true;
-    }
-
-    @Override
-    public boolean remove(Object o) {
-        int i = this.indexOf(o);
-        if (i == -1) {
-            return false;
-        }
-        return removeFromTo(i, i);
-    }
 
     @Override
     public Boolean remove(int index) {
@@ -106,108 +194,18 @@ public class BufferedArrayList implements IBufferedArrayList, InnerAccessToArray
 
 
     @Override
-    public boolean contains(Object o) {
-
-        for (int i = 0; i < size; i++) {
-            if (arr[i].equals(o)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Object... objArr) {
-
-        for (Object c : objArr) {
-            if (!contains(c)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    @Override
-    public boolean addAll(Object... objArr) {
-
-        calc.resize(size + objArr.length);
-        System.arraycopy(objArr, 0, arr, size, objArr.length);
-        size = size + objArr.length;
-        return true;
-    }
-
-    @Override
-    public void clear() {
-
-        arr = new Object[InnerAccessToArrayList.INIT_CAPACITY];
-        arrTmp = null;
-        size = 0;
-    }
-
-    @Override
-    public Object get(int i) {
-
-        verifyIndex(i);
-        return arr[i];
-    }
-
-    /**
-     * nerespektuje velikost a pokud je to mimo, nafoukne pole
-     */
-    @Override
-    public void insert(Object o, int index) {
-        if (index < calc.capacity) {
-            arr[index] = o;
-            size = size > index + 1 ? size : ++index;
-        } else {
-            insertFromTo(index, 1, o);
-        }
-    }
-
-    /**
-     * respektuje velikost a pokud je to mimo, přeteče
-     */
-    @Override
-    public Object set(int i, Object value) {
-
-        verifyIndex(i);
-        arr[i] = value;
-        return value;
-    }
-
-
-    @Override
-    public IBufferedArrayList subList(int indexFrom, int indexTo) {
+    public IBufferedArrayList<E> subList(int indexFrom, int indexTo) {
 
         verifyIndex(indexFrom, indexTo);
         int len = indexTo - indexFrom;
-        Object[] newArr = new Object[len];
+        E[] newArr = createArray(len);
         System.arraycopy(arr, indexFrom, newArr, 0, len);
-        BufferedArrayList my = new BufferedArrayList(Arrays.asList(newArr));
+        BufferedArrayList<E> my = new BufferedArrayList<E>(myType, newArr);
         return my;
-
     }
-
 
     /**
-     * textové výstupy
-     */
-    @Override
-    public String getStreamToString() {
-        return Arrays.stream(arr).map(String::valueOf).collect(Collectors.joining(", "));
-    }
-
-    @Override
-    public String toString() {
-
-        String out = Arrays.toString(arr);
-        out = getAllocatedCapacity() + "/" + size() + "{" + out.substring(1, out.length() - 1) + "}";
-        return out;
-    }
-
-
-    /**
-     * Procedura kopiruje pole z "arr" do "arrTmp" a vynechá prvek na pozici "indexDelete"
+     * Procedura vynechá prvek/y na pozici "indexDelete"
      */
     @Override
     public Boolean removeFromTo(int indexFrom, int indexTo) {
@@ -220,23 +218,32 @@ public class BufferedArrayList implements IBufferedArrayList, InnerAccessToArray
         if (freeSize == 1 && getAllocatedCapacity() >= size) {
             arr[size] = null;
         } else {
-            Object[] t = new Object[freeSize];
-            System.arraycopy(t, 0, arr, size, freeSize);
+            System.arraycopy(createArray(freeSize), 0, arr, size, freeSize);
         }
-        calc.resize(size);
+        resizeCapacity(size);
         return true;
     }
 
+    private E[] createArray(int newSize) {
+        return myType.cast(Array.newInstance(myType.getComponentType(), newSize));
+    }
 
-    /**
-     * kopírování z exteru do arrTmp
-     *
-     * @param fromExtPosition - od pozice (src)
-     * @param toPosition      - pozicev arrTmp
-     * @param length          - délka
-     * @param extArr          - odkaz na src
-     */
-    private void copyToTmp(int arrTmpFromPosition, int extArrayPosition, int extArrayLength, Object... arrayObjects) {
+    private void verifyIndex(int i) {
+        if (i < 0 || i >= size) {
+            throw new ArrayIndexOutOfBoundsException("Error: verifyIndex: Out ouf bound exception");
+        }
+    }
+
+    private void verifyIndex(int indexFrom, int indexTo) {
+        if (indexFrom < 0 || indexTo >= size) {
+            throw new ArrayIndexOutOfBoundsException("Error: verifyIndex: Out ouf bound exception");
+        }
+        if (indexFrom > indexTo) {
+            throw new ArrayIndexOutOfBoundsException("Error: verifyIndex: Out ouf bound exception. (from > to)");
+        }
+    }
+
+    private void copyToTmp(int arrTmpFromPosition, int extArrayPosition, int extArrayLength, E... arrayObjects) {
         try {
             System.arraycopy(arrayObjects, extArrayPosition, arrTmp, arrTmpFromPosition, extArrayLength);
         } catch (ArrayIndexOutOfBoundsException ex) {
@@ -249,76 +256,34 @@ public class BufferedArrayList implements IBufferedArrayList, InnerAccessToArray
      * Pokud přeteče, tak se nafoukne a mezery budou null.
      */
     @Override
-    public void insertFromTo(int indexOfInsert, int length, Object... objArr) {
+    public void insertFromTo(int indexOfInsert, int length, E... objArr) {
 
         if (objArr == null) {
-            throw new NullPointerException("Null pointer exception.");
+            throw new NullPointerException("Error: insertFromTo: Null pointer exception.");
         }
-        // verifyIndex(indexFrom, indexTo);
+        if (objArr.length < length) {
+            throw new IndexOutOfBoundsException("Error: insertFromTo: The length of the field is less than the required length.");
+        }
+        if (length == 0) {
+            return;
+        }
+        int newSize;
         if (indexOfInsert >= size) {
-            int newSize = Math.max(size, indexOfInsert + length);
-            calc.resize(newSize);
-            createTempArr();
+            newSize = Math.max(size, indexOfInsert + length);
+            resizeCapacity(newSize);
+            arrTmp = createArray(capacity);
             copyToTmp(0, 0, size, arr);
             copyToTmp(indexOfInsert, 0, length, objArr);
-            changeTempAndArr();
-            size = newSize;
         } else {
-            int newSize = length + size;
-            calc.resize(newSize);
-            createTempArr();
+            newSize = length + size;
+            resizeCapacity(newSize);
+            arrTmp = createArray(capacity);
             copyToTmp(0, 0, indexOfInsert, arr);
             copyToTmp(indexOfInsert, 0, length, objArr);
             copyToTmp(indexOfInsert + length, indexOfInsert, size - indexOfInsert, arr);
-            changeTempAndArr();
-            size = newSize;
         }
-    }
-
-
-    /**
-     * Volá kalkulátor při přetečení
-     *
-     * @param newSize
-     */
-    public void reCopyWithNewSize(int newSize) {
-        arrTmp = new Object[newSize];
-        System.arraycopy(arr, 0, arrTmp, 0, Math.min(arr.length, arrTmp.length));
-        arr = arrTmp;
-        arrTmp = null;
-    }
-
-
-    protected void createTemporaryArray() {
-        arrTmp = new Object[calc.capacity];
-    }
-
-    protected void createTempArr() {
-        createTemporaryArray();
-        int length = Math.min(Math.min(arr.length, arrTmp.length), size);
-        System.arraycopy(arr, 0, arrTmp, 0, length);
-    }
-
-    protected void verifyIndex(int i) {
-        if (i < 0 || i >= size) {
-            throw new ArrayIndexOutOfBoundsException("Out ouf bound exception");
-        }
-    }
-
-    protected void verifyIndex(int indexFrom, int indexTo) {
-        if (indexFrom < 0 || indexTo >= size) {
-            throw new ArrayIndexOutOfBoundsException("Out ouf bound exception");
-        }
-        if (indexFrom > indexTo) {
-            throw new ArrayIndexOutOfBoundsException("Out ouf bound exception. (from > to)");
-        }
-
-    }
-
-
-    protected void changeTempAndArr() {
-        arr = arrTmp;
-        arrTmp = null;
+        changeTempAndArr();
+        size = newSize;
     }
 
 

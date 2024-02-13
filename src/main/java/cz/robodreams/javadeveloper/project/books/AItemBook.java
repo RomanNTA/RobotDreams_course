@@ -1,11 +1,12 @@
 package cz.robodreams.javadeveloper.project.books;
 
-import cz.robodreams.javadeveloper.project.util.TerminalColorConst;
+import cz.robodreams.javadeveloper.project.lending.ALoan;
 
-public class Book extends TerminalColorConst implements IBook {
+import static cz.robodreams.javadeveloper.project.books.TypeArticle.BOOK;
+
+public class AItemBook extends AItem implements IItem, IItemBook {
 
     private Integer idBook;
-
     private String title;
     private String author;
     private Integer numberOfPages;
@@ -20,10 +21,12 @@ public class Book extends TerminalColorConst implements IBook {
 
     private Boolean borrowed = false;
 
+    private ALoan borrowedReference;
 
-    public Book(Integer idBook, String title, String author, Integer numberOfPages,
-                Integer price, String isbn, String ean, String custody, String genre,
-                String publisher, Integer profit) {
+
+    public AItemBook(Integer idBook, String title, String author, Integer numberOfPages,
+                     Integer price, String isbn, String ean, String custody, String genre,
+                     String publisher, Integer profit) {
         this.idBook = idBook;
         this.title = title;
         this.author = author;
@@ -42,39 +45,46 @@ public class Book extends TerminalColorConst implements IBook {
      */
     public void show(Boolean shortLongFormat) {
         String s = "";
-        if (shortLongFormat) {
-        }
         s += String.format("| Název: " + colCyan("%40s"), title);
-        s += String.format("  Nakladatelství : " + colCyan("%15s \r\n"), publisher);
+        s += String.format("  Nakladatelství : " + colCyan("%15s"), publisher);
 
-        s += String.format("| Autor: " + colCyan("%40s"), author);
-        s += String.format("  Počet stran : " + colCyan("%18s \r\n"), numberOfPages);
+        if (shortLongFormat) {
 
-        s += String.format("| Obor:  " + colCyan("%40s"), genre);
-        s += String.format("  Vazba: " + colCyan("%25s \r\n"), custody);
+            s += String.format("\n| Autor: " + colCyan("%40s"), author);
+            s += String.format("  Počet stran : " + colCyan("%18s \r\n"), numberOfPages);
 
-        s += shortLongFormat ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + colRed("%d") + " Kč. Cena : " + colRed("%d") + " Kč.\r\n",
-                isbn, ean, profit, price) : "";
+            s += String.format("| Obor:  " + colCyan("%40s"), genre);
+            s += String.format("  Vazba: " + colCyan("%25s \r\n"), custody);
 
-        s += shortLongFormat ? String.format("| Kniha je nyní : %s.", (borrowed ? colRed("zapůjčená") : colGreen("k dispozici"))) : "";
+            s += shortLongFormat ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + colRed("%d") + " Kč. Cena : " + colRed("%d") + " Kč.",
+                    isbn, ean, profit, price) : "";
+
+        }
+
+        if (!borrowed) {
+            s += String.format("\r\n| Kniha je nyní : %s.", colGreen("k dispozici"));
+        }
 
         System.out.println(s);
+
+        if (borrowed) {
+            borrowedReference.show(true);
+        }
+
     }
 
+    public String getShortInfo() {
+        return String.format(String.format(colCyan("%-40s"), title));
+    }
+
+    public String getShortInfoBuying() {
+        return String.format(String.format(colCyan("%-40s") + colRed("%d Kč."), title, price));
+    }
 
 
     /**
      * Getter + setter
      */
-
-    public Boolean getBorrowed() {
-        return borrowed;
-    }
-
-    public void setBorrowed(Boolean borrowed) {
-        this.borrowed = borrowed;
-    }
-
 
     /**
      * Jen gettery
@@ -122,6 +132,5 @@ public class Book extends TerminalColorConst implements IBook {
     public Integer getProfit() {
         return profit;
     }
-
 
 }

@@ -1,9 +1,10 @@
 package cz.robodreams.javadeveloper.project.users;
 
-import cz.robodreams.javadeveloper.project.util.ITerminal;
-import cz.robodreams.javadeveloper.project.util.TerminalColorConst;
+import cz.robodreams.javadeveloper.project.common.TerminalColorConst;
 
-public class Identity extends TerminalColorConst implements IUserIdentity {
+import java.util.Objects;
+
+public class AUser extends TerminalColorConst implements IUser {
 
 
     private Integer id;
@@ -20,8 +21,8 @@ public class Identity extends TerminalColorConst implements IUserIdentity {
     private String zipCode;
 
 
-    public Identity(Integer id, String gender, String name, String surname, String phone,
-                    String email, String city, String street, String streetNumber, String zipCode) {
+    public AUser(Integer id, String gender, String name, String surname, String phone,
+                 String email, String city, String street, String streetNumber, String zipCode) {
         this.id = id;
         this.gender = gender;
         this.name = name;
@@ -50,6 +51,40 @@ public class Identity extends TerminalColorConst implements IUserIdentity {
         System.out.println(s);
     }
 
+    public String getShortInfo() {
+        return String.format("| %s " + colPurple("%s %s."), gender, name, surname);
+    }
+
+
+
+
+//
+//
+//    public void show(Boolean shortLongFormat) {
+//        String s = "";
+//
+//        if (shortLongFormat) {
+//        }
+//
+//        s += String.format("| %s od : %s", colRed("Zapůjčena"), colGreen(sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy"))));
+//        s += String.format(" do : " + colGreen("%s "), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+//        s += String.format(" %s " + colPurple("%s %s"), user.getGender(), user.getName(), user.getSurname());
+//        System.out.println(s);
+//    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AUser aUser = (AUser) o;
+        return Objects.equals(id, aUser.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     public Integer getId() {
         return id;

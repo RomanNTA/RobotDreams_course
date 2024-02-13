@@ -1,50 +1,30 @@
 package cz.robodreams.javadeveloper.project.users;
 
-import org.apache.commons.lang3.StringUtils;
+import cz.robodreams.javadeveloper.project.common.ISubjectAdd;
+import cz.robodreams.javadeveloper.project.db.ATable;
 
-public class UserGenerator implements IUserIdentity {
+public class UserGenerator implements IUserConst {
 
-    public Identity giveMePerson(int id ) {
+    private static Integer counter = 0;
 
-        GENDER gen = (what(1) == 1) ? GENDER.MAN : GENDER.WOMAN;
-        String gender = (gen == GENDER.MAN) ? "pan" : "paní";
+    public UserGenerator(ISubjectAdd<IUser> destination, int countOfNewPerson) {
 
-        String name = (gen == GENDER.MAN)
-                ? NAME_OF_MAN[what(COUNT_NAME_OF_MAN - 1)]
-                : NAME_OF_WOMAN[what(COUNT_NAME_OF_WOMAN - 1)];
+        if (destination == null) return;
 
-        String surname = (gen == GENDER.MAN)
-                ? SURNAME_OF_MAN[what(COUNT_SURNAME_OF_MAN - 1)]
-                : SURNAME_OF_WOMAN[what(COUNT_SURNAME_OF_WOMAN - 1)];
+        if (countOfNewPerson > 0 ) {
+            for (int i = 0; i < countOfNewPerson; i++) {
+                destination.add(counter, new People().giveMePerson(counter));
+                counter++;
+            }
+        }
 
-        String phone = getRandomPhoneNr();
-
-        String email = StringUtils.stripAccents(name+"."+surname + "@example.org").toLowerCase();
-
-        String city = "Praha";
-
-        String street = STREETS[what(COUNT_STREETS - 1)];
-
-        String streetNumber = String.format("%d/%d",what(800,2000),what(100));
-
-        String zipCode = String.format("%d",what(10000,11199));
-
-        Identity result = new Identity(id,gender,name,surname,phone,email,
-                                       city,street,streetNumber,zipCode );
-
-        return result;
+        // Ukončí až odmítnutí
+        if (countOfNewPerson < 0 ) {
+            while (destination.add(counter, new People().giveMePerson(counter))) {
+                counter++;
+            }
+        }
     }
 
-
-
-    String getRandomPhoneNr() {
-        return "602"+ UsefulProc.getRandomIdString(100000,999999);
-    }
-    private int what(int min,int max) {
-        return UsefulProc.getRandomId(min,max);
-    }
-    private int what(int max) {
-        return UsefulProc.getRandomId(0,max);
-    }
 
 }

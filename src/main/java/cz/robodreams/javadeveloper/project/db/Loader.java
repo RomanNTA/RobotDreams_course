@@ -18,57 +18,16 @@ public class Loader implements ILoader {
         this.source = source;
     }
 
-//    public void loadData() {
-//
-//        if (callBack == null) {
-//            throw new AssertionError("Loader: Chybí přiřazení calleru.");
-//        }
-//
-//        ClassLoader viaCl = Thread.currentThread().getContextClassLoader();
-//        InputStream is = viaCl.getSystemResourceAsStream(callBack.source);
-//        try (
-//                InputStreamReader sr = new InputStreamReader(is, StandardCharsets.UTF_8);
-//                BufferedReader buffer = new BufferedReader(sr)) {
-//
-//            String line;
-//            Integer counter = 0;
-//            while ((line = buffer.readLine()) != null) {
-//
-//                String[] output = line.split(Pattern.quote("|"));
-//
-//                if (counter == 0) {
-//                    // načtení jmen sloupců
-//                    callBack.insertNames(output);
-//
-//                } else if (counter == 1) {
-//                    // načtení jmen sloupců
-//                    callBack.insertTypes(output);
-//
-//                } else if (counter == 2) {
-//                    // načtení jmen sloupců
-//                    callBack.insertAdditional(output);
-//
-//                } else {
-//                    callBack.insertSubjects(counter - 3, output);
-//                }
-//                counter++;
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-
     public void loadData() {
 
-//        if (callBack == null) {
-//            throw new AssertionError("Loader: Chybí přiřazení calleru.");
-//        }
+        if (recipient == null) {
+            throw new AssertionError("Loader: Chybí přiřazení calleru.");
+        }
 
         String[] typeOfColumns = new String[0];
         String[] nameOfColumns = new String[0];
         String line;
-        Integer counter = 0;
+        int counter = 0;
 
         ClassLoader viaCl = Thread.currentThread().getContextClassLoader();
         InputStream is = viaCl.getSystemResourceAsStream(source);
