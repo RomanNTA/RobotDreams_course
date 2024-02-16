@@ -69,7 +69,9 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
         books.line();
         lending.showBorrowedBooks();
         lending.showUsersBorrowedBooks();
-
+        lending.showUsersBorrowedBooks();
+        lending.showUsersBorrowedBooks();
+        lending.showUsersBorrowedBooks();
 
 //        EventManager ev = new EventManager(books, usr,lending);
 //        ev.generator(0);
