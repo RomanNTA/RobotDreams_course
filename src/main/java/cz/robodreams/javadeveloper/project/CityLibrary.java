@@ -51,28 +51,28 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
     @Override
     public void oneMonth() {
 
-//        for (int i = 0; i < books.size(); i++) {
-//            books.show(i, true);
-//        }
-//
-//        for (int i = 0; i < usr.size(); i++) {
-//            usr.show(i, true);
-//        }
-//
-//        books.line();
-//        System.out.println("Random : " + ((IBook) books.getRandomSubject()).getGenre());
-//        books.line();
-//
-//        String genre = books.showBookGenre(true,false);
-//        System.out.println("žánr: " + genre);
-//        books.showBooksAccordingToGenre(genre);
-//        books.line();
-//        lending.showBorrowedBooks();
-//        lending.showUsersBorrowedBooks();
+        for (int i = 0; i < books.size(); i++) {
+            books.show(i, true);
+        }
+
+        for (int i = 0; i < usr.size(); i++) {
+            usr.show(i, true);
+        }
+
+        books.line();
+        System.out.println("Random : " + ((IBook) books.getRandomSubject()).getGenre());
+        books.line();
+
+        String genre = books.showBookGenre(true,false);
+        System.out.println("žánr: " + genre);
+        books.showBooksAccordingToGenre(genre);
+        books.line();
+        lending.showBorrowedBooks();
+        lending.showUsersBorrowedBooks();
 
 
-        EventManager ev = new EventManager(books, usr,lending);
-        ev.generator(0);
+//        EventManager ev = new EventManager(books, usr,lending);
+//        ev.generator(0);
 
 
 
