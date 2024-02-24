@@ -4,6 +4,7 @@ import cz.robodreams.javadeveloper.project.books.BooksShopping;
 import cz.robodreams.javadeveloper.project.books.IBook;
 import cz.robodreams.javadeveloper.project.books.IBooks;
 import cz.robodreams.javadeveloper.project.common.ASubject;
+import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.common.UsefulProc;
 import cz.robodreams.javadeveloper.project.lending.ILending;
 import cz.robodreams.javadeveloper.project.lending.ILoan;
@@ -19,11 +20,11 @@ public class EventManager extends ASubject<IEvent> {
 
     //  private EventAccount account;
 
-    public EventManager(IBooks<IBook> books, IUsers<IUser> users, ILending<ILoan> lending) {
-        this.books = books;
-        this.users = users;
-        this.lending = lending;
-//        this.account = EventAccount.getInstance();
+    public EventManager() {
+        this.books = Service.getInstance().getBooks();
+        this.users = Service.getInstance().getUser();
+        this.lending = Service.getInstance().getLending();
+//        this.account = Acc.getInstance();
 //        this.account IEventAdd
 
     }

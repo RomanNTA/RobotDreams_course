@@ -1,10 +1,15 @@
 package cz.robodreams.javadeveloper.project.common;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public abstract class ASubject<T> implements ISubject<T> {
 
-    protected HashMap<Integer, T > repository = new HashMap<>();
+    //protected Map<Integer, T > repository = new HashMap<>();
+    //protected Map<T > repository = new HashMap<>();
+    protected List<T > repository = new ArrayList<>();
 
     @Override
     public abstract void generator(int count);
@@ -12,13 +17,19 @@ public abstract class ASubject<T> implements ISubject<T> {
     @Override
     public Boolean add(int key, T value) {
         if (value != null) {
-            repository.put(key, value);
+            //repository.put(key, value);
+            repository.add(value);
         }
         return true;
     }
 
     @Override
     public T get(int id) {
+
+//        if (repository.containsKey(id)) {
+//            return repository.get(id);
+//        }
+//        return null;
         if (id > repository.size() || id < 0) {
             throw new ArrayIndexOutOfBoundsException("Chybný index.");
         }

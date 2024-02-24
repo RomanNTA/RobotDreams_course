@@ -62,7 +62,8 @@ public class Books extends ASubject<IBook> implements IBooks<IBook> {
     @Override
     public IBook getRandomSubject() {
         try {
-            return (repository.values().stream()
+            //return (repository.values().stream()
+            return (repository.stream()
                     .skip(UsefulProc.getRandomId(0,repository.size()-1))
                     .findAny()
             ).get();
@@ -73,7 +74,8 @@ public class Books extends ASubject<IBook> implements IBooks<IBook> {
 
     public String showBookGenre(Boolean returnRandomGenre, Boolean showAllGenre) {
 
-        Map<String, Long> booksGenre = repository.values().stream()
+        //Map<String, Long> booksGenre = repository.values().stream()
+        Map<String, Long> booksGenre = repository.stream()
                 .filter(x -> x.getGenre().length() > 0)
                 .filter(x -> !x.getBorrowed())
                 .map(x -> x.getGenre())
@@ -101,7 +103,8 @@ public class Books extends ASubject<IBook> implements IBooks<IBook> {
 
     public void showBooksAccordingToGenre(String genre) {
 
-        List<Integer> listOfBooks = repository.values().stream()
+        //List<Integer> listOfBooks = repository.values().stream()
+        List<Integer> listOfBooks = repository.stream()
                 .filter(x -> !x.getBorrowed())
                 .filter(p -> p.getGenre() == genre)
                 .map(x -> x.getIdBook())

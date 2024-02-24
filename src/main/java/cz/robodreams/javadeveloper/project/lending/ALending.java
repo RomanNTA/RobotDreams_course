@@ -5,6 +5,7 @@ import cz.robodreams.javadeveloper.project.books.IBook;
 import cz.robodreams.javadeveloper.project.books.IBooks;
 import cz.robodreams.javadeveloper.project.common.ASubject;
 import cz.robodreams.javadeveloper.project.common.ISubjectAdd;
+import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.users.AUser;
 import cz.robodreams.javadeveloper.project.users.IUser;
 import cz.robodreams.javadeveloper.project.users.IUsers;
@@ -16,9 +17,9 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
     private IUsers<IUser> users;
     private IBooks<IBook> books;
 
-    public ALending(IUsers<IUser> users, IBooks<IBook> books) {
-        this.books = books;
-        this.users = users;
+    public ALending() {
+        this.books = Service.getInstance().getBooks();
+        this.users = Service.getInstance().getUser();
     }
 
     @Override
@@ -36,7 +37,8 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
 
     public void showBorrowedBooks() {
 
-        repository.values().stream()
+        //repository.values().stream()
+        repository.stream()
                 .filter(x -> !x.getBook().getBorrowed())
                 .forEach(x -> {
                     this.line();
@@ -50,7 +52,8 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
         this.line();
 
         // uživatelé s půjčenými knihami
-        List<Integer> usr = repository.values().stream()
+        //List<Integer> usr = repository.values().stream()
+        List<Integer> usr = repository.stream()
                 .map(x -> x.getUser().getId())
                 .distinct()
                 .toList();
@@ -59,7 +62,8 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
         usr.forEach(x -> {
             System.out.println(((AUser) users.get(x)).getShortInfo() + " má zapůjčené: ");
 
-            repository.values().stream()
+            //repository.values().stream()
+            repository.stream()
                     .filter(y -> x.equals( y.getUser().getId() ))
                     .forEach(y -> System.out.println(
                                     "|\t" + ((Book) y.getBook()).getShortInfo() + " " +
