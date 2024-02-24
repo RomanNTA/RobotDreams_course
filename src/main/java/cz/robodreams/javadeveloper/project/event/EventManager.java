@@ -50,7 +50,7 @@ public class EventManager extends ASubject<IEvent> {
         i = random(2);
         add(new EventNewUsers().setPeople(new UsersNewMembers()).setCountOfNewPerson(i));
 
-
+ 3321321
     }
 
 
