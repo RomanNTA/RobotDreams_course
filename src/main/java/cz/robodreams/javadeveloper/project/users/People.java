@@ -1,6 +1,6 @@
 package cz.robodreams.javadeveloper.project.users;
 
-import cz.robodreams.javadeveloper.project.common.UsefulProc;
+import cz.robodreams.javadeveloper.project.common.Util;
 import org.apache.commons.lang3.StringUtils;
 
 public class People implements IUserConst {
@@ -36,13 +36,13 @@ public class People implements IUserConst {
     }
 
     String getRandomPhoneNr() {
-        return "602"+ UsefulProc.getRandomIdString(100000,999999);
+        return "602"+ Util.getRandomIdString(100000,999999);
     }
     private int what(int min,int max) {
-        return UsefulProc.getRandomId(min,max);
+        return Util.getRandomId(min,max);
     }
     private int what(int max) {
-        return UsefulProc.getRandomId(0,max);
+        return Util.getRandomId(0,max);
     }
 
 

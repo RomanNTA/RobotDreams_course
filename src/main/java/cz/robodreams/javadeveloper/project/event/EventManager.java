@@ -1,14 +1,11 @@
 package cz.robodreams.javadeveloper.project.event;
 
 import cz.robodreams.javadeveloper.project.books.BooksShopping;
-import cz.robodreams.javadeveloper.project.books.IBook;
 import cz.robodreams.javadeveloper.project.books.IBooks;
 import cz.robodreams.javadeveloper.project.common.ASubject;
 import cz.robodreams.javadeveloper.project.common.Service;
-import cz.robodreams.javadeveloper.project.common.UsefulProc;
+import cz.robodreams.javadeveloper.project.common.Util;
 import cz.robodreams.javadeveloper.project.lending.ILending;
-import cz.robodreams.javadeveloper.project.lending.ILoan;
-import cz.robodreams.javadeveloper.project.users.IUser;
 import cz.robodreams.javadeveloper.project.users.IUsers;
 import cz.robodreams.javadeveloper.project.users.UsersNewMembers;
 
@@ -50,7 +47,6 @@ public class EventManager extends ASubject<IEvent> {
         i = random(2);
         add(new EventNewUsers().setPeople(new UsersNewMembers()).setCountOfNewPerson(i));
 
- 3321321
     }
 
 
@@ -61,11 +57,19 @@ public class EventManager extends ASubject<IEvent> {
 
 
     private Integer random(int max) {
-        return UsefulProc.getRandomId(0, max);
+        return Util.getRandomId(0, max);
     }
 
     private Integer random(int min, int max) {
-        return UsefulProc.getRandomId(min, max);
+        return Util.getRandomId(min, max);
+
+
+
+
+
+
+
+
     }
 
 

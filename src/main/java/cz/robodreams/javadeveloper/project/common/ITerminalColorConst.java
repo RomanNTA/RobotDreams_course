@@ -1,6 +1,6 @@
 package cz.robodreams.javadeveloper.project.common;
 
-public interface ITerminal {
+public interface ITerminalColorConst {
 
 
     String ANSI_RESET = "\u001B[0m";
@@ -85,23 +85,6 @@ public interface ITerminal {
     String PURPLE_BACKGROUND_BRIGHT = "\033[0;105m"; // PURPLE
     String CYAN_BACKGROUND_BRIGHT = "\033[0;106m";  // CYAN
     String WHITE_BACKGROUND_BRIGHT = "\033[0;107m";   // WHITE
-
-
-    String colBlack(String string);
-
-    String colBlue(String string);
-
-    String colCyan(String string);
-
-    String colGreen(String string);
-
-    String colPurple(String string);
-
-    String colRed(String string);
-
-    String colWhite(String string);
-
-    String colYellow(String string);
 
 
 }

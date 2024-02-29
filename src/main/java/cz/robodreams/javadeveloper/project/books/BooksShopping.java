@@ -1,13 +1,5 @@
 package cz.robodreams.javadeveloper.project.books;
 
-import cz.robodreams.javadeveloper.project.common.ASubject;
-import cz.robodreams.javadeveloper.project.common.UsefulProc;
-
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 
 public class BooksShopping extends Books implements IBooksShopping{
 

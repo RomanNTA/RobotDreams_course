@@ -1,9 +1,7 @@
 package cz.robodreams.javadeveloper.project.common;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public abstract class ASubject<T> implements ISubject<T> {
 
@@ -51,6 +49,6 @@ public abstract class ASubject<T> implements ISubject<T> {
 
     @Override
     public T getRandomSubject(){
-        return get(UsefulProc.getRandomId(0,this.size()-1));
+        return get(Util.getRandomId(0,this.size()-1));
     }
 }

@@ -1,14 +1,15 @@
 package cz.robodreams.javadeveloper.project.lending;
 
 import cz.robodreams.javadeveloper.project.books.IBook;
-import cz.robodreams.javadeveloper.project.common.TerminalColorConst;
+import cz.robodreams.javadeveloper.project.common.ITerminalColorConst;
+import cz.robodreams.javadeveloper.project.common.Util;
 import cz.robodreams.javadeveloper.project.users.IUser;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
-public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
+public class ALoan implements ILoan, ILendingConst {
 
     private IUser user;
     private IBook book;
@@ -43,9 +44,9 @@ public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
 
         //if (shortLongFormat) {        }
 
-        s += String.format("| %s od : %s", colRed("Zapůjčena"), colGreen(sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy"))));
-        s += String.format(" do : " + colGreen("%s "), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
-        s += String.format(" %s " + colPurple("%s %s"), user.getGender(), user.getName(), user.getSurname());
+        s += String.format("| %s od : %s", Util.colRed("Zapůjčena"), Util.colGreen(sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy"))));
+        s += String.format(" do : " + Util.colGreen("%s "), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        s += String.format(" %s " + Util.colPurple("%s %s"), user.getGender(), user.getName(), user.getSurname());
         System.out.println(s);
     }
 
@@ -53,8 +54,8 @@ public class ALoan extends TerminalColorConst implements ILoan, ILendingConst {
     public String getShortInfo(){
 
         String s = "";
-        s += String.format(" od : " + colGreen("%s"),  sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
-        s += String.format(" do : " + colGreen("%s" ), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        s += String.format(" od : " + Util.colGreen("%s"),  sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        s += String.format(" do : " + Util.colGreen("%s" ), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
         return s;
     }
 

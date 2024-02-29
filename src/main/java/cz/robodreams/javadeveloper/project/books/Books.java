@@ -1,12 +1,11 @@
 package cz.robodreams.javadeveloper.project.books;
 
 import cz.robodreams.javadeveloper.project.common.ASubject;
-import cz.robodreams.javadeveloper.project.common.UsefulProc;
+import cz.robodreams.javadeveloper.project.common.Util;
 
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 
@@ -64,7 +63,7 @@ public class Books extends ASubject<IBook> implements IBooks<IBook> {
         try {
             //return (repository.values().stream()
             return (repository.stream()
-                    .skip(UsefulProc.getRandomId(0,repository.size()-1))
+                    .skip(Util.getRandomId(0,repository.size()-1))
                     .findAny()
             ).get();
         } catch (NullPointerException e) {
@@ -91,7 +90,7 @@ public class Books extends ASubject<IBook> implements IBooks<IBook> {
         try {
             if (returnRandomGenre) {
                 result = (booksGenre.keySet().stream()
-                        .skip(UsefulProc.getRandomId(0,booksGenre.size()-1))
+                        .skip(Util.getRandomId(0,booksGenre.size()-1))
                         .findAny()
                 ).get();
             }

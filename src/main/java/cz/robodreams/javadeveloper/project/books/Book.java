@@ -1,9 +1,10 @@
 package cz.robodreams.javadeveloper.project.books;
 
-import cz.robodreams.javadeveloper.project.common.TerminalColorConst;
+import cz.robodreams.javadeveloper.project.common.ITerminalColorConst;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
+import cz.robodreams.javadeveloper.project.common.Util;
 
-public class Book extends TerminalColorConst implements IBook {
+public class Book implements IBook {
 
     private Integer idBook;
 
@@ -45,24 +46,24 @@ public class Book extends TerminalColorConst implements IBook {
      */
     public void show(Boolean shortLongFormat) {
         String s = "";
-        s += String.format("| Název: " + colCyan("%40s"), title);
-        s += String.format("  Nakladatelství : " + colCyan("%15s"), publisher);
+        s += String.format("| Název: " + Util.colCyan("%40s"), title);
+        s += String.format("  Nakladatelství : " + Util.colCyan("%15s"), publisher);
 
         if (shortLongFormat) {
 
-            s += String.format("\n| Autor: " + colCyan("%40s"), author);
-            s += String.format("  Počet stran : " + colCyan("%18s \r\n"), numberOfPages);
+            s += String.format("\n| Autor: " + Util.colCyan("%40s"), author);
+            s += String.format("  Počet stran : " + Util.colCyan("%18s \r\n"), numberOfPages);
 
-            s += String.format("| Obor:  " + colCyan("%40s"), genre);
-            s += String.format("  Vazba: " + colCyan("%25s \r\n"), custody);
+            s += String.format("| Obor:  " + Util.colCyan("%40s"), genre);
+            s += String.format("  Vazba: " + Util.colCyan("%25s \r\n"), custody);
 
-            s += shortLongFormat ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + colRed("%d") + " Kč. Cena : " + colRed("%d") + " Kč.",
+            s += shortLongFormat ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + Util.colRed("%d") + " Kč. Cena : " + Util.colRed("%d") + " Kč.",
                     isbn, ean, profit, price) : "";
 
         }
 
         if (!borrowed) {
-            s += String.format("\r\n| Kniha je nyní : %s.", colGreen("k dispozici"));
+            s += String.format("\r\n| Kniha je nyní : %s.", Util.colGreen("k dispozici"));
         }
 
         System.out.println(s);
@@ -74,10 +75,10 @@ public class Book extends TerminalColorConst implements IBook {
     }
 
     public String getShortInfo(){
-        return String.format(String.format(colCyan("%-40s"), title));
+        return String.format(String.format(Util.colCyan("%-40s"), title));
     }
     public String getShortInfoBuying(){
-        return String.format(String.format(colCyan("%-40s")+colRed("%d Kč."), title,price));
+        return String.format(String.format(Util.colCyan("%-40s")+Util.colRed("%d Kč."), title,price));
     }
 
 

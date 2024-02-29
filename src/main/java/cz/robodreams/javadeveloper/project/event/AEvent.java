@@ -1,12 +1,12 @@
 package cz.robodreams.javadeveloper.project.event;
 
-import cz.robodreams.javadeveloper.project.common.TerminalColorConst;
-import cz.robodreams.javadeveloper.project.common.UsefulProc;
+import cz.robodreams.javadeveloper.project.common.ITerminalColorConst;
+import cz.robodreams.javadeveloper.project.common.Util;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AEvent extends TerminalColorConst implements IEvent {
+public abstract class AEvent implements IEvent, ITerminalColorConst {
 
     // životní cyklus
     private Integer lifeCycle;
@@ -23,7 +23,7 @@ public abstract class AEvent extends TerminalColorConst implements IEvent {
 
     public AEvent(IEventType event, int lifeMin, int lifeMax) {
         this.event = event;
-        this.lifeCycle = UsefulProc.getRandomId(lifeMin, lifeMax);
+        this.lifeCycle = Util.getRandomId(lifeMin, lifeMax);
     }
 
     @Override

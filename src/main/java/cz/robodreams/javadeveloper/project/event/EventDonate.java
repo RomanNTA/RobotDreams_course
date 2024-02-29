@@ -1,5 +1,7 @@
 package cz.robodreams.javadeveloper.project.event;
 
+import cz.robodreams.javadeveloper.project.common.Util;
+
 import java.util.List;
 
 public class EventDonate extends AEvent {
@@ -13,7 +15,7 @@ public class EventDonate extends AEvent {
 
     @Override
     public Boolean run() {
-        print.add(String.format("Knihovna získala peněžitý dar ve výši " + colRed("%d")  +" Kč",donate));
+        print.add(String.format("Knihovna získala peněžitý dar ve výši " + Util.colRed("%d")  +" Kč",donate));
         printEvent();
         EventAccount.getInstance().setNewCash(donate).setMessage("Peněžitý dar.").run();
         return true;
