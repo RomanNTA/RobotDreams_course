@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 public class People implements IUserConst {
 
 
-    public AUser giveMePerson(int id ) {
+    public UserImpl giveMePerson(int id ) {
 
         IUserConst.GENDER gen = (what(1) == 1) ? IUserConst.GENDER.MAN : IUserConst.GENDER.WOMAN;
         String gender = (gen == IUserConst.GENDER.MAN) ? "pan" : "paní";
@@ -31,7 +31,7 @@ public class People implements IUserConst {
 
         String zipCode = String.format("%d",what(10000,11199));
 
-        return new AUser(id,gender,name,surname,phone,email,
+        return new UserImpl(id,gender,name,surname,phone,email,
                 city,street,streetNumber,zipCode );
     }
 

@@ -1,7 +1,8 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.books.IBook;
-import cz.robodreams.javadeveloper.project.users.IUser;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
+import cz.robodreams.javadeveloper.project.users.User;
 
 import java.time.LocalDateTime;
 
@@ -9,11 +10,11 @@ import java.time.LocalDateTime;
 public interface ILoan {
 
 
-    void show(Boolean shortLongFormat);
+    void show(ShowSubjectItems showItems);
 
-    IUser getUser();
+    User getUser();
 
-    IBook getBook();
+    Book getBook();
 
 
     LocalDateTime getSinceWhen();

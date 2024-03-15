@@ -1,11 +1,11 @@
 package cz.robodreams.javadeveloper.project;
 
-import cz.robodreams.javadeveloper.project.books.IBook;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
 import cz.robodreams.javadeveloper.project.common.Service;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.lending.ILendingConst;
 
 public class CityLibrary implements ICityLibrary, ILendingConst {
-
 
     Service service = Service.getInstance();
 
@@ -14,7 +14,7 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
         /**
          * Načtení 100 knih z databaze.
          */
-        service.getBooks().generator(100);
+        service.getArticle().loadBooks(100);
 
         /**
          * Vygenerování 20 uživatelů knihovny
@@ -31,12 +31,12 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
     @Override
     public void oneMonth() {
 
-        for (int i = 0; i < service.getBooks().size(); i++) {
-            service.getBooks().show(i, true);
+        for (int i = 0; i < service.getArticle().size(); i++) {
+            service.getArticle().show(i, ShowSubjectItems.LONG_FORMAT);
         }
 
         for (int i = 0; i < service.getUser().size(); i++) {
-            service.getUser().show(i, true);
+            service.getUser().show(i, ShowSubjectItems.LONG_FORMAT);
         }
 
 
@@ -49,21 +49,18 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
 
     public void oneDay() {
 
+        service.getArticle().line();
+        System.out.println("Random : " + ((Book) service.getArticle().getRandomSubject()).getGenre());
+        service.getArticle().line();
 
-
-        service.getBooks().line();
-        System.out.println("Random : " + ((IBook) service.getBooks().getRandomSubject()).getGenre());
-        service.getBooks().line();
-
-        String genre = service.getBooks().showBookGenre(true,false);
-        System.out.println("žánr: " + genre);
-        service.getBooks().showBooksAccordingToGenre(genre);
-        service.getBooks().line();
-        service.getLending().showBorrowedBooks();
-        service.getLending().showUsersBorrowedBooks();
-        service.getEventManager().generator(0);
-
-
+//        String genre = service.getArticle().showBookGenre(true,false);
+//        System.out.println("žánr: " + genre);
+//        service.getArticle().showBooksAccordingToGenre(genre);
+//
+//        service.getArticle().line();
+//        service.getLending().showBorrowedBooks();
+//        service.getLending().showUsersBorrowedBooks();
+//        service.getEventManager().generator(0);
 
     }
 

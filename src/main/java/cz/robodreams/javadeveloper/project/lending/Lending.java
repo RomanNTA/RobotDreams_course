@@ -1,8 +1,8 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.common.ISubject;
+import cz.robodreams.javadeveloper.project.common.Subjects;
 
-public interface ILending<ILoan>  extends ISubject<ILoan> {
+public interface Lending<ILoan>  extends Subjects<ILoan> {
 
     void showBorrowedBooks();
     void showUsersBorrowedBooks();

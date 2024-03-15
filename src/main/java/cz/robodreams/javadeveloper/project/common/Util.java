@@ -2,7 +2,7 @@ package cz.robodreams.javadeveloper.project.common;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class Util implements ITerminalColorConst {
+public class Util implements UtilConst {
 
     public static Integer getRandomId() {
         int min = 100000000;
@@ -68,6 +68,13 @@ public class Util implements ITerminalColorConst {
         return WHITE_BOLD + string + ANSI_RESET;
     }
     public static final String colYellow(String string) { return YELLOW_BOLD + string + ANSI_RESET; }
+
+
+
+
+
+
+
 
 
 }

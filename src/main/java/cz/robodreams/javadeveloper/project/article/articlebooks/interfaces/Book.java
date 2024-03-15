@@ -1,8 +1,11 @@
-package cz.robodreams.javadeveloper.project.books;
+package cz.robodreams.javadeveloper.project.article.articlebooks.interfaces;
 
+import cz.robodreams.javadeveloper.project.article.interfaces.Article;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 
-public interface IBook {
+public interface Book extends Article {
+
 
 
     int TITLE = 0;
@@ -17,7 +20,7 @@ public interface IBook {
     int PROFIT = 9;
 
 
-    void show(Boolean shortLongFormat);
+    void show(ShowSubjectItems showItems);
 
     String getShortInfo();
 
@@ -27,12 +30,12 @@ public interface IBook {
 
     void setBorrowed(Boolean borrowed, ALoan borrowedReference);
 
-    ALoan getBorrowedReference();
-
-
-    Integer getIdBook();
+    Integer getIdArticle();
 
     String getTitle();
+
+    ALoan getBorrowedReference();
+
 
     String getAuthor();
 
@@ -51,6 +54,7 @@ public interface IBook {
     String getPublisher();
 
     Integer getProfit();
+
 
 
 }

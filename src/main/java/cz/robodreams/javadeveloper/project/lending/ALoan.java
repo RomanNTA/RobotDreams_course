@@ -1,9 +1,11 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.books.IBook;
-import cz.robodreams.javadeveloper.project.common.ITerminalColorConst;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.common.Util;
-import cz.robodreams.javadeveloper.project.users.IUser;
+import cz.robodreams.javadeveloper.project.users.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,16 +13,21 @@ import java.time.format.DateTimeFormatter;
 
 public class ALoan implements ILoan, ILendingConst {
 
-    private IUser user;
-    private IBook book;
+    @Getter
+    private User user;
+    @Getter
+    private Book book;
 
 
+    @Setter
     private LocalDateTime sinceWhen;
+    @Setter
     private LocalDateTime untilWhen;
+    @Setter
     private STATUS_BORROW status;
 
 
-    public ALoan(IUser user, IBook book,
+    public ALoan(User user, Book book,
                  LocalDateTime sinceWhen, LocalDateTime untilWhen,
                  STATUS_BORROW status) {
         this.user = user;
@@ -39,7 +46,7 @@ public class ALoan implements ILoan, ILendingConst {
     /**
      * @param shortLongFormat ... true = dlouhé
      */
-    public void show(Boolean shortLongFormat) {
+    public void show(ShowSubjectItems showItems) {
         String s = "";
 
         //if (shortLongFormat) {        }
@@ -51,22 +58,20 @@ public class ALoan implements ILoan, ILendingConst {
     }
 
 
-    public String getShortInfo(){
+    public String getShortInfo() {
 
         String s = "";
-        s += String.format(" od : " + Util.colGreen("%s"),  sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
-        s += String.format(" do : " + Util.colGreen("%s" ), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        s += String.format(" od : " + Util.colGreen("%s"), sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        s += String.format(" do : " + Util.colGreen("%s"), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
         return s;
     }
 
 
-
-
-    public IUser getUser() {
+    public User getUser() {
         return user;
     }
 
-    public IBook getBook() {
+    public Book getBook() {
         return book;
     }
 
@@ -74,26 +79,14 @@ public class ALoan implements ILoan, ILendingConst {
         return sinceWhen;
     }
 
-    public void setSinceWhen(LocalDateTime sinceWhen) {
-        this.sinceWhen = sinceWhen;
-    }
-
 
     public LocalDateTime getUntilWhen() {
         return untilWhen;
     }
 
-    public void setUntilWhen(LocalDateTime untilWhen) {
-        this.untilWhen = untilWhen;
-    }
-
 
     public STATUS_BORROW getStatus() {
         return status;
-    }
-
-    public void setStatus(STATUS_BORROW status) {
-        this.status = status;
     }
 
 

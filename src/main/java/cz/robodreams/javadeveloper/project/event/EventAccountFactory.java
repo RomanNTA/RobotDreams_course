@@ -1,7 +1,7 @@
-package cz.robodreams.javadeveloper.project.event;
-
-public class EventAccountFactory {
-
-
-
-}
+//package cz.robodreams.javadeveloper.project.event;
+//
+//public class EventAccountFactory {
+//
+//
+//
+//}

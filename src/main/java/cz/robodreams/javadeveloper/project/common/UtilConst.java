@@ -1,6 +1,6 @@
 package cz.robodreams.javadeveloper.project.common;
 
-public interface ITerminalColorConst {
+public interface UtilConst {
 
 
     String ANSI_RESET = "\u001B[0m";

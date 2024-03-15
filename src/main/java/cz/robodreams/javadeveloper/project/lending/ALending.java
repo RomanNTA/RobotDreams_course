@@ -1,39 +1,49 @@
 package cz.robodreams.javadeveloper.project.lending;
 
-import cz.robodreams.javadeveloper.project.books.Book;
-import cz.robodreams.javadeveloper.project.books.IBook;
-import cz.robodreams.javadeveloper.project.books.IBooks;
-import cz.robodreams.javadeveloper.project.common.ASubject;
-import cz.robodreams.javadeveloper.project.common.ISubjectAdd;
+import cz.robodreams.javadeveloper.project.article.articlebooks.BookImpl;
+import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
 import cz.robodreams.javadeveloper.project.common.Service;
-import cz.robodreams.javadeveloper.project.users.AUser;
-import cz.robodreams.javadeveloper.project.users.IUser;
-import cz.robodreams.javadeveloper.project.users.IUsers;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
+import cz.robodreams.javadeveloper.project.common.SubjectAdd;
+import cz.robodreams.javadeveloper.project.common.SubjectsImpl;
+import cz.robodreams.javadeveloper.project.users.UserImpl;
+import cz.robodreams.javadeveloper.project.users.Users;
 
 import java.util.List;
 
-public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubjectAdd<ILoan> {
+public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, SubjectAdd<ILoan> {
 
-    private IUsers<IUser> users;
-    private IBooks<IBook> books;
+    private Users users;
+    private ArticlesRepository articlesRepository;
 
     public ALending() {
-        this.books = Service.getInstance().getBooks();
+        this.articlesRepository = Service.getInstance().getArticle();
         this.users = Service.getInstance().getUser();
     }
 
     @Override
     public void generator(int count) {
-        new ALendingGenerator(this, count, users, books);
+//        new ALendingGenerator(this, count, users, books);
     }
 
 
     @Override
-    public void show(int id, Boolean shortLongFormat) {
+    public void show(int id, ShowSubjectItems showItems) {
         line();
-        get(id).show(true);
+        get(id).show(showItems);
     }
 
+
+    @Override
+    public ArticleType getArticleType() {
+        return null;
+    }
+
+    @Override
+    public Integer getId() {
+        return null;
+    }
 
     public void showBorrowedBooks() {
 
@@ -42,7 +52,7 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
                 .filter(x -> !x.getBook().getBorrowed())
                 .forEach(x -> {
                     this.line();
-                    x.getBook().show(false);
+                    x.getBook().show(ShowSubjectItems.LONG_FORMAT);
                 });
     }
 
@@ -60,13 +70,13 @@ public class ALending extends ASubject<ILoan> implements ILending<ILoan>, ISubje
 
         // které knihy mají půjčené
         usr.forEach(x -> {
-            System.out.println(((AUser) users.get(x)).getShortInfo() + " má zapůjčené: ");
+            System.out.println(((UserImpl) users.get(x)).getShortInfo() + " má zapůjčené: ");
 
             //repository.values().stream()
             repository.stream()
-                    .filter(y -> x.equals( y.getUser().getId() ))
+                    .filter(y -> x.equals(y.getUser().getId()))
                     .forEach(y -> System.out.println(
-                                    "|\t" + ((Book) y.getBook()).getShortInfo() + " " +
+                            "|\t" + ((BookImpl) y.getBook()).getShortInfo() + " " +
                                     ((ALoan) y).getShortInfo())
                     );
             this.line();

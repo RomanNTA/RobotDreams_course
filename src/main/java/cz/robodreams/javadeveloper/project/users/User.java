@@ -1,8 +1,10 @@
 package cz.robodreams.javadeveloper.project.users;
 
-public interface IUser {
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 
-    void show(Boolean shortLongFormat);
+public interface User {
+
+    void show(ShowSubjectItems showItems);
 
     Integer getId();
 

@@ -1,14 +1,15 @@
 package cz.robodreams.javadeveloper.project.users;
 
-import cz.robodreams.javadeveloper.project.common.ITerminalColorConst;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.common.Util;
+import cz.robodreams.javadeveloper.project.common.UtilConst;
 import lombok.Getter;
 
 import java.util.Objects;
 
 
 @Getter
-public class AUser implements IUser, ITerminalColorConst {
+public class UserImpl implements User, UtilConst {
 
 
     private Integer id;
@@ -25,8 +26,8 @@ public class AUser implements IUser, ITerminalColorConst {
     private String zipCode;
 
 
-    public AUser(Integer id, String gender, String name, String surname, String phone,
-                 String email, String city, String street, String streetNumber, String zipCode) {
+    public UserImpl(Integer id, String gender, String name, String surname, String phone,
+                    String email, String city, String street, String streetNumber, String zipCode) {
         this.id = id;
         this.gender = gender;
         this.name = name;
@@ -40,16 +41,15 @@ public class AUser implements IUser, ITerminalColorConst {
     }
 
 
-
     /**
      * @param shortLongFormat ... true = dlouhé
      */
-    public void show(Boolean shortLongFormat) {
+    public void show(ShowSubjectItems showItems) {
 
         String s = String.format("| %s " + Util.colCyan("%s %s."), gender, name, surname);
         s += " ".repeat(Math.min(45 - s.length(), s.length()));
 
-        s += String.format("Telefon: " + Util.colYellow("%s") + ", email: " + Util.colYellow("%s") + ".", phone,email );
+        s += String.format("Telefon: " + Util.colYellow("%s") + ", email: " + Util.colYellow("%s") + ".", phone, email);
         s += String.format("\n| Adresa: %s, %s, %s, PSČ %s.", street, streetNumber, city, zipCode);
 
         System.out.println(s);
@@ -58,8 +58,6 @@ public class AUser implements IUser, ITerminalColorConst {
     public String getShortInfo() {
         return String.format("| %s " + Util.colPurple("%s %s."), gender, name, surname);
     }
-
-
 
 
 //
@@ -81,8 +79,8 @@ public class AUser implements IUser, ITerminalColorConst {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AUser aUser = (AUser) o;
-        return Objects.equals(id, aUser.id);
+        UserImpl userImpl = (UserImpl) o;
+        return Objects.equals(id, userImpl.id);
     }
 
     @Override

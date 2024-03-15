@@ -1,6 +1,8 @@
 package cz.robodreams.javadeveloper.project.users;
 
-public class UsersNewMembers extends Users implements IUsersNewMembers {
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
+
+public class UsersImplNewMembers extends UsersImpl implements IUsersNewMembers {
 
 
     private Integer countOfNewMembers;
@@ -12,11 +14,11 @@ public class UsersNewMembers extends Users implements IUsersNewMembers {
     }
 
     @Override
-    public Boolean add(int key, IUser value) {
+    public Boolean add(User value) {
 
-        super.add(key, value);
+        super.add(value);
         countOfNewMembers--;
-        value.show(true);
+        value.show(ShowSubjectItems.LONG_FORMAT);
 
         return countOfNewMembers == 0;
     }
