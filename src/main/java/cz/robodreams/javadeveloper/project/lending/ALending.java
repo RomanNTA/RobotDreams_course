@@ -1,12 +1,9 @@
 package cz.robodreams.javadeveloper.project.lending;
 
 import cz.robodreams.javadeveloper.project.article.articlebooks.BookImpl;
-import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
 import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
-import cz.robodreams.javadeveloper.project.common.Service;
-import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
-import cz.robodreams.javadeveloper.project.common.SubjectAdd;
-import cz.robodreams.javadeveloper.project.common.SubjectsImpl;
+import cz.robodreams.javadeveloper.project.common.*;
 import cz.robodreams.javadeveloper.project.users.UserImpl;
 import cz.robodreams.javadeveloper.project.users.Users;
 
@@ -24,13 +21,13 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
 
     @Override
     public void generator(int count) {
-//        new ALendingGenerator(this, count, users, books);
+        new ALendingGenerator(this, count);
     }
 
 
     @Override
     public void show(int id, ShowSubjectItems showItems) {
-        line();
+        Util.line();
         get(id).show(showItems);
     }
 
@@ -51,7 +48,7 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
         repository.stream()
                 .filter(x -> !x.getBook().getBorrowed())
                 .forEach(x -> {
-                    this.line();
+                    Util.line();
                     x.getBook().show(ShowSubjectItems.LONG_FORMAT);
                 });
     }
@@ -59,7 +56,7 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
 
     public void showUsersBorrowedBooks() {
 
-        this.line();
+        Util.line();
 
         // uživatelé s půjčenými knihami
         //List<Integer> usr = repository.values().stream()
@@ -79,7 +76,7 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
                             "|\t" + ((BookImpl) y.getBook()).getShortInfo() + " " +
                                     ((ALoan) y).getShortInfo())
                     );
-            this.line();
+            Util.line();
         });
         System.out.println(" ... konec. ");
     }

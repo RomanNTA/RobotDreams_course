@@ -1,9 +1,12 @@
 package cz.robodreams.javadeveloper.project;
 
-import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.*;
 import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
+import cz.robodreams.javadeveloper.project.common.Util;
 import cz.robodreams.javadeveloper.project.lending.ILendingConst;
+
+import java.util.List;
 
 public class CityLibrary implements ICityLibrary, ILendingConst {
 
@@ -14,7 +17,8 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
         /**
          * Načtení 100 knih z databaze.
          */
-        service.getArticle().loadBooks(100);
+        //service.getArticle().loadBooks(100);
+        service.getArticle().loadArticle();
 
         /**
          * Vygenerování 20 uživatelů knihovny
@@ -26,10 +30,15 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
          */
         service.getLending().generator(20);
 
+
     }
 
     @Override
     public void oneMonth() {
+
+
+
+
 
         for (int i = 0; i < service.getArticle().size(); i++) {
             service.getArticle().show(i, ShowSubjectItems.LONG_FORMAT);
@@ -45,14 +54,35 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
 //        Optional<Integer> answer = list.stream().findAny();
 //        System.out.println("answer : " + answer.get());
 
+
+        oneDay();
+
     }
 
     public void oneDay() {
 
-        service.getArticle().line();
-        System.out.println("Random : " + ((Book) service.getArticle().getRandomSubject()).getGenre());
-        service.getArticle().line();
+        Util.line();
 
+        System.out.println("Random : " );
+        Util.line();
+        service.getArticle().<Book>getRandomSubject(ArticleType.BOOKS).show(ShowSubjectItems.LONG_FORMAT);
+        Util.line();
+        service.getArticle().<Periodic>getRandomSubject(ArticleType.NEWS).show(ShowSubjectItems.LONG_FORMAT);
+        Util.line();
+        service.getArticle().<Periodic>getRandomSubject(ArticleType.MAGAZINES).show(ShowSubjectItems.LONG_FORMAT);
+        Util.line();
+
+
+        Util.line();
+        System.out.println("Locked : " );
+        service.getArticle().<Book>getRandomSubject(ArticleType.BOOKS).setLocked(Lock.UNLOCK);
+
+        List<Book> list = service.getArticle().getList(Lock.UNLOCK, ArticleType.BOOKS);
+        list.forEach(x -> x.show(ShowSubjectItems.LONG_FORMAT));
+
+
+//
+//
 //        String genre = service.getArticle().showBookGenre(true,false);
 //        System.out.println("žánr: " + genre);
 //        service.getArticle().showBooksAccordingToGenre(genre);
@@ -60,6 +90,8 @@ public class CityLibrary implements ICityLibrary, ILendingConst {
 //        service.getArticle().line();
 //        service.getLending().showBorrowedBooks();
 //        service.getLending().showUsersBorrowedBooks();
+
+
 //        service.getEventManager().generator(0);
 
     }

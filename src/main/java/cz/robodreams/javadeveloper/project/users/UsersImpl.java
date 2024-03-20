@@ -1,9 +1,10 @@
 package cz.robodreams.javadeveloper.project.users;
 
-import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.common.SubjectAdd;
 import cz.robodreams.javadeveloper.project.common.SubjectsImpl;
+import cz.robodreams.javadeveloper.project.common.Util;
 
 
 public class UsersImpl extends SubjectsImpl<User> implements Users, SubjectAdd<User> {
@@ -15,7 +16,7 @@ public class UsersImpl extends SubjectsImpl<User> implements Users, SubjectAdd<U
 
     @Override
     public void show(int id, ShowSubjectItems showItems) {
-        line();
+        Util.line();
         get(id).show(showItems);
     }
 

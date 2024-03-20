@@ -1,14 +1,27 @@
 package cz.robodreams.javadeveloper.project.article.interfaces;
 
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.common.Subjects;
 
-public interface ArticlesRepository extends Subjects<Article> {
+import java.util.List;
 
-    void loadBooks(Integer count);
+public interface ArticlesRepository {
 
-    void loadMagazines(Integer count);
+    void loadArticle();
 
-    void loadNews(Integer count);
+    Boolean add(Article value);
 
+    Integer size();
+
+    void show(int id, ShowSubjectItems showItems);
+
+
+//    Article getRandomSubject(ArticleType articleType);
+
+    <T extends Article> T getRandomSubject(ArticleType articleType);
+
+    <T extends Article> List<T> getList(Lock locked, ArticleType article);
 
 }

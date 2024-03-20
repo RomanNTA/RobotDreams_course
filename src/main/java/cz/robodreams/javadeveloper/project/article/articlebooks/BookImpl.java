@@ -1,22 +1,29 @@
 package cz.robodreams.javadeveloper.project.article.articlebooks;
 
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
-import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 import cz.robodreams.javadeveloper.project.common.Util;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.function.BiPredicate;
-import java.util.function.Predicate;
 
 @Builder
 @Getter
+@Setter
 public class BookImpl implements Book {
 
-    private ArticleType articleType;
+    private Lock locked;
     private Integer idArticle;
+    private Boolean borrowed = false;
+    private ALoan borrowedReference;
+
+
+    private ArticleType articleType;
     private String title;
     private String author;
     private Integer numberOfPages;
@@ -27,9 +34,7 @@ public class BookImpl implements Book {
     private String genre;
     private String publisher;
     private Integer profit;  // cena za vypůjčení knihy
-    private Boolean borrowed = false;
 
-    private ALoan borrowedReference;
 
 
 
@@ -82,11 +87,6 @@ public class BookImpl implements Book {
     public void setBorrowed(Boolean borrowed, ALoan borrowedReference) {
         this.borrowed = borrowed;
         this.borrowedReference = borrowed ? borrowedReference : null;
-    }
-
-    @Override
-    public Integer getId() {
-        return null;
     }
 
 }

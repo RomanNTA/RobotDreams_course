@@ -32,6 +32,8 @@ public class Util implements UtilConst {
     }
 
 
+
+
     public String normalizeString(String string) {
         return StringUtils.stripAccents(string).toLowerCase();
 
@@ -39,6 +41,9 @@ public class Util implements UtilConst {
 
 
 
+    public static void line() {
+        System.out.println("+" + "-".repeat(90));
+    }
 
 
     /**

@@ -1,31 +1,24 @@
 package cz.robodreams.javadeveloper.project.article;
 
-import cz.robodreams.javadeveloper.project.article.articlebooks.ServiceBookGenerator;
+
+import cz.robodreams.javadeveloper.project.article.articlebooks.LoaderRun;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.article.interfaces.Article;
-import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
 import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
-import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
-import cz.robodreams.javadeveloper.project.common.SubjectsImpl;
+import cz.robodreams.javadeveloper.project.common.*;
 
-public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements ArticlesRepository {
+import java.util.ArrayList;
+import java.util.List;
 
-    public void loadBooks(Integer count) {
+public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements ArticlesRepository, Subjects<Article>, SubjectAdd<Article> {
 
-        ServiceBookGenerator serviceBookGenerator = new ServiceBookGenerator(this);
-        serviceBookGenerator.generator(count);
+
+    public void loadArticle() {
+        new LoaderRun(this).run();
     }
 
-    public void loadMagazines(Integer count) {
-
-//        ServiceBookGenerator serviceBookGenerator = new ServiceBookGenerator(this);
-//        serviceBookGenerator.generator(count);
-    }
-
-    public void loadNews(Integer count) {
-
-//        ServiceBookGenerator serviceBookGenerator = new ServiceBookGenerator(this);
-//        serviceBookGenerator.generator(count);
-    }
+    ;
 
 
     @Override
@@ -45,16 +38,17 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 
     @Override
     public void show(int id, ShowSubjectItems showItems) {
-        line();
+        Util.line();
         get(id).show(showItems);
     }
 
 
 //    @Override
-//    public IBook getRandomSubject() {
+//    public Article getRandomSubject(ArticleType articleType) {
 //        try {
 //            //return (repository.values().stream()
 //            return (repository.stream()
+//                    .filter(x -> (x.getArticleType() == articleType) )
 //                    .skip(Util.getRandomId(0,repository.size()-1))
 //                    .findAny()
 //            ).get();
@@ -62,6 +56,43 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 //            return null;
 //        }
 //    }
+
+    @Override
+    public <T extends Article> T getRandomSubject(ArticleType articleType) {
+
+        try {
+            int i = this.<T>getCount(Lock.UNLOCK,articleType);
+
+            return (T) (repository.stream()
+                    .filter(x -> (x.getArticleType() == articleType))
+                    .map(x -> ((T) x))
+                    .skip(Util.getRandomId(0, i - 1))
+                    .findAny()
+            ).get();
+
+        } catch (RuntimeException e) {
+            return null;
+        }
+    }
+
+    public <T extends Article> List<T> getList(Lock locked, ArticleType article) {
+
+        try {
+            return repository.stream()
+                    .map(x -> ((T) x))
+                    .filter(x -> x.getArticleType() == article)
+                    .filter(lock -> (locked == Lock.ALL || (lock.getLocked() == locked)))
+                    .filter(lock -> (article == ArticleType.ALL || (lock.getArticleType() == article)))
+                    .toList();
+        } catch (RuntimeException e) {
+            return new ArrayList<T>();
+        }
+    }
+
+    public Integer getCount(Lock locked, ArticleType article) {
+        return this.<Article>getList(locked,article).size();
+    }
+
 
 //
 //

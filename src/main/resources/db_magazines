@@ -1,6 +1,6 @@
 název|vydavatel|rok založení|periodicita
-STRING|STRING|STRING|STRING
-|||
+STRING|STRING|INTEGER|STRING
+-|-|-|-
 Mladý svět|A 11 s.r.o.|1959|měsíčník
 Sorry|A 11 s.r.o.|1992|měsíčník
 AeroHobby|Aeromedia, a.s.|2003|dvouměsíčník

@@ -37,11 +37,11 @@ public class ALoan implements ILoan, ILendingConst {
         this.status = status;
 
         if (status == STATUS_BORROW.BOOK_BORROWED) {
-            book.setBorrowed(true, this);
+            book.setBorrowed(true);
+            book.setBorrowedReference(this);
         }
 
     }
-
 
     /**
      * @param shortLongFormat ... true = dlouhé
@@ -64,15 +64,6 @@ public class ALoan implements ILoan, ILendingConst {
         s += String.format(" od : " + Util.colGreen("%s"), sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
         s += String.format(" do : " + Util.colGreen("%s"), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
         return s;
-    }
-
-
-    public User getUser() {
-        return user;
-    }
-
-    public Book getBook() {
-        return book;
     }
 
     public LocalDateTime getSinceWhen() {

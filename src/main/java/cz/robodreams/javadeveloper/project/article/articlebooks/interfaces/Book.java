@@ -1,41 +1,23 @@
 package cz.robodreams.javadeveloper.project.article.articlebooks.interfaces;
 
 import cz.robodreams.javadeveloper.project.article.interfaces.Article;
-import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 
 public interface Book extends Article {
 
 
+    void setLocked(Lock locked);
 
-    int TITLE = 0;
-    int AUTHOR = 1;
-    int NUMBEROFPAGES = 2;
-    int PRICE = 3;
-    int ISBN = 4;
-    int EAN = 5;
-    int CUSTODY = 6;
-    int GENRE = 7;
-    int PUBLISHER = 8;
-    int PROFIT = 9;
+    void setIdArticle(Integer article);
 
+    void setBorrowed(Boolean borrowed);
 
-    void show(ShowSubjectItems showItems);
+    void setBorrowedReference(ALoan aLoan);
 
-    String getShortInfo();
 
     String getShortInfoBuying();
 
-    Boolean getBorrowed();
-
-    void setBorrowed(Boolean borrowed, ALoan borrowedReference);
-
-    Integer getIdArticle();
-
     String getTitle();
-
-    ALoan getBorrowedReference();
-
 
     String getAuthor();
 
@@ -54,7 +36,6 @@ public interface Book extends Article {
     String getPublisher();
 
     Integer getProfit();
-
 
 
 }

@@ -1,7 +1,7 @@
 package cz.robodreams.javadeveloper.project.article;
 
 
-import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

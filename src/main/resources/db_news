@@ -1,6 +1,6 @@
 název|vydavatel|rok založení|periodicita
-STRING|STRING|STRING|STRING
-|||
+STRING|STRING|INTEGER|STRING
+-|-|-|-
 Zdravotnické noviny|A 11 s.r.o.|1952|týdeník
 Listy Ašska|Ašské služby, s.r.o.|2000|týdeník
 Právo|Borgis|1990|deník

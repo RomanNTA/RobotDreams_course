@@ -3,7 +3,7 @@ package cz.robodreams.javadeveloper.project.common;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class SubjectsImpl<T> implements Subjects<T> {
+public abstract class SubjectsImpl<T> implements Subjects<T>, SubjectAdd<T> {
 
     protected List<T> repository = new ArrayList<>();
 
@@ -38,10 +38,7 @@ public abstract class SubjectsImpl<T> implements Subjects<T> {
         return repository.size();
     }
 
-    @Override
-    public void line() {
-        System.out.println("+" + "-".repeat(90));
-    }
+
 
     @Override
     public abstract void show(int id, ShowSubjectItems showItems);

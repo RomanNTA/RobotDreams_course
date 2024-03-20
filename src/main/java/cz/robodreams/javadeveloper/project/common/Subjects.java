@@ -1,33 +1,22 @@
 package cz.robodreams.javadeveloper.project.common;
 
-import cz.robodreams.javadeveloper.project.article.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
 
 public interface Subjects<T> {
 
     ArticleType getArticleType();
-    Integer getId();
 
+    Integer getId();
+    T get(int id);
+    Boolean add(T value);
 
     Integer size();
 
-    T get(int id);
-
-    Boolean add(T value);
-
+    void generator(int count);
+    T getRandomSubject();
 
     void show(int id, ShowSubjectItems showItems);
 
-
-
-    void generator(int count);
-
-    T getRandomSubject();
-
-
-
-    void line();
-
-//    void show(int id, Boolean shortLongFormat);
 
 
 }
