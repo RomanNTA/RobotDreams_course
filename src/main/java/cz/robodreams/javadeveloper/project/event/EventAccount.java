@@ -21,7 +21,7 @@
 //    @Getter
 //    private Integer newCash;
 //    @Getter
-//    private String message = "";
+//    private String replyTask = "";
 //
 //
 //    public EventAccount() {
@@ -48,18 +48,18 @@
 //
 //        if (newCash > 0) {
 //            this.cash += newCash;
-//            print.add(String.format("Příchozí platba " + Util.colRed("%d") + " Kč '" + Util.colGreen("%s") + "'. Konečný stav na účtu je " + Util.colRed("%d") + " Kč", newCash, message, this.cash));
+//            print.add(String.format("Příchozí platba " + Util.colRed("%d") + " Kč '" + Util.colGreen("%s") + "'. Konečný stav na účtu je " + Util.colRed("%d") + " Kč", newCash, replyTask, this.cash));
 //        }
 //
 //        if (newCash < 0) {
 //
 //            if (-newCash > this.cash) {
 //                this.cash -= newCash;
-//                print.add(String.format("Odchozí platba " + Util.colRed("%d") + " Kč za '" + Util.colGreen("%s") + "' nebyla provedena.", newCash, message));
+//                print.add(String.format("Odchozí platba " + Util.colRed("%d") + " Kč za '" + Util.colGreen("%s") + "' nebyla provedena.", newCash, replyTask));
 //                print.add(String.format(Util.colRed("Nedostatek") + ". Konečný stav na účtu je " + Util.colRed("%d") + " Kč", this.cash));
 //            } else {
 //                this.cash += newCash;
-//                print.add(String.format("Odchozí platba " + Util.colRed("%d") + " Kč '" + Util.colPurple("%s") + "' Konečný stav na účtu je " + Util.colRed("%d") + " Kč", newCash, message, this.cash));
+//                print.add(String.format("Odchozí platba " + Util.colRed("%d") + " Kč '" + Util.colPurple("%s") + "' Konečný stav na účtu je " + Util.colRed("%d") + " Kč", newCash, replyTask, this.cash));
 //            }
 //        }
 //        printEvent();
@@ -77,8 +77,8 @@
 //        return this;
 //    }
 //
-//    public EventAccount setMessage(String message) {
-//        this.message = message;
+//    public EventAccount setMessage(String replyTask) {
+//        this.replyTask = replyTask;
 //        return this;
 //    }
 //

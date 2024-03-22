@@ -10,7 +10,7 @@ public interface Client {
 
     //void setRole(String name);
 
-    //void sendMessage(String message);
+    //void sendMessage(String replyTask);
 
     List<MessageTransfer> getAllRoomMessage();
 

@@ -16,7 +16,7 @@ import java.util.Map;
 //public final class ServerImpl extends Thread implements Server {
 public final class ServerImpl implements Server {
 
-    public static final Map<String, List<String>> stack = new HashMap<>();
+    //public static final Map<String, List<String>> stack = new HashMap<>();
 
 
     public static void main(String[] args) {
@@ -47,13 +47,13 @@ public final class ServerImpl implements Server {
 //    }
 
 
-    public Service service = Service.getInstance();
+    public final Service service = Service.getInstance();
 
     public ServerImpl() {
 
 
         /**
-         * Načtení 100 knih z databaze.
+         * Načtení knih z databaze.
          */
         //service.getArticle().loadBooks(100);
         service.getArticle().loadArticle();
@@ -68,24 +68,26 @@ public final class ServerImpl implements Server {
          */
         service.getLending().generator(20);
 
-
-
     }
-
-
-
 
     @Override
     public void start() {
         int i = 0;
         try (ServerSocket serverSocket = new ServerSocket(Const.SOCKET_PORT)) {
             while (true) {
-                new ServerHandler(serverSocket.accept(), stack, i++).start();
+                new ServerHandler(serverSocket.accept(), i++).start();
             }
         } catch (IOException e) {
             System.out.println("Server (" + (i - 1) + ") není možné spustit.");
         }
     }
+
+
+
+
+
+
+
 
 
 }

@@ -41,26 +41,31 @@ public class UserImpl implements User, UtilConst {
     }
 
 
-    /**
-     * @param shortLongFormat ... true = dlouhé
-     */
     public void show(ShowSubjectItems showItems) {
-
-        String s = String.format("| %s " + Util.colCyan("%s %s."), gender, name, surname);
-        s += " ".repeat(Math.min(45 - s.length(), s.length()));
-
-        s += String.format("Telefon: " + Util.colYellow("%s") + ", email: " + Util.colYellow("%s") + ".", phone, email);
-        s += String.format("\n| Adresa: %s, %s, %s, PSČ %s.", street, streetNumber, city, zipCode);
-
-        System.out.println(s);
+        System.out.println(getResultShow(showItems));
     }
 
     public String getShortInfo() {
         return String.format("| %s " + Util.colPurple("%s %s."), gender, name, surname);
     }
 
+    @Override
+    public String getResultShow(ShowSubjectItems showItems) {
 
-//
+        String s = "";
+        if (showItems == ShowSubjectItems.LONG_FORMAT) {
+            s += String.format("| %s " + Util.colCyan("%s %s."), gender, name, surname);
+            s += " ".repeat(Math.min(45 - s.length(), s.length()));
+            s += String.format("Telefon: " + Util.colYellow("%s") + ", email: " + Util.colYellow("%s") + ".", phone, email);
+            s += String.format("\n| Adresa: %s, %s, %s, PSČ %s.", street, streetNumber, city, zipCode);
+        } else if (showItems == ShowSubjectItems.INFO) {
+            s = String.format("| %s " + Util.colPurple("%s %s."), gender, name, surname);
+        }
+        return s;
+    }
+
+
+    //
 //
 //    public void show(Boolean shortLongFormat) {
 //        String s = "";

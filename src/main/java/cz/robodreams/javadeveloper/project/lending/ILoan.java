@@ -11,6 +11,7 @@ public interface ILoan {
 
 
     void show(ShowSubjectItems showItems);
+    String getResultShow(ShowSubjectItems showItems);
 
     User getUser();
 

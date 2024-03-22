@@ -59,7 +59,7 @@ public class SocketReadWriter {
         try {
             outputString.println(string);
         } catch (Exception e) {
-            System.out.println(ServerHandler.th + "Chyba: sendLine = " + string);
+            System.out.println(ServerHandler.threadName + "Chyba: sendLine = " + string);
         }
     }
 
@@ -77,7 +77,7 @@ public class SocketReadWriter {
         try {
             outputBuffer.forEach(outputString::println);
         } catch (Exception e) {
-            System.out.println(ServerHandler.th + "Chyba: sendLines = " + outputBuffer);
+            System.out.println(ServerHandler.threadName + "Chyba: sendLines = " + outputBuffer);
         }
     }
 
@@ -120,10 +120,10 @@ public class SocketReadWriter {
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException("Server chyba : ClassNotFoundException " + e.getMessage());
             }
-            return (T) ((byteStream != null) ? byteStream : new MessageTransfer(Const.EMPTY, "", "", "", null, 0));
+            return (T) ((byteStream != null) ? byteStream : new MessageTransfer(Const.EMPTY, "", "", "", null, 0, false));
 
         } catch (IOException e) {
-            return (T) new MessageTransfer(Const.EMPTY, "", "", "", null, 0);
+            return (T) new MessageTransfer(Const.EMPTY, "", "", "", null, 0,false);
         }
 
     }

@@ -43,26 +43,31 @@ public class ALoan implements ILoan, ILendingConst {
 
     }
 
-    /**
-     * @param shortLongFormat ... true = dlouhé
-     */
+    @Override
     public void show(ShowSubjectItems showItems) {
-        String s = "";
-
-        //if (shortLongFormat) {        }
-
-        s += String.format("| %s od : %s", Util.colRed("Zapůjčena"), Util.colGreen(sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy"))));
-        s += String.format(" do : " + Util.colGreen("%s "), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
-        s += String.format(" %s " + Util.colPurple("%s %s"), user.getGender(), user.getName(), user.getSurname());
-        System.out.println(s);
+        System.out.println(getResultShow(showItems));
     }
-
 
     public String getShortInfo() {
 
         String s = "";
         s += String.format(" od : " + Util.colGreen("%s"), sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
         s += String.format(" do : " + Util.colGreen("%s"), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        return s;
+    }
+
+
+    @Override
+    public String getResultShow(ShowSubjectItems showItems) {
+        String s = "";
+        if (showItems == ShowSubjectItems.LONG_FORMAT) {
+            s += String.format("| %s od : %s", Util.colRed("Zapůjčena"), Util.colGreen(sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy"))));
+            s += String.format(" do : " + Util.colGreen("%s "), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+            s += String.format(" %s " + Util.colPurple("%s %s"), user.getGender(), user.getName(), user.getSurname());
+        } else {
+            s += String.format(" od : " + Util.colGreen("%s"), sinceWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+            s += String.format(" do : " + Util.colGreen("%s"), untilWhen.format(DateTimeFormatter.ofPattern("d MMMM yyyy")));
+        }
         return s;
     }
 

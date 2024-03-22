@@ -6,8 +6,8 @@ public class Main {
 
         System.out.println("Hello project");
 
-        ICityLibrary cityLibrary = new CityLibrary();
-        cityLibrary.oneMonth();
+        CityLibrary cityLibrary = new CityLibrary();
+        cityLibrary.run();
 
     }
 

@@ -5,6 +5,8 @@ import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 
+import java.util.List;
+
 public interface Article {
 
     Lock getLocked();
@@ -15,6 +17,9 @@ public interface Article {
 
     void show(ShowSubjectItems showItems);
 
+    //String getResultShow(ShowSubjectItems showItems);
+
+    List getResultShow(ShowSubjectItems showItems);
 
 
     Boolean getBorrowed();
@@ -23,8 +28,6 @@ public interface Article {
 
 
 
-
-    String getShortInfo();
 
 
     ALoan getBorrowedReference();

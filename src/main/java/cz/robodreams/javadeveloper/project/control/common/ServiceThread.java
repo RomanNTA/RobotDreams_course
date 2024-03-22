@@ -18,7 +18,7 @@ public class ServiceThread<T> {
         isAllowedRun = executorService != null;
 
         if (!isAllowedRun) {
-            String errorMessage = (ServerHandler.th + "V objektu '%s' newSingleThreadExecutor=null \n");
+            String errorMessage = (ServerHandler.threadName + "V objektu '%s' newSingleThreadExecutor=null \n");
         }
     }
 

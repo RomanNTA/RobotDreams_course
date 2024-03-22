@@ -21,6 +21,7 @@ public final class ClientImpl implements Client {
     public static void main(String[] args) {
         ClientImpl client = new ClientImpl();
         client.keyboardContrloler();
+        client.free();
     }
 
     public ClientImpl() {
@@ -28,7 +29,7 @@ public final class ClientImpl implements Client {
         try {
             new ClientHandler(sendMessageBuffer, messageBuffer, this).start();
         } catch (Exception e) {
-            System.out.println("Chyba : " + e.getMessage());
+            System.out.println("Chyba 1 : " + e.getMessage());
         }
 
         // Až nastartuje handler, můžeš pokračovat
@@ -42,7 +43,8 @@ public final class ClientImpl implements Client {
         }
         System.out.println("Start klienta.");
         connect();
-        keyboardContrloler();
+
+        //keyboardContrloler();
     }
 
 
@@ -91,7 +93,7 @@ public final class ClientImpl implements Client {
     }
 
     public void connect() {
-        sendMessageBuffer.add(new MessageTransfer(Const.MESSAGES_FIRST_CONNECT, "", "", "", null, 0));
+        sendMessageBuffer.add(new MessageTransfer(Const.MESSAGES_FIRST_CONNECT, "", "", "", null, 0,false));
     }
 
     public void printMessage(MessageTransfer mt) {
@@ -106,29 +108,54 @@ public final class ClientImpl implements Client {
 
     public MessageTransfer getMenu(MessageTransfer mt) {
 
-        AtomicInteger position = new AtomicInteger(0);
-        Util.line();
+//        try {
+//            synchronized (this) {
+//                wait(1000L);
+//            }
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//
+//        AtomicInteger position = new AtomicInteger(0);
+//        Util.line();
+//
+//        System.out.println(String.format("| %s ", Util.colRed(mt.label())));
+//        System.out.println(String.format("| %s ", Util.colWhite(mt.remark())));
+//        mt.menu().forEach(x -> System.out.println(String.format("|" + Util.colRed("%3d") + " : %s", position.getAndIncrement(), x)));
+//        System.out.println(String.format("| %s ", Util.colWhite("Zadej číslo: ")));
+//
+//        int result = 0;
+//        String stringLine = "";
+//
+//        console = new Scanner(System.in, "UTF-8");
+//        synchronized (console){
+//
+//            try {
+//                //while (!console.hasNextLine()){};
+//                stringLine = console.nextLine();
+//            } catch (Exception e) {
+//                throw new RuntimeException(e);
+//            } finally {
+//                console.close();
+//            }
+//        }
+//
+//        try {
+//            result = Integer.valueOf(stringLine);
+//        } catch (NumberFormatException e) {
+//            System.out.println("Chybný převod STR to INT.");
+//        }
+//
+//        System.out.println("přijato " + result);
+//
+//        return MessageTransfer.builder().
+//                task(mt.replyTask()).
+//                replyTask("reply").
+//                output(result).
+//                build();
+    return null;
 
-        System.out.println(String.format("| %s ", Util.colRed(mt.label())));
-        System.out.println(String.format("| %s ", Util.colWhite(mt.remark())));
-        mt.menu().forEach(x -> System.out.println(String.format("|" + Util.colRed("%3d") + " : %s", position.getAndIncrement(), x)));
-        System.out.println(String.format("| %s ", Util.colWhite("Zadej číslo: ")));
-
-        int result;
-
-        try (final Scanner con = new Scanner(System.in)) {
-            try {
-                result = con.nextInt();
-            } catch (Exception e) {
-                result = 0;
-                throw new RuntimeException(e);
-            } finally {
-                con.close();
-            }
-        }
-        System.out.println("přijato " + result);
-        MessageTransfer messageTransfer = new MessageTransfer(mt.task(), Const.MESSAGES_CLIENT_TO_SERVER, mt.label(), mt.remark(), mt.menu(), result);
-        return messageTransfer;
     }
 
 
@@ -137,8 +164,8 @@ public final class ClientImpl implements Client {
 //            sendMessageBuffer.add(new MessageTransfer(Const.MESSAGES_SET_CLIENT_ROLE, role, "", "", null, 0));
 //        }
 
-//        @SneakyThrows @Override public void sendMessage (String message){
-//            sendMessageBuffer.add(new MessageTransfer(Const.MESSAGES_CLIENT_TO_SERVER, message, "", "", null, 0));
+//        @SneakyThrows @Override public void sendMessage (String replyTask){
+//            sendMessageBuffer.add(new MessageTransfer(Const.MESSAGES_CLIENT_TO_SERVER, replyTask, "", "", null, 0));
 //        }
 
     @Override
@@ -158,17 +185,21 @@ public final class ClientImpl implements Client {
     @SneakyThrows
     @Override
     public void killConnect() {
-        sendMessageBuffer.add(new MessageTransfer(Const.EXIT, "", "", "", null, 0));
+        sendMessageBuffer.add(MessageTransfer.builder().task(Const.EXIT).build());
         isRunningHandler.set(false);
     }
 
 
-    private String getUserInput(String label, boolean isLabel) {
-        if (isLabel) {
-            System.out.println(label);
-        }
-        return console.nextLine();
-    }
+//    private String getUserInput(String label, boolean isLabel) {
+//        if (isLabel) {
+//            System.out.println(label);
+//        }
+//        return console.nextLine();
+//    }
 
+
+    public void free() {
+//        console.close();
+    }
 
 }

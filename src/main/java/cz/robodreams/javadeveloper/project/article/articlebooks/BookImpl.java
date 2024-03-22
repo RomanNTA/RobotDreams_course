@@ -4,12 +4,14 @@ import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Artic
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
-import cz.robodreams.javadeveloper.project.lending.ALoan;
 import cz.robodreams.javadeveloper.project.common.Util;
+import cz.robodreams.javadeveloper.project.lending.ALoan;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiPredicate;
 
 @Builder
@@ -35,52 +37,51 @@ public class BookImpl implements Book {
     private String publisher;
     private Integer profit;  // cena za vypůjčení knihy
 
-
-
-
-
-    /**
-     * @param shortLongFormat ... true = dlouhé
-     */
+    @Override
     public void show(ShowSubjectItems showItems) {
+        System.out.println(getResultShow(showItems));
+    }
 
-        BiPredicate<ShowSubjectItems,ShowSubjectItems> testShowItems =(x , y) -> ( x == y);
-        boolean view = testShowItems.test(showItems,ShowSubjectItems.LONG_FORMAT);
+    @Override
+    public List getResultShow(ShowSubjectItems showItems) {
 
-        String s = "";
-        s += String.format("| Název: " + Util.colCyan("%40s"), title);
-        s += String.format("  Nakladatelství : " + Util.colCyan("%15s"), publisher);
+        BiPredicate<ShowSubjectItems, ShowSubjectItems> testShowItems = (x, y) -> (x == y);
+        boolean view = testShowItems.test(showItems, ShowSubjectItems.LONG_FORMAT);
 
-        if ( view) {
+        List result = new ArrayList();
 
-            s += String.format("\n| Autor: " + Util.colCyan("%40s"), author);
-            s += String.format("  Počet stran : " + Util.colCyan("%18s \r\n"), numberOfPages);
+        result.add(String.format("| Název: " + Util.colCyan("%40s"), title));
+        result.add(String.format("  Nakladatelství : " + Util.colCyan("%15s"), publisher));
 
-            s += String.format("| Obor:  " + Util.colCyan("%40s"), genre);
-            s += String.format("  Vazba: " + Util.colCyan("%25s \r\n"), custody);
+        if (view) {
 
-            s +=  view ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + Util.colRed("%d") + " Kč. Cena : " + Util.colRed("%d") + " Kč.",
-                    isbn, ean, profit, price) : "";
+            result.add(String.format("\n| Autor: " + Util.colCyan("%40s"), author));
+            result.add(String.format("  Počet stran : " + Util.colCyan("%18s \r\n"), numberOfPages));
+
+            result.add(String.format("| Obor:  " + Util.colCyan("%40s"), genre));
+            result.add(String.format("  Vazba: " + Util.colCyan("%25s \r\n"), custody));
+
+            result.add(view ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + Util.colRed("%d") + " Kč. Cena : " + Util.colRed("%d") + " Kč.",
+                    isbn, ean, profit, price) : "");
         }
-
-        if (!getBorrowed()) {
-            s += String.format("\r\n| Kniha je nyní : %s.", Util.colGreen("k dispozici"));
-        }
-
-        System.out.println(s);
 
         if (getBorrowed()) {
-
             borrowedReference.show(showItems);
+        } else {
+            result.add(String.format("\r\n| Kniha je nyní : %s.", Util.colGreen("k dispozici")));
         }
 
+        System.out.println("getResultShow vrací list " + result.size());
+
+        return result;
     }
 
-    public String getShortInfo(){
+    public String getShortInfo() {
         return String.format(String.format(Util.colCyan("%-40s"), title));
     }
-    public String getShortInfoBuying(){
-        return String.format(String.format(Util.colCyan("%-40s")+Util.colRed("%d Kč."), title,price));
+
+    public String getShortInfoBuying() {
+        return String.format(String.format(Util.colCyan("%-40s") + Util.colRed("%d Kč."), title, price));
     }
 
 

@@ -11,6 +11,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiPredicate;
 
 @Builder
@@ -34,32 +37,38 @@ public class PeriodicImpl implements Periodic {
 
 
     public void show(ShowSubjectItems showItems) {
+        System.out.println(getResultShow(showItems));
+    }
 
-        BiPredicate<ShowSubjectItems,ShowSubjectItems> testShowItems =(x , y) -> ( x == y);
-        boolean view = testShowItems.test(showItems,ShowSubjectItems.LONG_FORMAT);
+    @Override
+    public List getResultShow(ShowSubjectItems showItems) {
 
-        String s = "";
+//        BiPredicate<ShowSubjectItems,ShowSubjectItems> testShowItems =(x , y) -> ( x == y);
+//        boolean view = testShowItems.test(showItems,ShowSubjectItems.LONG_FORMAT);
 
-        s += String.format("| Název: " + Util.colYellow("%43s"), title);
-        s += String.format("  Nakladatelství : " + Util.colCyan("%19s\n"), publisher);
+        List result = new ArrayList();
+        result.add(String.format("| Název: " + Util.colYellow("%43s"), title));
+        result.add(String.format("  Nakladatelství : " + Util.colCyan("%19s\n"), publisher));
 
-        if ( view) {
-            s += String.format("| Vydávaný od roku :  " + Util.colCyan("%5s"), yearOfFoundation);
-            s += String.format("  Periodika :  " + Util.colCyan("%10s"), getArticleType().toString());
-            s += String.format("  Periodicita: " + Util.colCyan("%23s "), periodicity);
-
-//            s +=  view ? String.format("| ISBN: %s. EAN: %s. Poplatek: " + Util.colRed("%d") + " Kč. Cena : " + Util.colRed("%d") + " Kč.",
-//                    isbn, ean, profit, price) : "";
+        if (showItems == ShowSubjectItems.LONG_FORMAT) {
+            result.add(String.format("| Vydávaný od roku :  " + Util.colCyan("%5s"), yearOfFoundation));
+            result.add(String.format("  Periodika :  " + Util.colCyan("%10s"), getArticleType().toString()));
+            result.add(String.format("  Periodicita: " + Util.colCyan("%23s "), periodicity));
+        } else if (showItems == ShowSubjectItems.INFO) {
+            result.clear();
+            result.add(String.format(Util.colCyan("%-40s"), title));
         }
-        System.out.println(s);
+
+        return result;
     }
 
-    public String getShortInfo(){
-        return String.format(String.format(Util.colCyan("%-40s"), title));
-    }
-    public String getShortInfoBuying(){
-        return String.format(String.format(Util.colCyan("%-40s")+Util.colRed("%d Kč."), title,price));
-    }
+//
+//    public String getShortInfo(){
+//
+//    }
+//    public String getShortInfoBuying(){
+//        return String.format(String.format(Util.colCyan("%-40s")+Util.colRed("%d Kč."), title,price));
+//    }
 
 
     public void setBorrowed(Boolean borrowed, ALoan borrowedReference) {

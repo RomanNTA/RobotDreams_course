@@ -9,6 +9,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.List;
 import java.util.Queue;
+import java.util.Scanner;
 
 import static cz.robodreams.javadeveloper.project.control.common.Const.doesThisTaskContain;
 import static cz.robodreams.javadeveloper.project.control.common.Const.isNotNull;
@@ -19,7 +20,7 @@ public class ClientHandler extends Thread {
     private Socket socket;
     private Queue<MessageTransfer> sendMessageBuffer;
     private List<MessageTransfer> messageBuffer;
-
+    private Scanner console;
     private ClientImpl caller;
 
 
@@ -41,6 +42,8 @@ public class ClientHandler extends Thread {
         } catch (SocketException e) {
             throw new RuntimeException("Chyba: clientSocket.");
         }
+        console = new Scanner(System.in, "UTF-8");
+
     }
 
 
@@ -96,7 +99,7 @@ public class ClientHandler extends Thread {
                     synchronized (sendMessageBuffer) {
                         mt = sendMessageBuffer.poll();
                     }
-                    System.out.println("-> " + mt.task() + " - " + mt.message());
+                    System.out.println("-> " + mt.task() + " - " + mt.replyTask());
                     communicator.sendStream(mt);
                 }
 
@@ -118,36 +121,37 @@ public class ClientHandler extends Thread {
                     synchronized (messageBuffer) {
                         messageBuffer.add(mt);
                     }
-                    System.out.println(" zapsane " + mt.message());
+                    System.out.println(" zapsane " + mt.replyTask());
                     continue;
                 }
 
                 //MessageTransfer mt = communicator.receiveStream();
                 if (isNotNull.test(mt)) {
-                    System.out.println(mt.task() + " - " + mt.message());
+                    System.out.println(mt.task() + " - " + mt.replyTask());
 
                 }
 
 //                MessageTransfer mt = getMessage();
-//                System.out.println(mt.message() +" - " + mt.message());
+//                System.out.println(mt.replyTask() +" - " + mt.replyTask());
 
                 if (mt.task().contains(Const.MESSAGES_CLIENT_TO_SERVER) || mt.task().contains(Const.MESSAGES_SERVER_TO_CLIENT)) {
 
                     synchronized (messageBuffer) {
                         messageBuffer.add(mt);
                     }
-                    System.out.println(mt.message());
+                    System.out.println(mt.replyTask());
                     continue;
                 }
 
                 if (doesThisTaskContain.test(mt, Const.MESSAGES_SEND_MENU)) {
-                    MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, caller);
+                    MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
                     sendMessageBuffer.add(messageTransfer);
                     continue;
                 }
 
                 if (doesThisTaskContain.test(mt, Const.MESSAGES_PRINT_TEXT)) {
-                    new CommunicatorPrintMessage(caller, mt).run();
+                    System.out.println("MESSAGES_PRINT_TEXT: " + mt.menu().size());
+                    new CommunicatorPrintMessage(mt).run();
                     continue;
                 }
 
@@ -155,20 +159,23 @@ public class ClientHandler extends Thread {
                     break;
                 }
 
-
             }
 
 
-        } catch (
-                RuntimeException e) {
-            System.out.println("Chyba: " + e.getMessage());
+//        } catch (
+//                RuntimeException e) {
+//            System.out.println("Chyba 2: " + e.getMessage());
+
+
         } finally {
             try {
                 socket.close();
             } catch (IOException e) {
-                System.out.println("Chyba: " + e.getMessage());
+                System.out.println("Chyba 3: " + e.getMessage());
             }
         }
+
+        console.close();
         ClientImpl.isRunningHandler.set(false);
     }
 }

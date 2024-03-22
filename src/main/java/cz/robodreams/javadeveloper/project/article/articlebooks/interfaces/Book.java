@@ -1,6 +1,7 @@
 package cz.robodreams.javadeveloper.project.article.articlebooks.interfaces;
 
 import cz.robodreams.javadeveloper.project.article.interfaces.Article;
+import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.lending.ALoan;
 
 public interface Book extends Article {

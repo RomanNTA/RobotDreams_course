@@ -67,13 +67,13 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
 
         // které knihy mají půjčené
         usr.forEach(x -> {
-            System.out.println(((UserImpl) users.get(x)).getShortInfo() + " má zapůjčené: ");
+            System.out.println(((UserImpl) users.get(x)).getResultShow(ShowSubjectItems.INFO) + " má zapůjčené: ");
 
             //repository.values().stream()
             repository.stream()
                     .filter(y -> x.equals(y.getUser().getId()))
                     .forEach(y -> System.out.println(
-                            "|\t" + ((BookImpl) y.getBook()).getShortInfo() + " " +
+                            "|\t" + ((BookImpl) y.getBook()).getResultShow(ShowSubjectItems.SHORT_FORMAT) + " " +
                                     ((ALoan) y).getShortInfo())
                     );
             Util.line();

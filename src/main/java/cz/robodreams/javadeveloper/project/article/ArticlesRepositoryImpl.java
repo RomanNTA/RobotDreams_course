@@ -18,9 +18,6 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         new LoaderRun(this).run();
     }
 
-    ;
-
-
     @Override
     public ArticleType getArticleType() {
         return null;
@@ -61,7 +58,7 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
     public <T extends Article> T getRandomSubject(ArticleType articleType) {
 
         try {
-            int i = this.<T>getCount(Lock.UNLOCK,articleType);
+            int i = this.<T>getCount(Lock.UNLOCK, articleType);
 
             return (T) (repository.stream()
                     .filter(x -> (x.getArticleType() == articleType))
@@ -89,8 +86,27 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         }
     }
 
+    public List<String> getListBook(Lock locked, ArticleType article) {
+
+        System.out.println( "getResultShow Volání ");
+        List result = new ArrayList();
+        try {
+            for (Article art : getList(locked, article)) {
+
+                List tmp = new ArrayList();
+                tmp = art.getResultShow(ShowSubjectItems.LONG_FORMAT);
+                System.out.println( "getResultShow tmp " + tmp.size() );
+                result.addAll(tmp);
+            }
+        } catch (RuntimeException e) {
+            return new ArrayList<>();
+        }
+        return result;
+    }
+
+
     public Integer getCount(Lock locked, ArticleType article) {
-        return this.<Article>getList(locked,article).size();
+        return this.<Article>getList(locked, article).size();
     }
 
 
