@@ -44,6 +44,9 @@ public class Util implements UtilConst {
     public static void line() {
         System.out.println("+" + "-".repeat(90));
     }
+    public static String getLine() {
+        return "+" + "-".repeat(90);
+    }
 
 
     /**

@@ -8,6 +8,7 @@ import cz.robodreams.javadeveloper.project.control.server.ServerImpl;
 import cz.robodreams.javadeveloper.project.lending.ILendingConst;
 
 import java.util.List;
+import java.util.Map;
 
 public class CityLibrary {
 
@@ -34,7 +35,13 @@ public class CityLibrary {
 
     public void run() {
 
-        new ServerImpl().start();
+        //new ServerImpl().start();
+
+
+        Map<String, Long> dd = service.getArticle().getListBooksAccordingGenre(Lock.UNLOCK);
+        dd.forEach((x,y) -> System.out.println( " - " + x + " (" + y + ")"));
+
+
 
 
 

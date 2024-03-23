@@ -5,9 +5,7 @@ import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
 
 public class CommunicatorPrintMessage implements Runnable {
 
-    private ClientImpl client;
     private MessageTransfer messageTransfer;
-
 
     public CommunicatorPrintMessage(MessageTransfer messageTransfer) {
         this.messageTransfer = messageTransfer;
@@ -15,10 +13,8 @@ public class CommunicatorPrintMessage implements Runnable {
 
     @Override
     public void run() {
-
         if (!Const.isNotNull.test(messageTransfer)) return;
         messageTransfer.menu().forEach(System.out::println);
-
     }
 
 

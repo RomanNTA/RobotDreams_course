@@ -74,7 +74,7 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
                     .filter(y -> x.equals(y.getUser().getId()))
                     .forEach(y -> System.out.println(
                             "|\t" + ((BookImpl) y.getBook()).getResultShow(ShowSubjectItems.SHORT_FORMAT) + " " +
-                                    ((ALoan) y).getShortInfo())
+                                    ((ALoan) y).getResultShow(ShowSubjectItems.SHORT_FORMAT))
                     );
             Util.line();
         });

@@ -12,8 +12,8 @@ public interface Client {
 
     //void sendMessage(String replyTask);
 
-    List<MessageTransfer> getAllRoomMessage();
-
-    void killConnect();
+//    List<MessageTransfer> getAllRoomMessage();
+//
+//    void killConnect();
 
 }

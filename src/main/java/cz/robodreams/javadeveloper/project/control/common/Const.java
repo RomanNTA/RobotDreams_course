@@ -26,6 +26,18 @@ public interface Const {
     String MESSAGE_SEND_DLG_LIST_text = "Výpis knih včetně zapůjčení a termínu.";
 
 
+    String MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE = "MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE";
+    String MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_label = "Knižních obory vydavatelů knih.";
+    String MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_text = "Seznam nabízených knižních oborů nových knih pro knihovnu.";
+
+
+
+    String MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_SHOW = "MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_SHOW";
+    String MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_SHOW_label = "Nabídka knih.";
+    String MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_SHOW_text = "Seznam dostupných knih od vyadavatelů.";
+
+
+
 
 
 

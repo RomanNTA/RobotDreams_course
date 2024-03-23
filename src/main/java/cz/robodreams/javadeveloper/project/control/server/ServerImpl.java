@@ -1,14 +1,15 @@
 package cz.robodreams.javadeveloper.project.control.server;
 
 
+import cz.robodreams.javadeveloper.project.article.ArticlesRepositoryImpl;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.control.common.Const;
 
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Zkoušel jsem vytvřit z toho vlákno - test se nezdařil
@@ -16,47 +17,21 @@ import java.util.Map;
 //public final class ServerImpl extends Thread implements Server {
 public final class ServerImpl implements Server {
 
-    //public static final Map<String, List<String>> stack = new HashMap<>();
-
-
     public static void main(String[] args) {
         new ServerImpl().start();
+        System.exit(0);
     }
-
-
-    /**
-     * Zkoušel jsem statiku - test se nezdařil
-     */
-//    private static Server INSTANCE;
-//
-//    static {
-//        initializeInstance();
-//    }
-//
-//    private ServerImpl() {}
-//
-//    public static void initializeInstance() {
-//        if (INSTANCE == null) {
-//            INSTANCE = new ServerImpl();
-//            INSTANCE.start();
-//        }
-//    }
-//
-//    public static Server getInstance() {
-//        return INSTANCE;
-//    }
-
 
     public final Service service = Service.getInstance();
 
     public ServerImpl() {
-
 
         /**
          * Načtení knih z databaze.
          */
         //service.getArticle().loadBooks(100);
         service.getArticle().loadArticle();
+
 
         /**
          * Vygenerování 20 uživatelů knihovny
@@ -66,7 +41,7 @@ public final class ServerImpl implements Server {
         /**
          * Vygenerování 20 zapůjčení knih
          */
-        service.getLending().generator(20);
+        service.getLending().generator(5);
 
     }
 
@@ -81,13 +56,5 @@ public final class ServerImpl implements Server {
             System.out.println("Server (" + (i - 1) + ") není možné spustit.");
         }
     }
-
-
-
-
-
-
-
-
 
 }

@@ -109,49 +109,42 @@ public class ClientHandler extends Thread {
                     continue;
                 }
 
-//                if (!isNotNull.test(mt)) {
-//
-//                }
-
 //                mt = new MessageTransfer(Const.MESSAGES_FIRST_CONNECT,"První pokus");
 //                communicator.sendStream(mt);
 
                 if (doesThisTaskContain.test(mt, Const.MESSAGES_FIRST_CONNECT)) {
-//                        mt.task().contains(Const.MESSAGES_FIRST_CONNECT)) {
+
                     synchronized (messageBuffer) {
                         messageBuffer.add(mt);
                     }
-                    System.out.println(" zapsane " + mt.replyTask());
+                    //System.out.println(" zapsane " + mt.replyTask());
                     continue;
                 }
 
-                //MessageTransfer mt = communicator.receiveStream();
                 if (isNotNull.test(mt)) {
                     System.out.println(mt.task() + " - " + mt.replyTask());
-
                 }
 
-//                MessageTransfer mt = getMessage();
-//                System.out.println(mt.replyTask() +" - " + mt.replyTask());
-
-                if (mt.task().contains(Const.MESSAGES_CLIENT_TO_SERVER) || mt.task().contains(Const.MESSAGES_SERVER_TO_CLIENT)) {
-
-                    synchronized (messageBuffer) {
-                        messageBuffer.add(mt);
-                    }
-                    System.out.println(mt.replyTask());
-                    continue;
-                }
+//                if (mt.task().contains(Const.MESSAGES_CLIENT_TO_SERVER) || mt.task().contains(Const.MESSAGES_SERVER_TO_CLIENT)) {
+//
+//                    synchronized (messageBuffer) {
+//                        messageBuffer.add(mt);
+//                    }
+//                    System.out.println(mt.replyTask());
+//                    continue;
+//                }
 
                 if (doesThisTaskContain.test(mt, Const.MESSAGES_SEND_MENU)) {
-                    MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
-                    sendMessageBuffer.add(messageTransfer);
+                    //MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
+                    sendMessageBuffer.add(new <MessageTransfer>CommunicatorGetMenu().go(mt, console));
                     continue;
                 }
 
                 if (doesThisTaskContain.test(mt, Const.MESSAGES_PRINT_TEXT)) {
-                    System.out.println("MESSAGES_PRINT_TEXT: " + mt.menu().size());
+                    // System.out.println("MESSAGES_PRINT_TEXT: " + mt.menu().size());
                     new CommunicatorPrintMessage(mt).run();
+                    sendMessageBuffer.add(MessageTransfer.builder().task(mt.replyTask()).build());
+
                     continue;
                 }
 

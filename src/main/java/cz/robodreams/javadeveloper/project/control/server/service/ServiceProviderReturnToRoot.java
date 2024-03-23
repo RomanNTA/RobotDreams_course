@@ -36,10 +36,13 @@ public class ServiceProviderReturnToRoot implements ServiceProvider {
 
         } else {
 
+
+
             switch (messageTransfer.output()) {
 
                 case 0 -> {
                     System.out.println(ServerHandler.threadName + "ServiceProviderReturnToRoot " + messageTransfer.output());
+                    System.out.println(ServerHandler.threadName + "RETURN_TO_ROOT -> ukončení aplikace.");
                     return MessageTransfer.builder().task(Const.EXIT).loop(false).build();
                 }
                 case 1 -> {
@@ -52,9 +55,9 @@ public class ServiceProviderReturnToRoot implements ServiceProvider {
 //                case 3 -> {
 //                    return MessageTransfer.builder().task(Const.MESSAGE_SEND_DLG_ALL_USER).build();
 //                }
-//                case 4 -> {
-//                    return MessageTransfer.builder().task(Const.MESSAGE_SEND_DLG_SHOPPING).build();
-//                }
+                case 4 -> {
+                    return MessageTransfer.builder().task(Const.MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE).loop(true).build();
+                }
             }
 
 

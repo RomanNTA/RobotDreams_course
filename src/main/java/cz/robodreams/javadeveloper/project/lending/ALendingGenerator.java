@@ -4,6 +4,7 @@ package cz.robodreams.javadeveloper.project.lending;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Books;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.common.SubjectAdd;
 import cz.robodreams.javadeveloper.project.users.Users;
@@ -24,7 +25,7 @@ public class ALendingGenerator implements ILendingConst {
 
         return new ALoan(
                 Service.getInstance().getUser().getRandomSubject(),
-                Service.getInstance().getArticle().<Book>getRandomSubject(ArticleType.BOOKS),
+                Service.getInstance().getArticle().<Book>getRandomSubject(Lock.LOCK, ArticleType.BOOKS),
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(BORROWED_LEADTIME),
                 STATUS_BORROW.BOOK_BORROWED);

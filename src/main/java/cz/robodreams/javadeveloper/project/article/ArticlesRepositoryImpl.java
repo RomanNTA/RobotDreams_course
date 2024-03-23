@@ -3,20 +3,32 @@ package cz.robodreams.javadeveloper.project.article;
 
 import cz.robodreams.javadeveloper.project.article.articlebooks.LoaderRun;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
+import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.article.interfaces.Article;
 import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
 import cz.robodreams.javadeveloper.project.common.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.BiPredicate;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements ArticlesRepository, Subjects<Article>, SubjectAdd<Article> {
+
+    BiPredicate<Lock,Lock> testLocked = (needLock, bookLock) -> (needLock.equals(Lock.ALL) || (bookLock.equals(needLock)));
+    BiPredicate<ArticleType,ArticleType> testArticle = (needArticle, thisArticle) -> (needArticle.equals(ArticleType.ALL) || (thisArticle.equals(needArticle)));
+    BiPredicate<String,String> testGenre = (needGenre, thisGenre) -> (needGenre.equals("") || (thisGenre.equals(needGenre)));
 
 
     public void loadArticle() {
         new LoaderRun(this).run();
     }
+
 
     @Override
     public ArticleType getArticleType() {
@@ -40,6 +52,7 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
     }
 
 
+
 //    @Override
 //    public Article getRandomSubject(ArticleType articleType) {
 //        try {
@@ -55,10 +68,10 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 //    }
 
     @Override
-    public <T extends Article> T getRandomSubject(ArticleType articleType) {
+    public <T extends Article> T getRandomSubject(Lock locked, ArticleType articleType) {
 
         try {
-            int i = this.<T>getCount(Lock.UNLOCK, articleType);
+            int i = this.<T>getCount(locked, articleType);
 
             return (T) (repository.stream()
                     .filter(x -> (x.getArticleType() == articleType))
@@ -74,13 +87,22 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 
     public <T extends Article> List<T> getList(Lock locked, ArticleType article) {
 
+
         try {
             return repository.stream()
                     .map(x -> ((T) x))
-                    .filter(x -> x.getArticleType() == article)
-                    .filter(lock -> (locked == Lock.ALL || (lock.getLocked() == locked)))
-                    .filter(lock -> (article == ArticleType.ALL || (lock.getArticleType() == article)))
+
+                    //.filter(x -> x.getArticleType() == article)
+                    .filter(items -> testArticle.test(article,items.getArticleType()))
+
+                    //.filter(lock -> (locked == Lock.ALL || (lock.getLocked() == locked)))
+                    .filter(items -> testLocked.test(locked, items.getLocked()))
+
+                    //.filter(items -> testArticle(article, items.getArticleType()))
+                    //.filter(lock -> (article == ArticleType.ALL || (lock.getArticleType() == article)))
+
                     .toList();
+
         } catch (RuntimeException e) {
             return new ArrayList<T>();
         }
@@ -88,26 +110,129 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 
     public List<String> getListBook(Lock locked, ArticleType article) {
 
-        System.out.println( "getResultShow Volání ");
-        List result = new ArrayList();
+        List<String> result = new ArrayList();
+        //System.out.println( "getResultShow Volání " + result.size() );
         try {
-            for (Article art : getList(locked, article)) {
-
-                List tmp = new ArrayList();
-                tmp = art.getResultShow(ShowSubjectItems.LONG_FORMAT);
-                System.out.println( "getResultShow tmp " + tmp.size() );
-                result.addAll(tmp);
+            for (Article art : this.<Book>getList(locked, article)) {
+//                List tmp = new ArrayList();
+//                tmp = art.getResultShow(ShowSubjectItems.LONG_FORMAT);
+//                System.out.println( "getResultShow tmp " + tmp.size() );
+//                result.addAll(tmp);
+                result.addAll(art.getResultShow(ShowSubjectItems.LONG_FORMAT));
             }
         } catch (RuntimeException e) {
             return new ArrayList<>();
         }
+        //System.out.println( "getResultShow vrací celkem " + result.size());
         return result;
     }
+
+
+
+
+
+
+
 
 
     public Integer getCount(Lock locked, ArticleType article) {
         return this.<Article>getList(locked, article).size();
     }
+
+    public Map<String, Long> getListBooksAccordingGenre(Lock locked) {
+
+        Map<String, Long> booksGenre = repository.stream()
+                .filter(x -> x.getArticleType() == ArticleType.BOOKS)
+                .filter(x -> testLocked.test(locked, x.getLocked()))
+                .filter(x -> !((Book) x).getGenre().isEmpty())
+                .map(x -> ((Book) x).getGenre())
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+//        System.out.println("Seznam žánrů v knihovně.");
+//        System.out.println("=".repeat(30));
+//        booksGenre.entrySet().stream().forEach(x -> System.out.println(x.getKey()));
+//
+        return booksGenre;
+    }
+
+
+//    public void showBooksAccordingToGenre(String genre) {
+//
+//        List<Integer> listOfBooks = repository.stream()
+//                .filter(x -> !x.getBorrowed())
+//                .filter(p -> p.getGenre() == genre)
+//                .map(x -> x.getIdArticle())
+//                .toList();
+//
+//        System.out.printf("Seznam voných knih v knihovně pro žánr '%s'.\n", genre);
+//        for (int i = 0; i < listOfBooks.size(); i++) {
+//            this.show(listOfBooks.get(i), true);
+//        }
+//    }
+
+    public  Map<Book, List<String>> showBooksAccordingToGenreForBuyin(String genre) {
+
+        Map<Book, List<String>> result = new HashMap<>();
+        //System.out.println( "getResultShow Volání " + result.size() );
+        try {
+
+            List<Book> books = this.<Book>getList(Lock.LOCK, ArticleType.BOOKS)
+                    .stream()
+                    .filter(items -> testGenre.test(genre, items.getGenre()))
+                    .toList();
+            int counter = 1;
+            List tmp = new ArrayList();
+            for (Book book : books) {
+                tmp.clear();
+
+                tmp.add(Util.getLine());
+                tmp.add(" Kniha č. " +  counter++);
+                tmp.addAll(book.getResultShow(ShowSubjectItems.LONG_FORMAT));
+                result.put(book, tmp);
+            }
+            System.out.println( "showBooksAccordingToGenreForBuyin vrací celkem " + result.size());
+            return result;
+
+        } catch (RuntimeException e) {
+            return new HashMap<>();
+        }
+        //System.out.println( "getResultShow vrací celkem " + result.size());
+
+
+    }
+
+//    public List<String> getListBook(Lock locked, ArticleType article) {
+//
+//        List result = new ArrayList();
+//        //System.out.println( "getResultShow Volání " + result.size() );
+//        try {
+//            for (Article art : this.<Book>getList(locked, article)) {
+////                List tmp = new ArrayList();
+////                tmp = art.getResultShow(ShowSubjectItems.LONG_FORMAT);
+////                System.out.println( "getResultShow tmp " + tmp.size() );
+////                result.addAll(tmp);
+//                result.addAll(art.getResultShow(ShowSubjectItems.LONG_FORMAT));
+//            }
+//        } catch (RuntimeException e) {
+//            return new ArrayList<>();
+//        }
+//        //System.out.println( "getResultShow vrací celkem " + result.size());
+//        return result;
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //
