@@ -53,14 +53,6 @@ public interface IUserConst {
     int COUNT_STREETS = STREETS.length;
 
 
-
-
-
-
-
-
-
-
 }
 
 

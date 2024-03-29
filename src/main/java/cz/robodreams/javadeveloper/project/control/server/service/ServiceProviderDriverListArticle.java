@@ -19,49 +19,16 @@ public class ServiceProviderDriverListArticle extends ServiceProviderImpl implem
     @Override
     public MessageTransfer sendOffer() {
 
-        System.out.println(ServerHandler.threadName + myId);
-
-        Service service = Service.getInstance();
-        List<String> menu = ((ArticlesRepositoryImpl) service.getArticle()).getListBook(Lock.UNLOCK, ArticleType.BOOKS);
+        menu = article.getListBook(Lock.UNLOCK, ArticleType.BOOKS);
 
         return MessageTransfer.builder()
                 .task(Const.MESSAGES_PRINT_TEXT)
                 .replyTask(Const.DRIVER_RETURN_TO_ROOT)
+                .strInOut1(Const.DRIVER_SEND_DLG_LIST_BORROWED_label)
+                .strInOut2(Const.DRIVER_SEND_DLG_LIST_BORROWED_text)
                 .menu(menu)
                 .loop(false)
                 .build();
 
     }
-
-//    @Override
-//    public MessageTransfer processAnswer() {
-//
-//    }
-//
-//    @Override
-//    public MessageTransfer run(MessageTransfer messageTransfer, ServerHandler serverHandler) {
-//
-//
-//
-//        if (Const.doesThisTaskEquals.test(messageTransfer, myId) &&
-//                !Const.isStringFullAndNotNull.test(messageTransfer.replyTask())) {
-//
-//            System.out.println(ServerHandler.threadName + "MESSAGE_SEND_DLG_LIST");
-//
-//            Service service = Service.getInstance();
-//            List<String> menu = ((ArticlesRepositoryImpl) service.getArticle()).getListBook(Lock.UNLOCK, ArticleType.BOOKS);
-//
-//            return MessageTransfer.builder()
-//                    .task(Const.MESSAGES_PRINT_TEXT)
-//                    .replyTask(Const.DRIVER_RETURN_TO_ROOT)
-//                    .menu(menu)
-//                    .loop(false)
-//                    .build();
-//
-//        } else {
-//            return MessageTransfer.builder().task(Const.DRIVER_RETURN_TO_ROOT).loop(true).build();
-//        }
-//        //return MessageTransfer.builder().task(Const.EMPTY).build();
-//    }
-
 }

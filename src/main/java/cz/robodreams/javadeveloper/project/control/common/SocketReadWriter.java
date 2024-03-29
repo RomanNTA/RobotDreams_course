@@ -58,8 +58,8 @@ public class SocketReadWriter {
                 outputStream.flush();
             }
         } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Server chyba : sendStream " + e.getMessage());
+            MessageTransfer.builder().task(Const.EXIT).build();
+            //throw new RuntimeException("Server chyba : sendStream " + e.getMessage());
         }
     }
 

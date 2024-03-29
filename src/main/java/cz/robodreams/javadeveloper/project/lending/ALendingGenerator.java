@@ -26,6 +26,7 @@ public class ALendingGenerator implements ILendingConst {
                 .sinceWhen(LocalDateTime.now())
                 .untilWhen(LocalDateTime.now().plusDays(BORROWED_LEADTIME))
                 .status(STATUS_BORROW.BOOK_BORROWED).build();
+
         loan.setStatus(ILendingConst.STATUS_BORROW.BOOK_BORROWED);
         return loan;
     }

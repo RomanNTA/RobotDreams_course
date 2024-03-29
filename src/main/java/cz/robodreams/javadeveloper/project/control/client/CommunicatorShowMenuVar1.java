@@ -20,10 +20,6 @@ public class CommunicatorShowMenuVar1 extends ServiceThread<MessageTransfer> {
 
         this.task = () -> {
 
-            //System.out.println(" mt.menu().size() " + mt.menu().size());
-
-            //myWait(100L);
-
             AtomicInteger position = new AtomicInteger(0);
             Util.line();
 
@@ -35,7 +31,6 @@ public class CommunicatorShowMenuVar1 extends ServiceThread<MessageTransfer> {
             int result = 0;
             String stringLine = "";
 
-
             do {
 
                 synchronized (console) {
@@ -46,18 +41,15 @@ public class CommunicatorShowMenuVar1 extends ServiceThread<MessageTransfer> {
                     result = Integer.valueOf(stringLine);
 
                     if (testIndex.test(result, mt.menu().size())) {
-                        //System.out.println("přijato " + result);
                         break;
                     }
                     System.out.println("Výběr není v požadovaném rozsahu.");
 
                 } catch (NumberFormatException e) {
                     System.out.println("Výběr není v požadovaném rozsahu.");
-
                 }
 
             } while (true);
-
 
             return MessageTransfer.builder()
                     .task(mt.replyTask())

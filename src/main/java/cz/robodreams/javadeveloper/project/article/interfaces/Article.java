@@ -17,22 +17,11 @@ public interface Article {
 
     void show(ShowSubjectItems showItems);
 
-    //String getResultShow(ShowSubjectItems showItems);
-
     List<String> getResultShow(ShowSubjectItems showItems);
-
 
     Boolean getBorrowed();
 
     void setBorrowed(Boolean borrowed);
 
-
-
-
-
     ALoan getBorrowedReference();
-
-
-
-
 }

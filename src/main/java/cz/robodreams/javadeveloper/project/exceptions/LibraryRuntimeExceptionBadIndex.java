@@ -9,8 +9,6 @@ public class LibraryRuntimeExceptionBadIndex extends RuntimeException{
 
     private String message;
 
-
-
     public LibraryRuntimeExceptionBadIndex(String message, Integer id) {
         super(String.format(message));
         this.id = id;

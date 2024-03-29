@@ -43,9 +43,6 @@ public class PeriodicImpl implements Periodic {
     @Override
     public List<String> getResultShow(ShowSubjectItems showItems) {
 
-//        BiPredicate<ShowSubjectItems,ShowSubjectItems> testShowItems =(x , y) -> ( x == y);
-//        boolean view = testShowItems.test(showItems,ShowSubjectItems.LONG_FORMAT);
-
         List<String> result = new ArrayList();
         result.add(String.format("| Název: " + Util.colYellow("%43s"), title));
         result.add(String.format("  Nakladatelství : " + Util.colCyan("%19s\n"), publisher));
@@ -61,15 +58,6 @@ public class PeriodicImpl implements Periodic {
 
         return result;
     }
-
-//
-//    public String getShortInfo(){
-//
-//    }
-//    public String getShortInfoBuying(){
-//        return String.format(String.format(Util.colCyan("%-40s")+Util.colRed("%d Kč."), title,price));
-//    }
-
 
     public void setBorrowed(Boolean borrowed, ALoan borrowedReference) {
         this.borrowed = borrowed;

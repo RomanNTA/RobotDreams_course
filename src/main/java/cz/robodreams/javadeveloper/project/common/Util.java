@@ -31,28 +31,12 @@ public class Util implements UtilConst {
         return String.format("%0" + len + "d", (int) ((Math.random() * (max + 1 - min)) + min));
     }
 
-
-
-
-    public String normalizeString(String string) {
-        return StringUtils.stripAccents(string).toLowerCase();
-
-    }
-
-
-
     public static void line() {
         System.out.println("+" + "-".repeat(90));
     }
     public static String getLine() {
         return "+" + "-".repeat(90);
     }
-
-
-    /**
-     *  barvičky pro konzoli v InteliJ
-     *
-     */
 
     public static final String colBlack(String string) {
         return BLACK_BOLD + string + ANSI_RESET;
@@ -76,13 +60,5 @@ public class Util implements UtilConst {
         return WHITE_BOLD + string + ANSI_RESET;
     }
     public static final String colYellow(String string) { return YELLOW_BOLD + string + ANSI_RESET; }
-
-
-
-
-
-
-
-
 
 }

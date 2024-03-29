@@ -13,8 +13,5 @@ public interface PeriodicsGenerator {
     String DATABASE_FILE_NEWS = "db_news";
     String DATABASE_FILE_MAGAZINES = "db_magazines";
 
-//    Article getBook(int id);
-//
-//    Integer getCount();
 
 }

@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 public class Loader implements ILoader {
 
     private ILoaderCallback recipient;
-
     private String source;
 
     public Loader(ILoaderCallback recipient, String source) {

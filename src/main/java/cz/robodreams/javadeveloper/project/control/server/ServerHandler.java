@@ -40,7 +40,6 @@ public class ServerHandler extends Thread {
     @Setter
     private User client;
 
-
     public ServerHandler(Socket socket, Integer id) {
 
         communicator = new SocketReadWriter(socket);
@@ -61,26 +60,15 @@ public class ServerHandler extends Thread {
 
         providerTask.put(Const.EMPTY, ServiceProviderEmpty::new);
         providerTask.put(Const.MESSAGES_FIRST_CONNECT, ServiceProviderRole::new);
-
         ServiceProvider serviceProvider;
 
         while (true) {
 
             messageTransfer = communicator.receiveStream();
-//
-//            if (!messageTransfer.task().equals(Const.EMPTY)){
-//                System.out.println("Test v karuselu: " + messageTransfer);
-//            }
-//
             if (providerTask.containsKey(messageTransfer.task())) {
                 do {
                     serviceProvider = (providerTask.get(messageTransfer.task()).get());
                     if (Const.isNotNull.test(serviceProvider)) {
-
-//                        if (!serviceProvider.getClass().getSimpleName().equals("ServiceProviderEmpty")){
-//                            System.out.println("Volání : " + serviceProvider.getClass().getSimpleName());
-//                        }
-
                         messageTransfer = ((ServiceProvider) serviceProvider).run(messageTransfer, this);
                         if (doesThisTaskEquals.test(messageTransfer, Const.EXIT)) {
                             break;
@@ -90,7 +78,6 @@ public class ServerHandler extends Thread {
 
                 communicator.sendStream(messageTransfer);
                 if (doesThisTaskEquals.test(messageTransfer, Const.EXIT)) {
-                    System.out.println("Poslední odeslaná message " + messageTransfer);
                     break;
                 }
 
@@ -101,11 +88,9 @@ public class ServerHandler extends Thread {
         communicator.free();
     }
 
-
     public void setRole(Role role) {
 
         this.role = role;
-
         if (role == Role.DRIVER) {
             providerTask.put(Const.DRIVER_RETURN_TO_ROOT, ServiceProviderDriverReturnToRoot::new);
             providerTask.put(Const.DRIVER_SEND_DLG_LIST, ServiceProviderDriverListArticle::new);
@@ -117,9 +102,8 @@ public class ServerHandler extends Thread {
             providerTask.put(Const.DRIVER_SEND_DLG_RELEASE_CLIENT_SELECTION, ServiceProviderDriverReleaseClientSelection::new);
         }
         if (role == Role.CLIENT) {
-            providerTask.put(Const.CLIENT_SEND_DLG_LOGIN_USER, ServiceProviderClientLoginUser::new);
             providerTask.put(Const.CLIENT_RETURN_TO_ROOT, ServiceProviderClientReturnToRoot::new);
-
+            providerTask.put(Const.CLIENT_SEND_DLG_LOGIN_USER, ServiceProviderClientLoginUser::new);
         }
     }
 
@@ -132,18 +116,11 @@ public class ServerHandler extends Thread {
 
             providerTask.put(Const.CLIENT_SEND_DLG_LOAN_LIST, ServiceProviderClientLoanList::new);
             providerTask.put(Const.CLIENT_SEND_DLG_LOAN_BOOKS, ServiceProviderClientLoan::new);
-            //providerTask.put(Const.CLIENT_SEND_DLG_LOAN_BOOKS_CHOICE, ServiceProviderClientLoanChoice::new);
-
             System.out.println("providerTask SIZE : " + providerTask.size());
-
         }
-
     }
 
     public String getUserName(){
         return isNotNull.test(userName) ? userName : "";
     };
-
-
-
 }

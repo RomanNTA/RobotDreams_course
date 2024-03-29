@@ -44,16 +44,9 @@ public interface Const {
     String DRIVER_SEND_DLG_LIST_ACCORDING_GENRE_text = "Seznam nabízených knižních oborů nových knih pro knihovnu.";
 
 
-
     String DRIVER_SEND_DLG_LIST_ACCORDING_GENRE_SHOW = "DRIVER_SEND_DLG_LIST_ACCORDING_GENRE_SHOW";
     String DRIVER_SEND_DLG_LIST_ACCORDING_GENRE_SHOW_label = "Nabídka knih.";
     String DRIVER_SEND_DLG_LIST_ACCORDING_GENRE_SHOW_text = "Seznam dostupných knih od vyadavatelů.";
-
-
-
-
-
-
 
 
     String CLIENT_RETURN_TO_ROOT = "CLIENT_RETURN_TO_ROOT";
@@ -74,9 +67,7 @@ public interface Const {
     String CLIENT_SEND_DLG_LOAN_LIST_label = "Výpis půjčených knih uživatele";
     String CLIENT_SEND_DLG_LOAN_LIST_text = "Seznam obsahuje půjčené knihy klienta knihovny, včetně termínů.";
 
-//    String CLIENT_SEND_DLG_LOAN_BOOKS_CHOICE = "CLIENT_SEND_DLG_LOAN_BOOKS_CHOICE";
-//    String CLIENT_SEND_DLG_LOAN_BOOKS_CHOICE_label = "Proces vypůjčení knihy";
-//    String CLIENT_SEND_DLG_LOAN_BOOKS_CHOICE_text = "Vyberte jsi knihu. Po ověření, dojde k potvrzení půjčky.";
+
 
     String DRIVER_SEND_DLG_RELEASE_BOOKS = "DRIVER_SEND_DLG_RELEASE_BOOKS";
     String DRIVER_SEND_DLG_RELEASE_BOOKS_label = "Vrácení knihy";

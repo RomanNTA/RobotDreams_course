@@ -3,6 +3,7 @@ package cz.robodreams.javadeveloper.project.control.client;
 import cz.robodreams.javadeveloper.project.control.common.Const;
 import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
 import cz.robodreams.javadeveloper.project.control.common.SocketReadWriter;
+import cz.robodreams.javadeveloper.project.control.common.exceptions.MyRuntimeExceptionSocket;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -12,7 +13,6 @@ import java.util.Queue;
 import java.util.Scanner;
 
 import static cz.robodreams.javadeveloper.project.control.common.Const.doesThisTaskEquals;
-import static cz.robodreams.javadeveloper.project.control.common.Const.isNotNull;
 
 public class ClientHandler extends Thread {
 
@@ -41,7 +41,7 @@ public class ClientHandler extends Thread {
             ClientImpl.isRunningHandler.set(true);
 
         } catch (SocketException e) {
-            throw new RuntimeException("Chyba: clientSocket.");
+            throw new MyRuntimeExceptionSocket(Const.SOCKET_HOST, Const.SOCKET_PORT,"Chyba: clientSocket.", e.getMessage() );
         }
         console = new Scanner(System.in, "UTF-8");
 
@@ -56,8 +56,6 @@ public class ClientHandler extends Thread {
             communicator = new SocketReadWriter(socket);
 
             while (true) {
-                mt = null;
-
                 if (!ClientImpl.isRunningHandler.get()) {
                     break;
                 }
@@ -66,58 +64,41 @@ public class ClientHandler extends Thread {
                     synchronized (sendMessageBuffer) {
                         mt = sendMessageBuffer.poll();
                     }
-                    //System.out.println("-> (" + sendMessageBuffer.size() + ") " + mt.task() + " - " + mt.replyTask());
                     communicator.sendStream(mt);
                 }
 
                 mt = communicator.receiveStream();
-
                 if (doesThisTaskEquals.test(mt, Const.EMPTY)) {
                     continue;
-                } else {
-                //    if (isNotNull.test(mt.menu()))
-                        //System.out.println("-> MENU " + mt.menu().size() );
                 }
 
                 if (doesThisTaskEquals.test(mt, Const.MESSAGES_FIRST_CONNECT)) {
                     synchronized (messageBuffer) {
                         messageBuffer.add(mt);
                     }
-                    //System.out.println(" zapsane " + mt.replyTask());
                     continue;
                 }
 
-//                if (isNotNull.test(mt)) {
-//                    System.out.println(mt.task() + " - " + mt.replyTask());
-//                }
-
                 if (doesThisTaskEquals.test(mt, Const.MESSAGES_SEND_MENU)) {
-                    //MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
                     sendMessageBuffer.add(new <MessageTransfer>CommunicatorShowMenuVar1().go(mt, console));
                     continue;
                 }
 
                 if (doesThisTaskEquals.test(mt, Const.MESSAGES_SEND_MENU_CHOICE_BOOKS)) {
-                    //MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
                     sendMessageBuffer.add(new <MessageTransfer>CommunicatorShowMenuVar2().go(mt, console));
                     continue;
                 }
 
-
                 if (doesThisTaskEquals.test(mt, Const.MESSAGES_PRINT_TEXT)) {
-                    // System.out.println("MESSAGES_PRINT_TEXT: " + mt.menu().size());
                     new CommunicatorPrintMessage(mt).run();
                     sendMessageBuffer.add(MessageTransfer.builder().task(mt.replyTask()).build());
-
                     continue;
                 }
 
                 if (mt.task().contains(Const.EXIT) || mt.task().contains(Const.CLIENT_ERROR)) {
                     break;
                 }
-
             }
-
 
         } finally {
             try {

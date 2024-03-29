@@ -5,7 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 
 public class People implements IUserConst {
 
-
     public UserImpl giveMePerson(int id ) {
 
         IUserConst.GENDER gen = (what(1) == 1) ? IUserConst.GENDER.MAN : IUserConst.GENDER.WOMAN;
@@ -31,8 +30,8 @@ public class People implements IUserConst {
 
         String zipCode = String.format("%d",what(10000,11199));
 
-        return new UserImpl(id,gender,name,surname,phone,email,
-                city,street,streetNumber,zipCode );
+        return UserImpl.builder().id(id).gender(gender).name(name).surname(surname)
+                .phone(phone).email(email).city(city).street(street).streetNumber(streetNumber).zipCode(zipCode).build();
     }
 
     String getRandomPhoneNr() {

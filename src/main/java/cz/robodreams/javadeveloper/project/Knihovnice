@@ -1,0 +1,388 @@
++------------------------------------------------------------------------------------------
+| Role.
+| Vyber jsi, jaká bude Tvá role ?
+|  0 : Knihovnice
+|  1 : Klient knihovny
+| Zadej číslo:
+0
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:
+5
++------------------------------------------------------------------------------------------
+| Vyběr uživatele
+| Vyberte uživatelé, který vrací knihy
+|  0 : pan Petr Pospíšil (1)
+|  1 : pan Vojtěch Kratochvíl (2)
+|  2 : paní Markéta Růžičková (1)
+|  3 : paní Lucie Růžičková (2)
+| Zadej číslo:
+2
++------------------------------------------------------------------------------------------
+| Vrácení knihy
+| Vyberte knihu, kterou vrací paní Markéta Růžičková
+|  0 :   Název: Krása jednoduchosti       Autor: Kumár Satiš
+| Zadej číslo:
+1
+Výběr není v požadovaném rozsahu.
+0
+OK -> paní Markéta Růžičková  vrátil   Název: Krása jednoduchosti       Autor: Kumár Satiš
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:
+5
++------------------------------------------------------------------------------------------
+| Vyběr uživatele
+| Vyberte uživatelé, který vrací knihy
+|  0 : pan Petr Pospíšil (1)
+|  1 : pan Vojtěch Kratochvíl (2)
+|  2 : paní Lucie Růžičková (2)
+| Zadej číslo:
+2
++------------------------------------------------------------------------------------------
+| Vrácení knihy
+| Vyberte knihu, kterou vrací paní Lucie Růžičková
+|  0 :   Název: První lež                 Autor: Park A.J.
+|  1 :   Název: Superstroje               Autor: Kolektiv autorů
+| Zadej číslo:
+1
+OK -> paní Lucie Růžičková  vrátil   Název: Superstroje               Autor: Kolektiv autorů
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:
+1
++------------------------------------------------------------------------------------------
+| Název:                       Něžná náruč rodičů  Nakladatelství :           Grada
+| Autor:                           Kiedroňová Eva  Počet stran :                304
+| Obor:                           Rady pro rodiče  Vazba:          Pevná šitá vazba
+| ISBN: 80-247-1210-5. EAN: 8024712105. Poplatek: 50 Kč. Cena : 499 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+| Název:                     Krásná a zdravá pleť  Nakladatelství :           Grada
+| Autor:                          Hammelmann Iris  Počet stran :                 98
+| Obor:                     Zdraví a životní styl  Vazba:           Brožovaná vazba
+| ISBN: 80-247-1510-4. EAN: 8024715104. Poplatek: 50 Kč. Cena : 159 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+| Název:                            Koně a poníci  Nakladatelství :         Bambook
+| Autor:                          Kolektiv autorů  Počet stran :                 32
+| Obor:                          Čtení s poučením  Vazba:         Vazba se skobkami
+| ISBN: 859-404-924-057-9. EAN: 8594049240579. Poplatek: 50 Kč. Cena : 179 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+| Název:                        Pejsci a štěňátka  Nakladatelství :         Bambook
+| Autor:                          Kolektiv autorů  Počet stran :                 32
+| Obor:                          Čtení s poučením  Vazba:         Vazba se skobkami
+| ISBN: 859-404-924-058-6. EAN: 8594049240586. Poplatek: 50 Kč. Cena : 179 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+| Název:                              Superstroje  Nakladatelství :         Bambook
+| Autor:                          Kolektiv autorů  Počet stran :                 32
+| Obor:                          Čtení s poučením  Vazba:         Vazba se skobkami
+| ISBN: 859-404-924-059-3. EAN: 8594049240593. Poplatek: 50 Kč. Cena : 179 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+| Název:                     Sociální péče 2. díl  Nakladatelství :           Grada
+| Autor:                           Arnoldová Anna  Počet stran :                320
+| Obor:                       Psychologie odborná  Vazba:           Brožovaná vazba
+| ISBN: 978-80-247-5148-1. EAN: 9788024751481. Poplatek: 50 Kč. Cena : 349 Kč.
+| Zapůjčena od : 29 března 2024 do : 5 dubna 2024  pan Petr Pospíšil
++------------------------------------------------------------------------------------------
+| Název:                     Zoner Photo Studio X  Nakladatelství :           Grada
+| Autor:                         Pecinovský Josef  Počet stran :                192
+| Obor:              Digitální fotografie a video  Vazba:           Brožovaná vazba
+| ISBN: 978-80-271-0356-0. EAN: 9788027103560. Poplatek: 50 Kč. Cena : 339 Kč.
+| Zapůjčena od : 29 března 2024 do : 5 dubna 2024  pan Vojtěch Kratochvíl
++------------------------------------------------------------------------------------------
+| Název:                                První lež  Nakladatelství :      Cosmopolis
+| Autor:                                Park A.J.  Počet stran :                376
+| Obor:          Dobrodružství, napětí, thrillery  Vazba:          Pevná šitá vazba
+| ISBN: 978-80-271-1327-9. EAN: 9788027113279. Poplatek: 50 Kč. Cena : 399 Kč.
+| Zapůjčena od : 29 března 2024 do : 5 dubna 2024  paní Lucie Růžičková
++------------------------------------------------------------------------------------------
+| Název:                      Krása jednoduchosti  Nakladatelství :         Alferia
+| Autor:                              Kumár Satiš  Počet stran :                224
+| Obor:                      Harmonie těla a duše  Vazba: Brožovaná vazba s klopami
+| ISBN: 978-80-271-3085-6. EAN: 9788027130856. Poplatek: 50 Kč. Cena : 299 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+| Název:                      Rty s příchutí vína  Nakladatelství :      Cosmopolis
+| Autor:                             Novotný Aleš  Počet stran :                192
+| Obor:                    Young Adult, New Adult  Vazba: Brožovaná vazba s klopami
+| ISBN: 978-80-271-5178-3. EAN: 9788027151783. Poplatek: 50 Kč. Cena : 299 Kč.
+| Zapůjčena od : 29 března 2024 do : 5 dubna 2024  pan Vojtěch Kratochvíl
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:
+4
++------------------------------------------------------------------------------------------
+| Knižních obory vydavatelů knih.
+| Seznam nabízených knižních oborů nových knih pro knihovnu.
+|  0 : Zpět, bez výběru.
+|  1 : Fyzioterapeut, rehabilitační pracovník (3)
+|  2 : Děti a sport (3)
+|  3 : Dětské omalovánky (1)
+|  4 : Internet, komunikace, sítě (2)
+|  5 : Milostné romány (14)
+|  6 : Memoáry, osobnosti a osudy (18)
+|  7 : Myslivost (1)
+|  8 : Anesteziologie, resuscitace, emergency (1)
+|  9 : Erotické romány (8)
+| 10 : Politologie (1)
+| 11 : Zahrada (7)
+| 12 : Young Adult, New Adult (7)
+| 13 : Dobrodružství, napětí, thrillery (50)
+| 14 : Ošetřovatelství - postupy, první pomoc (3)
+| 15 : Žurnalistika a komunikace (1)
+| 16 : Rodičovství (1)
+| 17 : Jazyky (3)
+| 18 : Auto & moto (2)
+| 19 : Historie (1)
+| 20 : Pracovní sešity, zábava, hry (9)
+| 21 : Česká současná beletrie (15)
+| 22 : Psychologie a komunikace (2)
+| 23 : Pohostinství (1)
+| 24 : Antistresové omalovánky (3)
+| 25 : Výživa (3)
+| 26 : Dárkové knížky (3)
+| 27 : Romantika, romány pro ženy (45)
+| 28 : Ostatní lékařské obory (3)
+| 29 : Management, jazyky (1)
+| 30 : Ošetřovatelství - klinické obory (2)
+| 31 : Programování (6)
+| 32 : Komunikační dovednosti (9)
+| 33 : Medicína pro veřejnost (4)
+| 34 : Militaria (11)
+| 35 : Sport, zdraví a životní styl (3)
+| 36 : Finance a investování (2)
+| 37 : Čtení s poučením (1)
+| 38 : Sebeobrana (1)
+| 39 : Společenské vědy, historie (1)
+| 40 : Digitální fotografie a video (1)
+| 41 : Sociologie (1)
+| 42 : Sociálně zdravotnický pracovník (6)
+| 43 : Architektura (28)
+| 44 : Podnikání a management (9)
+| 45 : Psychologie pro každého (9)
+| 46 : Harmonie těla a duše (20)
+| 47 : Fitness a kondice (6)
+| 48 : Pedagogika (1)
+| 49 : Oftalmologie, ORL (1)
+| 50 : Řemesla (8)
+| 51 : První čtení (2)
+| 52 : Finanční trhy a instituce (5)
+| 53 : Umění a kultura (4)
+| 54 : Hubnutí (1)
+| 55 : Prezentace (2)
+| 56 : Automobily (5)
+| 57 : Personalistika (1)
+| 58 : Trénink (2)
+| 59 : Leporela (2)
+| 60 : Speciální pedagogika (2)
+| 61 : Komunikace (1)
+| 62 : Lékařské obory (2)
+| 63 : Dětská literatura (7)
+| 64 : Mindfulness (6)
+| 65 : Biografické romány (10)
+| 66 : Osobní rozvoj a poznání (15)
+| 67 : Chovatelství (5)
+| 68 : Krimi, detektivky (27)
+| 69 : Teoretické obory (6)
+| 70 : Společenské romány (11)
+| 71 : Ostatní (8)
+| 72 : Zdravotnická a lékařská literatura (1)
+| 73 : Úprava zahrady (2)
+| 74 : Kuchařky (8)
+| 75 : Sebepoznání (4)
+| 76 : Dobrodružství, napětí, fantasy (14)
+| 77 : Pohádky (5)
+| 78 : Beletrie pro děti (4)
+| 79 : Historické romány (10)
+| 80 : Ekonomie (15)
+| 81 : Marketing a reklama (5)
+| 82 : Křížovky a zábava (1)
+| 83 : Sport (3)
+| 84 : Populárně naučná pro děti (5)
+| 85 : Zobrazovací metody (2)
+| 86 : Kariéra a zaměstnání (3)
+| 87 : Světová současná beletrie (7)
+| 88 : Přírodní vědy (2)
+| 89 : Příběhy, deníky (7)
+| 90 : Hobby (6)
+| 91 : Zahradní rostliny (2)
+| 92 : Psychiatrie, psychoterapie (1)
+| 93 : Trénink paměti a učení (4)
+| 94 : Osobní rozvoj a kariéra (1)
+| 95 : Osobní a rodinné finance (1)
+| 96 : Němčina (2)
+| 97 : Zdraví a životní styl (5)
+| 98 : Obchod a prodej (2)
+| 99 : Sporty (9)
+|100 : Literatura faktu (10)
+|101 : Andragogika (3)
+|102 : Ostatní nelékařské profese (1)
+|103 : Rady pro rodiče (7)
+|104 : Vztahy, láska, rodina (6)
+|105 : Slovní sebeobrana, manipulace (2)
+|106 : Windows a další OS (1)
+|107 : Výtvarné techniky, umění (17)
+|108 : Alternativní léčení (8)
+|109 : Metabolizmus, imunita (1)
+|110 : Beletrie (20)
+|111 : Štěstí a pozitivní myšlení (5)
+|112 : Stavebnictví (6)
+|113 : Didaktika (3)
+|114 : Retro (14)
+|115 : Grafika, CAD (1)
+|116 : Jazyky, komunikace, etika (4)
+|117 : Životní styl (4)
+|118 : Uvědomělý život (2)
+|119 : Úspěch a motivace (5)
+|120 : Kancelářské programy (7)
+|121 : Logopedie (1)
+|122 : Sebedůvěra a emoce (3)
+|123 : Průvodce (13)
+|124 : Farmacie, farmakologie (2)
+|125 : Psychologie odborná (13)
+|126 : Angličtina (2)
+|127 : Humor, satira (12)
+|128 : Daně (5)
+|129 : Autoškola (2)
+|130 : Chirurgie, ortopedie, traumatologie (2)
+|131 : Výtvarné techniky (35)
+|132 : Humor (5)
+|133 : Příroda kolem nás (5)
+|134 : Dějiny (5)
+|135 : Předškolní pedagogika (2)
+|136 : Zahrada, zvířata, příroda (11)
+|137 : Encyklopedie a naučná (3)
+|138 : Kuchařky,  gastronomie (5)
+|139 : Komiksy (11)
+| Zadej číslo:
+126
++------------------------------------------------------------------------------------------
+| Název:                      Anglická konverzace  Nakladatelství :           Grada
+| Autor:                                           Počet stran :                324
+| Obor:                                Angličtina  Vazba:           Brožovaná vazba
+| ISBN: 978-80-247-4701-9. EAN: 9788024747019. Poplatek: 50 Kč. Cena : 249 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+  Kniha 1
+
++------------------------------------------------------------------------------------------
+| Název:                      English Is Not Easy  Nakladatelství :           Grada
+| Autor:                           Gutierrez Luci  Počet stran :                344
+| Obor:                                Angličtina  Vazba:                Šitá vazba
+| ISBN: 978-80-271-0600-4. EAN: 9788027106004. Poplatek: 50 Kč. Cena : 299 Kč.
+| Kniha je nyní : k dispozici.
++------------------------------------------------------------------------------------------
+  Kniha 2
+
++------------------------------------------------------------------------------------------
+Výběr knihy. Povolené zadání je:
+ - návrat bez výběru tj. číslo '0'
+ - číslo knihy např. '1'
+ - rozsah např.  knihy v pořadí '3-6'
+ - vše tj. písmeno 'A'
+A
+Koupě: 2 knih.
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:
+3
++------------------------------------------------------------------------------------------
+| pan Vojtěch Kratochvíl.         Telefon: 602331672, email: vojtech.kratochvil@example.org.
+| Adresa: K Olympiku, 957/59, Švestková Lhota, PSČ 10419.
++------------------------------------------------------------------------------------------
+| paní Lucie Růžičková.           Telefon: 602463131, email: lucie.ruzickova@example.org.
+| Adresa: Nekvasilova, 1019/56, Švestková Lhota, PSČ 10812.
++------------------------------------------------------------------------------------------
+| paní Lucie Benešová.            Telefon: 602572546, email: lucie.benesova@example.org.
+| Adresa: K Olympiku, 1418/58, Švestková Lhota, PSČ 10220.
++------------------------------------------------------------------------------------------
+| paní Natálie Sedláčková.        Telefon: 602195910, email: natalie.sedlackova@example.org.
+| Adresa: Urxova, 1426/77, Švestková Lhota, PSČ 10766.
++------------------------------------------------------------------------------------------
+| pan Jan Procházka.              Telefon: 602771333, email: jan.prochazka@example.org.
+| Adresa: Zábranská, 1118/68, Švestková Lhota, PSČ 11172.
++------------------------------------------------------------------------------------------
+| paní Adéla Horáková.            Telefon: 602857000, email: adela.horakova@example.org.
+| Adresa: Na Špitálsku, 1278/1, Švestková Lhota, PSČ 10338.
++------------------------------------------------------------------------------------------
+| pan Jáchym Horváth.             Telefon: 602115820, email: jachym.horvath@example.org.
+| Adresa: Rohanské nábřeží, 1449/81, Švestková Lhota, PSČ 10091.
++------------------------------------------------------------------------------------------
+| pan Petr Pospíšil.              Telefon: 602989070, email: petr.pospisil@example.org.
+| Adresa: Nekvasilova, 1832/21, Švestková Lhota, PSČ 10887.
++------------------------------------------------------------------------------------------
+| paní Markéta Růžičková.         Telefon: 602806249, email: marketa.ruzickova@example.org.
+| Adresa: Prvního pluku, 1834/24, Švestková Lhota, PSČ 10124.
++------------------------------------------------------------------------------------------
+| paní Nela Kučerová.             Telefon: 602603460, email: nela.kucerova@example.org.
+| Adresa: Štvanická lávka, 1578/28, Švestková Lhota, PSČ 10676.
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:
+2
++------------------------------------------------------------------------------------------
+| paní Lucie Růžičková  má zapůjčené:
+  Název: První lež                 Autor: Park A.J.           od : 29 března 2024 do : 5 dubna 2024
++------------------------------------------------------------------------------------------
+| pan Petr Pospíšil  má zapůjčené:
+  Název: Sociální péče 2. díl      Autor: Arnoldová Anna      od : 29 března 2024 do : 5 dubna 2024
++------------------------------------------------------------------------------------------
+| pan Vojtěch Kratochvíl  má zapůjčené:
+  Název: Zoner Photo Studio X      Autor: Pecinovský Josef    od : 29 března 2024 do : 5 dubna 2024
+  Název: Rty s příchutí vína       Autor: Novotný Aleš        od : 29 března 2024 do : 5 dubna 2024
++------------------------------------------------------------------------------------------
+| Hlavní menu.
+| V hlavním menu jsou obsažené výstupy ze systému knihovny
+|  0 : Odhlášení/ukončení aplikace.
+|  1 : Výpis všech knih
+|  2 : Výpis půjčených knih
+|  3 : Výpis uživatelů
+|  4 : Nákup knih od dodavatele
+|  5 : Vrácení knih
+| Zadej číslo:

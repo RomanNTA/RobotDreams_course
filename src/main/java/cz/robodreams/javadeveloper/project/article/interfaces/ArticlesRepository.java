@@ -18,13 +18,11 @@ public interface ArticlesRepository {
 
     void show(int id, ShowSubjectItems showItems);
 
-
-//    Article getRandomSubject(ArticleType articleType);
+    List<String> getListBook(Lock locked, ArticleType article);
 
     <T extends Article> T getRandomSubject(Lock locked, ArticleType articleType);
 
     <T extends Article> List<T> getList(Lock locked, ArticleType article);
-
 
     Map<String, Long> getListBooksAccordingGenre(Lock locked);
 
@@ -32,9 +30,11 @@ public interface ArticlesRepository {
 
     List<String> getListBorrowedBook();
 
-    //List<Article> showFreeBooks(ShowSubjectItems showSubjectItems);
     Map<Integer,Book> showFreeBooks(ShowSubjectItems showSubjectItems);
 
     void unlockAnyBooks(int count);
+
+    Integer getCount(Lock locked, ArticleType article);
+
 
 }

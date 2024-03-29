@@ -11,16 +11,13 @@ import static cz.robodreams.javadeveloper.project.control.common.Const.isNotNull
 
 public class ServiceProviderClientReturnToRoot extends ServiceProviderImpl implements ServiceProvider {
 
-
     public ServiceProviderClientReturnToRoot() {
         myId = Const.CLIENT_RETURN_TO_ROOT;
     }
 
     @Override
     public MessageTransfer sendOffer() {
-        System.out.println(ServerHandler.threadName + myId);
 
-        List<String> menu = new ArrayList<>();
         menu.add("Odhlášení/ukončení aplikace.");
         menu.add("Výběr registrovaného uživatele.");
 
@@ -48,92 +45,18 @@ public class ServiceProviderClientReturnToRoot extends ServiceProviderImpl imple
         switch (messageTransfer.intResult()) {
 
             case 0 -> {
-                System.out.println(ServerHandler.threadName + "ServiceProviderReturnToRoot " + messageTransfer.intResult());
-                System.out.println(ServerHandler.threadName + "RETURN_TO_ROOT -> ukončení aplikace.");
                 return MessageTransfer.builder().task(Const.EXIT).loop(false).build();
             }
             case 1 -> {
-                System.out.println(ServerHandler.threadName + "ServiceProviderClientLoginUser " + messageTransfer.intResult());
                 return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOGIN_USER).loop(true).build();
             }
             case 2 -> {
-                System.out.println(ServerHandler.threadName + "ServiceProviderClientLoanList" + messageTransfer.intResult());
                 return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_LIST).loop(true).build();
             }
             case 3 -> {
-                System.out.println(ServerHandler.threadName + "ServiceProviderClientLoan" + messageTransfer.intResult());
                 return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_BOOKS).loop(true).build();
             }
-
-//                case 4 -> {
-//                    return MessageTransfer.builder().task(Const.DRIVER_SEND_DLG_LIST_ACCORDING_GENRE).loop(true).build();
-//                }
         }
         return MessageTransfer.builder().task(Const.EMPTY).build();
     }
 }
-//
-//    @Override
-//    public MessageTransfer run(MessageTransfer messageTransfer, ServerHandler serverHandler) {
-//
-//
-//
-//        if (Const.doesThisTaskEquals.test(messageTransfer, myId) &&
-//                !Const.isStringFullAndNotNull.test(messageTransfer.replyTask())) {
-//
-//            System.out.println(ServerHandler.threadName + myId);
-//
-//            List<String> menu = new ArrayList<>();
-//            menu.add("Odhlášení/ukončení aplikace.");
-//            menu.add("Výběr registrovaného uživatele.");
-//
-//            if (isNotNull.test( serverHandler.getClient())) {
-//                menu.add("Výpis půjčených knih.");
-//                menu.add("Výběr volných knih a potvrzení půjčení.");
-//            }
-//
-//            return MessageTransfer.builder()
-//                    .task(Const.MESSAGES_SEND_MENU)
-//                    .replyTask(myId)
-//                    .strInOut1(Const.CLIENT_DLG2_ROOT_MENU_label + serverHandler.getUserName())
-//                    .strInOut2(Const.CLIENT_DLG2_ROOT_MENU_text)
-//                    .menu(menu)
-//                    .intResult(-1)
-//                    .loop(false)
-//                    .build();
-//
-//        } else {
-//
-//
-//            switch (messageTransfer.intResult()) {
-//
-//                case 0 -> {
-//                    System.out.println(ServerHandler.threadName + "ServiceProviderReturnToRoot " + messageTransfer.intResult());
-//                    System.out.println(ServerHandler.threadName + "RETURN_TO_ROOT -> ukončení aplikace.");
-//                    return MessageTransfer.builder().task(Const.EXIT).loop(false).build();
-//                }
-//                case 1 -> {
-//                    System.out.println(ServerHandler.threadName + "ServiceProviderClientLoginUser " + messageTransfer.intResult());
-//                    return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOGIN_USER).loop(true).build();
-//                }
-//                case 2 -> {
-//                    System.out.println(ServerHandler.threadName + "ServiceProviderClientLoanList" + messageTransfer.intResult());
-//                    return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_LIST).loop(true).build();
-//                }
-//                case 3 -> {
-//                    System.out.println(ServerHandler.threadName + "ServiceProviderClientLoan" + messageTransfer.intResult());
-//                    return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_BOOKS).loop(true).build();
-//                }
-//
-////                case 4 -> {
-////                    return MessageTransfer.builder().task(Const.DRIVER_SEND_DLG_LIST_ACCORDING_GENRE).loop(true).build();
-////                }
-//            }
-//
-//
-//        }
-//        return MessageTransfer.builder().task(Const.EMPTY).build();
-//
-//    }
-//
-//}

@@ -26,21 +26,6 @@ public class ALoan implements ILoan, ILendingConst {
     private LocalDateTime untilWhen;
     private STATUS_BORROW status;
 
-//    public ALoan(User user, Book book, LocalDateTime sinceWhen, LocalDateTime untilWhen, STATUS_BORROW status) {
-//
-//        this.user = user;
-//        this.book = book;
-//        this.sinceWhen = sinceWhen;
-//        this.untilWhen = untilWhen;
-//        this.status = status;
-//
-//        if (status == STATUS_BORROW.BOOK_BORROWED) {
-//            book.setBorrowed(true);
-//            book.setBorrowedReference(this);
-//            book.setLocked(Lock.UNLOCK);
-//        }
-//    }
-
     public void setStatus(STATUS_BORROW status) {
 
         if (status == STATUS_BORROW.BOOK_BORROWED) {
@@ -85,6 +70,5 @@ public class ALoan implements ILoan, ILendingConst {
     public void show(ShowSubjectItems showItems) {
         getResultShow(showItems).forEach(System.out::println);
     }
-
 
 }

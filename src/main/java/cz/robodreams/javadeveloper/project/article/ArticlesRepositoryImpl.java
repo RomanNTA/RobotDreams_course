@@ -21,25 +21,6 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
     BiPredicate<ArticleType, ArticleType> testArticle = (needArticle, thisArticle) -> (needArticle.equals(ArticleType.ALL) || (thisArticle.equals(needArticle)));
     BiPredicate<String, String> testGenre = (needGenre, thisGenre) -> (needGenre.equals("") || (thisGenre.equals(needGenre)));
 
-
-    public void loadArticle() {
-        new LoaderRun(this).run();
-    }
-
-    public void unlockAnyBooks(int count) {
-
-        int counter = 0;
-        while (counter < repository.size() && counter < count) {
-
-            Article a = repository.get(counter);
-            if (a.getArticleType() == ArticleType.BOOKS && a.getLocked() == Lock.LOCK) {
-                ((Book) a).setLocked(Lock.UNLOCK);
-                counter++;
-            }
-        }
-    }
-
-
     @Override
     public ArticleType getArticleType() {
         return null;
@@ -61,21 +42,6 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         get(id).show(showItems);
     }
 
-
-//    @Override
-//    public Article getRandomSubject(ArticleType articleType) {
-//        try {
-//            //return (repository.values().stream()
-//            return (repository.stream()
-//                    .filter(x -> (x.getArticleType() == articleType) )
-//                    .skip(Util.getRandomId(0,repository.size()-1))
-//                    .findAny()
-//            ).get();
-//        } catch (NullPointerException e) {
-//            return null;
-//        }
-//    }
-
     @Override
     public <T extends Article> T getRandomSubject(Lock locked, ArticleType articleType) {
 
@@ -94,6 +60,7 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         }
     }
 
+    @Override
     public <T extends Article> List<T> getList(Lock locked, ArticleType article) {
 
         try {
@@ -108,9 +75,10 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         }
     }
 
+
+    @Override
     public List<String> getListBook(Lock locked, ArticleType article) {
         try {
-
             return this.<Book>getList(locked, article).stream()
                     .map(x -> x.getResultShow(ShowSubjectItems.LONG_FORMAT))
                     .flatMap(Collection::stream)
@@ -121,10 +89,10 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
     }
 
 
+    @Override
     public List<String> getListBorrowedBook() {
 
         try {
-
             return repository.stream()
                     .filter(items -> items.getArticleType() == ArticleType.BOOKS)
                     .filter(items -> items.getLocked() == Lock.UNLOCK)
@@ -138,11 +106,13 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         }
     }
 
+    @Override
     public Integer getCount(Lock locked, ArticleType article) {
         return this.<Article>getList(locked, article).size();
     }
 
 
+    @Override
     public Map<String, Long> getListBooksAccordingGenre(Lock locked) {
 
         return repository.stream()
@@ -153,25 +123,7 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
 
-
-//    public void showBooksAccordingToGenre(String genre) {
-//
-//        List<Integer> listOfBooks = repository.stream()
-//                .filter(x -> !x.getBorrowed())
-//                .filter(p -> p.getGenre() == genre)
-//                .map(x -> x.getIdArticle())
-//                .toList();
-//
-//        System.out.printf("Seznam voných knih v knihovně pro žánr '%s'.\n", genre);
-//        for (int i = 0; i < listOfBooks.size(); i++) {
-//            this.show(listOfBooks.get(i), true);
-//        }
-//    }
-
-    /**
-     * @return Map<idArticle, Lines>
-     */
-
+    @Override
     public Map<Integer, Book> showBooksAccordingToGenreForBuyin(String genre) {
 
         try {
@@ -185,6 +137,7 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         }
     }
 
+    @Override
     public Map<Integer,Book> showFreeBooks(ShowSubjectItems showSubjectItems) {
 
         try {
@@ -201,72 +154,24 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
     }
 
 
-//    public List<String> getListBook(Lock locked, ArticleType article) {
-//
-//        List result = new ArrayList();
-//        //System.out.println( "getResultShow Volání " + result.size() );
-//        try {
-//            for (Article art : this.<Book>getList(locked, article)) {
-////                List tmp = new ArrayList();
-////                tmp = art.getResultShow(ShowSubjectItems.LONG_FORMAT);
-////                System.out.println( "getResultShow tmp " + tmp.size() );
-////                result.addAll(tmp);
-//                result.addAll(art.getResultShow(ShowSubjectItems.LONG_FORMAT));
-//            }
-//        } catch (RuntimeException e) {
-//            return new ArrayList<>();
-//        }
-//        //System.out.println( "getResultShow vrací celkem " + result.size());
-//        return result;
-//    }
+    @Override
+    public void loadArticle() {
+        new LoaderRun(this).run();
+    }
 
+    @Override
+    public void unlockAnyBooks(int count) {
 
-//
-//
-//    public String showBookGenre(Boolean returnRandomGenre, Boolean showAllGenre) {
-//
-//        //Map<String, Long> booksGenre = repository.values().stream()
-//        Map<String, Long> booksGenre = repository.stream()
-//                .filter(x -> x.getArticleType() == ArticleType.BOOKS)
-//                .map(x -> x.getArticleType() == ArticleType.BOOKS)
-//                .filter(x -> x.getGenre().length() > 0)
-//                .filter(x -> !x.getBorrowed())
-//                .map(x -> x.getGenre())
-//                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-//
-//        if (showAllGenre) {
-//            System.out.println("Seznam žánrů v knihovně.");
-//            System.out.println("=".repeat(30));
-//            booksGenre.entrySet().stream().forEach(x -> System.out.println(x.getKey()));
-//        }
-//
-//        String result = "";
-//        try {
-//            if (returnRandomGenre) {
-//                result = (booksGenre.keySet().stream()
-//                        .skip(Util.getRandomId(0,booksGenre.size()-1))
-//                        .findAny()
-//                ).get();
-//            }
-//        } catch (NullPointerException e) {
-//            return "";
-//        }
-//        return result;
-//    }
-//
-//    public void showBooksAccordingToGenre(String genre) {
-//
-//        List<Integer> listOfBooks = repository.stream()
-//                .filter(x -> !x.getBorrowed())
-//                .filter(p -> p.getGenre() == genre)
-//                .map(x -> x.getIdArticle())
-//                .toList();
-//
-//        System.out.printf("Seznam voných knih v knihovně pro žánr '%s'.\n", genre);
-//        for (int i = 0; i < listOfBooks.size(); i++) {
-//            this.show(listOfBooks.get(i), true);
-//        }
-//    }
+        int counter = 0;
+        while (counter < repository.size() && counter < count) {
+
+            Article a = repository.get(counter);
+            if (a.getArticleType() == ArticleType.BOOKS && a.getLocked() == Lock.LOCK) {
+                ((Book) a).setLocked(Lock.UNLOCK);
+                counter++;
+            }
+        }
+    }
 
 
 }

@@ -19,8 +19,6 @@ public class CommunicatorShowMenuVar2 extends ServiceThread<MessageTransfer> {
 
         this.task = () -> {
 
-            //myWait(300L);
-
             if (!isNotNull.test(messageTransfer)) {
                 return MessageTransfer.builder()
                         .task(Const.CLIENT_RETURN_TO_ROOT)
@@ -45,7 +43,6 @@ public class CommunicatorShowMenuVar2 extends ServiceThread<MessageTransfer> {
 
                 if (stringLine.equalsIgnoreCase("A")) {
 
-                    System.out.println("Odesílám A");
                     return MessageTransfer.builder()
                             .task(messageTransfer.replyTask())
                             .strInOut1("A")
@@ -64,10 +61,6 @@ public class CommunicatorShowMenuVar2 extends ServiceThread<MessageTransfer> {
                             int i1 = Integer.valueOf(out[0]);
                             int i2 = Integer.valueOf(out[1]);
 
-//                            System.out.println(" - messageTransfer.intResult()+1 = " + messageTransfer.intResult());
-//                            System.out.println(" - testIndex.test(i1,messageTransfer.intResult()+1) = " + testIndex.test(i1, messageTransfer.intResult() + 1));
-//                            System.out.println(" - testIndex.test(i2,messageTransfer.intResult()+1) = " + testIndex.test(i2, messageTransfer.intResult() + 1));
-
                             if (!testIndex.test(i1, messageTransfer.intResult() + 1) || !testIndex.test(i2, messageTransfer.intResult() + 1)) {
                                 System.out.println("Výběr není v požadovaném rozsahu");
                                 continue;
@@ -81,7 +74,6 @@ public class CommunicatorShowMenuVar2 extends ServiceThread<MessageTransfer> {
                             continue;
                         }
 
-//                        System.out.println("Odesílám " + result);
                         return MessageTransfer.builder()
                                 .task(messageTransfer.replyTask())
                                 .replyTask(Const.REPLY)
@@ -103,7 +95,6 @@ public class CommunicatorShowMenuVar2 extends ServiceThread<MessageTransfer> {
                     continue;
                 }
 
-  //              System.out.println("Odesílám " + i);
                 return MessageTransfer.builder()
                         .task(messageTransfer.replyTask())
                         .replyTask(Const.REPLY)

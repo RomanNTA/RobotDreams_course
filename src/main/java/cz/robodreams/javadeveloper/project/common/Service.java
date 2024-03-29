@@ -14,12 +14,7 @@ public class Service {
     private ArticlesRepository article;
     private Users user;
     private Lending<ILoan> lending;
-//    private PaymentManager paymentManager;
-//    private EventManager eventManager;
-
-
     private static Service instance;
-
 
     private Service() {
     }
@@ -53,19 +48,5 @@ public class Service {
         }
         return this.lending;
     }
-
-//    public PaymentManager getPaymentManager() {
-//        if (paymentManager == null){
-//            this.paymentManager = new PaymentManager();
-//        }
-//        return this.paymentManager;
-//    }
-//
-//    public EventManager getEventManager() {
-//        if (eventManager == null){
-//            this.eventManager = new EventManager();
-//        }
-//        return this.eventManager;
-//    }
 
 }

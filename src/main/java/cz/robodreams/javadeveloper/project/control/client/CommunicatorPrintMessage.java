@@ -6,7 +6,6 @@ import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
 public class CommunicatorPrintMessage implements Runnable {
 
     private MessageTransfer messageTransfer;
-
     public CommunicatorPrintMessage(MessageTransfer messageTransfer) {
         this.messageTransfer = messageTransfer;
     }

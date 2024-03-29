@@ -18,10 +18,7 @@ public interface Lending<ILoan>  extends Subjects<ILoan> {
 
     Boolean removeLoan(ILoan loan);
 
-    //Map<Integer,User> driverReleaseClientSelection();
     Map<User, Long> driverReleaseClientSelection();
-
-    //Map<Integer,User> driverReleaseBooks( Integer userId);
 
     Map<Integer, ILoan> driverReleaseBooks(Integer userId);
 

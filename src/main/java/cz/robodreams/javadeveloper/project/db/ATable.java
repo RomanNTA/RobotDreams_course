@@ -31,7 +31,6 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
     }
 
     private void put(int col, int row, Object value) {
-        //System.out.println("col = " + col + ", row = " + row + ", value -> " + value);
 
         AColumn column = getColumn(col);
         try {
@@ -83,10 +82,6 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
         columns.clear();
         ILoader loader = new Loader(this, sourceFile);
         loader.loadData();
-
-//        IBufferedArrayList col = (AColumn) getColumn(2);
-//        System.out.println( col.find(32) );
-
     }
 
 
@@ -169,8 +164,6 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
         return (LocalDateTime) getColumn(col).getValue(row);
     }
 
-
-
     @Override
     public String toString() {
         String s = "ATable{";
@@ -181,25 +174,3 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
         return s;
     }
 }
-
-
-//    //    @Override
-//    public ArrayList<String> toArrayList(Boolean writeTerminal, String delimiter) {
-//
-//        ArrayList<String> out = new ArrayList<>();
-////        linesMap.forEach((key, value) -> {
-////            String s = String.join(delimiter, (String[]) value);
-////            if (writeTerminal) {
-////                System.out.println(s);
-////            } else {
-////                out.add(s);
-////            }
-////        });
-//        return out;
-//    }
-//
-//    @Override
-//    public void insertSubjects(int counter, String[] intResult) {
-////        linesMap.put(counter, intResult);
-//    }
-

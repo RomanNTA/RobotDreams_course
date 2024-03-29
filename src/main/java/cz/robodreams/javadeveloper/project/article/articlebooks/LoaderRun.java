@@ -7,8 +7,6 @@ import cz.robodreams.javadeveloper.project.common.SubjectAdd;
 public class LoaderRun extends Thread implements SubjectAdd<Article> {
 
     private ArticlesRepository articlesRepository;
-
-
     public LoaderRun(ArticlesRepository articlesRepository) {
         this.articlesRepository = articlesRepository;
     }
