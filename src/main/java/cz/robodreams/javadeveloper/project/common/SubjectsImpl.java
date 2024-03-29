@@ -38,8 +38,6 @@ public abstract class SubjectsImpl<T> implements Subjects<T>, SubjectAdd<T> {
         return repository.size();
     }
 
-
-
     @Override
     public abstract void show(int id, ShowSubjectItems showItems);
 

@@ -14,13 +14,10 @@ public class BufferedArrayList<E> extends ArrayCalculator implements IBufferedAr
 
     private int allocCapacity;
 
-//    private int position;
-
     /***
      *  Suspend validation while appending to the end of an array.
      */
     private Boolean suspendVerify = false;
-
 
     public BufferedArrayList(Class<E[]> type) {
         super();
@@ -28,9 +25,6 @@ public class BufferedArrayList<E> extends ArrayCalculator implements IBufferedAr
         arr = createArray(capacity);
         arrTmp = null;
         size = 0;
-
-
-
     }
 
     public BufferedArrayList(Class<E[]> type, E... objArr) {
@@ -175,16 +169,6 @@ public class BufferedArrayList<E> extends ArrayCalculator implements IBufferedAr
         }
         return -1;
     }
-
-//    @Override
-//    public String toString() {
-//        String out = Arrays.stream(arr)
-//                .filter(x -> x!= null)
-//                .map(x -> (String) x.toString())
-//                .collect(Collectors.joining(", "));
-//        return "BufferedArrayList<" + myType.getTypeName() + ">size = "+size + "; capacity = " + capacity + "\r\n{" + out + "}";
-//    }
-
 
     @Override
     public Boolean remove(int index) {

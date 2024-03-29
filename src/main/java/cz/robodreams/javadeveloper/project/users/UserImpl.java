@@ -20,6 +20,7 @@ public class UserImpl implements User, UtilConst {
 
     private String name;
     private String surname;
+
     private String phone;
     private String email;
 

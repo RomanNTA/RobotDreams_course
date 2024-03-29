@@ -12,11 +12,6 @@ public final class ServerImpl implements Server {
     public final Service service = Service.getInstance();
     private static ServerImpl INSTANCE = new ServerImpl();
 
-//    public static void main(String[] args) {
-//
-//        new ServerImpl().start();
-//        System.exit(0);
-//    }
 
     public static ServerImpl getInstance() {
         return INSTANCE;

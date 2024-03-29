@@ -14,11 +14,4 @@ public interface BooksGenerator {
     int PUBLISHER = 8;
     int PROFIT = 9;
 
-
-    //String DATABASE_FILE = "db_books";
-
-    //Book getBook(int id);
-
-    //Integer getCountOfBooks();
-
 }

@@ -46,21 +46,14 @@ public class ServerHandler extends Thread {
         communicator = new SocketReadWriter(socket);
         this.socket = socket;
         threadName = "Thread " + id + ": ";
+        try {
+            this.socket.setSoTimeout(200);
+            System.out.println(threadName + "Server socket OK.");
 
-//        try {
-            try {
-//
-//                //this.socket.setKeepAlive(true);
-                this.socket.setSoTimeout(200);
-                System.out.println(threadName + "Server socket OK.");
-
-            } catch (IOException e) {
-                System.out.println(threadName + "Server socket nenastartoval.");
-                throw new RuntimeException(e);
-            }
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
+        } catch (IOException e) {
+            System.out.println(threadName + "Server socket nenastartoval.");
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -128,7 +121,9 @@ public class ServerHandler extends Thread {
         }
     }
 
-    public String getUserName(){
+    public String getUserName() {
         return isNotNull.test(userName) ? userName : "";
-    };
+    }
+
+    ;
 }

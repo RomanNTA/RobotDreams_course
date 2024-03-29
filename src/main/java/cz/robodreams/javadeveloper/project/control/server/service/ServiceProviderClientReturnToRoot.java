@@ -43,19 +43,10 @@ public class ServiceProviderClientReturnToRoot extends ServiceProviderImpl imple
     public MessageTransfer processAnswer() {
 
         switch (messageTransfer.intResult()) {
-
-            case 0 -> {
-                return MessageTransfer.builder().task(Const.EXIT).loop(false).build();
-            }
-            case 1 -> {
-                return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOGIN_USER).loop(true).build();
-            }
-            case 2 -> {
-                return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_LIST).loop(true).build();
-            }
-            case 3 -> {
-                return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_BOOKS).loop(true).build();
-            }
+            case 0 -> {return MessageTransfer.builder().task(Const.EXIT).loop(false).build();}
+            case 1 -> {return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOGIN_USER).loop(true).build();}
+            case 2 -> {return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_LIST).loop(true).build();}
+            case 3 -> {return MessageTransfer.builder().task(Const.CLIENT_SEND_DLG_LOAN_BOOKS).loop(true).build();}
         }
         return MessageTransfer.builder().task(Const.EMPTY).build();
     }

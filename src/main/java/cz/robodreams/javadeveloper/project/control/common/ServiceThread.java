@@ -26,12 +26,7 @@ public class ServiceThread<T> {
 
         T result;
         try {
-
-            Future<T> future = executorService.submit(task);
-            result = future.get();
-
-            // zkusit změnit na ...
-            //result = executorService.submit(task).get();
+            result = executorService.submit(task).get();
 
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);

@@ -16,7 +16,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-
 public class UsersImpl extends SubjectsImpl<User> implements Users, SubjectAdd<User> {
 
     @Override
@@ -52,14 +51,6 @@ public class UsersImpl extends SubjectsImpl<User> implements Users, SubjectAdd<U
             }
     }
 
-
-
-
-
-
-
-
-
     @Override
     public String toString() {
         return "Users{ count of user : " + repository.size() + '}';
@@ -74,6 +65,4 @@ public class UsersImpl extends SubjectsImpl<User> implements Users, SubjectAdd<U
     public Integer getId() {
         return null;
     }
-
-
 }
