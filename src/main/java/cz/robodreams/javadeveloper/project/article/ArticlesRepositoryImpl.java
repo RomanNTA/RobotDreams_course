@@ -9,24 +9,34 @@ import cz.robodreams.javadeveloper.project.article.interfaces.Article;
 import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
 import cz.robodreams.javadeveloper.project.common.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiPredicate;
 import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements ArticlesRepository, Subjects<Article>, SubjectAdd<Article> {
 
-    BiPredicate<Lock,Lock> testLocked = (needLock, bookLock) -> (needLock.equals(Lock.ALL) || (bookLock.equals(needLock)));
-    BiPredicate<ArticleType,ArticleType> testArticle = (needArticle, thisArticle) -> (needArticle.equals(ArticleType.ALL) || (thisArticle.equals(needArticle)));
-    BiPredicate<String,String> testGenre = (needGenre, thisGenre) -> (needGenre.equals("") || (thisGenre.equals(needGenre)));
+    BiPredicate<Lock, Lock> testLocked = (needLock, bookLock) -> (needLock.equals(Lock.ALL) || (bookLock.equals(needLock)));
+    BiPredicate<ArticleType, ArticleType> testArticle = (needArticle, thisArticle) -> (needArticle.equals(ArticleType.ALL) || (thisArticle.equals(needArticle)));
+    BiPredicate<String, String> testGenre = (needGenre, thisGenre) -> (needGenre.equals("") || (thisGenre.equals(needGenre)));
 
 
     public void loadArticle() {
         new LoaderRun(this).run();
+    }
+
+    public void unlockAnyBooks(int count) {
+
+        int counter = 0;
+        while (counter < repository.size() && counter < count) {
+
+            Article a = repository.get(counter);
+            if (a.getArticleType() == ArticleType.BOOKS && a.getLocked() == Lock.LOCK) {
+                ((Book) a).setLocked(Lock.UNLOCK);
+                counter++;
+            }
+        }
     }
 
 
@@ -50,7 +60,6 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
         Util.line();
         get(id).show(showItems);
     }
-
 
 
 //    @Override
@@ -87,20 +96,11 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 
     public <T extends Article> List<T> getList(Lock locked, ArticleType article) {
 
-
         try {
             return repository.stream()
                     .map(x -> ((T) x))
-
-                    //.filter(x -> x.getArticleType() == article)
-                    .filter(items -> testArticle.test(article,items.getArticleType()))
-
-                    //.filter(lock -> (locked == Lock.ALL || (lock.getLocked() == locked)))
+                    .filter(items -> testArticle.test(article, items.getArticleType()))
                     .filter(items -> testLocked.test(locked, items.getLocked()))
-
-                    //.filter(items -> testArticle(article, items.getArticleType()))
-                    //.filter(lock -> (article == ArticleType.ALL || (lock.getArticleType() == article)))
-
                     .toList();
 
         } catch (RuntimeException e) {
@@ -109,50 +109,48 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
     }
 
     public List<String> getListBook(Lock locked, ArticleType article) {
-
-        List<String> result = new ArrayList();
-        //System.out.println( "getResultShow Volání " + result.size() );
         try {
-            for (Article art : this.<Book>getList(locked, article)) {
-//                List tmp = new ArrayList();
-//                tmp = art.getResultShow(ShowSubjectItems.LONG_FORMAT);
-//                System.out.println( "getResultShow tmp " + tmp.size() );
-//                result.addAll(tmp);
-                result.addAll(art.getResultShow(ShowSubjectItems.LONG_FORMAT));
-            }
+
+            return this.<Book>getList(locked, article).stream()
+                    .map(x -> x.getResultShow(ShowSubjectItems.LONG_FORMAT))
+                    .flatMap(Collection::stream)
+                    .toList();
         } catch (RuntimeException e) {
             return new ArrayList<>();
         }
-        //System.out.println( "getResultShow vrací celkem " + result.size());
-        return result;
     }
 
 
+    public List<String> getListBorrowedBook() {
 
+        try {
 
+            return repository.stream()
+                    .filter(items -> items.getArticleType() == ArticleType.BOOKS)
+                    .filter(items -> items.getLocked() == Lock.UNLOCK)
+                    .filter(Article::getBorrowed)
+                    .map(items -> items.getResultShow(ShowSubjectItems.LONG_FORMAT))
+                    .flatMap(Collection::stream)
+                    .toList();
 
-
-
-
+        } catch (RuntimeException e) {
+            return new ArrayList<>();
+        }
+    }
 
     public Integer getCount(Lock locked, ArticleType article) {
         return this.<Article>getList(locked, article).size();
     }
 
+
     public Map<String, Long> getListBooksAccordingGenre(Lock locked) {
 
-        Map<String, Long> booksGenre = repository.stream()
+        return repository.stream()
                 .filter(x -> x.getArticleType() == ArticleType.BOOKS)
                 .filter(x -> testLocked.test(locked, x.getLocked()))
                 .filter(x -> !((Book) x).getGenre().isEmpty())
                 .map(x -> ((Book) x).getGenre())
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
-//        System.out.println("Seznam žánrů v knihovně.");
-//        System.out.println("=".repeat(30));
-//        booksGenre.entrySet().stream().forEach(x -> System.out.println(x.getKey()));
-//
-        return booksGenre;
     }
 
 
@@ -170,36 +168,38 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 //        }
 //    }
 
-    public  Map<Book, List<String>> showBooksAccordingToGenreForBuyin(String genre) {
+    /**
+     * @return Map<idArticle, Lines>
+     */
 
-        Map<Book, List<String>> result = new HashMap<>();
-        //System.out.println( "getResultShow Volání " + result.size() );
+    public Map<Integer, Book> showBooksAccordingToGenreForBuyin(String genre) {
+
         try {
-
-            List<Book> books = this.<Book>getList(Lock.LOCK, ArticleType.BOOKS)
-                    .stream()
-                    .filter(items -> testGenre.test(genre, items.getGenre()))
-                    .toList();
-            int counter = 1;
-            List tmp = new ArrayList();
-            for (Book book : books) {
-                tmp.clear();
-
-                tmp.add(Util.getLine());
-                tmp.add(" Kniha č. " +  counter++);
-                tmp.addAll(book.getResultShow(ShowSubjectItems.LONG_FORMAT));
-                result.put(book, tmp);
-            }
-            System.out.println( "showBooksAccordingToGenreForBuyin vrací celkem " + result.size());
-            return result;
+            AtomicInteger counter = new AtomicInteger(1);
+            return this.<Book>getList(Lock.LOCK, ArticleType.BOOKS).stream()
+                    .filter(items -> (testGenre.test(genre, items.getGenre())))
+                    .collect(Collectors.toMap(x -> (counter.getAndIncrement()), Function.identity()));
 
         } catch (RuntimeException e) {
             return new HashMap<>();
         }
-        //System.out.println( "getResultShow vrací celkem " + result.size());
-
-
     }
+
+    public Map<Integer,Book> showFreeBooks(ShowSubjectItems showSubjectItems) {
+
+        try {
+            AtomicInteger counter = new AtomicInteger(1);
+            return repository.stream()
+                    .filter(items -> items.getArticleType() == ArticleType.BOOKS)
+                    .filter(items -> items.getLocked() == Lock.UNLOCK)
+                    .filter(items -> !items.getBorrowed())
+                    .map(items -> ((Book) items))
+                    .collect(Collectors.toMap(x -> (counter.getAndIncrement()), Function.identity()));
+        } catch (RuntimeException e) {
+            return new HashMap<>();
+        }
+    }
+
 
 //    public List<String> getListBook(Lock locked, ArticleType article) {
 //
@@ -219,20 +219,6 @@ public class ArticlesRepositoryImpl extends SubjectsImpl<Article> implements Art
 //        //System.out.println( "getResultShow vrací celkem " + result.size());
 //        return result;
 //    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //

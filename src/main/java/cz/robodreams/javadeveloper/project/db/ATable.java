@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class ATable implements ITable, IConstant, ILoaderCallback {
 
-    private Map<Integer, AColumn> columns = new HashMap<>();
+    private Map<Integer, AColumn<?,?>> columns = new HashMap<>();
     private String sourceFile;
     private ILoader loader;
 
@@ -199,7 +199,7 @@ public class ATable implements ITable, IConstant, ILoaderCallback {
 //    }
 //
 //    @Override
-//    public void insertSubjects(int counter, String[] output) {
-////        linesMap.put(counter, output);
+//    public void insertSubjects(int counter, String[] intResult) {
+////        linesMap.put(counter, intResult);
 //    }
 

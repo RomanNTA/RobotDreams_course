@@ -7,6 +7,9 @@ import cz.robodreams.javadeveloper.project.lending.ALoan;
 public interface Book extends Article {
 
 
+    String getShortInfo();
+
+
     void setLocked(Lock locked);
 
     void setIdArticle(Integer article);

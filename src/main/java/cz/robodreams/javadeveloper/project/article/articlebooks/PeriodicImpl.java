@@ -41,12 +41,12 @@ public class PeriodicImpl implements Periodic {
     }
 
     @Override
-    public List getResultShow(ShowSubjectItems showItems) {
+    public List<String> getResultShow(ShowSubjectItems showItems) {
 
 //        BiPredicate<ShowSubjectItems,ShowSubjectItems> testShowItems =(x , y) -> ( x == y);
 //        boolean view = testShowItems.test(showItems,ShowSubjectItems.LONG_FORMAT);
 
-        List result = new ArrayList();
+        List<String> result = new ArrayList();
         result.add(String.format("| Název: " + Util.colYellow("%43s"), title));
         result.add(String.format("  Nakladatelství : " + Util.colCyan("%19s\n"), publisher));
 

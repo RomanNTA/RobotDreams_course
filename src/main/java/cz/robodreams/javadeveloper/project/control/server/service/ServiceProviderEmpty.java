@@ -9,12 +9,11 @@ import java.lang.module.ResolutionException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiceProviderEmpty implements ServiceProvider {
+public class ServiceProviderEmpty extends ServiceProviderImpl implements ServiceProvider {
 
 
     @Override
     public MessageTransfer run(MessageTransfer messageTransfer, ServerHandler serverHandler) {
-
         return messageTransfer;
     }
 

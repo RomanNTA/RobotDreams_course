@@ -14,7 +14,7 @@ public final class ClientImpl implements Client {
 //
 //    private String role;
     private List<MessageTransfer> messageBuffer = new ArrayList<>();
-    private Queue<MessageTransfer> sendMessageBuffer = new LinkedList();
+    private Queue<MessageTransfer> sendMessageBuffer = new LinkedList<>();
     public static AtomicBoolean isRunningHandler = new AtomicBoolean(false);
 //    private Scanner console;
 
@@ -99,8 +99,8 @@ public final class ClientImpl implements Client {
 //    public void printMessage(MessageTransfer mt) {
 ////    public MessageTransfer printMessage(MessageTransfer mt) {
 //        Util.line();
-//        System.out.println(String.format("| %s ", Util.colRed(mt.label())));
-//        System.out.println(String.format("| %s ", Util.colWhite(mt.remark())));
+//        System.out.println(String.format("| %s ", Util.colRed(mt.strInOut1())));
+//        System.out.println(String.format("| %s ", Util.colWhite(mt.strInOut2())));
 //        mt.menu().forEach(x -> System.out.println(String.format("| %s", x)));
 //        //return new MessageTransfer(mt.task(), Const.MESSAGES_CLIENT_TO_SERVER, "", "", null, 0);
 //    }
@@ -120,8 +120,8 @@ public final class ClientImpl implements Client {
 ////        AtomicInteger position = new AtomicInteger(0);
 ////        Util.line();
 ////
-////        System.out.println(String.format("| %s ", Util.colRed(mt.label())));
-////        System.out.println(String.format("| %s ", Util.colWhite(mt.remark())));
+////        System.out.println(String.format("| %s ", Util.colRed(mt.strInOut1())));
+////        System.out.println(String.format("| %s ", Util.colWhite(mt.strInOut2())));
 ////        mt.menu().forEach(x -> System.out.println(String.format("|" + Util.colRed("%3d") + " : %s", position.getAndIncrement(), x)));
 ////        System.out.println(String.format("| %s ", Util.colWhite("Zadej číslo: ")));
 ////
@@ -152,7 +152,7 @@ public final class ClientImpl implements Client {
 ////        return MessageTransfer.builder().
 ////                task(mt.replyTask()).
 ////                replyTask("reply").
-////                output(result).
+////                intResult(result).
 ////                build();
 //    return null;
 //
@@ -190,9 +190,9 @@ public final class ClientImpl implements Client {
 //    }
 
 
-//    private String getUserInput(String label, boolean isLabel) {
+//    private String getUserInput(String strInOut1, boolean isLabel) {
 //        if (isLabel) {
-//            System.out.println(label);
+//            System.out.println(strInOut1);
 //        }
 //        return console.nextLine();
 //    }

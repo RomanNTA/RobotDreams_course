@@ -22,6 +22,17 @@ public class ServiceThread<T> {
         }
     }
 
+    protected void myWait(long countTick){
+        try {
+            synchronized (this) {
+                wait(countTick);
+            }
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
     protected T start() {
 
         T result;

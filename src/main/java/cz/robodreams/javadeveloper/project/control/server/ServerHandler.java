@@ -1,11 +1,13 @@
 package cz.robodreams.javadeveloper.project.control.server;
 
 
+import cz.robodreams.javadeveloper.project.common.Util;
 import cz.robodreams.javadeveloper.project.control.common.Const;
 import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
 import cz.robodreams.javadeveloper.project.control.common.Role;
 import cz.robodreams.javadeveloper.project.control.common.SocketReadWriter;
 import cz.robodreams.javadeveloper.project.control.server.service.*;
+import cz.robodreams.javadeveloper.project.users.User;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.map.HashedMap;
@@ -13,23 +15,31 @@ import org.apache.commons.collections4.map.HashedMap;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Map;
+import java.util.function.Supplier;
 
-import static cz.robodreams.javadeveloper.project.control.common.Const.doesThisTaskContain;
+import static cz.robodreams.javadeveloper.project.control.common.Const.doesThisTaskEquals;
 import static cz.robodreams.javadeveloper.project.control.common.Const.isNotNull;
 
 
 public class ServerHandler extends Thread {
 
+    public static String threadName;
+
     @Getter
     @Setter
     private Role role = Role.NONE;
 
+    private String userName;
+
     private SocketReadWriter communicator;
     private Socket socket;
-    private Map<String, ServiceProvider> carusel = new HashedMap<>();
-    public static String threadName;
-
+    private Map<String, Supplier<ServiceProvider>> providerTask = new HashedMap<>();
     private MessageTransfer messageTransfer;
+
+    @Getter
+    @Setter
+    private User client;
+
 
     public ServerHandler(Socket socket, Integer id) {
 
@@ -49,39 +59,38 @@ public class ServerHandler extends Thread {
     @Override
     public void run() {
 
-        carusel.put(Const.EMPTY, new ServiceProviderEmpty());
-        carusel.put(Const.MESSAGES_FIRST_CONNECT, new ServiceProviderRole());
-
-        carusel.put(Const.RETURN_TO_ROOT, new ServiceProviderReturnToRoot());
-        carusel.put(Const.MESSAGE_SEND_DLG_LIST, new ServiceProviderListArticle());
-        carusel.put(Const.MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE, new ServiceProviderListAccordingGenre());
-        carusel.put(Const.MESSAGE_SEND_DLG_LIST_ACCORDING_GENRE_SHOW, new ServiceProviderListAccordingGenreShow());
+        providerTask.put(Const.EMPTY, ServiceProviderEmpty::new);
+        providerTask.put(Const.MESSAGES_FIRST_CONNECT, ServiceProviderRole::new);
 
         ServiceProvider serviceProvider;
 
         while (true) {
 
             messageTransfer = communicator.receiveStream();
-            System.out.println("Test v karuselu: " + messageTransfer.task());
-
-            if (carusel.containsKey(messageTransfer.task())) {
+//
+//            if (!messageTransfer.task().equals(Const.EMPTY)){
+//                System.out.println("Test v karuselu: " + messageTransfer);
+//            }
+//
+            if (providerTask.containsKey(messageTransfer.task())) {
                 do {
-                    serviceProvider = carusel.get(messageTransfer.task());
-
+                    serviceProvider = (providerTask.get(messageTransfer.task()).get());
                     if (Const.isNotNull.test(serviceProvider)) {
 
-                        System.out.println("Volání : " + serviceProvider.getClass().getSimpleName());
-                        messageTransfer = ((ServiceProvider) serviceProvider).run(messageTransfer, this);
+//                        if (!serviceProvider.getClass().getSimpleName().equals("ServiceProviderEmpty")){
+//                            System.out.println("Volání : " + serviceProvider.getClass().getSimpleName());
+//                        }
 
-                        if (doesThisTaskContain.test(messageTransfer, Const.EXIT)) {
+                        messageTransfer = ((ServiceProvider) serviceProvider).run(messageTransfer, this);
+                        if (doesThisTaskEquals.test(messageTransfer, Const.EXIT)) {
                             break;
                         }
                     }
                 } while (isNotNull.test(messageTransfer) && isNotNull.test(messageTransfer.loop()) && messageTransfer.loop());
 
                 communicator.sendStream(messageTransfer);
-                if (doesThisTaskContain.test(messageTransfer, Const.EXIT)) {
-                    System.out.println("Poslední message " + messageTransfer);
+                if (doesThisTaskEquals.test(messageTransfer, Const.EXIT)) {
+                    System.out.println("Poslední odeslaná message " + messageTransfer);
                     break;
                 }
 
@@ -91,5 +100,50 @@ public class ServerHandler extends Thread {
         }
         communicator.free();
     }
+
+
+    public void setRole(Role role) {
+
+        this.role = role;
+
+        if (role == Role.DRIVER) {
+            providerTask.put(Const.DRIVER_RETURN_TO_ROOT, ServiceProviderDriverReturnToRoot::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_LIST, ServiceProviderDriverListArticle::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_LIST_ACCORDING_GENRE, ServiceProviderDriverListAccordingGenre::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_LIST_ACCORDING_GENRE_SHOW, ServiceProviderDriverListAccordingGenreShow::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_LIST_BORROWED, ServiceProviderDriverListArticleBorrowed::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_LIST_ALL_USERS, ServiceProviderDriverListAllUsers::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_RELEASE_BOOKS, ServiceProviderDriverReleaseBooks::new);
+            providerTask.put(Const.DRIVER_SEND_DLG_RELEASE_CLIENT_SELECTION, ServiceProviderDriverReleaseClientSelection::new);
+        }
+        if (role == Role.CLIENT) {
+            providerTask.put(Const.CLIENT_SEND_DLG_LOGIN_USER, ServiceProviderClientLoginUser::new);
+            providerTask.put(Const.CLIENT_RETURN_TO_ROOT, ServiceProviderClientReturnToRoot::new);
+
+        }
+    }
+
+    public void setClient(User client) {
+
+        this.client = client;
+        if (isNotNull.test(client)) {
+
+            userName = String.format(Util.colWhite(" : %s ") + Util.colPurple("%s %s"), client.getGender(), client.getName(), client.getSurname());
+
+            providerTask.put(Const.CLIENT_SEND_DLG_LOAN_LIST, ServiceProviderClientLoanList::new);
+            providerTask.put(Const.CLIENT_SEND_DLG_LOAN_BOOKS, ServiceProviderClientLoan::new);
+            //providerTask.put(Const.CLIENT_SEND_DLG_LOAN_BOOKS_CHOICE, ServiceProviderClientLoanChoice::new);
+
+            System.out.println("providerTask SIZE : " + providerTask.size());
+
+        }
+
+    }
+
+    public String getUserName(){
+        return isNotNull.test(userName) ? userName : "";
+    };
+
+
 
 }

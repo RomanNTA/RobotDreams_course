@@ -4,6 +4,7 @@ package cz.robodreams.javadeveloper.project.common;
 import cz.robodreams.javadeveloper.project.article.ArticlesRepositoryImpl;
 import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
 import cz.robodreams.javadeveloper.project.lending.ALending;
+import cz.robodreams.javadeveloper.project.lending.ILoan;
 import cz.robodreams.javadeveloper.project.lending.Lending;
 import cz.robodreams.javadeveloper.project.users.Users;
 import cz.robodreams.javadeveloper.project.users.UsersImpl;
@@ -12,7 +13,7 @@ public class Service {
 
     private ArticlesRepository article;
     private Users user;
-    private Lending lending;
+    private Lending<ILoan> lending;
 //    private PaymentManager paymentManager;
 //    private EventManager eventManager;
 
@@ -46,7 +47,7 @@ public class Service {
         return this.user;
     }
 
-    public Lending getLending() {
+    public Lending<ILoan> getLending() {
         if (lending == null){
             this.lending = new ALending();
         }

@@ -27,21 +27,23 @@ public final class ServerImpl implements Server {
     public ServerImpl() {
 
         /**
-         * Načtení knih z databaze.
+         * Načtení knih z databaze a odemknutí části.
          */
         //service.getArticle().loadBooks(100);
         service.getArticle().loadArticle();
 
 
         /**
-         * Vygenerování 20 uživatelů knihovny
+         * Vygenerování 10 uživatelů knihovny
          */
-        service.getUser().generator(20);
+        service.getUser().generator(10);
 
         /**
-         * Vygenerování 20 zapůjčení knih
+         * Vygenerování 5 zapůjčení knih
          */
         service.getLending().generator(5);
+
+        service.getArticle().unlockAnyBooks(5);
 
     }
 

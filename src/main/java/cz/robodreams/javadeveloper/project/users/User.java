@@ -2,10 +2,15 @@ package cz.robodreams.javadeveloper.project.users;
 
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 
+import java.util.List;
+
 public interface User {
 
     void show(ShowSubjectItems showItems);
-    String getResultShow(ShowSubjectItems showItems);
+    List<String> getResultShow(ShowSubjectItems showItems);
+    String getShortInfo();
+
+    String getRegisteredClient();
 
     Integer getId();
 

@@ -5,6 +5,8 @@ import cz.robodreams.javadeveloper.project.common.Util;
 import cz.robodreams.javadeveloper.project.common.UtilConst;
 import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -41,27 +43,38 @@ public class UserImpl implements User, UtilConst {
     }
 
 
+    @Override
     public void show(ShowSubjectItems showItems) {
-        System.out.println(getResultShow(showItems));
-    }
-
-    public String getShortInfo() {
-        return String.format("| %s " + Util.colPurple("%s %s."), gender, name, surname);
+        getResultShow(showItems).forEach(System.out::println);
     }
 
     @Override
-    public String getResultShow(ShowSubjectItems showItems) {
+    public String getShortInfo() {
+        return String.format("| %s " + Util.colPurple("%s %s "), gender, name, surname);
+    }
 
+    @Override
+    public String getRegisteredClient() {
+        return String.format("%s " + Util.colPurple("%s %s") + " - " + Util.colCyan(" %s"), gender, name, surname, email);
+    }
+
+    @Override
+    public List<String> getResultShow(ShowSubjectItems showItems) {
+
+        List<String> result = new ArrayList<>();
+        result.add(Util.getLine());
         String s = "";
         if (showItems == ShowSubjectItems.LONG_FORMAT) {
-            s += String.format("| %s " + Util.colCyan("%s %s."), gender, name, surname);
+            s = String.format("| %s " + Util.colCyan("%s %s."), gender, name, surname);
             s += " ".repeat(Math.min(45 - s.length(), s.length()));
             s += String.format("Telefon: " + Util.colYellow("%s") + ", email: " + Util.colYellow("%s") + ".", phone, email);
-            s += String.format("\n| Adresa: %s, %s, %s, PSČ %s.", street, streetNumber, city, zipCode);
-        } else if (showItems == ShowSubjectItems.INFO) {
-            s = String.format("| %s " + Util.colPurple("%s %s."), gender, name, surname);
+            result.add(s);
+            result.add(String.format("| Adresa: %s, %s, %s, PSČ %s.", street, streetNumber, city, zipCode));
+
+//        } else if (showItems == ShowSubjectItems.INFO) {
+//            result.add(String.format("| %s " + Util.colPurple("%s %s."), gender, name, surname));
         }
-        return s;
+        return result;
     }
 
 
@@ -80,72 +93,4 @@ public class UserImpl implements User, UtilConst {
 //    }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UserImpl userImpl = (UserImpl) o;
-        return Objects.equals(id, userImpl.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-//
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public String getGender() {
-//        return gender;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public String getSurname() {
-//        return surname;
-//    }
-//
-//    public String getPhone() {
-//        return phone;
-//    }
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public String getCity() {
-//        return city;
-//    }
-//
-//    public String getStreet() {
-//        return street;
-//    }
-//
-//    public String getStreetNumber() {
-//        return streetNumber;
-//    }
-//
-//    public String getZipCode() {
-//        return zipCode;
-//    }
-
-    @Override
-    public String toString() {
-        return "Identity{" +
-                "id=" + id +
-                ", gender=" + gender +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", city='" + city + '\'' +
-                ", street='" + street + '\'' +
-                ", streetNumber='" + streetNumber + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                '}';
-    }
 }

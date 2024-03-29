@@ -19,7 +19,7 @@ public interface Article {
 
     //String getResultShow(ShowSubjectItems showItems);
 
-    List getResultShow(ShowSubjectItems showItems);
+    List<String> getResultShow(ShowSubjectItems showItems);
 
 
     Boolean getBorrowed();

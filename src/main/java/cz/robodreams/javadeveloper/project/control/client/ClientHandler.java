@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 
-import static cz.robodreams.javadeveloper.project.control.common.Const.doesThisTaskContain;
+import static cz.robodreams.javadeveloper.project.control.common.Const.doesThisTaskEquals;
 import static cz.robodreams.javadeveloper.project.control.common.Const.isNotNull;
 
 public class ClientHandler extends Thread {
@@ -33,6 +33,7 @@ public class ClientHandler extends Thread {
         try {
             try {
                 this.socket = new Socket(Const.SOCKET_HOST, Const.SOCKET_PORT);
+                this.socket.setKeepAlive(true);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -44,40 +45,6 @@ public class ClientHandler extends Thread {
         }
         console = new Scanner(System.in, "UTF-8");
 
-    }
-
-
-    public MessageTransfer getMessage() {
-
-//        String inputString;
-//        PrintOutputImpl newDialog;
-//        MessageTransfer messageTransfer;
-//        while (true) {
-//            messageTransfer = ((MessageTransfer) <MessageTransfer>communicator.receiveStream();
-//        }
-//        return messageTransfer != null ? messageTransfer : new MessageTransfer(Const.CLIENT_ERROR, "public MessageTransfer getMessage");
-
-//            if (!(sendMessageBuffer.isEmpty())) {
-//                String s;
-//                synchronized (sendMessageBuffer) {
-//                    s = sendMessageBuffer.poll();
-//                }
-//                communicator.sendLine(s);
-//            }
-
-
-//            inputString = communicator.receiveLine();
-
-
-//            if (newDialog != null)
-//                newDialog.show();
-
-//            if (inputString != null && !inputString.isBlank()) {
-//                messageTransfer = new MessageTransfer(communicator.parseByPosition(inputString, 0).trim(), communicator.parseByPosition(inputString, 1).trim());
-//                break;
-//            }
-
-        return null;
     }
 
     @Override
@@ -99,21 +66,20 @@ public class ClientHandler extends Thread {
                     synchronized (sendMessageBuffer) {
                         mt = sendMessageBuffer.poll();
                     }
-                    System.out.println("-> " + mt.task() + " - " + mt.replyTask());
+                    //System.out.println("-> (" + sendMessageBuffer.size() + ") " + mt.task() + " - " + mt.replyTask());
                     communicator.sendStream(mt);
                 }
 
                 mt = communicator.receiveStream();
 
-                if (doesThisTaskContain.test(mt, Const.EMPTY)) {
+                if (doesThisTaskEquals.test(mt, Const.EMPTY)) {
                     continue;
+                } else {
+                //    if (isNotNull.test(mt.menu()))
+                        //System.out.println("-> MENU " + mt.menu().size() );
                 }
 
-//                mt = new MessageTransfer(Const.MESSAGES_FIRST_CONNECT,"První pokus");
-//                communicator.sendStream(mt);
-
-                if (doesThisTaskContain.test(mt, Const.MESSAGES_FIRST_CONNECT)) {
-
+                if (doesThisTaskEquals.test(mt, Const.MESSAGES_FIRST_CONNECT)) {
                     synchronized (messageBuffer) {
                         messageBuffer.add(mt);
                     }
@@ -121,26 +87,24 @@ public class ClientHandler extends Thread {
                     continue;
                 }
 
-                if (isNotNull.test(mt)) {
-                    System.out.println(mt.task() + " - " + mt.replyTask());
-                }
-
-//                if (mt.task().contains(Const.MESSAGES_CLIENT_TO_SERVER) || mt.task().contains(Const.MESSAGES_SERVER_TO_CLIENT)) {
-//
-//                    synchronized (messageBuffer) {
-//                        messageBuffer.add(mt);
-//                    }
-//                    System.out.println(mt.replyTask());
-//                    continue;
+//                if (isNotNull.test(mt)) {
+//                    System.out.println(mt.task() + " - " + mt.replyTask());
 //                }
 
-                if (doesThisTaskContain.test(mt, Const.MESSAGES_SEND_MENU)) {
+                if (doesThisTaskEquals.test(mt, Const.MESSAGES_SEND_MENU)) {
                     //MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
-                    sendMessageBuffer.add(new <MessageTransfer>CommunicatorGetMenu().go(mt, console));
+                    sendMessageBuffer.add(new <MessageTransfer>CommunicatorShowMenuVar1().go(mt, console));
                     continue;
                 }
 
-                if (doesThisTaskContain.test(mt, Const.MESSAGES_PRINT_TEXT)) {
+                if (doesThisTaskEquals.test(mt, Const.MESSAGES_SEND_MENU_CHOICE_BOOKS)) {
+                    //MessageTransfer messageTransfer = new <MessageTransfer>CommunicatorGetMenu().go(mt, console);
+                    sendMessageBuffer.add(new <MessageTransfer>CommunicatorShowMenuVar2().go(mt, console));
+                    continue;
+                }
+
+
+                if (doesThisTaskEquals.test(mt, Const.MESSAGES_PRINT_TEXT)) {
                     // System.out.println("MESSAGES_PRINT_TEXT: " + mt.menu().size());
                     new CommunicatorPrintMessage(mt).run();
                     sendMessageBuffer.add(MessageTransfer.builder().task(mt.replyTask()).build());
@@ -153,11 +117,6 @@ public class ClientHandler extends Thread {
                 }
 
             }
-
-
-//        } catch (
-//                RuntimeException e) {
-//            System.out.println("Chyba 2: " + e.getMessage());
 
 
         } finally {

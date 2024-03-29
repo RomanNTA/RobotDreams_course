@@ -35,7 +35,7 @@ public interface ITable {
     LocalDateTime getLocalDateTime(int row, int col);
 
 
-    AColumn addColumn(String name, int type, String additional);
+    AColumn<?,?> addColumn(String name, int type, String additional);
 
     String getTypeToString(int index);
 
