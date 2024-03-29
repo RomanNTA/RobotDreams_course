@@ -17,8 +17,12 @@ public final class ClientImpl implements Client {
     public static AtomicBoolean isRunningHandler = new AtomicBoolean(false);
 
     public static void main(String[] args) {
-        ClientImpl client = new ClientImpl();
+
+        new ClientImpl();
+        System.exit(0);
     }
+
+
 
     public ClientImpl() {
 

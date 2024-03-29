@@ -33,7 +33,7 @@ public class ClientHandler extends Thread {
         try {
             try {
                 this.socket = new Socket(Const.SOCKET_HOST, Const.SOCKET_PORT);
-                this.socket.setKeepAlive(true);
+                //this.socket.setKeepAlive(true);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -41,7 +41,8 @@ public class ClientHandler extends Thread {
             ClientImpl.isRunningHandler.set(true);
 
         } catch (SocketException e) {
-            throw new MyRuntimeExceptionSocket(Const.SOCKET_HOST, Const.SOCKET_PORT,"Chyba: clientSocket.", e.getMessage() );
+            System.out.println(e.getStackTrace());
+            //throw new MyRuntimeExceptionSocket(Const.SOCKET_HOST, Const.SOCKET_PORT,"Chyba: clientSocket.", e.getMessage() );
         }
         console = new Scanner(System.in, "UTF-8");
 

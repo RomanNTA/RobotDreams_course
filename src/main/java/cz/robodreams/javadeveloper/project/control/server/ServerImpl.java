@@ -17,12 +17,15 @@ import java.net.ServerSocket;
 //public final class ServerImpl extends Thread implements Server {
 public final class ServerImpl implements Server {
 
+
+    public final Service service = Service.getInstance();
+
     public static void main(String[] args) {
+
         new ServerImpl().start();
         System.exit(0);
     }
 
-    public final Service service = Service.getInstance();
 
     public ServerImpl() {
 
