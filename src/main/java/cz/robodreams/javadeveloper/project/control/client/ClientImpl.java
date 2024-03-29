@@ -17,18 +17,12 @@ public final class ClientImpl implements Client {
     private Queue<MessageTransfer> sendMessageBuffer = new LinkedList<>();
     public static AtomicBoolean isRunningHandler = new AtomicBoolean(false);
 
-//    public static void main(String[] args) {
-//
-//        new ClientImpl();
-//        //System.exit(0);
-//    }
 
     public static ClientImpl getInstance() {
         return new ClientImpl();
     }
 
-
-    private  ClientImpl() {
+    private ClientImpl() {
 
         isRunningHandler.set(false);
 
@@ -37,36 +31,21 @@ public final class ClientImpl implements Client {
         } catch (Exception e) {
             System.out.println("Chyba 1 : " + e.getMessage());
         }
-//        while (isRunningHandler.equals(false)) {
-//            try {
-//                synchronized (this) {
-//                    wait(5);
-//                }
-//            } catch (InterruptedException e) {
-//            }
-//        }
-//
-        System.out.println("Start klienta.");
-        connect();
 
-        while (isRunningHandler.equals(true)) {
+        while (isRunningHandler.equals(false)) {
             try {
                 synchronized (this) {
-                    wait(500L);
+                    wait(5);
                 }
             } catch (InterruptedException e) {
             }
         }
-        System.exit(0);
+
+        System.out.println("Start klienta.");
+        connect();
     }
 
     private void connect() {
-//        try {
-//            synchronized (this) {
-//                wait(500L);
-//            }
-//        } catch (InterruptedException e) {
-//        }
         sendMessageBuffer.add(MessageTransfer.builder().task(Const.MESSAGES_FIRST_CONNECT).build());
     }
 

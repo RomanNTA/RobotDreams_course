@@ -33,19 +33,8 @@ public class ClientHandler extends Thread {
 
         try {
             try {
-
                 this.socket = new Socket(Const.SOCKET_HOST, Const.SOCKET_PORT);
-
-//        try {
-//            synchronized (this) {
-//                wait(200L);
-//            }
-//        } catch (InterruptedException e) {
-//        }
-
-
                 this.socket.setKeepAlive(true);
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -54,7 +43,7 @@ public class ClientHandler extends Thread {
 
         } catch (SocketException e) {
             System.out.println(e.getStackTrace());
-            //throw new MyRuntimeExceptionSocket(Const.SOCKET_HOST, Const.SOCKET_PORT,"Chyba: clientSocket.", e.getMessage() );
+            throw new MyRuntimeExceptionSocket(Const.SOCKET_HOST, Const.SOCKET_PORT,"Chyba: clientSocket.", e.getMessage() );
         }
         console = new Scanner(System.in, "UTF-8");
 
@@ -64,14 +53,7 @@ public class ClientHandler extends Thread {
     public void run() {
 
         try {
-
             MessageTransfer mt;
-//            try {
-//                synchronized (this) {
-//                    wait(200L);
-//                }
-//            } catch (InterruptedException e) {
-//            }
             communicator = new SocketReadWriter(socket);
 
             while (true) {
@@ -83,7 +65,6 @@ public class ClientHandler extends Thread {
                     synchronized (sendMessageBuffer) {
                         mt = sendMessageBuffer.poll();
                     }
-                    System.out.println("mt " + mt.toString());
                     communicator.sendStream(mt);
                 }
 

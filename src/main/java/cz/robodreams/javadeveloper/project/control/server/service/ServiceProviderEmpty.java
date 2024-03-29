@@ -11,7 +11,6 @@ import java.util.List;
 
 public class ServiceProviderEmpty extends ServiceProviderImpl implements ServiceProvider {
 
-
     @Override
     public MessageTransfer run(MessageTransfer messageTransfer, ServerHandler serverHandler) {
         return messageTransfer;

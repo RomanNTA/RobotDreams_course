@@ -26,8 +26,6 @@ public class ServiceProviderImpl implements ServiceProvider {
     protected ServerHandler serverHandler;
     protected MessageTransfer messageTransfer;
 
-    //    BiPredicate<Object,Object> testResultAndNotNull = (t,u) -> ((t != null) && (t == u));
-
     @Override
     public MessageTransfer run(MessageTransfer messageTransfer, ServerHandler serverHandler) {
 

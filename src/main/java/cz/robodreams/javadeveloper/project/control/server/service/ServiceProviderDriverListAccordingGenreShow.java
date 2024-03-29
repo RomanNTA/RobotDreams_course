@@ -92,7 +92,6 @@ public class ServiceProviderDriverListAccordingGenreShow extends ServiceProvider
             if (Objects.nonNull(messageTransfer.strInOut1()) && messageTransfer.strInOut1().length() > 0) {
 
                 String[] inp = messageTransfer.strInOut1().split(";");
-                Arrays.stream(inp).toList().forEach(System.out::println);
 
                 int count = 0;
                 for (int i = 0; i < inp.length; i++) {

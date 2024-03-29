@@ -42,23 +42,25 @@ public class ServerHandler extends Thread {
 
     public ServerHandler(Socket socket, Integer id) {
 
-        threadName = "Thread " + id + ": ";
-        try {
-            try {
-                this.socket = socket;
 
-                communicator = new SocketReadWriter(socket);
-                //this.socket.setKeepAlive(true);
+        communicator = new SocketReadWriter(socket);
+        this.socket = socket;
+        threadName = "Thread " + id + ": ";
+
+//        try {
+            try {
+//
+//                //this.socket.setKeepAlive(true);
                 this.socket.setSoTimeout(200);
                 System.out.println(threadName + "Server socket OK.");
 
             } catch (IOException e) {
                 System.out.println(threadName + "Server socket nenastartoval.");
-                //throw new RuntimeException(e);
+                throw new RuntimeException(e);
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
 
     }
 
@@ -117,13 +119,12 @@ public class ServerHandler extends Thread {
     public void setClient(User client) {
 
         this.client = client;
-        if (isNotNull.test(client)) {
 
+        if (isNotNull.test(client)) {
             userName = String.format(Util.colWhite(" : %s ") + Util.colPurple("%s %s"), client.getGender(), client.getName(), client.getSurname());
 
             providerTask.put(Const.CLIENT_SEND_DLG_LOAN_LIST, ServiceProviderClientLoanList::new);
             providerTask.put(Const.CLIENT_SEND_DLG_LOAN_BOOKS, ServiceProviderClientLoan::new);
-            System.out.println("providerTask SIZE : " + providerTask.size());
         }
     }
 
