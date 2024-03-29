@@ -8,6 +8,7 @@ import cz.robodreams.javadeveloper.project.control.common.exceptions.MyRuntimeEx
 import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketException;
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
@@ -32,8 +33,19 @@ public class ClientHandler extends Thread {
 
         try {
             try {
+
                 this.socket = new Socket(Const.SOCKET_HOST, Const.SOCKET_PORT);
-                //this.socket.setKeepAlive(true);
+
+//        try {
+//            synchronized (this) {
+//                wait(200L);
+//            }
+//        } catch (InterruptedException e) {
+//        }
+
+
+                this.socket.setKeepAlive(true);
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -54,6 +66,12 @@ public class ClientHandler extends Thread {
         try {
 
             MessageTransfer mt;
+//            try {
+//                synchronized (this) {
+//                    wait(200L);
+//                }
+//            } catch (InterruptedException e) {
+//            }
             communicator = new SocketReadWriter(socket);
 
             while (true) {
@@ -65,6 +83,7 @@ public class ClientHandler extends Thread {
                     synchronized (sendMessageBuffer) {
                         mt = sendMessageBuffer.poll();
                     }
+                    System.out.println("mt " + mt.toString());
                     communicator.sendStream(mt);
                 }
 
@@ -109,6 +128,7 @@ public class ClientHandler extends Thread {
             }
         }
 
+        System.out.println("Konec ClientHandler");
         console.close();
         ClientImpl.isRunningHandler.set(false);
     }

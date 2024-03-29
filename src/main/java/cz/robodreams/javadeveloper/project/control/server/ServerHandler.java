@@ -42,17 +42,24 @@ public class ServerHandler extends Thread {
 
     public ServerHandler(Socket socket, Integer id) {
 
-        communicator = new SocketReadWriter(socket);
-        this.socket = socket;
         threadName = "Thread " + id + ": ";
-
         try {
-            this.socket.setSoTimeout(200);
-        } catch (IOException e) {
-            System.out.println(threadName + "Server socket nenastartoval.");
+            try {
+                this.socket = socket;
+
+                communicator = new SocketReadWriter(socket);
+                //this.socket.setKeepAlive(true);
+                this.socket.setSoTimeout(200);
+                System.out.println(threadName + "Server socket OK.");
+
+            } catch (IOException e) {
+                System.out.println(threadName + "Server socket nenastartoval.");
+                //throw new RuntimeException(e);
+            }
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        System.out.println(threadName + "Server socket OK.");
+
     }
 
     @Override

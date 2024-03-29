@@ -7,7 +7,7 @@ public class ServerApp {
 
     public static void main(String[] args) {
 
-        new ServerImpl().start();
+        ServerImpl.getInstance().start();
         System.exit(0);
     }
 

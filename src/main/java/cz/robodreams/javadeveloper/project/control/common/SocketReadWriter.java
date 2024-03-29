@@ -52,18 +52,23 @@ public class SocketReadWriter {
 
     public <T extends MessageTransfer> void sendStream(T transferObject) {
 
+        System.out.println("Send Stream " + transferObject.toString());
+
         try {
             if (!socket.isClosed()) {
                 outputStream.writeObject(transferObject);
                 outputStream.flush();
             }
         } catch (IOException e) {
-            MessageTransfer.builder().task(Const.EXIT).build();
+            //e.printStackTrace();
+            //throw new RuntimeException("Server chyba : sendStream " + e.getMessage());
+            //MessageTransfer.builder().task(Const.EXIT).build();
             //throw new RuntimeException("Server chyba : sendStream " + e.getMessage());
         }
     }
 
     public <T extends MessageTransfer> T receiveStream() {
+
 
         T byteStream = null;
         try {
@@ -72,6 +77,11 @@ public class SocketReadWriter {
         } catch (ClassNotFoundException | IOException e) {
             return (T) MessageTransfer.builder().task(Const.EMPTY).build();
         }
+
+        if (byteStream != null) {
+            System.out.println("Send Stream " + byteStream.toString());
+        }
+
         return (T) ((byteStream != null) ? byteStream : MessageTransfer.builder().task(Const.EMPTY).build());
     }
 

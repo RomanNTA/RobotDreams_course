@@ -6,9 +6,7 @@ import cz.robodreams.javadeveloper.project.control.client.ClientImpl;
 public class ClientApp {
 
     public static void main(String[] args) {
-
-        new ClientImpl();
-        System.exit(0);
+        ClientImpl.getInstance();
     }
 
 }

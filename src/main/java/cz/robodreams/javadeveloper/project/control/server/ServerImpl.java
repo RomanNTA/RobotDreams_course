@@ -1,33 +1,28 @@
 package cz.robodreams.javadeveloper.project.control.server;
 
 
-import cz.robodreams.javadeveloper.project.article.ArticlesRepositoryImpl;
-import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.ArticleType;
-import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
-import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Lock;
 import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.control.common.Const;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 
-/**
- * Zkoušel jsem vytvřit z toho vlákno - test se nezdařil
- */
-//public final class ServerImpl extends Thread implements Server {
 public final class ServerImpl implements Server {
 
-
     public final Service service = Service.getInstance();
+    private static ServerImpl INSTANCE = new ServerImpl();
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+//
+//        new ServerImpl().start();
+//        System.exit(0);
+//    }
 
-        new ServerImpl().start();
-        System.exit(0);
+    public static ServerImpl getInstance() {
+        return INSTANCE;
     }
 
-
-    public ServerImpl() {
+    private ServerImpl() {
 
         /**
          * Načtení knih z databaze a odemknutí části.
