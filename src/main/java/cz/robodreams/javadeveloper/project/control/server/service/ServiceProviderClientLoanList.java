@@ -1,11 +1,7 @@
 package cz.robodreams.javadeveloper.project.control.server.service;
 
-import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.control.common.Const;
 import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
-import cz.robodreams.javadeveloper.project.control.server.ServerHandler;
-
-import java.util.List;
 
 public class ServiceProviderClientLoanList extends ServiceProviderImpl implements ServiceProvider {
 

@@ -18,7 +18,6 @@ public class ServiceProviderDriverListAccordingGenre extends ServiceProviderImpl
 
     @Override
     public MessageTransfer sendOffer() {
-        System.out.println(ServerHandler.threadName + myId);
 
         menu.clear();
         menu.add("Zpět, bez výběru.");

@@ -8,6 +8,7 @@ import cz.robodreams.javadeveloper.project.control.common.Const;
 import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
 import cz.robodreams.javadeveloper.project.control.server.ServerHandler;
 import cz.robodreams.javadeveloper.project.lending.ILoan;
+import cz.robodreams.javadeveloper.project.users.User;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -30,12 +31,14 @@ public class ServiceProviderDriverReleaseBooks extends ServiceProviderImpl imple
         loanBooks = lending.driverReleaseBooks(userId);
 
         String name = loanBooks.values().stream()
-                .map(x-> x.getUser().getShortInfo())
+                .map(ILoan::getUser)
+                .map(User::getShortInfo)
                 .findFirst()
                 .get();
 
         menu = loanBooks.values().stream()
-                .map(x-> x.getBook().getShortInfo())
+                .map(ILoan::getBook)
+                .map(Book::getShortInfo)
                 .toList();
 
         return MessageTransfer.builder()

@@ -1,8 +1,11 @@
 package cz.robodreams.javadeveloper.project.control.server;
 
-
+import cz.robodreams.javadeveloper.project.article.interfaces.Article;
+import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
 import cz.robodreams.javadeveloper.project.common.Service;
 import cz.robodreams.javadeveloper.project.control.common.Const;
+import cz.robodreams.javadeveloper.project.lending.Lending;
+import cz.robodreams.javadeveloper.project.users.Users;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -52,4 +55,18 @@ public final class ServerImpl implements Server {
         }
     }
 
+    @Override
+    public Users getUsers() {
+        return service.getUser();
+    }
+
+    @Override
+    public ArticlesRepository getArticle() {
+        return service.<Article>getArticle();
+    }
+
+    @Override
+    public Lending getLending() {
+        return service.getLending();
+    }
 }

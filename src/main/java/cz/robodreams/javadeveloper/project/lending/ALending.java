@@ -4,6 +4,7 @@ import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Artic
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
 import cz.robodreams.javadeveloper.project.article.interfaces.ArticlesRepository;
 import cz.robodreams.javadeveloper.project.common.*;
+import cz.robodreams.javadeveloper.project.control.common.Const;
 import cz.robodreams.javadeveloper.project.users.User;
 import cz.robodreams.javadeveloper.project.users.Users;
 
@@ -39,9 +40,9 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
                         .user(user)
                         .book(book)
                         .sinceWhen(LocalDateTime.now())
-                        .untilWhen(LocalDateTime.now().plusDays(ILendingConst.BORROWED_LEADTIME))
-                        .status(ILendingConst.STATUS_BORROW.BOOK_BORROWED).build();
-                loan.setStatus(ILendingConst.STATUS_BORROW.BOOK_BORROWED);
+                        .untilWhen(LocalDateTime.now().plusDays(Const.BORROWED_LEADTIME))
+                        .status(StatusBorrow.BOOK_BORROWED).build();
+                loan.setStatus(StatusBorrow.BOOK_BORROWED);
                 repository.add(loan);
                 return true;
             }
@@ -52,7 +53,7 @@ public class ALending extends SubjectsImpl<ILoan> implements Lending<ILoan>, Sub
 
     public Boolean removeLoan(ILoan loan){
 
-        loan.setStatus(ILendingConst.STATUS_BORROW.BOOK_RETURNED);
+        loan.setStatus(StatusBorrow.BOOK_RETURNED);
         return repository.remove(loan);
     }
 

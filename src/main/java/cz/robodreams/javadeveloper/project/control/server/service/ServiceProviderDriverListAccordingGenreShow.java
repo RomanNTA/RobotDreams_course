@@ -29,9 +29,9 @@ public class ServiceProviderDriverListAccordingGenreShow extends ServiceProvider
         offerBooks = article.showBooksAccordingToGenreForBuyin(genre);
         AtomicInteger counter = new AtomicInteger(1);
 
-        menu.addAll(offerBooks.entrySet().stream()
-                .map(x -> ((Book) x.getValue()).getResultShow(ShowSubjectItems.INFO))
-                .map(x -> (List<String>) x)
+        menu.addAll(offerBooks.values().stream()
+                .map(book -> book.getResultShow(ShowSubjectItems.INFO))
+                .map(list -> (List<String>) list)
                 .peek(line -> line.add(Util.getLine()))
                 .peek(row -> row.add("  Kniha " + counter.getAndIncrement() + "\n"))
                 .flatMap(Collection::stream)

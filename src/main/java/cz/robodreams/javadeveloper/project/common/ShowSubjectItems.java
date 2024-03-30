@@ -6,8 +6,4 @@ public enum ShowSubjectItems {
     SHORT_FORMAT,
     INFO;
 
-
-
-
-
 }

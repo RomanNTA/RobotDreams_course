@@ -19,8 +19,8 @@ public interface ILoan {
     void setSinceWhen(LocalDateTime sinceWhen);
     LocalDateTime getUntilWhen();
     void setUntilWhen(LocalDateTime untilWhen);
-    ILendingConst.STATUS_BORROW getStatus();
-    void setStatus(ILendingConst.STATUS_BORROW status);
+    StatusBorrow getStatus();
+    void setStatus(StatusBorrow status);
 
 
 }

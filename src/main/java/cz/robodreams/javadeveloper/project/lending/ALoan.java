@@ -17,24 +17,24 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class ALoan implements ILoan, ILendingConst {
+public class ALoan implements ILoan {
 
     private Integer loanId;
     private User user;
     private Book book;
     private LocalDateTime sinceWhen;
     private LocalDateTime untilWhen;
-    private STATUS_BORROW status;
+    private StatusBorrow status;
 
-    public void setStatus(STATUS_BORROW status) {
+    public void setStatus(StatusBorrow status) {
 
-        if (status == STATUS_BORROW.BOOK_BORROWED) {
+        if (status == StatusBorrow.BOOK_BORROWED) {
             book.setBorrowed(true);
             book.setBorrowedReference(this);
             book.setLocked(Lock.UNLOCK);
         }
 
-        if (status == STATUS_BORROW.BOOK_RETURNED) {
+        if (status == StatusBorrow.BOOK_RETURNED) {
             book.setBorrowed(false);
             book.setBorrowedReference(null);
         }

@@ -30,8 +30,18 @@ public class People implements IUserConst {
 
         String zipCode = String.format("%d",what(10000,11199));
 
-        return UserImpl.builder().id(id).gender(gender).name(name).surname(surname)
-                .phone(phone).email(email).city(city).street(street).streetNumber(streetNumber).zipCode(zipCode).build();
+        return UserImpl.builder()
+                .id(id)
+                .gender(gender)
+                .name(name)
+                .surname(surname)
+                .phone(phone)
+                .email(email)
+                .city(city)
+                .street(street)
+                .streetNumber(streetNumber)
+                .zipCode(zipCode)
+                .build();
     }
 
     String getRandomPhoneNr() {

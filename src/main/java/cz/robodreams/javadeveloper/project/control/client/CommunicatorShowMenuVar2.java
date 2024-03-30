@@ -53,36 +53,17 @@ public class CommunicatorShowMenuVar2 extends ServiceThread<MessageTransfer> {
 
                 if (stringLine.contains("-")) {
 
-                    result = "";
-                    String[] out = stringLine.split("-");
-                    if (out.length == 2) {
-
-                        try {
-                            int i1 = Integer.valueOf(out[0]);
-                            int i2 = Integer.valueOf(out[1]);
-
-                            if (!testIndex.test(i1, messageTransfer.intResult() + 1) || !testIndex.test(i2, messageTransfer.intResult() + 1)) {
-                                System.out.println("Výběr není v požadovaném rozsahu");
-                                continue;
-                            }
-
-                            for (int i = Math.min(i1, i2); i <= Math.max(i1, i2); i++) {
-                                result += i + ";";
-                            }
-                        } catch (NumberFormatException e) {
-                            System.out.println("Chybný převod vstupního zadání");
-                            continue;
-                        }
+                    TestedRange testedRange = new TestedRange();
+                    if (testedRange.test(stringLine,messageTransfer.intResult() + 1)){
 
                         return MessageTransfer.builder()
                                 .task(messageTransfer.replyTask())
                                 .replyTask(Const.REPLY)
-                                .strInOut1(result)
+                                .strInOut1(testedRange.getOutputString())
                                 .intResult(-1)
                                 .build();
-
                     } else {
-                        System.out.println("Chybný převod vstupního zadání");
+                        System.out.println(testedRange.getErrorMessage());
                         continue;
                     }
                 }

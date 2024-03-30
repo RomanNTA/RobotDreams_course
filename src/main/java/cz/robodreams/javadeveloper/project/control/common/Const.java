@@ -73,6 +73,8 @@ public interface Const {
 
     int SOCKET_PORT = 5001;
 
+    int BORROWED_LEADTIME = 7;
+
     BiPredicate<Integer, Integer> testIndex = (index, max) -> (index < max && index >= 0);
 
     Predicate<String> isStringFullAndNotNull = (str) -> ((str != null) && (!str.isBlank()));

@@ -3,6 +3,7 @@ package cz.robodreams.javadeveloper.project.control.server.service;
 import cz.robodreams.javadeveloper.project.article.articlebooks.interfaces.Book;
 import cz.robodreams.javadeveloper.project.common.ShowSubjectItems;
 import cz.robodreams.javadeveloper.project.common.Util;
+import cz.robodreams.javadeveloper.project.control.client.TestedRange;
 import cz.robodreams.javadeveloper.project.control.common.Const;
 import cz.robodreams.javadeveloper.project.control.common.MessageTransfer;
 import cz.robodreams.javadeveloper.project.control.server.ServerHandler;
@@ -10,6 +11,7 @@ import cz.robodreams.javadeveloper.project.control.server.ServerHandler;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 
 import static cz.robodreams.javadeveloper.project.control.common.Const.isNotNull;
 import static cz.robodreams.javadeveloper.project.control.common.Const.testIndex;
@@ -27,7 +29,22 @@ public class ServiceProviderClientLoan extends ServiceProviderImpl implements Se
         freeBooks = article.showFreeBooks(ShowSubjectItems.LONG_FORMAT);
         AtomicInteger counter = new AtomicInteger(1);
 
-        menu.addAll(freeBooks.entrySet().stream().map(x -> ((Book) x.getValue()).getResultShow(ShowSubjectItems.INFO)).map(x -> (List<String>) x).peek(line -> line.add(Util.getLine())).peek(row -> row.add("  Kniha " + counter.getAndIncrement() + "\n")).flatMap(Collection::stream).toList());
+//        menu.addAll(freeBooks.entrySet()
+//                .stream()
+//                .map(x -> ((Book) x.getValue()).getResultShow(ShowSubjectItems.INFO))
+//                .map(x -> (List<String>) x)
+//                .peek(line -> line.add(Util.getLine()))
+//                .peek(row -> row.add("  Kniha " + counter.getAndIncrement() + "\n"))
+//                .flatMap(Collection::stream)
+//                .toList());
+
+        menu.addAll(freeBooks.values().stream()
+                .map(x -> x.getResultShow(ShowSubjectItems.INFO))
+                .peek(line -> line.add(Util.getLine()))
+                .peek(row -> row.add("  Kniha " + counter.getAndIncrement() + "\n"))
+                .flatMap(Collection::stream)
+                .toList());
+
         menu.add("Výběr knihy. Povolené zadání je:");
         menu.add(" - návrat bez výběru tj. číslo '0'");
         menu.add(" - číslo knihy např. '1'");
@@ -44,6 +61,9 @@ public class ServiceProviderClientLoan extends ServiceProviderImpl implements Se
                 .loop(false)
                 .build();
     }
+
+
+
 
 
 
@@ -79,9 +99,9 @@ public class ServiceProviderClientLoan extends ServiceProviderImpl implements Se
                 break;
             }
 
-
             // rozsah od - do
             if (Objects.nonNull(messageTransfer.strInOut1()) && messageTransfer.strInOut1().length() > 0) {
+
                 String[] inp = messageTransfer.strInOut1().split(";");
 
                 int count = 0;
@@ -100,6 +120,9 @@ public class ServiceProviderClientLoan extends ServiceProviderImpl implements Se
                 break;
             }
         }
+
+
+
         return MessageTransfer.builder()
                 .task(Const.MESSAGES_PRINT_TEXT)
                 .replyTask(Const.CLIENT_RETURN_TO_ROOT)
